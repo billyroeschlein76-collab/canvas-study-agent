@@ -1,0 +1,1376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Canvas Study Agent</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+
+  /* Priority badges */
+  .badge-high  { background:#dcfce7; color:#15803d; }
+  .badge-mid   { background:#fef9c3; color:#92400e; }
+  .badge-low   { background:#f1f5f9; color:#64748b; }
+  .dot-high    { background:#16a34a; }
+  .dot-mid     { background:#d97706; }
+  .dot-low     { background:#94a3b8; }
+
+  /* Animations */
+  .fade-in     { animation: fadeIn .18s ease both; }
+  @keyframes fadeIn { from { opacity:0; transform:translateY(5px); } to { opacity:1; transform:none; } }
+  .slide-in-right { animation: slideR .22s ease both; }
+  @keyframes slideR { from { opacity:0; transform:translateX(24px); } to { opacity:1; transform:none; } }
+
+  /* Spinner */
+  .spinner { border:2px solid #e2e8f0; border-top-color:#6366f1; border-radius:50%;
+             width:16px; height:16px; animation:spin .65s linear infinite; display:inline-block; vertical-align:middle; }
+  @keyframes spin { to { transform:rotate(360deg); } }
+
+  /* Course list pulse when user needs to pick one */
+  .pulse-pick { animation: pulsePick .55s ease 2; }
+  @keyframes pulsePick { 0%,100% { background:transparent; } 50% { background:#312e81; } }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width:5px; }
+  ::-webkit-scrollbar-track { background:transparent; }
+  ::-webkit-scrollbar-thumb { background:#cbd5e1; border-radius:3px; }
+
+  /* Topic rows */
+  .topic-row { transition: background .1s; cursor:pointer; }
+  .topic-row:hover { background:#f8fafc; }
+  .topic-row.active { background:#eef2ff; }
+
+  /* Nav buttons */
+  .nav-btn { transition: all .12s; border-radius: 6px; }
+  .nav-btn.active { background:#6366f1; color:#fff; }
+  .nav-btn:not(.active):hover { background:#334155; }
+
+  /* Course buttons */
+  .course-btn { transition: all .12s; border-radius:6px; }
+  .course-btn.active { background:#6366f1; color:#fff; }
+  .course-btn:not(.active):hover { background:#334155; }
+
+  /* Paper exam style */
+  .exam-paper { background:#fff; border:1px solid #e2e8f0; border-radius:12px; overflow:hidden; }
+  .exam-header { border-bottom:2px solid #1e293b; padding:24px 32px; }
+  .exam-section-head { background:#f8fafc; border-bottom:1px solid #e2e8f0; padding:10px 32px;
+                       font-size:13px; font-weight:600; display:flex; align-items:center; gap:10px; }
+  .exam-problem { padding:20px 32px; border-bottom:1px solid #f1f5f9; }
+  .exam-problem:last-child { border-bottom:none; }
+  .answer-lines { margin-top:12px; }
+  .answer-line { border-bottom:1px solid #cbd5e1; height:26px; margin-bottom:2px; }
+
+  /* Answer key */
+  .answer-step { font-size:13px; color:#475569; padding:3px 0; display:flex; gap:8px; }
+  .answer-step-num { color:#6366f1; font-weight:600; min-width:52px; }
+  .answer-final { font-size:14px; font-weight:600; color:#1e293b; margin-bottom:8px; }
+  .concept-tag { display:inline-block; font-size:11px; background:#ede9fe; color:#5b21b6;
+                 border-radius:4px; padding:2px 8px; margin-top:6px; }
+
+  /* Low confidence warning */
+  .low-conf-banner { font-size:11px; color:#92400e; background:#fef3c7;
+                     border:1px solid #fde68a; border-radius:4px; padding:3px 8px; margin-bottom:8px; display:inline-flex; align-items:center; gap:4px; }
+
+  /* Drawer */
+  #drawer { transition: transform .22s ease, opacity .22s ease; }
+  #drawer.closed { transform: translateX(100%); opacity:0; pointer-events:none; }
+
+  /* Practice set list */
+  .pset-row { transition:background .1s; cursor:pointer; }
+  .pset-row:hover { background:#f8fafc; }
+
+  pre { white-space:pre-wrap; word-break:break-word; }
+
+  /* Tutor step indicator */
+  .step-node { width:24px; height:24px; border-radius:50%; border:2px solid #cbd5e1;
+               background:#f8fafc; color:#94a3b8; font-size:11px; font-weight:700;
+               display:flex; align-items:center; justify-content:center; shrink:0; transition:all .2s; }
+  .step-node.active  { border-color:#6366f1; background:#6366f1; color:#fff; }
+  .step-node.done    { border-color:#10b981; background:#10b981; color:#fff; }
+  .step-line { flex:1; height:2px; background:#e2e8f0; min-width:20px; transition:background .3s; }
+  .step-line.done    { background:#10b981; }
+
+  /* Tutor card */
+  .tutor-card { background:#fff; border:1px solid #e2e8f0; border-radius:14px;
+                overflow:hidden; animation:fadeIn .2s ease both; }
+  .tutor-card-head { padding:16px 24px 14px; border-bottom:1px solid #f1f5f9; }
+  .tutor-card-body { padding:22px 24px; }
+  .tutor-label { font-size:10px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; margin-bottom:6px; }
+
+  /* Answer textarea in tutor */
+  .tutor-answer { width:100%; border:1px solid #e2e8f0; border-radius:8px; padding:12px;
+                  font-size:14px; resize:none; background:#f8fafc; line-height:1.5;
+                  transition:border .15s; outline:none; }
+  .tutor-answer:focus { border-color:#6366f1; background:#fff; }
+
+  /* Feedback bar */
+  .fb-good    { background:#f0fdf4; border:1px solid #bbf7d0; color:#15803d; }
+  .fb-partial { background:#fffbeb; border:1px solid #fde68a; color:#92400e; }
+  .fb-miss    { background:#fef2f2; border:1px solid #fecaca; color:#b91c1c; }
+</style>
+</head>
+<body class="bg-slate-100 text-slate-800 min-h-screen flex">
+
+<!-- ─── Sidebar ─── -->
+<aside class="w-52 bg-slate-900 text-slate-100 flex flex-col min-h-screen shrink-0 z-20">
+  <div class="px-5 pt-6 pb-4 border-b border-slate-800">
+    <div class="text-[10px] font-bold tracking-widest text-slate-500 uppercase mb-0.5">Canvas</div>
+    <div class="text-lg font-bold text-white">Study Agent</div>
+  </div>
+
+  <!-- Courses -->
+  <div class="px-3 pt-4 pb-2">
+    <div class="text-[10px] font-bold tracking-widest text-slate-600 uppercase px-2 mb-2">Courses</div>
+    <div id="course-list" class="space-y-0.5">
+      <div class="text-slate-500 text-xs px-2 py-1">Loading…</div>
+    </div>
+  </div>
+
+  <!-- Polyratings (shows after course selected) -->
+  <div id="sidebar-reviews" class="hidden px-3 pb-3">
+    <button id="sidebar-reviews-btn" onclick="fetchReviews()"
+      class="w-full text-left px-3 py-2 rounded-md text-xs font-semibold text-amber-400 hover:bg-slate-800 transition flex items-center gap-2">
+      <span>★</span>
+      <span id="sidebar-reviews-label">Fetch Polyratings</span>
+      <span id="sidebar-reviews-spinner" class="hidden ml-auto"><span class="spinner" style="width:10px;height:10px;border-width:2px;border-top-color:#fbbf24"></span></span>
+    </button>
+    <div id="sidebar-reviews-status" class="hidden px-3 pt-1 text-[10px] leading-tight"></div>
+  </div>
+
+  <!-- Nav -->
+  <div class="px-3 pt-4 border-t border-slate-800 mt-auto">
+    <div class="text-[10px] font-bold tracking-widest text-slate-600 uppercase px-2 mb-2">Study</div>
+    <div class="space-y-0.5" id="nav-links">
+      <button onclick="showView('topics')"  class="nav-btn w-full text-left px-3 py-2 text-sm text-slate-300" data-view="topics">
+        <span class="mr-2 opacity-70">▤</span>Topics
+      </button>
+      <button onclick="showView('practice')" class="nav-btn w-full text-left px-3 py-2 text-sm text-slate-300" data-view="practice">
+        <span class="mr-2 opacity-70">✎</span>Practice
+      </button>
+      <button onclick="showView('teach')"   class="nav-btn w-full text-left px-3 py-2 text-sm text-slate-300" data-view="teach">
+        <span class="mr-2 opacity-70">◎</span>Teach
+      </button>
+      <button onclick="showView('quiz')"    class="nav-btn w-full text-left px-3 py-2 text-sm text-slate-300" data-view="quiz">
+        <span class="mr-2 opacity-70">✓</span>Quiz
+      </button>
+      <button onclick="showView('plan')"    class="nav-btn w-full text-left px-3 py-2 text-sm text-slate-300" data-view="plan">
+        <span class="mr-2 opacity-70">◷</span>Study Plan
+      </button>
+      <button onclick="showView('review')"  class="nav-btn w-full text-left px-3 py-2 text-sm text-slate-300" data-view="review">
+        <span class="mr-2 opacity-70">◈</span>Review Sheet
+      </button>
+    </div>
+  </div>
+  <div class="pb-5"></div>
+</aside>
+
+<!-- ─── Main ─── -->
+<div class="flex-1 flex flex-col min-h-screen overflow-hidden relative">
+
+  <!-- Topbar -->
+  <header class="bg-white border-b border-slate-200 px-7 py-3.5 flex items-center justify-between shrink-0 z-10">
+    <div class="flex items-center gap-3">
+      <div>
+        <div id="header-course" class="text-[11px] text-slate-400 font-semibold uppercase tracking-wider">No course selected</div>
+        <div id="header-view"   class="text-lg font-bold text-slate-800 leading-snug">Welcome</div>
+      </div>
+    </div>
+    <div id="header-actions" class="flex items-center gap-2"></div>
+  </header>
+
+  <!-- Content area (scrollable) -->
+  <div id="content" class="flex-1 overflow-y-auto">
+
+    <!-- ── Welcome ── -->
+    <div id="view-welcome" class="fade-in p-8 max-w-2xl">
+      <h2 class="text-2xl font-bold mb-2">Pick a course to start</h2>
+      <p class="text-slate-500 mb-6 text-sm leading-relaxed">Select a course from the sidebar. If it hasn't been indexed yet, click <strong>Index</strong> to build the exam topic map from your Canvas files.</p>
+      <div id="welcome-courses" class="space-y-3"></div>
+    </div>
+
+    <!-- ── Setup (not indexed) ── -->
+    <div id="view-setup" class="hidden fade-in p-8 max-w-lg">
+      <h2 class="text-2xl font-bold mb-2" id="setup-title">Index Course</h2>
+      <p class="text-slate-500 mb-6 text-sm" id="setup-desc"></p>
+      <button id="index-btn" onclick="runIndex()"
+        class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-3 rounded-lg transition flex items-center gap-2.5 text-sm">
+        <span id="index-btn-text">Index Course</span>
+        <span id="index-spinner" class="hidden"><span class="spinner" style="border-top-color:#fff"></span></span>
+      </button>
+      <div id="index-error" class="mt-4 text-red-600 text-sm hidden"></div>
+    </div>
+
+    <!-- ── Topics ── -->
+    <div id="view-topics" class="hidden fade-in flex h-full">
+      <!-- Topic list -->
+      <div class="flex-1 flex flex-col min-w-0">
+        <div class="px-7 pt-6 pb-4 flex items-center justify-between shrink-0">
+          <div>
+            <div class="flex items-center gap-2">
+              <h2 class="text-xl font-bold">Exam Topics</h2>
+              <span id="topics-meta" class="text-xs text-slate-400 font-medium"></span>
+            </div>
+            <div class="flex items-center gap-2 mt-1">
+              <button id="sort-likelihood" onclick="setTopicSort('likelihood')"
+                class="text-[11px] font-semibold px-2.5 py-1 rounded-md bg-indigo-600 text-white transition">Exam Likelihood</button>
+              <button id="sort-chapter" onclick="setTopicSort('chapter')"
+                class="text-[11px] font-semibold px-2.5 py-1 rounded-md bg-white border border-slate-300 text-slate-600 hover:bg-slate-50 transition">Chapter Order</button>
+            </div>
+          </div>
+          <div class="flex items-center gap-2">
+            <button id="reviews-btn" onclick="fetchReviews()"
+              class="bg-white border border-slate-300 hover:bg-slate-50 text-slate-700 text-sm font-semibold px-4 py-2 rounded-lg transition flex items-center gap-2">
+              <span id="reviews-btn-text">Fetch Polyratings</span>
+              <span id="reviews-spinner" class="hidden"><span class="spinner" style="width:12px;height:12px;border-width:2px"></span></span>
+            </button>
+            <button onclick="generateExam()"
+              class="bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold px-4 py-2 rounded-lg transition flex items-center gap-2">
+              <span>Generate Practice Exam</span>
+              <span id="gen-exam-spinner" class="hidden"><span class="spinner" style="border-top-color:#fff;width:12px;height:12px;border-width:2px"></span></span>
+            </button>
+          </div>
+        </div>
+        <!-- Reviews status bar -->
+        <div id="reviews-status" class="hidden mx-7 mb-3 px-4 py-2.5 rounded-lg text-xs font-medium flex items-center gap-2"></div>
+
+        <!-- Legend -->
+        <div class="px-7 pb-3 flex items-center gap-4 text-xs text-slate-500 shrink-0">
+          <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full dot-high inline-block"></span>Very Likely</span>
+          <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full dot-mid  inline-block"></span>Possible</span>
+          <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full dot-low  inline-block"></span>Low</span>
+        </div>
+
+        <div id="topics-list" class="mx-7 mb-7 bg-white rounded-xl border border-slate-200 divide-y divide-slate-100 overflow-hidden"></div>
+      </div>
+    </div>
+
+    <!-- ── Practice ── -->
+    <div id="view-practice" class="hidden fade-in p-7">
+      <div class="flex items-start justify-between mb-5">
+        <div>
+          <h2 class="text-xl font-bold">Practice</h2>
+          <p class="text-xs text-slate-400 mt-0.5">Generated exams and problem sets from your course material</p>
+        </div>
+        <button onclick="generateExam()"
+          class="bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold px-4 py-2 rounded-lg transition flex items-center gap-2">
+          Generate Practice Exam
+          <span id="gen-exam-spinner2" class="hidden"><span class="spinner" style="border-top-color:#fff;width:12px;height:12px;border-width:2px"></span></span>
+        </button>
+      </div>
+
+      <!-- Saved sets list -->
+      <div id="practice-sets-list" class="mb-6"></div>
+
+      <!-- Active exam viewer -->
+      <div id="practice-viewer" class="hidden"></div>
+    </div>
+
+    <!-- ── Teach ── -->
+    <div id="view-teach" class="hidden fade-in p-7 max-w-2xl">
+      <!-- Search bar -->
+      <div class="flex gap-2.5 mb-6">
+        <input id="teach-search" type="text" placeholder="Topic name, or leave blank for the #1 topic…"
+          class="flex-1 border border-slate-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-400"
+          onkeydown="if(event.key==='Enter') startTutor()">
+        <button onclick="startTutor()" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-5 py-2.5 rounded-lg text-sm transition">
+          Start
+        </button>
+      </div>
+
+      <!-- Step indicator -->
+      <div id="tutor-steps" class="hidden mb-6">
+        <div class="flex items-center gap-0">
+          <div class="step-node" data-step="1" id="snode-1">1</div>
+          <div class="step-line" id="sline-1"></div>
+          <div class="step-node" data-step="2" id="snode-2">2</div>
+          <div class="step-line" id="sline-2"></div>
+          <div class="step-node" data-step="3" id="snode-3">3</div>
+          <div class="step-line" id="sline-3"></div>
+          <div class="step-node" data-step="4" id="snode-4">4</div>
+          <div class="step-line" id="sline-4"></div>
+          <div class="step-node" data-step="5" id="snode-5">5</div>
+        </div>
+        <div class="flex text-[10px] text-slate-400 mt-1.5 font-medium" style="gap:0">
+          <span class="w-6 text-center">Explain</span>
+          <span class="flex-1"></span>
+          <span class="w-6 text-center">Example</span>
+          <span class="flex-1"></span>
+          <span class="w-6 text-center">Try It</span>
+          <span class="flex-1"></span>
+          <span class="w-6 text-center">Feedback</span>
+          <span class="flex-1"></span>
+          <span class="w-6 text-center">Exam</span>
+        </div>
+      </div>
+
+      <!-- Active step card -->
+      <div id="tutor-card" class=""></div>
+    </div>
+
+    <!-- ── Quiz ── -->
+    <div id="view-quiz" class="hidden fade-in p-7 max-w-2xl">
+      <div class="flex gap-3 mb-5 items-center">
+        <button onclick="loadQuiz()" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-5 py-2.5 rounded-lg text-sm transition">New Quiz</button>
+        <span class="text-xs text-slate-400">6 questions · highest-priority topics</span>
+      </div>
+      <div id="quiz-content"></div>
+      <div id="quiz-results" class="hidden mt-5 p-5 bg-indigo-50 rounded-xl border border-indigo-100">
+        <div class="font-semibold text-indigo-800 text-sm mb-1">Quiz complete</div>
+        <div id="quiz-score-text" class="text-sm text-indigo-700"></div>
+      </div>
+    </div>
+
+    <!-- ── Study Plan ── -->
+    <div id="view-plan" class="hidden fade-in p-7 max-w-2xl">
+      <div class="flex gap-3 mb-5 items-center flex-wrap">
+        <label class="text-sm font-medium text-slate-700">Hours available:</label>
+        <input id="plan-hours" type="number" value="2" min="0.5" max="12" step="0.5"
+          class="w-20 border border-slate-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-400">
+        <button onclick="loadPlan()" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-5 py-2 rounded-lg text-sm transition">Build Plan</button>
+      </div>
+      <div id="plan-content"></div>
+    </div>
+
+    <!-- ── Review Sheet ── -->
+    <div id="view-review" class="hidden fade-in p-7 max-w-3xl">
+      <div class="flex items-center justify-between mb-5">
+        <h2 class="text-xl font-bold">Review Sheet</h2>
+        <button onclick="loadReview()" class="text-sm text-indigo-600 hover:underline">Reload</button>
+      </div>
+      <div id="review-content"></div>
+    </div>
+
+  </div><!-- /content -->
+</div><!-- /main -->
+
+<!-- ─── Topic Drawer (right panel) ─── -->
+<div id="drawer-overlay" class="hidden fixed inset-0 z-30 bg-black/20" onclick="closeDrawer()"></div>
+<aside id="drawer" class="closed fixed top-0 right-0 h-screen w-[480px] bg-white shadow-2xl z-40 flex flex-col overflow-hidden border-l border-slate-200">
+  <div class="flex items-center justify-between px-6 py-4 border-b border-slate-200 shrink-0">
+    <div id="drawer-header-label" class="text-xs font-bold uppercase tracking-widest text-slate-400">Topic Detail</div>
+    <button onclick="closeDrawer()" class="text-slate-400 hover:text-slate-700 text-lg leading-none">✕</button>
+  </div>
+  <div id="drawer-content" class="flex-1 overflow-y-auto p-6"></div>
+</aside>
+
+<!-- ─── Scripts ─── -->
+<script>
+// ============================================================
+//  State
+// ============================================================
+let courses      = [];
+let activeCourse = null;   // { name, key, course_dir, state_dir, indexed, file_count }
+let activeView   = 'welcome';
+let topicsCache  = null;
+let quizState    = { questions:[], answers:[], submitted:false };
+let activePracticeSet = null;
+let showAnswerKey = false;
+
+// ============================================================
+//  Boot
+// ============================================================
+async function init() {
+  const data = await api('/api/courses');
+  courses = data;
+  renderCourseList();
+  renderWelcomeCourses();
+}
+
+// ============================================================
+//  Course list
+// ============================================================
+function renderCourseList() {
+  const el = document.getElementById('course-list');
+  if (!courses.length) { el.innerHTML = '<div class="text-slate-500 text-xs px-2 py-1">No courses found</div>'; return; }
+  el.innerHTML = courses.map(c => `
+    <button onclick="selectCourse('${c.key}')"
+      class="course-btn ${activeCourse?.key===c.key?'active':''} w-full text-left px-3 py-2 text-sm">
+      <div class="font-medium ${activeCourse?.key===c.key?'text-white':'text-slate-200'}">${c.name}</div>
+      <div class="text-[11px] ${activeCourse?.key===c.key?'text-indigo-200':'text-slate-500'} mt-0.5">
+        ${c.indexed ? '✓ indexed' : c.file_count+' files'}
+      </div>
+    </button>
+  `).join('');
+}
+
+function renderWelcomeCourses() {
+  const el = document.getElementById('welcome-courses');
+  el.innerHTML = courses.map(c => `
+    <div class="bg-white border border-slate-200 rounded-xl p-5 flex items-center justify-between">
+      <div>
+        <div class="font-semibold">${c.name}</div>
+        <div class="text-xs text-slate-400 mt-0.5">${c.file_count} files · ${c.indexed?'Indexed':'Not indexed'}</div>
+      </div>
+      <button onclick="selectCourse('${c.key}')"
+        class="bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium px-4 py-2 rounded-lg transition">
+        ${c.indexed?'Open':'Index & Open'}
+      </button>
+    </div>`).join('');
+}
+
+// ============================================================
+//  Select course
+// ============================================================
+function selectCourse(key) {
+  activeCourse = courses.find(c => c.key === key);
+  if (!activeCourse) return;
+  topicsCache = null;
+  renderCourseList();
+  document.getElementById('header-course').textContent = activeCourse.name;
+
+  // Show sidebar Polyratings button when course is indexed
+  const sidebarReviews = document.getElementById('sidebar-reviews');
+  if (activeCourse.indexed) {
+    sidebarReviews.classList.remove('hidden');
+  } else {
+    sidebarReviews.classList.add('hidden');
+    document.getElementById('sidebar-reviews-status').classList.add('hidden');
+  }
+
+  if (!activeCourse.indexed) {
+    showRawView('setup');
+    document.getElementById('setup-title').textContent = `Index ${activeCourse.name}`;
+    document.getElementById('setup-desc').textContent =
+      `${activeCourse.file_count} file${activeCourse.file_count!==1?'s':''} found. Click below to build the exam topic map.`;
+    setHeader('Index Course');
+  } else {
+    showView('topics');
+    loadTopics();
+  }
+}
+
+// ============================================================
+//  Index
+// ============================================================
+async function runIndex() {
+  if (!activeCourse) return;
+  const btn    = document.getElementById('index-btn');
+  const txt    = document.getElementById('index-btn-text');
+  const sp     = document.getElementById('index-spinner');
+  const errEl  = document.getElementById('index-error');
+  btn.disabled=true; txt.textContent='Indexing…'; sp.classList.remove('hidden'); errEl.classList.add('hidden');
+  const res = await api('/api/index', { method:'POST', body: JSON.stringify({
+    course_dir: activeCourse.course_dir, state_dir: activeCourse.state_dir }) });
+  btn.disabled=false; txt.textContent='Index Course'; sp.classList.add('hidden');
+  if (res.ok) {
+    activeCourse.indexed = true;
+    courses.find(c=>c.key===activeCourse.key).indexed = true;
+    renderCourseList();
+    showView('topics');
+    loadTopics();
+  } else {
+    errEl.textContent = res.error || 'Indexing failed.';
+    errEl.classList.remove('hidden');
+  }
+}
+
+// ============================================================
+//  Views
+// ============================================================
+const ALL_VIEWS    = ['welcome','setup','topics','practice','teach','quiz','plan','review'];
+const VIEW_LABELS  = { welcome:'Welcome', setup:'Index Course', topics:'Exam Topics',
+                       practice:'Practice', teach:'Teach Me', quiz:'Quiz',
+                       plan:'Study Plan', review:'Review Sheet' };
+
+function showRawView(name) {
+  ALL_VIEWS.forEach(v => document.getElementById('view-'+v).classList.add('hidden'));
+  const el = document.getElementById('view-'+name);
+  el.classList.remove('hidden','fade-in'); void el.offsetWidth; el.classList.add('fade-in');
+  activeView = name;
+  setHeader(VIEW_LABELS[name]||name);
+  document.querySelectorAll('[data-view]').forEach(b => b.classList.toggle('active', b.dataset.view===name));
+  document.getElementById('header-actions').innerHTML = '';
+}
+
+function showView(name) {
+  if (!activeCourse && name !== 'welcome') {
+    // Flash the course list so the user knows to pick one first
+    showRawView('welcome');
+    const list = document.getElementById('course-list');
+    list.classList.remove('pulse-pick');
+    void list.offsetWidth;
+    list.classList.add('pulse-pick');
+    list.addEventListener('animationend', () => list.classList.remove('pulse-pick'), { once: true });
+    return;
+  }
+  if (activeCourse && !activeCourse.indexed && !['welcome','setup'].includes(name)) {
+    showRawView('setup'); return;
+  }
+  showRawView(name);
+  if (name==='quiz' && !quizState.questions.length) loadQuiz();
+  if (name==='plan') loadPlan();
+  if (name==='review') loadReview();
+  if (name==='practice') loadPracticeSets();
+}
+
+function setHeader(label) { document.getElementById('header-view').textContent = label; }
+
+// ============================================================
+//  Topics
+// ============================================================
+let topicSort = 'likelihood'; // 'likelihood' | 'chapter'
+
+async function loadTopics() {
+  if (!activeCourse) return;
+  const listEl = document.getElementById('topics-list');
+  listEl.innerHTML = '<div class="p-5 text-slate-400 text-sm">Loading topics…</div>';
+  const data = await api(`/api/topics?state=${enc(activeCourse.state_dir)}&limit=50`);
+  if (data.error) { listEl.innerHTML = `<div class="p-5 text-red-500 text-sm">${esc(data.error)}</div>`; return; }
+  topicsCache = data;
+  document.getElementById('topics-meta').textContent =
+    `${data.topics.length} topics · ${data.course_type}`;
+  renderTopics();
+}
+
+function setTopicSort(mode) {
+  topicSort = mode;
+  document.getElementById('sort-likelihood').className =
+    `text-[11px] font-semibold px-2.5 py-1 rounded-md transition ${mode==='likelihood' ? 'bg-indigo-600 text-white' : 'bg-white border border-slate-300 text-slate-600 hover:bg-slate-50'}`;
+  document.getElementById('sort-chapter').className =
+    `text-[11px] font-semibold px-2.5 py-1 rounded-md transition ${mode==='chapter' ? 'bg-indigo-600 text-white' : 'bg-white border border-slate-300 text-slate-600 hover:bg-slate-50'}`;
+  renderTopics();
+}
+
+function chapterSortKey(topic) {
+  const file = (topic.sources && topic.sources[0] && topic.sources[0].file) || '';
+  // Match a 1-2 digit number surrounded by underscores/spaces/dots — skips 3-digit course codes like 440, 470
+  const m = file.match(/[_\s.](\d{1,2})[_\s.]/);
+  const num = m ? parseInt(m[1], 10) : 999;
+  return [num, file.toLowerCase()];
+}
+
+function renderTopics() {
+  if (!topicsCache) return;
+  const listEl = document.getElementById('topics-list');
+  let topics = [...topicsCache.topics];
+
+  if (topicSort === 'chapter') {
+    topics.sort((a, b) => {
+      const [an, af] = chapterSortKey(a);
+      const [bn, bf] = chapterSortKey(b);
+      return an !== bn ? an - bn : af.localeCompare(bf);
+    });
+  }
+  // 'likelihood' keeps the original order (already sorted by score from API)
+
+  listEl.innerHTML = topics.map((t, i) => {
+    const dotClass   = t.priority==='very likely exam material' ? 'dot-high' : t.priority==='possibly testable material' ? 'dot-mid' : 'dot-low';
+    const badgeClass = t.priority==='very likely exam material' ? 'badge-high' : t.priority==='possibly testable material' ? 'badge-mid' : 'badge-low';
+    const badgeTxt   = t.priority==='very likely exam material' ? 'Very Likely' : t.priority==='possibly testable material' ? 'Possible' : 'Low';
+    const covMark    = t.covered ? '<span class="text-emerald-500 text-[10px] font-bold ml-1">✓</span>' : '';
+    const srcFile    = topicSort==='chapter' && t.sources && t.sources[0]
+                       ? `<span class="text-[10px] text-slate-300 shrink-0 truncate max-w-[120px]">${esc(t.sources[0].file.replace(/\.[^.]+$/,''))}</span>` : '';
+    return `
+      <div class="topic-row px-5 py-3.5 flex items-center gap-4" onclick="openDrawer('${escQ(t.topic)}', ${i})">
+        <span class="w-2 h-2 rounded-full shrink-0 ${dotClass}"></span>
+        <div class="flex-1 min-w-0">
+          <div class="font-semibold text-slate-800 text-sm">${esc(t.topic)}${covMark}</div>
+          <div class="text-xs text-slate-400 mt-0.5 truncate">${esc(t.rationale)}</div>
+        </div>
+        ${srcFile}
+        <span class="text-[11px] font-semibold px-2 py-0.5 rounded-full shrink-0 ${badgeClass}">${badgeTxt}</span>
+        <span class="text-xs text-slate-400 w-10 text-right shrink-0 tabular-nums">${t.score}/100</span>
+        <span class="text-slate-300 text-sm shrink-0">›</span>
+      </div>`;
+  }).join('');
+}
+
+// ============================================================
+//  Topic Drawer
+// ============================================================
+function openDrawer(topicName, idx) {
+  document.querySelectorAll('.topic-row').forEach((r,i) => r.classList.toggle('active', i===idx));
+  const drawer  = document.getElementById('drawer');
+  const overlay = document.getElementById('drawer-overlay');
+  overlay.classList.remove('hidden');
+  drawer.classList.remove('closed');
+
+  const content = document.getElementById('drawer-content');
+  content.innerHTML = '<div class="text-slate-400 text-sm">Loading…</div>';
+
+  api(`/api/teach?state=${enc(activeCourse.state_dir)}&topic=${encodeURIComponent(topicName)}`).then(d => {
+    if (d.error) { content.innerHTML = `<div class="text-red-500">${esc(d.error)}</div>`; return; }
+    const badge = d.priority==='very likely exam material' ? 'badge-high' : d.priority==='possibly testable material' ? 'badge-mid' : 'badge-low';
+    const badgeTxt = d.priority==='very likely exam material' ? 'Very Likely' : d.priority==='possibly testable material' ? 'Possibly' : 'Low';
+    content.innerHTML = `
+      <div class="slide-in-right space-y-5">
+        <!-- Header -->
+        <div>
+          <div class="flex items-start justify-between gap-3 mb-2">
+            <h3 class="text-xl font-bold text-slate-900 leading-tight">${esc(d.topic)}</h3>
+            <span class="text-[11px] font-semibold px-2 py-0.5 rounded-full shrink-0 ${badge}">${badgeTxt}</span>
+          </div>
+          <div class="text-xs text-slate-400">Score: <strong class="text-slate-600">${d.score}/100</strong> · Confidence: <strong class="text-slate-600">${d.confidence}</strong></div>
+        </div>
+
+        <!-- Actions -->
+        <div class="flex gap-2 flex-wrap">
+          <button onclick="generateTopicSet('${escQ(d.topic)}')"
+            class="bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold px-3 py-1.5 rounded-md transition flex items-center gap-1.5">
+            ✎ Generate Problem Set
+          </button>
+          <button onclick="openTeach('${escQ(d.topic)}')"
+            class="bg-white border border-slate-300 hover:bg-slate-50 text-slate-700 text-xs font-semibold px-3 py-1.5 rounded-md transition">
+            ◎ Teach me this
+          </button>
+        </div>
+
+        <!-- Rationale -->
+        <div class="bg-slate-50 rounded-lg p-3 text-xs text-slate-600 leading-relaxed">
+          <span class="font-semibold text-slate-700">Why likely: </span>${esc(d.rationale)}
+        </div>
+
+        <!-- Explanation -->
+        <section>
+          <div class="text-[10px] font-bold uppercase tracking-widest text-indigo-500 mb-1.5">Explanation</div>
+          <p class="text-sm text-slate-700 leading-relaxed">${esc(d.explanation)}</p>
+        </section>
+
+        <!-- Core ideas -->
+        <section>
+          <div class="text-[10px] font-bold uppercase tracking-widest text-indigo-500 mb-1.5">Core Ideas</div>
+          <ul class="space-y-1.5">${d.core_ideas.map(c => `
+            <li class="flex gap-2 text-sm text-slate-700 leading-relaxed">
+              <span class="text-indigo-300 shrink-0 mt-0.5">–</span><span>${esc(c)}</span>
+            </li>`).join('')}</ul>
+        </section>
+
+        <!-- Likely question styles -->
+        <section>
+          <div class="text-[10px] font-bold uppercase tracking-widest text-indigo-500 mb-1.5">Likely Exam Questions</div>
+          <ul class="space-y-1.5">${d.question_styles.map(q => `
+            <li class="flex gap-2 text-sm text-slate-700 leading-relaxed">
+              <span class="text-slate-400 shrink-0 mt-0.5">?</span><span>${esc(q)}</span>
+            </li>`).join('')}</ul>
+        </section>
+
+        <!-- Sample problems (3 quick ones) -->
+        <section>
+          <div class="text-[10px] font-bold uppercase tracking-widest text-indigo-500 mb-1.5">Sample Problems</div>
+          <div class="space-y-3">${d.quiz.map((q,i) => `
+            <div class="border border-slate-200 rounded-lg p-3">
+              <div class="text-xs font-semibold text-slate-700 mb-1">${i+1}. ${esc(q.question)}</div>
+              <div class="text-xs text-slate-400">Expected terms: ${esc((q.expected_terms||[]).slice(0,5).join(', '))}</div>
+            </div>`).join('')}</div>
+        </section>
+
+        <!-- Traps -->
+        <section>
+          <div class="text-[10px] font-bold uppercase tracking-widest text-red-400 mb-1.5">Common Traps</div>
+          <ul class="space-y-1.5">${d.traps.map(t => `
+            <li class="flex gap-2 text-sm text-slate-600">
+              <span class="text-red-400 shrink-0">⚠</span><span>${esc(t)}</span>
+            </li>`).join('')}</ul>
+        </section>
+
+        <!-- Sources -->
+        <section>
+          <div class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-1.5">Source Evidence</div>
+          <ul class="space-y-1">${d.sources.map(s => `
+            <li class="text-xs text-slate-500">
+              <span class="font-medium text-slate-600">${esc(s.file)}</span> :: ${esc(s.section)}
+            </li>`).join('')}</ul>
+        </section>
+      </div>`;
+  });
+}
+
+function closeDrawer() {
+  document.getElementById('drawer').classList.add('closed');
+  document.getElementById('drawer-overlay').classList.add('hidden');
+  document.querySelectorAll('.topic-row').forEach(r => r.classList.remove('active'));
+}
+
+// ============================================================
+//  Polyratings Reviews
+// ============================================================
+async function fetchReviews() {
+  if (!activeCourse) return;
+  const btn  = document.getElementById('reviews-btn');
+  const txt  = document.getElementById('reviews-btn-text');
+  const sp   = document.getElementById('reviews-spinner');
+  const bar  = document.getElementById('reviews-status');
+  btn.disabled = true;
+  txt.textContent = 'Fetching…';
+  sp.classList.remove('hidden');
+  bar.classList.add('hidden');
+
+  const res = await api('/api/reviews', { method: 'POST',
+    body: JSON.stringify({ state_dir: activeCourse.state_dir }) });
+
+  btn.disabled = false;
+  txt.textContent = 'Fetch Polyratings';
+  sp.classList.add('hidden');
+  // Also re-enable sidebar button
+  const sbBtn = document.getElementById('sidebar-reviews-btn');
+  const sbSp  = document.getElementById('sidebar-reviews-spinner');
+  const sbLbl = document.getElementById('sidebar-reviews-label');
+  const sbSt  = document.getElementById('sidebar-reviews-status');
+  if (sbBtn) sbBtn.disabled = false;
+  if (sbSp)  sbSp.classList.add('hidden');
+
+  bar.classList.remove('hidden');
+  if (!res.ok) {
+    bar.className = 'mx-7 mb-3 px-4 py-2.5 rounded-lg text-xs font-medium flex items-center gap-2 bg-red-50 border border-red-200 text-red-700';
+    bar.innerHTML = `<span>✕</span><span>${esc(res.error || 'Request failed')}</span>`;
+    if (sbSt) { sbSt.className = 'px-3 pt-1 text-[10px] leading-tight text-red-400'; sbSt.textContent = 'Failed'; sbSt.classList.remove('hidden'); }
+    return;
+  }
+
+  if (res.status === 'found') {
+    const dept = (res.department || '').toUpperCase();
+    const courseName = (activeCourse.name || '').toUpperCase();
+    const deptMismatch = dept && !courseName.includes(dept.slice(0,3)) &&
+      !['ECON','BUS','FIN','ACCT','MGMT'].some(d => dept.includes(d));
+    if (deptMismatch) {
+      bar.className = 'mx-7 mb-3 px-4 py-2.5 rounded-lg text-xs font-medium flex items-center gap-2 bg-amber-50 border border-amber-200 text-amber-800';
+      bar.innerHTML = `<span>⚠</span><span>${esc(res.message)} — department mismatch, verify this is the right professor before relying on review data.</span>`;
+      if (sbLbl) sbLbl.textContent = '★ Reviews (verify dept)';
+      if (sbSt)  { sbSt.className = 'px-3 pt-1 text-[10px] leading-tight text-amber-400'; sbSt.textContent = 'Dept mismatch — verify'; sbSt.classList.remove('hidden'); }
+    } else {
+      bar.className = 'mx-7 mb-3 px-4 py-2.5 rounded-lg text-xs font-medium flex items-center gap-2 bg-emerald-50 border border-emerald-200 text-emerald-800';
+      bar.innerHTML = `<span>✓</span><span>${esc(res.message)}</span>`;
+      if (sbLbl) sbLbl.textContent = '★ Reviews loaded';
+      if (sbSt)  { sbSt.className = 'px-3 pt-1 text-[10px] leading-tight text-emerald-400'; sbSt.textContent = `${res.review_count||''} reviews · ${res.instructor||''}`; sbSt.classList.remove('hidden'); }
+    }
+  } else {
+    bar.className = 'mx-7 mb-3 px-4 py-2.5 rounded-lg text-xs font-medium flex items-center gap-2 bg-slate-100 border border-slate-200 text-slate-600';
+    bar.innerHTML = `<span>ℹ</span><span>${esc(res.message)}</span>`;
+    if (sbLbl) sbLbl.textContent = 'Fetch Polyratings';
+    if (sbSt)  { sbSt.className = 'px-3 pt-1 text-[10px] leading-tight text-slate-400'; sbSt.textContent = 'No match found'; sbSt.classList.remove('hidden'); }
+  }
+}
+
+// ============================================================
+//  Practice — Generate
+// ============================================================
+async function generateExam() {
+  if (!activeCourse) return;
+  const sp1 = document.getElementById('gen-exam-spinner');
+  const sp2 = document.getElementById('gen-exam-spinner2');
+  [sp1,sp2].forEach(s=>s&&s.classList.remove('hidden'));
+  const ps = await api('/api/practice/generate', { method:'POST', body: JSON.stringify({
+    state_dir: activeCourse.state_dir, kind:'exam', problems_per_topic:2
+  })});
+  [sp1,sp2].forEach(s=>s&&s.classList.add('hidden'));
+  if (ps.error) { alert('Error: ' + ps.error); return; }
+  showRawView('practice');
+  loadPracticeSets();
+  activePracticeSet = ps;
+  showAnswerKey = false;
+  renderPracticeViewer(ps);
+  document.getElementById('practice-viewer').classList.remove('hidden');
+  document.getElementById('practice-viewer').scrollIntoView({behavior:'smooth'});
+}
+
+async function generateTopicSet(topicName) {
+  closeDrawer();
+  if (!activeCourse) return;
+  const ps = await api('/api/practice/generate', { method:'POST', body: JSON.stringify({
+    state_dir: activeCourse.state_dir, kind:'topic', topic_query: topicName, problems_per_topic:3
+  })});
+  if (ps.error) { alert('Error: ' + ps.error); return; }
+  showRawView('practice');
+  loadPracticeSets();
+  activePracticeSet = ps;
+  showAnswerKey = false;
+  renderPracticeViewer(ps);
+  document.getElementById('practice-viewer').classList.remove('hidden');
+  document.getElementById('practice-viewer').scrollIntoView({behavior:'smooth'});
+}
+
+async function generateVariation(setId) {
+  if (!activeCourse) return;
+  // Load existing set to get kind and topic_query
+  const sets = await api(`/api/practice/list?state=${enc(activeCourse.state_dir)}`);
+  const existing = sets.find(s=>s.id===setId);
+  if (!existing) return;
+  const isExam = existing.kind === 'practice exam';
+  const ps = await api('/api/practice/generate', { method:'POST', body: JSON.stringify({
+    state_dir: activeCourse.state_dir,
+    kind: isExam ? 'exam' : 'topic',
+    problems_per_topic: 2,
+    variation: Math.floor(Math.random()*100),
+  })});
+  if (ps.error) { alert('Error: ' + ps.error); return; }
+  activePracticeSet = ps;
+  showAnswerKey = false;
+  loadPracticeSets();
+  renderPracticeViewer(ps);
+  document.getElementById('practice-viewer').classList.remove('hidden');
+}
+
+// ============================================================
+//  Practice — List
+// ============================================================
+async function loadPracticeSets() {
+  if (!activeCourse) return;
+  const sets = await api(`/api/practice/list?state=${enc(activeCourse.state_dir)}`);
+  const el = document.getElementById('practice-sets-list');
+  if (!sets.length) {
+    el.innerHTML = `<div class="text-sm text-slate-400">No practice sets yet. Click <strong>Generate Practice Exam</strong> to create one.</div>`;
+    return;
+  }
+  el.innerHTML = `
+    <div class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-2">Saved Sets</div>
+    <div class="bg-white border border-slate-200 rounded-xl divide-y divide-slate-100 overflow-hidden">
+      ${sets.map(s=>`
+        <div class="pset-row px-5 py-3.5 flex items-center gap-4" onclick="openSavedSet('${escQ(s.id)}')">
+          <div class="flex-1 min-w-0">
+            <div class="font-semibold text-sm text-slate-800">${esc(s.title)}</div>
+            <div class="text-xs text-slate-400 mt-0.5">${s.problem_count} problems · ${s.course_type} · ${s.created_at?s.created_at.slice(0,10):''}</div>
+          </div>
+          <span class="text-xs font-medium text-slate-500 shrink-0 bg-slate-100 px-2 py-0.5 rounded">${s.kind==='practice exam'?'Full Exam':'Problem Set'}</span>
+          <span class="text-slate-300 text-sm shrink-0">›</span>
+        </div>`).join('')}
+    </div>`;
+}
+
+async function openSavedSet(setId) {
+  if (!activeCourse) return;
+  // Re-fetch from list metadata, then load full JSON via generate-variation trick:
+  // Actually just load via export HTML approach — but we need the full JSON.
+  // We'll load via a lightweight endpoint — for now, re-generate not needed,
+  // instead load from the generate endpoint response by fetching the metadata:
+  const r = await fetch(`/api/practice/export/html?state=${enc(activeCourse.state_dir)}&id=${encodeURIComponent(setId)}&kind=worksheet`);
+  if (!r.ok) return;
+  // We can't get the JSON back from html endpoint; let's store active set differently.
+  // Instead, open as printable page:
+  window.open(`/api/practice/export/html?state=${enc(activeCourse.state_dir)}&id=${encodeURIComponent(setId)}&kind=worksheet`, '_blank');
+}
+
+// ============================================================
+//  Practice — Viewer
+// ============================================================
+function renderPracticeViewer(ps) {
+  const el = document.getElementById('practice-viewer');
+  const grouped = groupByTopic(ps.problems);
+  const keyMode = showAnswerKey;
+  const setId = ps.id || '';
+
+  el.innerHTML = `
+    <div class="mb-4 border-b border-slate-200 pb-4 flex items-center justify-between flex-wrap gap-3">
+      <div class="flex gap-2">
+        <button onclick="setKeyMode(false)" class="${!keyMode?'bg-indigo-600 text-white':'bg-white border border-slate-300 text-slate-600 hover:bg-slate-50'} text-xs font-semibold px-3 py-1.5 rounded-md transition">
+          Worksheet
+        </button>
+        <button onclick="setKeyMode(true)" class="${keyMode?'bg-indigo-600 text-white':'bg-white border border-slate-300 text-slate-600 hover:bg-slate-50'} text-xs font-semibold px-3 py-1.5 rounded-md transition">
+          Answer Key
+        </button>
+      </div>
+      <div class="flex gap-2 flex-wrap">
+        ${setId ? `
+        <a href="/api/practice/export/html?state=${enc(activeCourse.state_dir)}&id=${encodeURIComponent(setId)}&kind=worksheet"
+           target="_blank"
+           class="bg-white border border-slate-300 hover:bg-slate-50 text-slate-700 text-xs font-semibold px-3 py-1.5 rounded-md transition flex items-center gap-1">
+          ↗ Printable Worksheet
+        </a>
+        <a href="/api/practice/export/pdf?state=${enc(activeCourse.state_dir)}&id=${encodeURIComponent(setId)}&kind=worksheet"
+           class="bg-white border border-slate-300 hover:bg-slate-50 text-slate-700 text-xs font-semibold px-3 py-1.5 rounded-md transition flex items-center gap-1">
+          ↓ Worksheet PDF
+        </a>
+        <a href="/api/practice/export/pdf?state=${enc(activeCourse.state_dir)}&id=${encodeURIComponent(setId)}&kind=answer_key"
+           class="bg-white border border-slate-300 hover:bg-slate-50 text-slate-700 text-xs font-semibold px-3 py-1.5 rounded-md transition flex items-center gap-1">
+          ↓ Answer Key PDF
+        </a>` : ''}
+        <button onclick="generateVariation('${escQ(setId)}')"
+          class="bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold px-3 py-1.5 rounded-md transition">
+          ↺ New Variation
+        </button>
+      </div>
+    </div>
+
+    <div class="exam-paper">
+      <!-- Exam header -->
+      <div class="exam-header">
+        <div style="font-size:22px;font-weight:700;color:#0f172a;margin-bottom:6px">${esc(ps.title)}${keyMode?' — Answer Key':''}</div>
+        <div style="font-size:12px;color:#64748b;display:flex;gap:20px;flex-wrap:wrap">
+          <span>Course type: <strong>${esc(ps.course_type)}</strong></span>
+          <span>${ps.problems.length} questions</span>
+          <span>Generated: ${ps.created_at?ps.created_at.slice(0,10):''}</span>
+        </div>
+        ${!keyMode ? `<div style="margin-top:14px;display:flex;gap:24px;font-size:12px;color:#64748b">
+          <span>Name: ___________________________</span>
+          <span>Date: _______________</span>
+          <span>Score: ________</span>
+        </div>` : ''}
+      </div>
+
+      <!-- Sections -->
+      ${Object.entries(grouped).map(([topic, probs], sIdx) => {
+        const first = probs[0];
+        const pClass = first.source_priority==='very likely exam material'?'badge-high':first.source_priority==='possibly testable material'?'badge-mid':'badge-low';
+        const pLabel = first.source_priority==='very likely exam material'?'Very Likely':first.source_priority==='possibly testable material'?'Possible':'Low';
+        return `
+          <div class="exam-section-head">
+            <span>Section ${sIdx+1}: ${esc(topic)}</span>
+            <span class="text-[11px] font-semibold px-2 py-0.5 rounded-full ${pClass}">${pLabel}</span>
+            <span class="text-xs text-slate-400 ml-auto">${first.source_score}/100 · ${first.source_confidence} confidence</span>
+          </div>
+          ${probs.map(p => keyMode ? renderAnswerProblem(p) : renderWorksheetProblem(p)).join('')}`;
+      }).join('')}
+    </div>`;
+}
+
+function renderWorksheetProblem(p) {
+  return `
+    <div class="exam-problem">
+      ${p.low_confidence ? `<div class="low-conf-banner">⚠ Low confidence — generated from general patterns</div>` : ''}
+      <div style="font-weight:600;font-size:14px;color:#1e293b;margin-bottom:8px">${p.number}. ${esc(p.prompt)}</div>
+      <div class="answer-lines">
+        <div class="answer-line"></div>
+        <div class="answer-line"></div>
+        <div class="answer-line"></div>
+        <div class="answer-line"></div>
+      </div>
+    </div>`;
+}
+
+function renderAnswerProblem(p) {
+  const steps = (p.steps||[]).map((s,i)=>`
+    <div class="answer-step">
+      <span class="answer-step-num">Step ${i+1}.</span>
+      <span>${esc(s)}</span>
+    </div>`).join('');
+  return `
+    <div class="exam-problem">
+      ${p.low_confidence ? `<div class="low-conf-banner">⚠ Low confidence — generated from general patterns</div>` : ''}
+      <div style="font-size:12px;color:#64748b;margin-bottom:6px">${p.number}. ${esc(p.prompt)}</div>
+      <div class="answer-final">Final Answer: ${esc(p.answer||'')}</div>
+      ${steps}
+      ${p.concept ? `<div><span class="concept-tag">Concept: ${esc(p.concept)}</span></div>` : ''}
+    </div>`;
+}
+
+function setKeyMode(isKey) {
+  if (!activePracticeSet) return;
+  showAnswerKey = isKey;
+  renderPracticeViewer(activePracticeSet);
+}
+
+function groupByTopic(problems) {
+  const map = {};
+  for (const p of problems) {
+    if (!map[p.topic]) map[p.topic] = [];
+    map[p.topic].push(p);
+  }
+  return map;
+}
+
+// ============================================================
+//  Teach — Interactive Tutor
+// ============================================================
+let tutor = null;   // current session data
+let tutorStep = 0;  // 1-5
+let guidedScore = 0;
+
+function openTeach(topicName) {
+  closeDrawer();
+  document.getElementById('teach-search').value = topicName;
+  showView('teach');
+  startTutor();
+}
+
+async function startTutor() {
+  if (!activeCourse) return;
+  const query = document.getElementById('teach-search').value.trim();
+  const card  = document.getElementById('tutor-card');
+  const steps = document.getElementById('tutor-steps');
+  card.innerHTML = '<div class="text-slate-400 text-sm py-4">Loading…</div>';
+  steps.classList.add('hidden');
+
+  const d = await api(`/api/tutor/session?state=${enc(activeCourse.state_dir)}${query?'&topic='+encodeURIComponent(query):''}`);
+  if (d.error) { card.innerHTML = `<div class="text-red-500 text-sm">${esc(d.error)}</div>`; return; }
+
+  tutor = d;
+  tutorStep = 0;
+  guidedScore = 0;
+  steps.classList.remove('hidden');
+  goStep(1);
+}
+
+function goStep(n) {
+  tutorStep = n;
+  // Update step indicator
+  for (let i=1; i<=5; i++) {
+    const node = document.getElementById(`snode-${i}`);
+    const line = document.getElementById(`sline-${i}`);
+    node.className = 'step-node ' + (i < n ? 'done' : i === n ? 'active' : '');
+    if (line) line.className = 'step-line ' + (i < n ? 'done' : '');
+  }
+  const card = document.getElementById('tutor-card');
+  card.innerHTML = '';
+  card.className = '';
+
+  if (n === 1) renderStep1();
+  else if (n === 2) renderStep2();
+  else if (n === 3) renderStep3();
+  else if (n === 4) renderStep4();
+  else if (n === 5) renderStep5();
+}
+
+// ── Step 1: Explanation ──────────────────────────────────────
+function renderStep1() {
+  const d = tutor;
+  const badge = d.priority==='very likely exam material'?'badge-high':d.priority==='possibly testable material'?'badge-mid':'badge-low';
+  const badgeTxt = d.priority==='very likely exam material'?'Very Likely':d.priority==='possibly testable material'?'Possible':'Low';
+
+  document.getElementById('tutor-card').innerHTML = `
+    <div class="tutor-card">
+      <div class="tutor-card-head flex items-center justify-between">
+        <div>
+          <div class="text-[10px] font-bold uppercase tracking-widest text-indigo-500 mb-1">Step 1 of 5 — Understand It</div>
+          <div class="text-xl font-bold text-slate-900">${esc(d.topic)}</div>
+        </div>
+        <div class="flex flex-col items-end gap-1 shrink-0">
+          <span class="text-[11px] font-semibold px-2 py-0.5 rounded-full ${badge}">${badgeTxt}</span>
+          <span class="text-xs text-slate-400">${d.score}/100</span>
+        </div>
+      </div>
+      <div class="tutor-card-body space-y-4">
+        <p class="text-sm text-slate-700 leading-relaxed">${esc(d.explanation.plain)}</p>
+        ${d.explanation.formulas.length ? `
+          <div class="bg-indigo-50 border border-indigo-100 rounded-lg px-4 py-3">
+            <div class="tutor-label text-indigo-500">Key Relationship</div>
+            ${d.explanation.formulas.map(f=>`<p class="text-sm font-mono text-indigo-800">${esc(f)}</p>`).join('')}
+          </div>` : ''}
+        <div class="bg-amber-50 border border-amber-100 rounded-lg px-4 py-3">
+          <div class="tutor-label text-amber-600">What the Exam Will Ask</div>
+          <p class="text-sm text-amber-900">${esc(d.explanation.exam_hint)}</p>
+        </div>
+        ${d.explanation.source ? `<p class="text-xs text-slate-400">Source: ${esc(d.explanation.source)}</p>` : ''}
+        <div class="pt-2 flex gap-2">
+          <button onclick="goStep(2)"
+            class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-5 py-2.5 rounded-lg text-sm transition">
+            Got it — show me a worked example →
+          </button>
+          <button onclick="generateTopicSet('${escQ(d.topic)}')"
+            class="bg-white border border-slate-300 hover:bg-slate-50 text-slate-600 text-sm font-medium px-4 py-2.5 rounded-lg transition">
+            ✎ Practice Set
+          </button>
+        </div>
+      </div>
+    </div>`;
+}
+
+// ── Step 2: Worked Example ───────────────────────────────────
+function renderStep2() {
+  const w = tutor.worked;
+  document.getElementById('tutor-card').innerHTML = `
+    <div class="tutor-card">
+      <div class="tutor-card-head">
+        <div class="text-[10px] font-bold uppercase tracking-widest text-indigo-500 mb-1">Step 2 of 5 — Worked Example</div>
+        <div class="text-base font-semibold text-slate-800">${esc(tutor.topic)}</div>
+      </div>
+      <div class="tutor-card-body space-y-4">
+        <div class="bg-slate-50 border border-slate-200 rounded-lg px-4 py-3">
+          <div class="tutor-label text-slate-500">Problem</div>
+          <p class="text-sm text-slate-800 leading-relaxed">${esc(w.prompt)}</p>
+        </div>
+        <div>
+          <div class="tutor-label text-indigo-500">Solution — Step by Step</div>
+          <div class="space-y-2 mt-1">
+            ${(w.steps||[]).map((s,i)=>`
+              <div class="flex gap-3 text-sm">
+                <span class="shrink-0 w-16 font-semibold text-indigo-600">Step ${i+1}.</span>
+                <span class="text-slate-700">${esc(s)}</span>
+              </div>`).join('')}
+          </div>
+        </div>
+        <div class="bg-emerald-50 border border-emerald-200 rounded-lg px-4 py-3 flex items-start gap-3">
+          <span class="text-emerald-600 font-bold shrink-0 mt-0.5">✓</span>
+          <div>
+            <div class="tutor-label text-emerald-700">Final Answer</div>
+            <p class="text-sm font-semibold text-emerald-900">${esc(w.answer)}</p>
+          </div>
+        </div>
+        ${w.concept ? `<p class="text-xs text-slate-400">Concept used: <span class="font-medium text-slate-600">${esc(w.concept)}</span></p>` : ''}
+        <div class="pt-2">
+          <button onclick="goStep(3)"
+            class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-5 py-2.5 rounded-lg text-sm transition">
+            I see it — let me try one →
+          </button>
+        </div>
+      </div>
+    </div>`;
+}
+
+// ── Step 3: Guided Practice ──────────────────────────────────
+function renderStep3() {
+  const g = tutor.guided;
+  document.getElementById('tutor-card').innerHTML = `
+    <div class="tutor-card">
+      <div class="tutor-card-head">
+        <div class="text-[10px] font-bold uppercase tracking-widest text-indigo-500 mb-1">Step 3 of 5 — Your Turn</div>
+        <div class="text-base font-semibold text-slate-800">${esc(tutor.topic)}</div>
+      </div>
+      <div class="tutor-card-body space-y-4">
+        <div class="bg-slate-50 border border-slate-200 rounded-lg px-4 py-3">
+          <p class="text-sm text-slate-800 leading-relaxed font-medium">${esc(g.prompt)}</p>
+        </div>
+        <textarea id="guided-answer" rows="5" class="tutor-answer" placeholder="Work through it here — show your reasoning, not just the final answer."></textarea>
+        <div class="flex gap-2">
+          <button onclick="submitGuided()"
+            class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-5 py-2.5 rounded-lg text-sm transition">
+            Submit Answer
+          </button>
+          <button onclick="goStep(2)"
+            class="bg-white border border-slate-300 hover:bg-slate-50 text-slate-600 text-sm px-4 py-2 rounded-lg transition">
+            ← Back to example
+          </button>
+        </div>
+      </div>
+    </div>`;
+  document.getElementById('guided-answer').focus();
+}
+
+// ── Step 4: Feedback ─────────────────────────────────────────
+async function submitGuided() {
+  const answer = document.getElementById('guided-answer')?.value || '';
+  const g = tutor.guided;
+  const r = await api('/api/tutor/answer', { method:'POST',
+    body: JSON.stringify({ answer, expected_terms: g.expected_terms }) });
+  guidedScore = r.pct;
+
+  const fbClass = r.level==='good' ? 'fb-good' : r.level==='partial' ? 'fb-partial' : 'fb-miss';
+  const showFollowup = r.pct < 40;
+
+  document.getElementById('tutor-card').innerHTML = `
+    <div class="tutor-card">
+      <div class="tutor-card-head">
+        <div class="text-[10px] font-bold uppercase tracking-widest text-indigo-500 mb-1">Step 4 of 5 — Feedback</div>
+        <div class="text-base font-semibold text-slate-800">${esc(tutor.topic)}</div>
+      </div>
+      <div class="tutor-card-body space-y-4">
+        <div class="rounded-lg px-4 py-3 ${fbClass} flex items-start gap-3">
+          <span class="font-bold text-lg shrink-0">${r.pct >= 70 ? '✓' : r.pct >= 40 ? '~' : '✕'}</span>
+          <div>
+            <div class="font-semibold text-sm mb-0.5">${r.pct}% — ${esc(r.message)}</div>
+          </div>
+        </div>
+
+        <div>
+          <div class="tutor-label text-slate-500">Your Answer</div>
+          <p class="text-sm text-slate-600 bg-slate-50 rounded-lg px-3 py-2">${esc(answer||'(no answer)')}</p>
+        </div>
+
+        ${r.pct < 70 ? `
+        <div>
+          <div class="tutor-label text-indigo-500">Correct Approach</div>
+          <div class="space-y-2">
+            ${(g.steps||[]).map((s,i)=>`
+              <div class="flex gap-3 text-sm">
+                <span class="shrink-0 w-16 font-semibold text-indigo-600">Step ${i+1}.</span>
+                <span class="text-slate-700">${esc(s)}</span>
+              </div>`).join('')}
+          </div>
+          <div class="mt-3 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2 text-sm font-semibold text-emerald-800">
+            Answer: ${esc(g.answer)}
+          </div>
+        </div>` : ''}
+
+        ${showFollowup ? `
+        <div class="bg-orange-50 border border-orange-200 rounded-lg px-4 py-3">
+          <div class="tutor-label text-orange-600">Follow-Up — Similar Problem</div>
+          <p class="text-sm text-orange-900 font-medium mb-3">${esc(tutor.followup.prompt)}</p>
+          <textarea id="followup-answer" rows="4" class="tutor-answer" placeholder="Try this one…"></textarea>
+          <button onclick="submitFollowup()" class="mt-2 bg-orange-500 hover:bg-orange-600 text-white font-semibold px-4 py-2 rounded-lg text-sm transition">
+            Check
+          </button>
+          <div id="followup-fb" class="mt-2 text-sm hidden"></div>
+        </div>` : ''}
+
+        <div class="pt-1">
+          <button onclick="goStep(5)"
+            class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-5 py-2.5 rounded-lg text-sm transition">
+            Exam-style problem →
+          </button>
+        </div>
+      </div>
+    </div>`;
+}
+
+async function submitFollowup() {
+  const answer = document.getElementById('followup-answer')?.value || '';
+  const r = await api('/api/tutor/answer', { method:'POST',
+    body: JSON.stringify({ answer, expected_terms: tutor.followup.expected_terms }) });
+  const fbEl = document.getElementById('followup-fb');
+  fbEl.className = `mt-2 text-sm rounded-lg px-3 py-2 ${r.level==='good'?'fb-good':r.level==='partial'?'fb-partial':'fb-miss'}`;
+  fbEl.textContent = `${r.pct}% — ${r.message}`;
+  fbEl.classList.remove('hidden');
+}
+
+// ── Step 5: Exam Problem ─────────────────────────────────────
+function renderStep5() {
+  const e = tutor.exam_problem;
+  document.getElementById('tutor-card').innerHTML = `
+    <div class="tutor-card">
+      <div class="tutor-card-head">
+        <div class="text-[10px] font-bold uppercase tracking-widest text-indigo-500 mb-1">Step 5 of 5 — Exam Problem</div>
+        <div class="text-base font-semibold text-slate-800">${esc(tutor.topic)}</div>
+      </div>
+      <div class="tutor-card-body space-y-4">
+        <div class="bg-slate-800 text-slate-100 rounded-lg px-4 py-3">
+          <div class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-2">Exam-Style Question</div>
+          <p class="text-sm leading-relaxed">${esc(e.prompt)}</p>
+        </div>
+        <textarea id="exam-answer" rows="6" class="tutor-answer" placeholder="Show all work. State your method, calculate, then interpret."></textarea>
+        <div id="exam-feedback" class="hidden"></div>
+        <div class="flex gap-2" id="exam-btns">
+          <button onclick="submitExam()"
+            class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-5 py-2.5 rounded-lg text-sm transition">
+            Submit
+          </button>
+          <button onclick="goStep(3)"
+            class="bg-white border border-slate-300 hover:bg-slate-50 text-slate-600 text-sm px-4 py-2 rounded-lg transition">
+            ← Retry practice
+          </button>
+        </div>
+        <div id="exam-done" class="hidden pt-2 space-y-3">
+          <p class="text-xs text-slate-400">Sources: ${tutor.sources.map(s=>`<span class="font-medium text-slate-600">${esc(s.file)}</span>`).join(', ')}</p>
+          <div class="flex gap-2 flex-wrap">
+            <button onclick="startTutor()"
+              class="bg-white border border-slate-300 hover:bg-slate-50 text-slate-700 text-sm font-medium px-4 py-2 rounded-lg transition">
+              ↺ Same topic again
+            </button>
+            <button onclick="document.getElementById('teach-search').value=''; startTutor()"
+              class="bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold px-4 py-2 rounded-lg transition">
+              Next topic →
+            </button>
+            <button onclick="generateTopicSet('${escQ(tutor.topic)}')"
+              class="bg-white border border-slate-300 hover:bg-slate-50 text-slate-700 text-sm font-medium px-4 py-2 rounded-lg transition">
+              ✎ Full problem set
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>`;
+  document.getElementById('exam-answer').focus();
+}
+
+async function submitExam() {
+  const answer = document.getElementById('exam-answer')?.value || '';
+  const e = tutor.exam_problem;
+  const r = await api('/api/tutor/answer', { method:'POST',
+    body: JSON.stringify({ answer, expected_terms: e.expected_terms }) });
+
+  const fbEl = document.getElementById('exam-feedback');
+  const fbClass = r.level==='good' ? 'fb-good' : r.level==='partial' ? 'fb-partial' : 'fb-miss';
+  fbEl.className = `rounded-lg px-4 py-3 space-y-3 ${fbClass}`;
+  fbEl.innerHTML = `
+    <div class="font-semibold text-sm">${r.pct}% — ${esc(r.message)}</div>
+    ${r.pct < 70 ? `
+    <div class="space-y-1.5">
+      ${(e.steps||[]).map((s,i)=>`<div class="flex gap-2 text-sm"><span class="font-semibold w-14 shrink-0">Step ${i+1}.</span><span>${esc(s)}</span></div>`).join('')}
+      <div class="font-semibold text-sm pt-1">Answer: ${esc(e.answer)}</div>
+    </div>` : ''}`;
+  fbEl.classList.remove('hidden');
+  document.getElementById('exam-btns').classList.add('hidden');
+  document.getElementById('exam-done').classList.remove('hidden');
+}
+
+// ============================================================
+//  Quiz
+// ============================================================
+async function loadQuiz() {
+  if (!activeCourse) return;
+  quizState = { questions:[], answers:[], submitted:false };
+  document.getElementById('quiz-results').classList.add('hidden');
+  const el = document.getElementById('quiz-content');
+  el.innerHTML = '<div class="text-slate-400 text-sm">Loading…</div>';
+  const data = await api(`/api/quiz?state=${enc(activeCourse.state_dir)}&count=6`);
+  quizState.questions = data.questions;
+  quizState.answers   = new Array(data.questions.length).fill('');
+  renderQuiz();
+}
+
+function renderQuiz() {
+  document.getElementById('quiz-content').innerHTML = `
+    <div class="space-y-5">
+      ${quizState.questions.map((q,i)=>`
+        <div class="bg-white border border-slate-200 rounded-xl p-5">
+          <div class="text-[10px] font-bold uppercase tracking-widest text-indigo-500 mb-1.5">Q${i+1} · ${esc(q.topic)}</div>
+          <p class="text-sm font-medium text-slate-800 mb-3">${esc(q.question)}</p>
+          <textarea rows="3" id="quiz-ans-${i}"
+            class="w-full border border-slate-200 rounded-lg p-3 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-400 resize-none bg-slate-50"
+            placeholder="Your answer…"
+            oninput="quizState.answers[${i}]=this.value">${esc(quizState.answers[i])}</textarea>
+          <div id="quiz-fb-${i}" class="mt-1 text-xs"></div>
+        </div>`).join('')}
+      <button onclick="submitQuiz()" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-2.5 rounded-lg text-sm transition">
+        Submit Quiz
+      </button>
+    </div>`;
+}
+
+async function submitQuiz() {
+  if (quizState.submitted) return;
+  quizState.submitted = true;
+  let total = 0;
+  for (let i=0; i<quizState.questions.length; i++) {
+    const r = await api('/api/quiz/score', { method:'POST', body: JSON.stringify({
+      answer: quizState.answers[i], expected_terms: quizState.questions[i].expected_terms }) });
+    total += r.pct;
+    const fb = document.getElementById(`quiz-fb-${i}`);
+    fb.textContent = `${r.pct}% — ${r.feedback}`;
+    fb.className = `mt-1 text-xs font-medium ${r.pct>=70?'text-emerald-600':r.pct>=40?'text-amber-600':'text-red-500'}`;
+  }
+  const avg = Math.round(total / quizState.questions.length);
+  document.getElementById('quiz-score-text').textContent =
+    `Average score: ${avg}%. ${avg>=70?'Strong — move to the next topic set.':avg>=40?'Partial — review weak topics, then retry.':'Needs work — use Teach mode on your weak topics.'}`;
+  document.getElementById('quiz-results').classList.remove('hidden');
+}
+
+// ============================================================
+//  Plan
+// ============================================================
+async function loadPlan() {
+  if (!activeCourse) return;
+  const hours = parseFloat(document.getElementById('plan-hours').value)||2;
+  const el = document.getElementById('plan-content');
+  el.innerHTML = '<div class="text-slate-400 text-sm">Building plan…</div>';
+  const d = await api(`/api/plan?state=${enc(activeCourse.state_dir)}&hours=${hours}`);
+  el.innerHTML = `<div class="bg-white border border-slate-200 rounded-xl p-6"><pre class="text-sm text-slate-700 leading-relaxed">${esc(d.plan)}</pre></div>`;
+}
+
+// ============================================================
+//  Review
+// ============================================================
+async function loadReview() {
+  if (!activeCourse) return;
+  const el = document.getElementById('review-content');
+  el.innerHTML = '<div class="text-slate-400 text-sm">Loading…</div>';
+  const d = await api(`/api/review?state=${enc(activeCourse.state_dir)}`);
+  el.innerHTML = `
+    <div class="bg-white border border-slate-200 rounded-xl p-6 mb-4">
+      <pre class="text-sm text-slate-700 leading-relaxed">${esc(d.review)}</pre>
+    </div>
+    ${d.strategy?`
+    <div class="bg-indigo-50 border border-indigo-100 rounded-xl p-6">
+      <div class="text-[10px] font-bold uppercase tracking-widest text-indigo-500 mb-3">Professor & Course Strategy</div>
+      <pre class="text-sm text-indigo-800 leading-relaxed">${esc(d.strategy)}</pre>
+    </div>`:''}`;
+}
+
+// ============================================================
+//  Utilities
+// ============================================================
+function esc(str) {
+  if (!str) return '';
+  return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+function escQ(str) { return String(str||'').replace(/\\/g,'\\\\').replace(/'/g,"\\'"); }
+function enc(str)  { return encodeURIComponent(str||''); }
+
+async function api(url, opts={}) {
+  opts.headers = {'Content-Type':'application/json',...(opts.headers||{})};
+  try { const r = await fetch(url,opts); return await r.json(); }
+  catch(e) { return {error:e.message}; }
+}
+
+// Boot
+init();
+</script>
+</body>
+</html>

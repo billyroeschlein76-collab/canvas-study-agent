@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+*.egg-info/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Generated state / course data (large, personal)
+state/
+practice_sets/
+
+# Canvas course files (personal data — add your own)
+canvas_files/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Secrets
+.env
+*.env
+
+# Claude preview config (local only)
+.claude/
