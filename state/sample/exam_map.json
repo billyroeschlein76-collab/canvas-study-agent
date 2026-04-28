@@ -1,0 +1,1381 @@
+{
+  "version": "0.1.0",
+  "created_at": "2026-04-28T19:52:39+00:00",
+  "course_type": "quantitative",
+  "topic_count": 9,
+  "topics": [
+    {
+      "topic": "Price Elasticity of Demand",
+      "topic_key": "price elasticity of demand",
+      "score": 100.0,
+      "priority": "very likely exam material",
+      "confidence": "high",
+      "rationale": "appears in review or study-guide material; shows up in homework/quiz-style assessment material; repeats across 4 files; linked to learning-objective language; near instructor-emphasis phrasing; supported by examples or practice problems; student-reported Polyratings patterns modestly increase its priority. Confidence is high; normalized score 100.0/100.",
+      "occurrences": 25,
+      "file_count": 4,
+      "roles": [
+        "assignment",
+        "exam_review",
+        "lecture_slides",
+        "syllabus"
+      ],
+      "signals": {
+        "learning_objective": 5,
+        "heading": 5,
+        "assessment": 5,
+        "example_problem": 4,
+        "formula": 4,
+        "emphasis": 3,
+        "summary": 1
+      },
+      "sources": [
+        {
+          "file": "Final_Review.md",
+          "section": "Unit 3 Review: Price Elasticity Of Demand",
+          "role": "exam_review",
+          "signals": [
+            "learning objective",
+            "emphasis",
+            "summary",
+            "example problem",
+            "heading",
+            "formula"
+          ],
+          "snippet": "## Unit 3 Review: Price Elasticity Of Demand Important: know how to calculate price elasticity of demand using the midpoint method. You should understand how elasticity connects to total revenue. Learning objective: students will be able to classify demand as "
+        },
+        {
+          "file": "Homework_04.md",
+          "section": "Homework 04: Elasticity Problems",
+          "role": "assignment",
+          "signals": [
+            "example problem",
+            "assessment",
+            "heading",
+            "formula"
+          ],
+          "snippet": "# Homework 04: Elasticity Problems Practice problem: calculate price elasticity of demand with the midpoint method."
+        },
+        {
+          "file": "Lecture_07_Slides.md",
+          "section": "Elasticity And Revenue",
+          "role": "lecture_slides",
+          "signals": [
+            "heading"
+          ],
+          "snippet": "# Elasticity And Revenue Price elasticity of demand measures responsiveness of quantity demanded to a change in price."
+        },
+        {
+          "file": "Syllabus.md",
+          "section": "Learning Objectives",
+          "role": "syllabus",
+          "signals": [
+            "learning objective",
+            "heading",
+            "formula"
+          ],
+          "snippet": "## Learning Objectives By the end of the course, students will be able to calculate price elasticity of demand, interpret total revenue changes, and explain consumer surplus."
+        },
+        {
+          "file": "Syllabus.md",
+          "section": "Exam Guidance",
+          "role": "syllabus",
+          "signals": [
+            "emphasis",
+            "example problem",
+            "assessment",
+            "heading"
+          ],
+          "snippet": "## Exam Guidance The final exam is cumulative, but it focuses heavily on elasticity, welfare analysis, and homework-style calculation problems. Important topics include price elasticity of demand, consumer surplus, producer surplus, and deadweight loss."
+        }
+      ],
+      "review_adjustments": [
+        "boosted because student reviews emphasize exam review",
+        "boosted because student reviews emphasize assignment",
+        "boosted because student reviews emphasize lecture slides"
+      ]
+    },
+    {
+      "topic": "Total Revenue",
+      "topic_key": "total revenue",
+      "score": 85.3,
+      "priority": "very likely exam material",
+      "confidence": "high",
+      "rationale": "appears in review or study-guide material; shows up in homework/quiz-style assessment material; repeats across 4 files; linked to learning-objective language; near instructor-emphasis phrasing; supported by examples or practice problems; student-reported Polyratings patterns modestly increase its priority. Confidence is high; normalized score 85.3/100.",
+      "occurrences": 15,
+      "file_count": 4,
+      "roles": [
+        "assignment",
+        "exam_review",
+        "lecture_slides",
+        "syllabus"
+      ],
+      "signals": {
+        "learning_objective": 7,
+        "formula": 7,
+        "heading": 5,
+        "emphasis": 4,
+        "summary": 2,
+        "example_problem": 2
+      },
+      "sources": [
+        {
+          "file": "Final_Review.md",
+          "section": "Unit 3 Review: Price Elasticity Of Demand",
+          "role": "exam_review",
+          "signals": [
+            "learning objective",
+            "emphasis",
+            "summary",
+            "example problem",
+            "heading",
+            "formula"
+          ],
+          "snippet": "know how to calculate price elasticity of demand using the midpoint method.\nYou should understand how elasticity connects to total revenue.\n\nLearning objective: students will be able to classify demand as elastic, inelastic, or unit elastic.\n\nExample"
+        },
+        {
+          "file": "Homework_04.md",
+          "section": "Question 2",
+          "role": "assignment",
+          "signals": [
+            "heading"
+          ],
+          "snippet": "2:\nExplain whether total revenue rises or falls when demand is elastic and price"
+        },
+        {
+          "file": "Lecture_07_Slides.md",
+          "section": "Formula",
+          "role": "lecture_slides",
+          "signals": [
+            "heading",
+            "formula"
+          ],
+          "snippet": "Elasticity = percent change in quantity demanded / percent change in price.\n\nIf demand is elastic, a price decrease increases total revenue.\nIf demand is inelastic, a price increase increases total"
+        },
+        {
+          "file": "Syllabus.md",
+          "section": "Learning Objectives",
+          "role": "syllabus",
+          "signals": [
+            "learning objective",
+            "heading",
+            "formula"
+          ],
+          "snippet": "Learning Objectives\n\nBy the end of the course, students will be able to calculate price elasticity of demand, interpret total revenue changes, and explain consumer"
+        }
+      ],
+      "review_adjustments": [
+        "boosted because student reviews emphasize exam review",
+        "boosted because student reviews emphasize assignment",
+        "boosted because student reviews emphasize lecture slides"
+      ]
+    },
+    {
+      "topic": "Consumer Surplus",
+      "topic_key": "consumer surplus",
+      "score": 56.6,
+      "priority": "possibly testable material",
+      "confidence": "high",
+      "rationale": "appears in review or study-guide material; repeats across 3 files; linked to learning-objective language; near instructor-emphasis phrasing; supported by examples or practice problems; student-reported Polyratings patterns modestly increase its priority. Confidence is high; normalized score 56.6/100.",
+      "occurrences": 21,
+      "file_count": 3,
+      "roles": [
+        "exam_review",
+        "lecture_notes",
+        "syllabus"
+      ],
+      "signals": {
+        "learning_objective": 4,
+        "heading": 4,
+        "assessment": 4,
+        "summary": 1,
+        "formula": 1,
+        "emphasis": 1,
+        "example_problem": 1
+      },
+      "sources": [
+        {
+          "file": "Final_Review.md",
+          "section": "Unit 4 Review: Consumer Surplus",
+          "role": "exam_review",
+          "signals": [
+            "learning objective",
+            "summary",
+            "heading"
+          ],
+          "snippet": "Unit 4 Review: Consumer Surplus\n\nKnow how to identify consumer surplus on a demand graph.\nBe able to explain how taxes can create deadweight"
+        },
+        {
+          "file": "Reading_Notes.md",
+          "section": "Welfare Analysis",
+          "role": "lecture_notes",
+          "signals": [
+            "heading"
+          ],
+          "snippet": "Welfare Analysis\n\nConsumer surplus is the difference between willingness to pay and the price actually paid.\nProducer surplus is the difference"
+        },
+        {
+          "file": "Syllabus.md",
+          "section": "Learning Objectives",
+          "role": "syllabus",
+          "signals": [
+            "learning objective",
+            "heading",
+            "formula"
+          ],
+          "snippet": "end of the course, students will be able to calculate price elasticity of demand, interpret total revenue changes, and explain consumer"
+        },
+        {
+          "file": "Syllabus.md",
+          "section": "Exam Guidance",
+          "role": "syllabus",
+          "signals": [
+            "emphasis",
+            "example problem",
+            "assessment",
+            "heading"
+          ],
+          "snippet": "on elasticity, welfare analysis, and homework-style calculation problems. Important topics include price elasticity of demand, consumer surplus, producer surplus, and deadweight"
+        }
+      ],
+      "review_adjustments": [
+        "boosted because student reviews emphasize exam review",
+        "boosted because student reviews emphasize lecture notes"
+      ]
+    },
+    {
+      "topic": "Common Mistakes",
+      "topic_key": "common mistakes",
+      "score": 5.1,
+      "priority": "low-priority material",
+      "confidence": "low",
+      "rationale": "near instructor-emphasis phrasing; student-reported Polyratings patterns modestly increase its priority. Confidence is low; normalized score 5.1/100.",
+      "occurrences": 11,
+      "file_count": 1,
+      "roles": [
+        "lecture_slides"
+      ],
+      "signals": {
+        "emphasis": 1,
+        "heading": 1
+      },
+      "sources": [
+        {
+          "file": "Lecture_07_Slides.md",
+          "section": "Common Mistakes",
+          "role": "lecture_slides",
+          "signals": [
+            "emphasis",
+            "heading"
+          ],
+          "snippet": "Common Mistakes\n\nDo not confuse a shift in demand with movement along the demand curve.\nRemember that elasticity is usually"
+        }
+      ],
+      "review_adjustments": [
+        "boosted because student reviews emphasize lecture slides"
+      ]
+    },
+    {
+      "topic": "Rises Quantity Fall",
+      "topic_key": "rises quantity fall",
+      "score": 4.7,
+      "priority": "low-priority material",
+      "confidence": "high",
+      "rationale": "appears in review or study-guide material; linked to learning-objective language; near instructor-emphasis phrasing; supported by examples or practice problems; student-reported Polyratings patterns modestly increase its priority. Confidence is high; normalized score 4.7/100.",
+      "occurrences": 1,
+      "file_count": 1,
+      "roles": [
+        "exam_review"
+      ],
+      "signals": {
+        "learning_objective": 2,
+        "emphasis": 2,
+        "formula": 2,
+        "summary": 1,
+        "example_problem": 1,
+        "heading": 1
+      },
+      "sources": [
+        {
+          "file": "Final_Review.md",
+          "section": "Unit 3 Review: Price Elasticity Of Demand",
+          "role": "exam_review",
+          "signals": [
+            "learning objective",
+            "emphasis",
+            "summary",
+            "example problem",
+            "heading",
+            "formula"
+          ],
+          "snippet": "## Unit 3 Review: Price Elasticity Of Demand Important: know how to calculate price elasticity of demand using the midpoint method. You should understand how elasticity connects to total revenue. Learning objective: students will be able to classify demand as "
+        }
+      ],
+      "review_adjustments": [
+        "boosted because student reviews emphasize exam review"
+      ]
+    },
+    {
+      "topic": "Formula",
+      "topic_key": "formula",
+      "score": 1.7,
+      "priority": "low-priority material",
+      "confidence": "low",
+      "rationale": "student-reported Polyratings patterns modestly increase its priority. Confidence is low; normalized score 1.7/100.",
+      "occurrences": 11,
+      "file_count": 1,
+      "roles": [
+        "lecture_slides"
+      ],
+      "signals": {
+        "formula": 2,
+        "heading": 1
+      },
+      "sources": [
+        {
+          "file": "Lecture_07_Slides.md",
+          "section": "Formula",
+          "role": "lecture_slides",
+          "signals": [
+            "heading",
+            "formula"
+          ],
+          "snippet": "Elasticity = percent change in quantity demanded / percent change in price.\n\nIf demand is elastic, a price decrease"
+        }
+      ],
+      "review_adjustments": [
+        "boosted because student reviews emphasize lecture slides"
+      ]
+    },
+    {
+      "topic": "Usually Interpreted Absolute Value",
+      "topic_key": "usually interpreted absolute value",
+      "score": 1.6,
+      "priority": "low-priority material",
+      "confidence": "low",
+      "rationale": "near instructor-emphasis phrasing; student-reported Polyratings patterns modestly increase its priority. Confidence is low; normalized score 1.6/100.",
+      "occurrences": 3,
+      "file_count": 1,
+      "roles": [
+        "lecture_slides"
+      ],
+      "signals": {
+        "emphasis": 1,
+        "heading": 1
+      },
+      "sources": [
+        {
+          "file": "Lecture_07_Slides.md",
+          "section": "Common Mistakes",
+          "role": "lecture_slides",
+          "signals": [
+            "emphasis",
+            "heading"
+          ],
+          "snippet": "# Common Mistakes Do not confuse a shift in demand with movement along the demand curve. Remember that elasticity is usually interpreted using absolute value."
+        }
+      ],
+      "review_adjustments": [
+        "boosted because student reviews emphasize lecture slides",
+        "boosted because related terms appear in student-reported review themes"
+      ]
+    },
+    {
+      "topic": "Difference Willingness Pay",
+      "topic_key": "difference willingness pay",
+      "score": 0.3,
+      "priority": "low-priority material",
+      "confidence": "low",
+      "rationale": "student-reported Polyratings patterns modestly increase its priority. Confidence is low; normalized score 0.3/100.",
+      "occurrences": 1,
+      "file_count": 1,
+      "roles": [
+        "lecture_notes"
+      ],
+      "signals": {
+        "heading": 1
+      },
+      "sources": [
+        {
+          "file": "Reading_Notes.md",
+          "section": "Welfare Analysis",
+          "role": "lecture_notes",
+          "signals": [
+            "heading"
+          ],
+          "snippet": "# Welfare Analysis Consumer surplus is the difference between willingness to pay and the price actually paid. Producer surplus is the difference between market price and the minimum price sellers accept. Deadweight loss happens when total surplus is reduced by"
+        }
+      ],
+      "review_adjustments": [
+        "boosted because student reviews emphasize lecture notes"
+      ]
+    },
+    {
+      "topic": "Reduced Distortion Tax",
+      "topic_key": "reduced distortion tax",
+      "score": 0.3,
+      "priority": "low-priority material",
+      "confidence": "low",
+      "rationale": "student-reported Polyratings patterns modestly increase its priority. Confidence is low; normalized score 0.3/100.",
+      "occurrences": 1,
+      "file_count": 1,
+      "roles": [
+        "lecture_notes"
+      ],
+      "signals": {
+        "heading": 1
+      },
+      "sources": [
+        {
+          "file": "Reading_Notes.md",
+          "section": "Welfare Analysis",
+          "role": "lecture_notes",
+          "signals": [
+            "heading"
+          ],
+          "snippet": "# Welfare Analysis Consumer surplus is the difference between willingness to pay and the price actually paid. Producer surplus is the difference between market price and the minimum price sellers accept. Deadweight loss happens when total surplus is reduced by"
+        }
+      ],
+      "review_adjustments": [
+        "boosted because student reviews emphasize lecture notes"
+      ]
+    }
+  ],
+  "syllabus_analysis": {
+    "status": "found",
+    "course_code": "ECON 201",
+    "course_name": "Principles of Microeconomics",
+    "instructor": "Parisa Mahjoor",
+    "grading_breakdown": [
+      {
+        "line": "Midterm Exam: 25%",
+        "file": "Syllabus.md",
+        "section": "Grading Breakdown",
+        "context": "Instructor: Parisa Mahjoor ## Grading Breakdown Midterm Exam: 25% Final Exam: 35% Homework and problem sets: 20%"
+      },
+      {
+        "line": "Final Exam: 35%",
+        "file": "Syllabus.md",
+        "section": "Grading Breakdown",
+        "context": "## Grading Breakdown Midterm Exam: 25% Final Exam: 35% Homework and problem sets: 20% Quizzes: 10%"
+      },
+      {
+        "line": "Homework and problem sets: 20%",
+        "file": "Syllabus.md",
+        "section": "Grading Breakdown",
+        "context": "Midterm Exam: 25% Final Exam: 35% Homework and problem sets: 20% Quizzes: 10% Participation: 10%"
+      },
+      {
+        "line": "Quizzes: 10%",
+        "file": "Syllabus.md",
+        "section": "Grading Breakdown",
+        "context": "Final Exam: 35% Homework and problem sets: 20% Quizzes: 10% Participation: 10% ## Learning Objectives"
+      },
+      {
+        "line": "Participation: 10%",
+        "file": "Syllabus.md",
+        "section": "Grading Breakdown",
+        "context": "Homework and problem sets: 20% Quizzes: 10% Participation: 10% ## Learning Objectives By the end of the course, students will be able to calculate price elasticity of demand, interpret total revenue changes, and explain consumer surplus."
+      }
+    ],
+    "exam_weighting": [
+      {
+        "line": "Midterm Exam: 25%",
+        "file": "Syllabus.md",
+        "section": "Grading Breakdown",
+        "context": "Instructor: Parisa Mahjoor ## Grading Breakdown Midterm Exam: 25% Final Exam: 35% Homework and problem sets: 20%"
+      },
+      {
+        "line": "Final Exam: 35%",
+        "file": "Syllabus.md",
+        "section": "Grading Breakdown",
+        "context": "## Grading Breakdown Midterm Exam: 25% Final Exam: 35% Homework and problem sets: 20% Quizzes: 10%"
+      }
+    ],
+    "important_topics": [
+      {
+        "line": "The final exam is cumulative, but it focuses heavily on elasticity, welfare analysis, and homework-style calculation problems. Important topics include price elasticity of demand, consumer surplus, producer surplus, and deadweight loss.",
+        "file": "Syllabus.md",
+        "section": "Exam Guidance",
+        "context": "By the end of the course, students will be able to calculate price elasticity of demand, interpret total revenue changes, and explain consumer surplus. ## Exam Guidance The final exam is cumulative, but it focuses heavily on elasticity, welfare analysis, and homework-style calculation problems. Important topics include price elasticity of demand, consumer surplus, producer surplus, and deadweight loss."
+      }
+    ],
+    "learning_objectives": [
+      {
+        "line": "## Learning Objectives",
+        "file": "Syllabus.md",
+        "section": "Learning Objectives",
+        "context": "Quizzes: 10% Participation: 10% ## Learning Objectives By the end of the course, students will be able to calculate price elasticity of demand, interpret total revenue changes, and explain consumer surplus. ## Exam Guidance"
+      },
+      {
+        "line": "By the end of the course, students will be able to calculate price elasticity of demand, interpret total revenue changes, and explain consumer surplus.",
+        "file": "Syllabus.md",
+        "section": "Learning Objectives",
+        "context": "Participation: 10% ## Learning Objectives By the end of the course, students will be able to calculate price elasticity of demand, interpret total revenue changes, and explain consumer surplus. ## Exam Guidance The final exam is cumulative, but it focuses heavily on elasticity, welfare analysis, and homework-style calculation problems. Important topics include price elasticity of demand, consumer surplus, producer surplus, and deadweight loss."
+      }
+    ],
+    "exam_guidance": [
+      {
+        "line": "The final exam is cumulative, but it focuses heavily on elasticity, welfare analysis, and homework-style calculation problems. Important topics include price elasticity of demand, consumer surplus, producer surplus, and deadweight loss.",
+        "file": "Syllabus.md",
+        "section": "Exam Guidance",
+        "context": "By the end of the course, students will be able to calculate price elasticity of demand, interpret total revenue changes, and explain consumer surplus. ## Exam Guidance The final exam is cumulative, but it focuses heavily on elasticity, welfare analysis, and homework-style calculation problems. Important topics include price elasticity of demand, consumer surplus, producer surplus, and deadweight loss."
+      }
+    ],
+    "sources": [
+      "Syllabus.md :: ECON 201: Principles of Microeconomics",
+      "Syllabus.md :: Exam Guidance",
+      "Syllabus.md :: Grading Breakdown",
+      "Syllabus.md :: Instructor: Parisa Mahjoor",
+      "Syllabus.md :: Learning Objectives"
+    ],
+    "created_at": "2026-04-28T19:52:28+00:00"
+  },
+  "review_insights": {
+    "created_at": "2026-04-28T19:51:08+00:00",
+    "source": "polyratings.dev",
+    "api_base": "https://api-prod.polyratings.org",
+    "course_code": "ECON 201",
+    "course_name": "Principles of Microeconomics",
+    "instructor": "Parisa Mahjoor",
+    "status": "found",
+    "professor_match": {
+      "id": "0038ea39-3910-4f80-9353-41dce33c754d",
+      "name": "Parisa Mahjoor",
+      "department": "CHEM",
+      "num_evals": 17,
+      "overall_rating": 0.64,
+      "material_clear": 0.82,
+      "student_difficulties": 0.46
+    },
+    "top_matches": [
+      {
+        "score": 1.7,
+        "id": "0038ea39-3910-4f80-9353-41dce33c754d",
+        "name": "Parisa Mahjoor",
+        "department": "CHEM",
+        "courses": [
+          "CHEM 110",
+          "CHEM 127",
+          "CHEM 316"
+        ],
+        "num_evals": 17,
+        "overall_rating": 0.64
+      },
+      {
+        "score": 0.712,
+        "id": "b8940792-86b5-4911-ac2e-53bc975a6c44",
+        "name": "Aric Shafran",
+        "department": "ECON",
+        "courses": [
+          "ECON 201",
+          "ECON 221",
+          "ECON 434",
+          "ECON 435",
+          "ECON 222",
+          "ECON 510",
+          "ECON 524"
+        ],
+        "num_evals": 70,
+        "overall_rating": 2.23
+      },
+      {
+        "score": 0.65,
+        "id": "31fa4ff6-d393-412f-8663-2c1f138a099a",
+        "name": "Mike Marlow",
+        "department": "ECON",
+        "courses": [
+          "ECON 201",
+          "ECON 221",
+          "ECON 222",
+          "ECON 311",
+          "ECON 410",
+          "ECON 424",
+          "ECON 464",
+          "GSB 500",
+          "GSB 523",
+          "GSB 533"
+        ],
+        "num_evals": 124,
+        "overall_rating": 2.73
+      },
+      {
+        "score": 0.65,
+        "id": "38e5cde8-9d3e-41d2-884f-f4d9315aadc9",
+        "name": "Eric Fisher",
+        "department": "ECON",
+        "courses": [
+          "ECON 101",
+          "ECON 201",
+          "ECON 202",
+          "ECON 222",
+          "ECON 330",
+          "ECON 333",
+          "ECON 337",
+          "ECON 339",
+          "ECON 401",
+          "ECON 404",
+          "ECON 405",
+          "ECON 460",
+          "ECON 512"
+        ],
+        "num_evals": 108,
+        "overall_rating": 2.45
+      },
+      {
+        "score": 0.64,
+        "id": "d5123a85-c0e9-49dd-9e9b-f4d42db24106",
+        "name": "Laura Moore",
+        "department": "ARCH",
+        "courses": [
+          "ARCH 131",
+          "ARCH 132"
+        ],
+        "num_evals": 8,
+        "overall_rating": 3.34
+      }
+    ],
+    "course_review_count": 0,
+    "total_review_count": 17,
+    "course_specific_used": false,
+    "review_url": "https://polyratings.dev/professor/0038ea39-3910-4f80-9353-41dce33c754d",
+    "categories": {
+      "study_strategies": [
+        {
+          "insight": "Students report that lectures, notes, or slides are important for exams.",
+          "support_count": 10,
+          "review_count": 17,
+          "reliability": "recurring student-reported pattern",
+          "source": "student-reported",
+          "examples": [
+            {
+              "course": "CHEM 110",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "She can be hard to understand at times because of her accent and her lectures can be very dry but overall an easy class."
+            },
+            {
+              "course": "CHEM 110",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "Lectures can be a bit confusing at times because it is pretty fast paced."
+            },
+            {
+              "course": "CHEM 127",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "Where to start, how about with the fact that she thinks this is your only class, and you should be spending all your time focused on her class, or \"sleeping less\" like she told us in one of her recent lectures to the class about how we \"aren't studying enough.\" She is very smart but just having your doctorate does not mean you know anything about teaching."
+            }
+          ]
+        },
+        {
+          "insight": "Students report that homework, assignments, or problem sets are important preparation.",
+          "support_count": 7,
+          "review_count": 17,
+          "reliability": "recurring student-reported pattern",
+          "source": "student-reported",
+          "examples": [
+            {
+              "course": "CHEM 110",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "There's no homework and the final is basically a shorter version of the 500 question study guide."
+            },
+            {
+              "course": "CHEM 127",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "The poor LA's in our class do all the grading and do all they can to help us with the labs and homework and such."
+            },
+            {
+              "course": "CHEM 127",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "Do not take anything she says at face value because you will realize that the labs, the homework, the quizzes, and the midterms are extremely rigorous and challenging."
+            }
+          ]
+        },
+        {
+          "insight": "Students mention quizzes as a meaningful signal for what to study.",
+          "support_count": 9,
+          "review_count": 17,
+          "reliability": "recurring student-reported pattern",
+          "source": "student-reported",
+          "examples": [
+            {
+              "course": "CHEM 110",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "There's a quiz every week but she drops your two lowest grades."
+            },
+            {
+              "course": "CHEM 110",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "Basically in CHEM 110, work hard to study for the quizzes each week and thoroughly complete the labs and you'll get a good grade."
+            },
+            {
+              "course": "CHEM 127",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "It is impossible to keep up with all of the work, between lecture, 1-2 labs per week, homeworks every week, quizzes every week, the 50 suggested problems she posts a few times per week, and reading the textbook."
+            }
+          ]
+        },
+        {
+          "insight": "Students report that review sheets, study guides, or practice exams are useful.",
+          "support_count": 3,
+          "review_count": 17,
+          "reliability": "recurring student-reported pattern",
+          "source": "student-reported",
+          "examples": [
+            {
+              "course": "CHEM 110",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "There's no homework and the final is basically a shorter version of the 500 question study guide."
+            },
+            {
+              "course": "CHEM 110",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "The final was a compilation of the huge Finals study guide she sends out."
+            },
+            {
+              "course": "CHEM 127",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "As if we aren't already sleeping less because of our other classes.The practice exam for her midterms did not help in the least, I walked out of that midterm terrified."
+            }
+          ]
+        },
+        {
+          "insight": "Students report that readings or the textbook matter.",
+          "support_count": 5,
+          "review_count": 17,
+          "reliability": "recurring student-reported pattern",
+          "source": "student-reported",
+          "examples": [
+            {
+              "course": "CHEM 127",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "It is impossible to keep up with all of the work, between lecture, 1-2 labs per week, homeworks every week, quizzes every week, the 50 suggested problems she posts a few times per week, and reading the textbook."
+            },
+            {
+              "course": "CHEM 127",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "The book can be quite confusing at times and even when I show her what particularly in the book has me confused she still shames me for asking."
+            },
+            {
+              "course": "CHEM 127",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "Anything includes lectures, homework, labs, textbook material, and previous information mentioned in class."
+            }
+          ]
+        },
+        {
+          "insight": "Students recommend office hours or asking questions.",
+          "support_count": 5,
+          "review_count": 17,
+          "reliability": "recurring student-reported pattern",
+          "source": "student-reported",
+          "examples": [
+            {
+              "course": "CHEM 110",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "I greatly enjoyed this class and Parisa is very helpful."
+            },
+            {
+              "course": "CHEM 127",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "Oh, and going into office hours is really awkward because her and Dr."
+            },
+            {
+              "course": "CHEM 127",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "Since I had a basic understanding of chemistry from my sophomore year of high school, it was definitely difficult to follow along- especially because she gives off a bad vibe to students who ask questions."
+            }
+          ]
+        }
+      ],
+      "exam_patterns": [
+        {
+          "insight": "Students report that lectures, notes, or slides are important for exams.",
+          "support_count": 10,
+          "review_count": 17,
+          "reliability": "recurring student-reported pattern",
+          "source": "student-reported",
+          "examples": [
+            {
+              "course": "CHEM 110",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "She can be hard to understand at times because of her accent and her lectures can be very dry but overall an easy class."
+            },
+            {
+              "course": "CHEM 110",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "Lectures can be a bit confusing at times because it is pretty fast paced."
+            },
+            {
+              "course": "CHEM 127",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "Where to start, how about with the fact that she thinks this is your only class, and you should be spending all your time focused on her class, or \"sleeping less\" like she told us in one of her recent lectures to the class about how we \"aren't studying enough.\" She is very smart but just having your doctorate does not mean you know anything about teaching."
+            }
+          ]
+        },
+        {
+          "insight": "Students report that homework, assignments, or problem sets are important preparation.",
+          "support_count": 7,
+          "review_count": 17,
+          "reliability": "recurring student-reported pattern",
+          "source": "student-reported",
+          "examples": [
+            {
+              "course": "CHEM 110",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "There's no homework and the final is basically a shorter version of the 500 question study guide."
+            },
+            {
+              "course": "CHEM 127",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "The poor LA's in our class do all the grading and do all they can to help us with the labs and homework and such."
+            },
+            {
+              "course": "CHEM 127",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "Do not take anything she says at face value because you will realize that the labs, the homework, the quizzes, and the midterms are extremely rigorous and challenging."
+            }
+          ]
+        },
+        {
+          "insight": "Students mention quizzes as a meaningful signal for what to study.",
+          "support_count": 9,
+          "review_count": 17,
+          "reliability": "recurring student-reported pattern",
+          "source": "student-reported",
+          "examples": [
+            {
+              "course": "CHEM 110",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "There's a quiz every week but she drops your two lowest grades."
+            },
+            {
+              "course": "CHEM 110",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "Basically in CHEM 110, work hard to study for the quizzes each week and thoroughly complete the labs and you'll get a good grade."
+            },
+            {
+              "course": "CHEM 127",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "It is impossible to keep up with all of the work, between lecture, 1-2 labs per week, homeworks every week, quizzes every week, the 50 suggested problems she posts a few times per week, and reading the textbook."
+            }
+          ]
+        },
+        {
+          "insight": "Students report that review sheets, study guides, or practice exams are useful.",
+          "support_count": 3,
+          "review_count": 17,
+          "reliability": "recurring student-reported pattern",
+          "source": "student-reported",
+          "examples": [
+            {
+              "course": "CHEM 110",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "There's no homework and the final is basically a shorter version of the 500 question study guide."
+            },
+            {
+              "course": "CHEM 110",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "The final was a compilation of the huge Finals study guide she sends out."
+            },
+            {
+              "course": "CHEM 127",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "As if we aren't already sleeping less because of our other classes.The practice exam for her midterms did not help in the least, I walked out of that midterm terrified."
+            }
+          ]
+        },
+        {
+          "insight": "Students report that readings or the textbook matter.",
+          "support_count": 5,
+          "review_count": 17,
+          "reliability": "recurring student-reported pattern",
+          "source": "student-reported",
+          "examples": [
+            {
+              "course": "CHEM 127",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "It is impossible to keep up with all of the work, between lecture, 1-2 labs per week, homeworks every week, quizzes every week, the 50 suggested problems she posts a few times per week, and reading the textbook."
+            },
+            {
+              "course": "CHEM 127",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "The book can be quite confusing at times and even when I show her what particularly in the book has me confused she still shames me for asking."
+            },
+            {
+              "course": "CHEM 127",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "Anything includes lectures, homework, labs, textbook material, and previous information mentioned in class."
+            }
+          ]
+        },
+        {
+          "insight": "Students mention cumulative exams or finals.",
+          "support_count": 4,
+          "review_count": 17,
+          "reliability": "recurring student-reported pattern",
+          "source": "student-reported",
+          "examples": [
+            {
+              "course": "CHEM 127",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "I aced the first midterm but it has gone downhill since then."
+            },
+            {
+              "course": "CHEM 127",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "As if we aren't already sleeping less because of our other classes.The practice exam for her midterms did not help in the least, I walked out of that midterm terrified."
+            },
+            {
+              "course": "CHEM 127",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "Don't take her if you can, she has a heavy workload, something is due at the beginning of every class, her practice midterm had nothing to do with her second midterm."
+            }
+          ]
+        }
+      ],
+      "difficult_topics": [
+        {
+          "insight": "Review text repeatedly names these possible difficult-topic cues: hard, extremely, difficult, times, lectures, labs",
+          "support_count": 24,
+          "review_count": 17,
+          "reliability": "student-reported keyword pattern",
+          "source": "student-reported",
+          "examples": []
+        },
+        {
+          "insight": "Students describe the class or material as difficult or confusing.",
+          "support_count": 10,
+          "review_count": 17,
+          "reliability": "recurring student-reported pattern",
+          "source": "student-reported",
+          "examples": [
+            {
+              "course": "CHEM 110",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "She can be hard to understand at times because of her accent and her lectures can be very dry but overall an easy class."
+            },
+            {
+              "course": "CHEM 110",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "Basically in CHEM 110, work hard to study for the quizzes each week and thoroughly complete the labs and you'll get a good grade."
+            },
+            {
+              "course": "CHEM 127",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "The book can be quite confusing at times and even when I show her what particularly in the book has me confused she still shames me for asking."
+            }
+          ]
+        }
+      ],
+      "time_management": [
+        {
+          "insight": "Students mention cumulative exams or finals.",
+          "support_count": 4,
+          "review_count": 17,
+          "reliability": "recurring student-reported pattern",
+          "source": "student-reported",
+          "examples": [
+            {
+              "course": "CHEM 127",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "I aced the first midterm but it has gone downhill since then."
+            },
+            {
+              "course": "CHEM 127",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "As if we aren't already sleeping less because of our other classes.The practice exam for her midterms did not help in the least, I walked out of that midterm terrified."
+            },
+            {
+              "course": "CHEM 127",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "Don't take her if you can, she has a heavy workload, something is due at the beginning of every class, her practice midterm had nothing to do with her second midterm."
+            }
+          ]
+        },
+        {
+          "insight": "Students mention time load, pacing, or starting early.",
+          "support_count": 3,
+          "review_count": 17,
+          "reliability": "recurring student-reported pattern",
+          "source": "student-reported",
+          "examples": [
+            {
+              "course": "CHEM 127",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "She skips over soo much material that it makes it impossible to keep up with her in lecture."
+            },
+            {
+              "course": "CHEM 127",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "Don't take her if you can, she has a heavy workload, something is due at the beginning of every class, her practice midterm had nothing to do with her second midterm."
+            },
+            {
+              "course": "CHEM 127",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "In this course I put in a lot of time and made a conscious effort to always go to office hours however my grade never reflected the amount of time I put in."
+            }
+          ]
+        },
+        {
+          "insight": "Students mention strict grading, rubrics, or point deductions.",
+          "support_count": 4,
+          "review_count": 17,
+          "reliability": "recurring student-reported pattern",
+          "source": "student-reported",
+          "examples": [
+            {
+              "course": "CHEM 127",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "The poor LA's in our class do all the grading and do all they can to help us with the labs and homework and such."
+            },
+            {
+              "course": "CHEM 127",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "Her LA's did the grading and her practice problems and lecture slides had clearly been taken from somewhere else, so she put in minimal effort for this class."
+            },
+            {
+              "course": "CHEM 127",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "She cannot lecture to save her life, she expects far too much from the students, she cannot admit to herself that she is the problem not the students, every assignment or quiz is graded ridiculously hard(don't count on any partial credit), in class she is rude to students, she is extremely unhelpful in answering questions(don't even try asking questions, she will just say you didn't do the reading or don't pay attention and say its your fault for not knowing something), and so on....."
+            }
+          ]
+        }
+      ],
+      "pitfalls": [
+        {
+          "insight": "Students mention time load, pacing, or starting early.",
+          "support_count": 3,
+          "review_count": 17,
+          "reliability": "recurring student-reported pattern",
+          "source": "student-reported",
+          "examples": [
+            {
+              "course": "CHEM 127",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "She skips over soo much material that it makes it impossible to keep up with her in lecture."
+            },
+            {
+              "course": "CHEM 127",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "Don't take her if you can, she has a heavy workload, something is due at the beginning of every class, her practice midterm had nothing to do with her second midterm."
+            },
+            {
+              "course": "CHEM 127",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "In this course I put in a lot of time and made a conscious effort to always go to office hours however my grade never reflected the amount of time I put in."
+            }
+          ]
+        },
+        {
+          "insight": "Students mention strict grading, rubrics, or point deductions.",
+          "support_count": 4,
+          "review_count": 17,
+          "reliability": "recurring student-reported pattern",
+          "source": "student-reported",
+          "examples": [
+            {
+              "course": "CHEM 127",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "The poor LA's in our class do all the grading and do all they can to help us with the labs and homework and such."
+            },
+            {
+              "course": "CHEM 127",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "Her LA's did the grading and her practice problems and lecture slides had clearly been taken from somewhere else, so she put in minimal effort for this class."
+            },
+            {
+              "course": "CHEM 127",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "She cannot lecture to save her life, she expects far too much from the students, she cannot admit to herself that she is the problem not the students, every assignment or quiz is graded ridiculously hard(don't count on any partial credit), in class she is rude to students, she is extremely unhelpful in answering questions(don't even try asking questions, she will just say you didn't do the reading or don't pay attention and say its your fault for not knowing something), and so on....."
+            }
+          ]
+        },
+        {
+          "insight": "Students describe the class or material as difficult or confusing.",
+          "support_count": 10,
+          "review_count": 17,
+          "reliability": "recurring student-reported pattern",
+          "source": "student-reported",
+          "examples": [
+            {
+              "course": "CHEM 110",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "She can be hard to understand at times because of her accent and her lectures can be very dry but overall an easy class."
+            },
+            {
+              "course": "CHEM 110",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "Basically in CHEM 110, work hard to study for the quizzes each week and thoroughly complete the labs and you'll get a good grade."
+            },
+            {
+              "course": "CHEM 127",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "The book can be quite confusing at times and even when I show her what particularly in the book has me confused she still shames me for asking."
+            }
+          ]
+        }
+      ],
+      "recurring_themes": [
+        {
+          "insight": "Students report that lectures, notes, or slides are important for exams.",
+          "support_count": 10,
+          "review_count": 17,
+          "reliability": "recurring student-reported pattern",
+          "source": "student-reported",
+          "examples": [
+            {
+              "course": "CHEM 110",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "She can be hard to understand at times because of her accent and her lectures can be very dry but overall an easy class."
+            },
+            {
+              "course": "CHEM 110",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "Lectures can be a bit confusing at times because it is pretty fast paced."
+            },
+            {
+              "course": "CHEM 127",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "Where to start, how about with the fact that she thinks this is your only class, and you should be spending all your time focused on her class, or \"sleeping less\" like she told us in one of her recent lectures to the class about how we \"aren't studying enough.\" She is very smart but just having your doctorate does not mean you know anything about teaching."
+            }
+          ]
+        },
+        {
+          "insight": "Students report that homework, assignments, or problem sets are important preparation.",
+          "support_count": 7,
+          "review_count": 17,
+          "reliability": "recurring student-reported pattern",
+          "source": "student-reported",
+          "examples": [
+            {
+              "course": "CHEM 110",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "There's no homework and the final is basically a shorter version of the 500 question study guide."
+            },
+            {
+              "course": "CHEM 127",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "The poor LA's in our class do all the grading and do all they can to help us with the labs and homework and such."
+            },
+            {
+              "course": "CHEM 127",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "Do not take anything she says at face value because you will realize that the labs, the homework, the quizzes, and the midterms are extremely rigorous and challenging."
+            }
+          ]
+        },
+        {
+          "insight": "Students mention quizzes as a meaningful signal for what to study.",
+          "support_count": 9,
+          "review_count": 17,
+          "reliability": "recurring student-reported pattern",
+          "source": "student-reported",
+          "examples": [
+            {
+              "course": "CHEM 110",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "There's a quiz every week but she drops your two lowest grades."
+            },
+            {
+              "course": "CHEM 110",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "Basically in CHEM 110, work hard to study for the quizzes each week and thoroughly complete the labs and you'll get a good grade."
+            },
+            {
+              "course": "CHEM 127",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "It is impossible to keep up with all of the work, between lecture, 1-2 labs per week, homeworks every week, quizzes every week, the 50 suggested problems she posts a few times per week, and reading the textbook."
+            }
+          ]
+        },
+        {
+          "insight": "Students report that review sheets, study guides, or practice exams are useful.",
+          "support_count": 3,
+          "review_count": 17,
+          "reliability": "recurring student-reported pattern",
+          "source": "student-reported",
+          "examples": [
+            {
+              "course": "CHEM 110",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "There's no homework and the final is basically a shorter version of the 500 question study guide."
+            },
+            {
+              "course": "CHEM 110",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "The final was a compilation of the huge Finals study guide she sends out."
+            },
+            {
+              "course": "CHEM 127",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "As if we aren't already sleeping less because of our other classes.The practice exam for her midterms did not help in the least, I walked out of that midterm terrified."
+            }
+          ]
+        },
+        {
+          "insight": "Students report that readings or the textbook matter.",
+          "support_count": 5,
+          "review_count": 17,
+          "reliability": "recurring student-reported pattern",
+          "source": "student-reported",
+          "examples": [
+            {
+              "course": "CHEM 127",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "It is impossible to keep up with all of the work, between lecture, 1-2 labs per week, homeworks every week, quizzes every week, the 50 suggested problems she posts a few times per week, and reading the textbook."
+            },
+            {
+              "course": "CHEM 127",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "The book can be quite confusing at times and even when I show her what particularly in the book has me confused she still shames me for asking."
+            },
+            {
+              "course": "CHEM 127",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "Anything includes lectures, homework, labs, textbook material, and previous information mentioned in class."
+            }
+          ]
+        },
+        {
+          "insight": "Students mention cumulative exams or finals.",
+          "support_count": 4,
+          "review_count": 17,
+          "reliability": "recurring student-reported pattern",
+          "source": "student-reported",
+          "examples": [
+            {
+              "course": "CHEM 127",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "I aced the first midterm but it has gone downhill since then."
+            },
+            {
+              "course": "CHEM 127",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "As if we aren't already sleeping less because of our other classes.The practice exam for her midterms did not help in the least, I walked out of that midterm terrified."
+            },
+            {
+              "course": "CHEM 127",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "Don't take her if you can, she has a heavy workload, something is due at the beginning of every class, her practice midterm had nothing to do with her second midterm."
+            }
+          ]
+        },
+        {
+          "insight": "Students mention time load, pacing, or starting early.",
+          "support_count": 3,
+          "review_count": 17,
+          "reliability": "recurring student-reported pattern",
+          "source": "student-reported",
+          "examples": [
+            {
+              "course": "CHEM 127",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "She skips over soo much material that it makes it impossible to keep up with her in lecture."
+            },
+            {
+              "course": "CHEM 127",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "Don't take her if you can, she has a heavy workload, something is due at the beginning of every class, her practice midterm had nothing to do with her second midterm."
+            },
+            {
+              "course": "CHEM 127",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "In this course I put in a lot of time and made a conscious effort to always go to office hours however my grade never reflected the amount of time I put in."
+            }
+          ]
+        },
+        {
+          "insight": "Students recommend office hours or asking questions.",
+          "support_count": 5,
+          "review_count": 17,
+          "reliability": "recurring student-reported pattern",
+          "source": "student-reported",
+          "examples": [
+            {
+              "course": "CHEM 110",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "I greatly enjoyed this class and Parisa is very helpful."
+            },
+            {
+              "course": "CHEM 127",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "Oh, and going into office hours is really awkward because her and Dr."
+            },
+            {
+              "course": "CHEM 127",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "Since I had a basic understanding of chemistry from my sophomore year of high school, it was definitely difficult to follow along- especially because she gives off a bad vibe to students who ask questions."
+            }
+          ]
+        },
+        {
+          "insight": "Students mention strict grading, rubrics, or point deductions.",
+          "support_count": 4,
+          "review_count": 17,
+          "reliability": "recurring student-reported pattern",
+          "source": "student-reported",
+          "examples": [
+            {
+              "course": "CHEM 127",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "The poor LA's in our class do all the grading and do all they can to help us with the labs and homework and such."
+            },
+            {
+              "course": "CHEM 127",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "Her LA's did the grading and her practice problems and lecture slides had clearly been taken from somewhere else, so she put in minimal effort for this class."
+            },
+            {
+              "course": "CHEM 127",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "She cannot lecture to save her life, she expects far too much from the students, she cannot admit to herself that she is the problem not the students, every assignment or quiz is graded ridiculously hard(don't count on any partial credit), in class she is rude to students, she is extremely unhelpful in answering questions(don't even try asking questions, she will just say you didn't do the reading or don't pay attention and say its your fault for not knowing something), and so on....."
+            }
+          ]
+        },
+        {
+          "insight": "Students describe the class or material as difficult or confusing.",
+          "support_count": 10,
+          "review_count": 17,
+          "reliability": "recurring student-reported pattern",
+          "source": "student-reported",
+          "examples": [
+            {
+              "course": "CHEM 110",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "She can be hard to understand at times because of her accent and her lectures can be very dry but overall an easy class."
+            },
+            {
+              "course": "CHEM 110",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "Basically in CHEM 110, work hard to study for the quizzes each week and thoroughly complete the labs and you'll get a good grade."
+            },
+            {
+              "course": "CHEM 127",
+              "post_date": "2014-03-01T08:00:00.000Z",
+              "example": "The book can be quite confusing at times and even when I show her what particularly in the book has me confused she still shames me for asking."
+            }
+          ]
+        }
+      ]
+    },
+    "strategy_modifiers": {
+      "role_boosts": {
+        "lecture_slides": 1.06,
+        "lecture_notes": 1.06,
+        "assignment": 1.06,
+        "quiz": 1.06,
+        "practice_exam": 1.12,
+        "exam_review": 1.12,
+        "study_guide": 1.12,
+        "reading": 1.06
+      },
+      "teaching_style": [
+        "anchor lessons in lecture notes and slide evidence",
+        "slow down on weak concepts and use more examples",
+        "quiz frequently with short active-recall checks",
+        "use more worked examples and problem practice",
+        "connect definitions to reading themes and examples"
+      ],
+      "review_scope": "professor-wide reviews"
+    },
+    "review_scope": "professor-wide reviews"
+  }
+}

@@ -1,0 +1,418 @@
+{
+  "version": "0.1.0",
+  "created_at": "2026-04-28T19:52:28+00:00",
+  "course_dir": "/Users/billyroeschlein/Documents/Codex/2026-04-28/create-an-agent-that-goes-through/examples/sample_course",
+  "file_count": 5,
+  "chunk_count": 14,
+  "course_type": "quantitative",
+  "files": [
+    {
+      "path": "Final_Review.md",
+      "name": "Final_Review.md",
+      "extension": ".md",
+      "role": "exam_review",
+      "word_count": 89
+    },
+    {
+      "path": "Homework_04.md",
+      "name": "Homework_04.md",
+      "extension": ".md",
+      "role": "assignment",
+      "word_count": 62
+    },
+    {
+      "path": "Lecture_07_Slides.md",
+      "name": "Lecture_07_Slides.md",
+      "extension": ".md",
+      "role": "lecture_slides",
+      "word_count": 72
+    },
+    {
+      "path": "Reading_Notes.md",
+      "name": "Reading_Notes.md",
+      "extension": ".md",
+      "role": "lecture_notes",
+      "word_count": 48
+    },
+    {
+      "path": "Syllabus.md",
+      "name": "Syllabus.md",
+      "extension": ".md",
+      "role": "syllabus",
+      "word_count": 84
+    }
+  ],
+  "chunks": [
+    {
+      "id": "final-review-0000",
+      "file_path": "Final_Review.md",
+      "file_name": "Final_Review.md",
+      "file_role": "exam_review",
+      "section": "Unit 3 Review: Price Elasticity Of Demand",
+      "chunk_index": 0,
+      "text": "## Unit 3 Review: Price Elasticity Of Demand\n\nImportant: know how to calculate price elasticity of demand using the midpoint method.\nYou should understand how elasticity connects to total revenue.\n\nLearning objective: students will be able to classify demand as elastic, inelastic, or unit elastic.\n\nExample problem: if price rises from 10 to 12 and quantity falls from 100 to 80, calculate elasticity.",
+      "word_count": 62,
+      "signals": {
+        "learning_objective": 2,
+        "emphasis": 2,
+        "summary": 1,
+        "example_problem": 1,
+        "assessment": 0,
+        "formula": 2,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "final-review-0001",
+      "file_path": "Final_Review.md",
+      "file_name": "Final_Review.md",
+      "file_role": "exam_review",
+      "section": "Unit 4 Review: Consumer Surplus",
+      "chunk_index": 1,
+      "text": "## Unit 4 Review: Consumer Surplus\n\nKnow how to identify consumer surplus on a demand graph.\nBe able to explain how taxes can create deadweight loss.",
+      "word_count": 25,
+      "signals": {
+        "learning_objective": 1,
+        "emphasis": 0,
+        "summary": 1,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "homework-04-0000",
+      "file_path": "Homework_04.md",
+      "file_name": "Homework_04.md",
+      "file_role": "assignment",
+      "section": "Homework 04: Elasticity Problems",
+      "chunk_index": 0,
+      "text": "# Homework 04: Elasticity Problems\n\nPractice problem: calculate price elasticity of demand with the midpoint method.",
+      "word_count": 15,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 2,
+        "assessment": 1,
+        "formula": 1,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "homework-04-0001",
+      "file_path": "Homework_04.md",
+      "file_name": "Homework_04.md",
+      "file_role": "assignment",
+      "section": "Question 1",
+      "chunk_index": 1,
+      "text": "Question 1:\nPrice changes from 8 to 10. Quantity demanded changes from 50 to 40. Compute elasticity.",
+      "word_count": 17,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 1,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "homework-04-0002",
+      "file_path": "Homework_04.md",
+      "file_name": "Homework_04.md",
+      "file_role": "assignment",
+      "section": "Question 2",
+      "chunk_index": 2,
+      "text": "Question 2:\nExplain whether total revenue rises or falls when demand is elastic and price decreases.",
+      "word_count": 16,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "lecture-07-slides-0000",
+      "file_path": "Lecture_07_Slides.md",
+      "file_name": "Lecture_07_Slides.md",
+      "file_role": "lecture_slides",
+      "section": "Elasticity And Revenue",
+      "chunk_index": 0,
+      "text": "# Elasticity And Revenue\n\nPrice elasticity of demand measures responsiveness of quantity demanded to a change in price.",
+      "word_count": 17,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "lecture-07-slides-0001",
+      "file_path": "Lecture_07_Slides.md",
+      "file_name": "Lecture_07_Slides.md",
+      "file_role": "lecture_slides",
+      "section": "Formula",
+      "chunk_index": 1,
+      "text": "Formula:\nElasticity = percent change in quantity demanded / percent change in price.\n\nIf demand is elastic, a price decrease increases total revenue.\nIf demand is inelastic, a price increase increases total revenue.",
+      "word_count": 31,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 2,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "lecture-07-slides-0002",
+      "file_path": "Lecture_07_Slides.md",
+      "file_name": "Lecture_07_Slides.md",
+      "file_role": "lecture_slides",
+      "section": "Common Mistakes",
+      "chunk_index": 2,
+      "text": "# Common Mistakes\n\nDo not confuse a shift in demand with movement along the demand curve.\nRemember that elasticity is usually interpreted using absolute value.",
+      "word_count": 24,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 1,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "reading-notes-0000",
+      "file_path": "Reading_Notes.md",
+      "file_name": "Reading_Notes.md",
+      "file_role": "lecture_notes",
+      "section": "Welfare Analysis",
+      "chunk_index": 0,
+      "text": "# Welfare Analysis\n\nConsumer surplus is the difference between willingness to pay and the price actually paid.\nProducer surplus is the difference between market price and the minimum price sellers accept.\n\nDeadweight loss happens when total surplus is reduced by a distortion such as a tax or price control.",
+      "word_count": 48,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "syllabus-0000",
+      "file_path": "Syllabus.md",
+      "file_name": "Syllabus.md",
+      "file_role": "syllabus",
+      "section": "ECON 201: Principles of Microeconomics",
+      "chunk_index": 0,
+      "text": "# ECON 201: Principles of Microeconomics",
+      "word_count": 5,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "syllabus-0001",
+      "file_path": "Syllabus.md",
+      "file_name": "Syllabus.md",
+      "file_role": "syllabus",
+      "section": "Instructor: Parisa Mahjoor",
+      "chunk_index": 1,
+      "text": "Instructor: Parisa Mahjoor",
+      "word_count": 3,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "syllabus-0002",
+      "file_path": "Syllabus.md",
+      "file_name": "Syllabus.md",
+      "file_role": "syllabus",
+      "section": "Grading Breakdown",
+      "chunk_index": 2,
+      "text": "## Grading Breakdown\n\n- Midterm Exam: 25%\n- Final Exam: 35%\n- Homework and problem sets: 20%\n- Quizzes: 10%\n- Participation: 10%",
+      "word_count": 17,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 1,
+        "assessment": 5,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "syllabus-0003",
+      "file_path": "Syllabus.md",
+      "file_name": "Syllabus.md",
+      "file_role": "syllabus",
+      "section": "Learning Objectives",
+      "chunk_index": 3,
+      "text": "## Learning Objectives\n\nBy the end of the course, students will be able to calculate price elasticity of demand, interpret total revenue changes, and explain consumer surplus.",
+      "word_count": 26,
+      "signals": {
+        "learning_objective": 3,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 1,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "syllabus-0004",
+      "file_path": "Syllabus.md",
+      "file_name": "Syllabus.md",
+      "file_role": "syllabus",
+      "section": "Exam Guidance",
+      "chunk_index": 4,
+      "text": "## Exam Guidance\n\nThe final exam is cumulative, but it focuses heavily on elasticity, welfare analysis, and homework-style calculation problems. Important topics include price elasticity of demand, consumer surplus, producer surplus, and deadweight loss.",
+      "word_count": 33,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 1,
+        "summary": 0,
+        "example_problem": 1,
+        "assessment": 4,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    }
+  ],
+  "warnings": [],
+  "syllabus_analysis": {
+    "status": "found",
+    "course_code": "ECON 201",
+    "course_name": "Principles of Microeconomics",
+    "instructor": "Parisa Mahjoor",
+    "grading_breakdown": [
+      {
+        "line": "Midterm Exam: 25%",
+        "file": "Syllabus.md",
+        "section": "Grading Breakdown",
+        "context": "Instructor: Parisa Mahjoor ## Grading Breakdown Midterm Exam: 25% Final Exam: 35% Homework and problem sets: 20%"
+      },
+      {
+        "line": "Final Exam: 35%",
+        "file": "Syllabus.md",
+        "section": "Grading Breakdown",
+        "context": "## Grading Breakdown Midterm Exam: 25% Final Exam: 35% Homework and problem sets: 20% Quizzes: 10%"
+      },
+      {
+        "line": "Homework and problem sets: 20%",
+        "file": "Syllabus.md",
+        "section": "Grading Breakdown",
+        "context": "Midterm Exam: 25% Final Exam: 35% Homework and problem sets: 20% Quizzes: 10% Participation: 10%"
+      },
+      {
+        "line": "Quizzes: 10%",
+        "file": "Syllabus.md",
+        "section": "Grading Breakdown",
+        "context": "Final Exam: 35% Homework and problem sets: 20% Quizzes: 10% Participation: 10% ## Learning Objectives"
+      },
+      {
+        "line": "Participation: 10%",
+        "file": "Syllabus.md",
+        "section": "Grading Breakdown",
+        "context": "Homework and problem sets: 20% Quizzes: 10% Participation: 10% ## Learning Objectives By the end of the course, students will be able to calculate price elasticity of demand, interpret total revenue changes, and explain consumer surplus."
+      }
+    ],
+    "exam_weighting": [
+      {
+        "line": "Midterm Exam: 25%",
+        "file": "Syllabus.md",
+        "section": "Grading Breakdown",
+        "context": "Instructor: Parisa Mahjoor ## Grading Breakdown Midterm Exam: 25% Final Exam: 35% Homework and problem sets: 20%"
+      },
+      {
+        "line": "Final Exam: 35%",
+        "file": "Syllabus.md",
+        "section": "Grading Breakdown",
+        "context": "## Grading Breakdown Midterm Exam: 25% Final Exam: 35% Homework and problem sets: 20% Quizzes: 10%"
+      }
+    ],
+    "important_topics": [
+      {
+        "line": "The final exam is cumulative, but it focuses heavily on elasticity, welfare analysis, and homework-style calculation problems. Important topics include price elasticity of demand, consumer surplus, producer surplus, and deadweight loss.",
+        "file": "Syllabus.md",
+        "section": "Exam Guidance",
+        "context": "By the end of the course, students will be able to calculate price elasticity of demand, interpret total revenue changes, and explain consumer surplus. ## Exam Guidance The final exam is cumulative, but it focuses heavily on elasticity, welfare analysis, and homework-style calculation problems. Important topics include price elasticity of demand, consumer surplus, producer surplus, and deadweight loss."
+      }
+    ],
+    "learning_objectives": [
+      {
+        "line": "## Learning Objectives",
+        "file": "Syllabus.md",
+        "section": "Learning Objectives",
+        "context": "Quizzes: 10% Participation: 10% ## Learning Objectives By the end of the course, students will be able to calculate price elasticity of demand, interpret total revenue changes, and explain consumer surplus. ## Exam Guidance"
+      },
+      {
+        "line": "By the end of the course, students will be able to calculate price elasticity of demand, interpret total revenue changes, and explain consumer surplus.",
+        "file": "Syllabus.md",
+        "section": "Learning Objectives",
+        "context": "Participation: 10% ## Learning Objectives By the end of the course, students will be able to calculate price elasticity of demand, interpret total revenue changes, and explain consumer surplus. ## Exam Guidance The final exam is cumulative, but it focuses heavily on elasticity, welfare analysis, and homework-style calculation problems. Important topics include price elasticity of demand, consumer surplus, producer surplus, and deadweight loss."
+      }
+    ],
+    "exam_guidance": [
+      {
+        "line": "The final exam is cumulative, but it focuses heavily on elasticity, welfare analysis, and homework-style calculation problems. Important topics include price elasticity of demand, consumer surplus, producer surplus, and deadweight loss.",
+        "file": "Syllabus.md",
+        "section": "Exam Guidance",
+        "context": "By the end of the course, students will be able to calculate price elasticity of demand, interpret total revenue changes, and explain consumer surplus. ## Exam Guidance The final exam is cumulative, but it focuses heavily on elasticity, welfare analysis, and homework-style calculation problems. Important topics include price elasticity of demand, consumer surplus, producer surplus, and deadweight loss."
+      }
+    ],
+    "sources": [
+      "Syllabus.md :: ECON 201: Principles of Microeconomics",
+      "Syllabus.md :: Exam Guidance",
+      "Syllabus.md :: Grading Breakdown",
+      "Syllabus.md :: Instructor: Parisa Mahjoor",
+      "Syllabus.md :: Learning Objectives"
+    ],
+    "created_at": "2026-04-28T19:52:28+00:00"
+  }
+}

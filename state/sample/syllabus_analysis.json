@@ -1,0 +1,90 @@
+{
+  "status": "found",
+  "course_code": "ECON 201",
+  "course_name": "Principles of Microeconomics",
+  "instructor": "Parisa Mahjoor",
+  "grading_breakdown": [
+    {
+      "line": "Midterm Exam: 25%",
+      "file": "Syllabus.md",
+      "section": "Grading Breakdown",
+      "context": "Instructor: Parisa Mahjoor ## Grading Breakdown Midterm Exam: 25% Final Exam: 35% Homework and problem sets: 20%"
+    },
+    {
+      "line": "Final Exam: 35%",
+      "file": "Syllabus.md",
+      "section": "Grading Breakdown",
+      "context": "## Grading Breakdown Midterm Exam: 25% Final Exam: 35% Homework and problem sets: 20% Quizzes: 10%"
+    },
+    {
+      "line": "Homework and problem sets: 20%",
+      "file": "Syllabus.md",
+      "section": "Grading Breakdown",
+      "context": "Midterm Exam: 25% Final Exam: 35% Homework and problem sets: 20% Quizzes: 10% Participation: 10%"
+    },
+    {
+      "line": "Quizzes: 10%",
+      "file": "Syllabus.md",
+      "section": "Grading Breakdown",
+      "context": "Final Exam: 35% Homework and problem sets: 20% Quizzes: 10% Participation: 10% ## Learning Objectives"
+    },
+    {
+      "line": "Participation: 10%",
+      "file": "Syllabus.md",
+      "section": "Grading Breakdown",
+      "context": "Homework and problem sets: 20% Quizzes: 10% Participation: 10% ## Learning Objectives By the end of the course, students will be able to calculate price elasticity of demand, interpret total revenue changes, and explain consumer surplus."
+    }
+  ],
+  "exam_weighting": [
+    {
+      "line": "Midterm Exam: 25%",
+      "file": "Syllabus.md",
+      "section": "Grading Breakdown",
+      "context": "Instructor: Parisa Mahjoor ## Grading Breakdown Midterm Exam: 25% Final Exam: 35% Homework and problem sets: 20%"
+    },
+    {
+      "line": "Final Exam: 35%",
+      "file": "Syllabus.md",
+      "section": "Grading Breakdown",
+      "context": "## Grading Breakdown Midterm Exam: 25% Final Exam: 35% Homework and problem sets: 20% Quizzes: 10%"
+    }
+  ],
+  "important_topics": [
+    {
+      "line": "The final exam is cumulative, but it focuses heavily on elasticity, welfare analysis, and homework-style calculation problems. Important topics include price elasticity of demand, consumer surplus, producer surplus, and deadweight loss.",
+      "file": "Syllabus.md",
+      "section": "Exam Guidance",
+      "context": "By the end of the course, students will be able to calculate price elasticity of demand, interpret total revenue changes, and explain consumer surplus. ## Exam Guidance The final exam is cumulative, but it focuses heavily on elasticity, welfare analysis, and homework-style calculation problems. Important topics include price elasticity of demand, consumer surplus, producer surplus, and deadweight loss."
+    }
+  ],
+  "learning_objectives": [
+    {
+      "line": "## Learning Objectives",
+      "file": "Syllabus.md",
+      "section": "Learning Objectives",
+      "context": "Quizzes: 10% Participation: 10% ## Learning Objectives By the end of the course, students will be able to calculate price elasticity of demand, interpret total revenue changes, and explain consumer surplus. ## Exam Guidance"
+    },
+    {
+      "line": "By the end of the course, students will be able to calculate price elasticity of demand, interpret total revenue changes, and explain consumer surplus.",
+      "file": "Syllabus.md",
+      "section": "Learning Objectives",
+      "context": "Participation: 10% ## Learning Objectives By the end of the course, students will be able to calculate price elasticity of demand, interpret total revenue changes, and explain consumer surplus. ## Exam Guidance The final exam is cumulative, but it focuses heavily on elasticity, welfare analysis, and homework-style calculation problems. Important topics include price elasticity of demand, consumer surplus, producer surplus, and deadweight loss."
+    }
+  ],
+  "exam_guidance": [
+    {
+      "line": "The final exam is cumulative, but it focuses heavily on elasticity, welfare analysis, and homework-style calculation problems. Important topics include price elasticity of demand, consumer surplus, producer surplus, and deadweight loss.",
+      "file": "Syllabus.md",
+      "section": "Exam Guidance",
+      "context": "By the end of the course, students will be able to calculate price elasticity of demand, interpret total revenue changes, and explain consumer surplus. ## Exam Guidance The final exam is cumulative, but it focuses heavily on elasticity, welfare analysis, and homework-style calculation problems. Important topics include price elasticity of demand, consumer surplus, producer surplus, and deadweight loss."
+    }
+  ],
+  "sources": [
+    "Syllabus.md :: ECON 201: Principles of Microeconomics",
+    "Syllabus.md :: Exam Guidance",
+    "Syllabus.md :: Grading Breakdown",
+    "Syllabus.md :: Instructor: Parisa Mahjoor",
+    "Syllabus.md :: Learning Objectives"
+  ],
+  "created_at": "2026-04-28T19:52:28+00:00"
+}

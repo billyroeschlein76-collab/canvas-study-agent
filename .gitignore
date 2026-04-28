@@ -10,12 +10,9 @@ venv/
 .venv/
 env/
 
-# Generated state / course data (large, personal)
-state/
+# OS artifacts inside course folders
+.DS_Store
 practice_sets/
-
-# Canvas course files (personal data — add your own)
-canvas_files/
 
 # OS
 .DS_Store

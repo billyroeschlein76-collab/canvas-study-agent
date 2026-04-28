@@ -1,0 +1,3716 @@
+{
+  "version": "0.1.0",
+  "created_at": "2026-04-28T21:29:17+00:00",
+  "course_dir": "/Users/billyroeschlein/Documents/Codex/2026-04-28/create-an-agent-that-goes-through/canvas_files/ECON 404",
+  "file_count": 10,
+  "chunk_count": 181,
+  "course_type": "quantitative",
+  "files": [
+    {
+      "path": "Distributional_Effects_Students.pdf",
+      "name": "Distributional_Effects_Students.pdf",
+      "extension": ".pdf",
+      "role": "unknown",
+      "word_count": 1956
+    },
+    {
+      "path": "Heckscher_Ohlin_Students (1).pdf",
+      "name": "Heckscher_Ohlin_Students (1).pdf",
+      "extension": ".pdf",
+      "role": "unknown",
+      "word_count": 2188
+    },
+    {
+      "path": "Heckscher_Ohlin_Students.pdf",
+      "name": "Heckscher_Ohlin_Students.pdf",
+      "extension": ".pdf",
+      "role": "unknown",
+      "word_count": 2188
+    },
+    {
+      "path": "Literature Review (2).pdf",
+      "name": "Literature Review (2).pdf",
+      "extension": ".pdf",
+      "role": "unknown",
+      "word_count": 268
+    },
+    {
+      "path": "Literature Review.pdf",
+      "name": "Literature Review.pdf",
+      "extension": ".pdf",
+      "role": "unknown",
+      "word_count": 268
+    },
+    {
+      "path": "New_New_Trade_Students.pdf",
+      "name": "New_New_Trade_Students.pdf",
+      "extension": ".pdf",
+      "role": "unknown",
+      "word_count": 2700
+    },
+    {
+      "path": "Ricardian_Students.pdf",
+      "name": "Ricardian_Students.pdf",
+      "extension": ".pdf",
+      "role": "unknown",
+      "word_count": 2529
+    },
+    {
+      "path": "Specific_Factors_Students (1).pdf",
+      "name": "Specific_Factors_Students (1).pdf",
+      "extension": ".pdf",
+      "role": "unknown",
+      "word_count": 1281
+    },
+    {
+      "path": "Specific_Factors_Students (2).pdf",
+      "name": "Specific_Factors_Students (2).pdf",
+      "extension": ".pdf",
+      "role": "unknown",
+      "word_count": 1281
+    },
+    {
+      "path": "Specific_Factors_Students.pdf",
+      "name": "Specific_Factors_Students.pdf",
+      "extension": ".pdf",
+      "role": "unknown",
+      "word_count": 1281
+    }
+  ],
+  "chunks": [
+    {
+      "id": "distributional-effects-students-0000",
+      "file_path": "Distributional_Effects_Students.pdf",
+      "file_name": "Distributional_Effects_Students.pdf",
+      "file_role": "unknown",
+      "section": "ECON 404: Cal Poly",
+      "chunk_index": 0,
+      "text": "ECON 404: Cal Poly\nLabor Markets, Distribution and the Political Economy of International Trade 1/35\n\nMotivation\nCommon belief among economists...\nFree trade or freer trade is \\good\"\nBut... trade has distributional implications\nHO model, Speci\nc factors model, etc.\nWhy is free or freer trade good?\nGains to winners >losses to losers\nAnd... these distributional implications have consequences for\nPolitical viability of trade related policy\nPolitical outcomes more generally\nComposition of elected politicians by party and ideology\nLabor Markets, Distribution and the Political Economy of International Trade 2/35\n\nDistributional implications of trade\nStrong theoretical predictions about distributional implications\nHO: rising wage inequality between skilled and unskilled\nworkers\nSpeci\nc factors model: contracting sector speci\nc factor hurt\nEmpirical evidence for strong distributional implications?\nUntil recently, relatively little\nRecently, lots of strong evidence\nLabor Markets, Distribution and the Political Economy of International Trade 3/35\n\nOutlets for trade-related distributional tensions\n1Political resistance to trade reform by voters\nA\nects politician's legislative voting behavior\nRole for compensating \\losers\" of trade reform?\n2Voters favor \\anti-trade\" politicians\nA\nects composition of legislature\nParty lines?\nIdeological lines within party?\nNo time to cover fully today...\nLabor Markets, Distribution and the Political Economy of International Trade 4/35\n\nOutline\n1Distributional implications: empirical evidence\nAutor, Dorn & Hanson (2013, AER)\nPierce & Schott (2016, AER)\nMcLaren & Hakobyan (2016, RESTAT)\n2Outlets for trade-related distributional tensions: empirical\nevidence\nReminder\nLake & Millimet (JIE, 2016)\n3Conclusion\nLabor Markets, Distribution and the Political Economy of International Trade 5/35\n\nMotivation and research question\nMotivation\nRapid rise of China\n1990-2007: massive \"US imports from China\nResearch question\nHow does this a\nect US labor market outcomes?\nManufacturing employment, unemployment, labor force\nparticipation, wages\nLabor Markets, Distribution and the Political Economy of International Trade 6/35\n\nEconometrics: thought experiment\nLook at change in labor market outcomes 1990-2007\nControl group\nUSlocations whose workers don't compete with China\nTreatment group\nUSlocations whose workers compete with China\nNeed local measures of rising import penetration\nLabor Markets, Distribution and the Political Economy of International Trade 7/35\n\nEconometrics: problem\nTwo reasons for rising US imports from China\n1US product demand shocks\nEX. US consumers start buying more clothes\nSome produced domestically )\" US employment\nSome produced by China )\" Chinese IM\nHard to estimate ceteris paribus e\nect of \"Chines IM\n2Chinese export supply shocks\nFree market reforms, productivity growth, etc.\nIdeally want to know e\nect of #2\nNeed local measures of rising import penetration due to\nChinese export supply shocks\nLabor Markets, Distribution and the Political Economy of International Trade 8/35\n\nEconometrics: Chinese export supply shocks\nHow do we identify Chinese export supply shocks?\nSuppose China exports \"because of export supply shocks\nThen, expect\"Chinese exports to other countries too\nLabor Markets, Distribution and the Political Economy of International Trade 9/35\n\nE\nect on manufacturing employment share\nLabor Markets, Distribution and the Political Economy of International Trade 10/35\n\nIs this a big e\nect?\nYes...\nUS manufacturing employment share\nB/w 1990 and 2007: #4:18% points\nIn 1990, 12.6%. So \u001933% of 1990 level\nAbout 22.5% of the 4.18% pt decline is due to the Chinese\nexport supply shock\nLabor Markets, Distribution and the Political Economy of International Trade 11/35\n\nDo people move away?\nLabor Markets, Distribution and the Political Economy of International Trade 12/35\n\nWhat happens to displaced workers?\nLabor Markets, Distribution and the Political Economy of International Trade 13/35\n\nE\nects on non-manufacturing workers\nLabor Markets, Distribution and the Political Economy of International Trade 14/35\n\nSummary of main results\n1Chinese export supply shocks explain about 22% of US manuf\nemp decline b/w 1990-2007\n2Workers do not migrate away from heavily a\nected locations\n3Non-manuf sector does not expand to absorb displaced manuf\nworkers. Rather they go into unemployment or leave the labor\nforce.\nEspecially true if not college educated\n4But, increased competition for non-manuf sector job bids\ndown non-manuf wages\n5Distributional transfers increase (disability, federal income\nassistance)\nLabor Markets, Distribution and the Political Economy of International Trade 15/35",
+      "word_count": 675,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 1,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 10
+      }
+    },
+    {
+      "id": "distributional-effects-students-0001",
+      "file_path": "Distributional_Effects_Students.pdf",
+      "file_name": "Distributional_Effects_Students.pdf",
+      "file_role": "unknown",
+      "section": "ECON 404: Cal Poly",
+      "chunk_index": 1,
+      "text": "export supply shocks explain about 22 of US manuf emp decline b w 1990-2007 2Workers do not migrate away from heavily a ected locations 3Non-manuf sector does not expand to absorb displaced manuf workers Rather they go into unemployment or leave the labor force Especially true if not college educated 4But increased competition for non-manuf sector job bids down non-manuf wages 5Distributional transfers increase disability federal income assistance Labor Markets Distribution and the Political Economy of International Trade 15 35\n\nOutline\n1Distributional implications: empirical evidence\nAutor, Dorn & Hanson (2013, AER)\nPierce & Schott (2016, AER)\nMcLaren & Hakobyan (2016, RESTAT)\n2Outlets for trade-related distributional tensions: empirical\nevidence\nReminder\nLake & Millimet (JIE, 2016)\n3Conclusion\nLabor Markets, Distribution and the Political Economy of International Trade 16/35\n\nMotivation and research question\nMotivation\nWTO must treat other WTO members equally\nMost Favored Nation (MFN) principle",
+      "word_count": 140,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 0,
+        "question": 0
+      }
+    },
+    {
+      "id": "distributional-effects-students-0002",
+      "file_path": "Distributional_Effects_Students.pdf",
+      "file_name": "Distributional_Effects_Students.pdf",
+      "file_role": "unknown",
+      "section": "Exception: Preferential Trade Agreements (e.g. NAFTA)",
+      "chunk_index": 2,
+      "text": "Exception: Preferential Trade Agreements (e.g. NAFTA)\nUS policy on non-WTO members\nGrant \\normal trade relations (NTR)\" )impose MFN tari\ns\nDon't grant NTR )impose very high non-NTR tari\ns\nNon-NTR tari\ns set in 1930\nSo,unrelated to current economic/political conditions\nLabor Markets, Distribution and the Political Economy of International Trade 17/35\n\nMotivation and research question\nPre-2001, US annually decided whether to grant NTR\nFrom 1980, US granted NTR status to China every year\nBut... politically controversial during 1990s\nChina entered WTO in 2001\nWTO entry)permanent NTR (PNTR)\nE\nectively, US liberalizes tari\npolicy on China\nPotential threat of very high non-NTR tari\ns\nDepressed US imports from China\nThreat now gone\nResearch question\nE\nect of PNTR on US mauf employment?\nLabor Markets, Distribution and the Political Economy of International Trade 18/35\n\nEconometrics: thought experiment\nLook at change in industry employment pre and post PNTR\nControl group\nUS industries where non-NTR tari\n= NTR tari\n\nTreatment group\nUS industries where non-NTR tari\n>NTR tari\n\nNeed industry speci\nc measure of NTR gap\nLabor Markets, Distribution and the Political Economy of International Trade 19/35\n\nMain result\nUse annual industry-level data 1990-2007\nFinds the elimination of NTRgap in all industries )#\naggregate manufacture employment by 15%\nrelative to the % change in manufacture employment in\nhypothetical situation where NTRgap didn't exist to begin with\nLabor Markets, Distribution and the Political Economy of International Trade 20/35\n\nOutline\n1Distributional implications: empirical evidence\nAutor, Dorn & Hanson (2013, AER)\nPierce & Schott (2016, AER)\nMcLaren & Hakobyan (2016, RESTAT)\n2Outlets for trade-related distributional tensions: empirical\nevidence\nReminder\nLake & Millimet (JIE, 2016)\n3Conclusion\nLabor Markets, Distribution and the Political Economy of International Trade 21/35\n\nMotivation and research question\nMotivation\nNAFTA very controversial in US\n1994: NAFTA comes into force\n2000: US has eliminated most tari\ns on Mexico\nResearch question\nE\nects of falling NAFTA tari\ns on US wages?\nWhen tari\nfor own industry falls\nWhen tari\ns for important local industries fall\nHeterogeneity by worker education level?\nLabor Markets, Distribution and the Political Economy of International Trade 22/35\n\nEconometrics: thought experiment\nLook at change in worker wages 1990-2000\nControl group (location tari\ns)\nUS workers in locations with many workers in industries where\n\\small\" fall in tari\ns on Mexico or\nMexico doesn't have a comparative advantage\nTreatment group (location tari\ns)\nUS workers in locations with many workers in industries where\n\\big\" fall in tari\ns on Mexico or\nMexico has a comparative advantage\nNeed local measure of \\local tari\nexposure\"\nLabor Markets, Distribution and the Political Economy of International Trade 23/35\n\nEconometrics: thought experiment\nLook at change in worker wages 1990-2000\nControl group (industry tari\ns)\nUS workers in industries where\n\\small\" fall in tari\ns on Mexico or\nMexico doesn't have a comparative advantage\nTreatment group (industry tari\ns)\nUS workers in industries where\n\\big\" fall in tari\ns on Mexico or\nMexico has a comparative advantage\nReally 8 thought experiments...\n1 on this slide and 1 on last slide, but do this for each of 4\neducational groups\nLabor Markets, Distribution and the Political Economy of International Trade 24/35\n\nInterpreting the results\nHigh school dropouts (often blue collarworkers) hit hard in\nvulnerable locations & industries\nRelative to wage growth of HS dropout in una\nected industry\nand location\nNAFTA reduces wage growth of HS dropout by...\n16% pts in most vulnerable industry but una\nected location\n10% pts in una\nected industry but most vulnerable location\n25% pts in most vulnerable industry and most vulnerable\nlocation\nHigh school grads and some college: somewhat weaker e\nects\nCollege grads: no e\nects\nLabor Markets, Distribution and the Political Economy of International Trade 25/35\n\nOutline\n1Distributional implications: empirical evidence\nAutor, Dorn & Hanson (2013, AER)\nPierce & Schott (2016, AER)\nMcLaren & Hakobyan (2016, RESTAT)\nSummary\n2Outlets for trade-related distributional tensions: empirical\nevidence\nReminder\nLake & Millimet (JIE, 2016)\n3Conclusion\nLabor Markets, Distribution and the Political Economy of International Trade 26/35",
+      "word_count": 662,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 1,
+        "summary": 1,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 1,
+        "heading": 1,
+        "question": 3
+      }
+    },
+    {
+      "id": "distributional-effects-students-0003",
+      "file_path": "Distributional_Effects_Students.pdf",
+      "file_name": "Distributional_Effects_Students.pdf",
+      "file_role": "unknown",
+      "section": "Exception: Preferential Trade Agreements (e.g. NAFTA)",
+      "chunk_index": 3,
+      "text": "pts in most vulnerable industry and most vulnerable location High school grads and some college somewhat weaker e ects College grads no e ects Labor Markets Distribution and the Political Economy of International Trade 25 35 Outline 1Distributional implications empirical evidence Autor Dorn Hanson 2013 AER Pierce Schott 2016 AER McLaren Hakobyan 2016 RESTAT Summary 2Outlets for trade-related distributional tensions empirical evidence Reminder Lake Millimet JIE 2016 3Conclusion Labor Markets Distribution and the Political Economy of International Trade 26 35\n\nMotivation and research question\nMotivation\nTrade has strong distributional implications\nPolitician rhetoric echoes voter anxieties",
+      "word_count": 95,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 1,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 0,
+        "question": 0
+      }
+    },
+    {
+      "id": "distributional-effects-students-0004",
+      "file_path": "Distributional_Effects_Students.pdf",
+      "file_name": "Distributional_Effects_Students.pdf",
+      "file_role": "unknown",
+      "section": "Trump, Sanders, Clinton",
+      "chunk_index": 4,
+      "text": "Trump, Sanders, Clinton\nLikely generates political resistance to trade reform\nUS Congressman vote on Free Trade Agreements (FTAs)\n13 in total (e.g. NAFTA, Colombia, etc.)\nLabor Markets, Distribution and the Political Economy of International Trade 27/35\n\nMotivation and research question\nWill a Congressman vote in favor of an FTA?\nLess likely if many losers in their Congressional District (CD)\nPerhaps more likely if losers (partly) compensated\nUS has Trade Adjustment Assistance (TAA) program\nTrade displaced workers get income support and training\nTAA petition needs approval from Dept. of Labor\nResearch question\nAre Congressman more likely to vote in favor of FTAs when\nexpected trade related redistribution higher in their CD?\nLabor Markets, Distribution and the Political Economy of International Trade 28/35\n\nEconometrics: thought experiment\nDoes a given Congressman change their FTA voting behavior\nwhen expected trade related redistribution ( R) higher in their\nCD?\nControl group\nCongressman voting on FTAs when Rlow in their CD\nTreatment group\nCongressman voting on FTAs when Rhigh in their CD\nNeed local measures of expected trade related redistribution\nLabor Markets, Distribution and the Political Economy of International Trade 29/35\n\nEconometrics: local expected trade related redistribution\nNotation\nc: location (435 Congressional Districts)\ns: state (50 states)\nj: industry (\u0019400 4-digit SIC industries)\nt: year (annual, 2001-2011)\nL: employment\nExpected trade related redistribution in location ctime t\nRct=UIst\u0002Pct\nUIst: unemployment insurance in state sat time t\nPct: prob of trade displaced worker approved for TAA\nPct=X\njLcj;2000\nLc;2000Pjt\nLabor Markets, Distribution and the Political Economy of International Trade 30/35\n\nEconometrics: local expected trade related redistribution\nRct=UIst\u0002Pct\nPct=X\njLcj;2000\nLc;2000Pjt\nWhen is Rctlarge?\nTAA income support generous in state of location c, and...\nWorkers in location cconcentrated in industries where\ntrade-displaced workers very likely to be approved for TAA\nLabor Markets, Distribution and the Political Economy of International Trade 31/35\n\nEconometrics: regression\nNotation\nv: vote (= 1 if pro-FTA)\ni: Congressman (435 in each Congress)\nb: FTA bill (11 in sample)\nMain speci\ncation\nvibt=\u0012Rct+",
+      "word_count": 343,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 7,
+        "heading": 1,
+        "question": 4
+      }
+    },
+    {
+      "id": "distributional-effects-students-0005",
+      "file_path": "Distributional_Effects_Students.pdf",
+      "file_name": "Distributional_Effects_Students.pdf",
+      "file_role": "unknown",
+      "section": "cb+",
+      "chunk_index": 5,
+      "text": "cb+:::\n\u0012: e\nect of expected trade related redist on pro-FTA vote\n\ncb: local tari\non FTA partner b\nLabor Markets, Distribution and the Political Economy of International Trade 32/35\n\nEconometrics: results\nvibt=\u0012Rct+",
+      "word_count": 34,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 1,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "distributional-effects-students-0006",
+      "file_path": "Distributional_Effects_Students.pdf",
+      "file_name": "Distributional_Effects_Students.pdf",
+      "file_role": "unknown",
+      "section": "cb+",
+      "chunk_index": 6,
+      "text": "cb+:::\n\u0012> 0: more likely to vote in favor of FTA when Rcthigher\nHow much more likely?\nE\nect of 1 stdev#inRabout 20-30% weaker than 1 stdev \"\nin\ncb\n1 stdev#inRfor all locations would've blocked two FTAs\nBut, very heterogeneous e\nects\nE\nect of 1 stdev\"inRmuch larger when\nhigh\ncb\nhigh re-election risk\n\\Vulnerable\" politicians very responsive to TAA\nLabor Markets, Distribution and the Political Economy of International Trade 33/35\n\nOutline\n1Distributional implications: empirical evidence\nAutor, Dorn & Hanson (2013, AER)\nPierce & Schott (2016, AER)\nMcLaren & Hakobyan (2016, RESTAT)\n2Outlets for trade-related distributional tensions: empirical\nevidence\nReminder\nLake & Millimet (JIE, 2016)\n3Conclusion\nLabor Markets, Distribution and the Political Economy of International Trade 34/35\n\nConclusion\nTrade has strong distributional implications for particular\ngroups of workers and locations\nOutlets for distributional tensions\nPolitical resistance to trade reform\nTrade related redistribution mitigates this resistance\nLabor Markets, Distribution and the Political Economy of International Trade 35/35",
+      "word_count": 157,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 1
+      }
+    },
+    {
+      "id": "heckscher-ohlin-students-1-0000",
+      "file_path": "Heckscher_Ohlin_Students (1).pdf",
+      "file_name": "Heckscher_Ohlin_Students (1).pdf",
+      "file_role": "unknown",
+      "section": "ECON 404: Cal Poly",
+      "chunk_index": 0,
+      "text": "ECON 404: Cal Poly\nHeckscher-Ohlin Model 1/34\n\nMotivation\nModel developed by Eli Heckscher and his student Bertil\nOhlin in the early 1900s.\nAt the time, there was massive amounts of trade { including\nmachinery.\nThis ability to transport machines meant harder to justify\ndi\nerences in technology was the driving force of trade (like\nRicardo)\nSo, they assume there are di\nerences in resources.",
+      "word_count": 64,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "heckscher-ohlin-students-1-0001",
+      "file_path": "Heckscher_Ohlin_Students (1).pdf",
+      "file_name": "Heckscher_Ohlin_Students (1).pdf",
+      "file_role": "unknown",
+      "section": "Even today",
+      "chunk_index": 1,
+      "text": "Even today:\nCanada { lots of land\nU.S, Western Europe, and Japan { lots of skilled labor\nChina and other Asian countries { lots of unskilled labor\nHeckscher-Ohlin Model 2/34",
+      "word_count": 29,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "heckscher-ohlin-students-1-0002",
+      "file_path": "Heckscher_Ohlin_Students (1).pdf",
+      "file_name": "Heckscher_Ohlin_Students (1).pdf",
+      "file_role": "unknown",
+      "section": "Model Setup",
+      "chunk_index": 2,
+      "text": "Model Setup\nConsider two sectors; Computers ( C) and Shoes ( S).\nCapital ( K) and Labor ( L) are used in both sectors with the\ntotal amount of Capital and Labor\nxed.",
+      "word_count": 29,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "heckscher-ohlin-students-1-0003",
+      "file_path": "Heckscher_Ohlin_Students (1).pdf",
+      "file_name": "Heckscher_Ohlin_Students (1).pdf",
+      "file_role": "unknown",
+      "section": "Foreign",
+      "chunk_index": 3,
+      "text": "Foreign:\n\u0016K\u0003=K\u0003\nC+K\u0003\nS\n\u0016L\u0003=L\u0003\nC+L\u0003\nS\nHeckscher-Ohlin Model 3/34\n\nAssumptions\n1Both factors can move freely between industries.\n2Shoe production is labor-intensive; that is, it requires more\nlabor per unit of capital to produce shoes than computers\nLS",
+      "word_count": 43,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 2,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "heckscher-ohlin-students-1-0004",
+      "file_path": "Heckscher_Ohlin_Students (1).pdf",
+      "file_name": "Heckscher_Ohlin_Students (1).pdf",
+      "file_role": "unknown",
+      "section": "KS>LC",
+      "chunk_index": 4,
+      "text": "KS>LC\nKC\n3Foreign is labor-abundant. Equivalently, Home is capital\nabundant\n\u0016L\u0003\n\u0016K\u0003>\u0016L\n\u0016Kor\u0016K\n\u0016L>\u0016K\u0003\n\u0016L\u0003\nHeckscher-Ohlin Model 4/34\n\nAssumptions\n4The\nnal outputs can be traded freely, but labor and capital\ndo not move between countries.\n5The technologies used to produce the two goods are identical\nacross the countries { i.e. everyone produces the same way.",
+      "word_count": 60,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "heckscher-ohlin-students-1-0005",
+      "file_path": "Heckscher_Ohlin_Students (1).pdf",
+      "file_name": "Heckscher_Ohlin_Students (1).pdf",
+      "file_role": "unknown",
+      "section": "QS=QS(KS;LS)",
+      "chunk_index": 5,
+      "text": "QS=QS(KS;LS)\n6Consumer tastes are the same across countries, and\npreferences for computers and shoes do not vary with the\ncounty's level of income.\nHeckscher-Ohlin Model 5/34",
+      "word_count": 30,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 1,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "heckscher-ohlin-students-1-0006",
+      "file_path": "Heckscher_Ohlin_Students (1).pdf",
+      "file_name": "Heckscher_Ohlin_Students (1).pdf",
+      "file_role": "unknown",
+      "section": "No Trade Equilibrium",
+      "chunk_index": 6,
+      "text": "No Trade Equilibrium\nHeckscher-Ohlin Model 8/34\n\nChoosing the Mix of Inputs { Home\nAgain, with perfect competition, we know that in equilibrium",
+      "word_count": 22,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "heckscher-ohlin-students-1-0007",
+      "file_path": "Heckscher_Ohlin_Students (1).pdf",
+      "file_name": "Heckscher_Ohlin_Students (1).pdf",
+      "file_role": "unknown",
+      "section": "Finding Input Intensity",
+      "chunk_index": 7,
+      "text": "Finding Input Intensity\nLabor (capital) intensive: A good is labor (capital) intensive\nrelative to another good if its production requires more (less)\nlabor per machine than the other good requires in its\nproduction.\nExample: Suppose production is Cobb-Douglas\nQS=L3\n4\nSK1\n4\nS(3)\nQC=L1\n4\nCK3\n4\nC(4)\nFind the marginal products and technical rate of substitution\n(TRS)",
+      "word_count": 62,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 1,
+        "assessment": 0,
+        "formula": 3,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "heckscher-ohlin-students-1-0008",
+      "file_path": "Heckscher_Ohlin_Students (1).pdf",
+      "file_name": "Heckscher_Ohlin_Students (1).pdf",
+      "file_role": "unknown",
+      "section": "Finding Input Intensity",
+      "chunk_index": 8,
+      "text": "Finding Input Intensity\nIn Equilibrium the TRS in each industry has to be equal.\nWhy?",
+      "word_count": 15,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 1
+      }
+    },
+    {
+      "id": "heckscher-ohlin-students-1-0009",
+      "file_path": "Heckscher_Ohlin_Students (1).pdf",
+      "file_name": "Heckscher_Ohlin_Students (1).pdf",
+      "file_role": "unknown",
+      "section": "KS= 9\u0012LC",
+      "chunk_index": 9,
+      "text": "KS= 9\u0012LC\nKC\u0013\nTherefore, the Shoe sector will require 9 times as much labor\npre capital as the Computer sector making Shoes labor\nintensive and Computers capital intensive .\nHeckscher-Ohlin Model 11/34\n\nChoosing the Mix of Inputs { Home\nNote that the country is constrained by the total amount of\nlabor and capital. In the previous section we\ngured out the\noptimal mix of labor and capital, but not the exact amount\nused.\nWe need our input constraints, but also Prices.\nUsing our optimality conditions\nPC",
+      "word_count": 86,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 1,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "heckscher-ohlin-students-1-0010",
+      "file_path": "Heckscher_Ohlin_Students (1).pdf",
+      "file_name": "Heckscher_Ohlin_Students (1).pdf",
+      "file_role": "unknown",
+      "section": "MPL C= 3\u0012KS",
+      "chunk_index": 10,
+      "text": "MPL C= 3\u0012KS\nLF\u00131\n4\u0012LC\nKC\u00133\n4\n= 3\u0012KC\n9LC\u00131\n4\u0012LC\nKC\u00133\n4\n=\u00123LC\nKC\u00131\n2\nHeckscher-Ohlin Model 12/34\n\nChoosing the Mix of Inputs { Home\nIn order to pin down each amount of inputs used in each\nsector, we have four equations and four unknowns.\nLS",
+      "word_count": 55,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 3,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "heckscher-ohlin-students-1-0011",
+      "file_path": "Heckscher_Ohlin_Students (1).pdf",
+      "file_name": "Heckscher_Ohlin_Students (1).pdf",
+      "file_role": "unknown",
+      "section": "Solving the above system of equations yields",
+      "chunk_index": 11,
+      "text": "Solving the above system of equations yields:\nKS=1\n80\nB@3\u0016L\u0010\nPC\nPS\u00112\u0000\u0016K1",
+      "word_count": 17,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 1,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "heckscher-ohlin-students-1-0012",
+      "file_path": "Heckscher_Ohlin_Students (1).pdf",
+      "file_name": "Heckscher_Ohlin_Students (1).pdf",
+      "file_role": "unknown",
+      "section": "CA KC=3",
+      "chunk_index": 12,
+      "text": "CA KC=3\n80\nB@3\u0016K\u0000\u0016L\u0010\nPC\nPS\u001121\nCA\nLS=9\n80\nB@\u0016L\u0000\u0016K\u0010\nPC\nPS\u00112\n31",
+      "word_count": 22,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 2,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "heckscher-ohlin-students-1-0013",
+      "file_path": "Heckscher_Ohlin_Students (1).pdf",
+      "file_name": "Heckscher_Ohlin_Students (1).pdf",
+      "file_role": "unknown",
+      "section": "CA LC=1",
+      "chunk_index": 13,
+      "text": "CA LC=1\n8\n3\u0016K\u0012PC\nPS\u00132\n\u0000\u0016L!\nWhat if the economy is endowed with more capital \u0016K? More\nlabor \u0016L?\nWhat if the relative price of ComputersPC\nPSincreases?\nDecreases?\nHeckscher-Ohlin Model 14/34",
+      "word_count": 36,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 1,
+        "heading": 1,
+        "question": 4
+      }
+    },
+    {
+      "id": "heckscher-ohlin-students-1-0014",
+      "file_path": "Heckscher_Ohlin_Students (1).pdf",
+      "file_name": "Heckscher_Ohlin_Students (1).pdf",
+      "file_role": "unknown",
+      "section": "Relative Supply",
+      "chunk_index": 14,
+      "text": "Relative Supply\nAs can be seen above, generally, an economy will tend to be\nrelatively e\nective at producing goods that are intensive in the\nfactors with which the country is relatively well endowed.\nThis can be seen explicitly by solving for the relative supply\nfunction\nQC\nQS=\u0012\n3\u0010\u0016K\n\u0016L\u0011\u0010\nPC\nPS\u00112\n\u00001\u0013\n33\n4\u0012\n3\u0000\u0010\u0016K\n\u0016L\u0011\u0010\nPC\nPS\u00112\u0013\u0010\nPC\nPS\u0011\nWhat if\u0016K\n\u0016L>\u0016K\u0003\n\u0016L\u0003?\nBut, perhaps more intuition can come from the PPFs\nHeckscher-Ohlin Model 15/34\n\nPPFs\nHeckscher-Ohlin Model 16/34",
+      "word_count": 89,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 2,
+        "heading": 1,
+        "question": 1
+      }
+    },
+    {
+      "id": "heckscher-ohlin-students-1-0015",
+      "file_path": "Heckscher_Ohlin_Students (1).pdf",
+      "file_name": "Heckscher_Ohlin_Students (1).pdf",
+      "file_role": "unknown",
+      "section": "Trade Equilibrium",
+      "chunk_index": 15,
+      "text": "Trade Equilibrium\nHeckscher-Ohlin Model 19/34\n\nTheorems\nThe H-O Theorem: A country will have comparative\nadvantage in, and therefore will export, that good whose\nproduction is relatively intensive in the factor with which that\ncountry is relatively well endowed.\nThe Rybczynski Theorem: At constant world prices, if a\ncountry experiences an increase in the supply of one factor, it\nwill produce more of the product whose production is\nintensive in that factor and less of the other.\nHeckscher-Ohlin Model 20/34\n\nTheorems",
+      "word_count": 82,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "heckscher-ohlin-students-1-0016",
+      "file_path": "Heckscher_Ohlin_Students (1).pdf",
+      "file_name": "Heckscher_Ohlin_Students (1).pdf",
+      "file_role": "unknown",
+      "section": "The Factor Price Equalization Theorem: Given all the",
+      "chunk_index": 16,
+      "text": "The Factor Price Equalization Theorem: Given all the\nassumptions of the H-O model, free international trade will\nlead to the international equalization of individual factor\nprices.\n!3 reasons why this might fail...\n1If countries have di\nerent technologies of production.\n2Needs complete convergence of the prices of goods. In the real\nworld, prices of goods are not fully equalized by international\ntrade { both natural barriers (such as transportation costs)\nand government (such as tari\ns, import quotas, and other\nrestrictions).\n3We also need the countries to produce the same set of goods.\nOne possible reason this isn't the case is countries have\nradically di\nerent ratios of capital to labor or of skilled to\nunskilled labor.\nHeckscher-Ohlin Model 21/34",
+      "word_count": 120,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "heckscher-ohlin-students-1-0017",
+      "file_path": "Heckscher_Ohlin_Students (1).pdf",
+      "file_name": "Heckscher_Ohlin_Students (1).pdf",
+      "file_role": "unknown",
+      "section": "Assumptions",
+      "chunk_index": 17,
+      "text": "Assumptions:\n1Labor and capital\now freely between the industries.\n2The production of shoes is labor-intensive as compared with\ncomputer production, which is capital-intensive.\n3The amounts of labor and capital found in the two countries\ndi\ner, with Foreign abundant in labor and Home abundant in\ncapital.\n4There is free international trade in goods.\n5The technologies for producing shoes and computers are the\nsame across countries.\n6Tastes are the same across countries.\nHeckscher-Ohlin Model 22/34",
+      "word_count": 75,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "heckscher-ohlin-students-1-0018",
+      "file_path": "Heckscher_Ohlin_Students (1).pdf",
+      "file_name": "Heckscher_Ohlin_Students (1).pdf",
+      "file_role": "unknown",
+      "section": "Testing the Heckscher-Ohlin Model",
+      "chunk_index": 18,
+      "text": "Testing the Heckscher-Ohlin Model\nThe\nrst test of the HeckscherOhlin theorem was performed by\neconomist Wassily Leontief in 1953.\nLeontief supposed correctly that in 1947 the United States\nwas abundant in capital relative to the rest of the world.\nLeontief assumed that U.S. and foreign technologies were the\nsame due to the limited data on foreign technology, which is\nconsistent with HO theorem.\nThus, from the HeckscherOhlin theorem, Leontief expected\nthat the United States would export capital-intensive goods\nand import labor-intensive goods.",
+      "word_count": 83,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 1,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "heckscher-ohlin-students-1-0019",
+      "file_path": "Heckscher_Ohlin_Students (1).pdf",
+      "file_name": "Heckscher_Ohlin_Students (1).pdf",
+      "file_role": "unknown",
+      "section": "What Leontief actually found, however, was just the opposite",
+      "chunk_index": 19,
+      "text": "What Leontief actually found, however, was just the opposite:\nthe capital-labor ratio for U.S. imports was higher than the\ncapitallabor ratio found for U.S. exports.\nThis\nnding contradicted the HeckscherOhlin theorem and\ncame to be called Leontief's paradox .\nHeckscher-Ohlin Model 23/34\n\nLeontief's (1953) Test",
+      "word_count": 47,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 1,
+        "formula": 2,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "heckscher-ohlin-students-1-0020",
+      "file_path": "Heckscher_Ohlin_Students (1).pdf",
+      "file_name": "Heckscher_Ohlin_Students (1).pdf",
+      "file_role": "unknown",
+      "section": "Exports Imports",
+      "chunk_index": 20,
+      "text": "Exports Imports\nCapital ($ million) $2.5 $3.1\nLabor (person-years) 182 170\nCapital/labor ($/person) $13,700 $18,200\nU.S. and foreign technologies are not the same.\nBy focusing only on labor and capital, Leontief ignored land.\nLabor should have been disaggregated by skill (since it would\nnot be surprising to\nnd that U.S. exports are intensive in\nskilled labor).\nThe data for 1947 may be unusual, since World War II had\njust ended.\nThe U.S. was not engaged in free trade, as the HO model\nassumes.\nHeckscher-Ohlin Model 24/34",
+      "word_count": 94,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "heckscher-ohlin-students-1-0021",
+      "file_path": "Heckscher_Ohlin_Students (1).pdf",
+      "file_name": "Heckscher_Ohlin_Students (1).pdf",
+      "file_role": "unknown",
+      "section": "Understanding Leontief's Paradox",
+      "chunk_index": 21,
+      "text": "Understanding Leontief's Paradox\nAs with any result that seems counterintuitive, you should\nalways ask yourself a couple questions.\nIs the methodology correct? In particular, if the methodology\nis appealing to a theoretical model, were the crimes\ncommitted in moving from theory to data signi\ncant?\nIf the methodology is correct, are there alternative\nexplanations outside the model which might explain the\nresult?\nIf exploring both questions leads you to accept the\nmethodology and the result, then you have a real puzzle\nAs you will notice, there is a common theme in economics\nthat \\puzzles\" are really just bad methodology or bad models\n(smell test usually su\u000ecient to identify a faux puzzle)\nHeckscher-Ohlin Model 25/34",
+      "word_count": 116,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 1,
+        "formula": 0,
+        "heading": 1,
+        "question": 3
+      }
+    },
+    {
+      "id": "heckscher-ohlin-students-1-0022",
+      "file_path": "Heckscher_Ohlin_Students (1).pdf",
+      "file_name": "Heckscher_Ohlin_Students (1).pdf",
+      "file_role": "unknown",
+      "section": "Testing the Heckscher-Ohlin Model",
+      "chunk_index": 22,
+      "text": "Testing the Heckscher-Ohlin Model\nAn important study by Donald Davis and David Weinstein\nshowed that if relax the assumption of common technologies,\nalong with assumptions underlying factor price equalization\n(countries produce the same goods and costless trade",
+      "word_count": 37,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 1,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "heckscher-ohlin-students-1-0023",
+      "file_path": "Heckscher_Ohlin_Students (1).pdf",
+      "file_name": "Heckscher_Ohlin_Students (1).pdf",
+      "file_role": "unknown",
+      "section": "equalizes prices of goods)",
+      "chunk_index": 23,
+      "text": "equalizes prices of goods):\nthen the predictions for the direction and volume of the factor\ncontent of trade line-up well with empirical evidence and\nultimately generate a good\nt.\nDi\u000eculty\nnding support for the predictions of the \\pure\"\nHeckscher-Ohlin model can be blamed on some of the\nassumptions made.\nHeckscher-Ohlin Model 26/34\n\nDavis and Weinstein (2001)\nHeckscher-Ohlin Model 27/34\n\nE\nect of Trade on Factor Prices\nLet's solve for equilibrium wages and rental rates and for\nsimplicity focus just on the Computer industry (note wages\nand rental rates have to be the same across industries)\nw=PCMPL C\nr=PCMPK C\nContinue to use our example from before\nQS=L3\n4\nSK1\n4\nS\nQC=L1\n4\nCK3\n4\nC\nHeckscher-Ohlin Model 28/34\n\nE\nect of Trade on Factor Prices\nRecall that in equilibrium, it must be the case that\nPC",
+      "word_count": 145,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 1,
+        "assessment": 0,
+        "formula": 5,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "heckscher-ohlin-students-1-0024",
+      "file_path": "Heckscher_Ohlin_Students (1).pdf",
+      "file_name": "Heckscher_Ohlin_Students (1).pdf",
+      "file_role": "unknown",
+      "section": "MPL C= 3\u0012KS",
+      "chunk_index": 24,
+      "text": "MPL C= 3\u0012KS\nLS\u00131\n4\u0012LC\nKC\u00133\n4\n= 3\u0012KC\n9LC\u00131\n4\u0012LC\nKC\u00133\n4\n=\u00123LC\nKC\u00131\n2\nWhich means that\nLC\nKC=1\n3\u0012PC\nPS\u00132\norKC",
+      "word_count": 35,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 4,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "heckscher-ohlin-students-1-0025",
+      "file_path": "Heckscher_Ohlin_Students (1).pdf",
+      "file_name": "Heckscher_Ohlin_Students (1).pdf",
+      "file_role": "unknown",
+      "section": "LC= 3\u0012PS",
+      "chunk_index": 25,
+      "text": "LC= 3\u0012PS\nPC\u00132\nHeckscher-Ohlin Model 29/34\n\nE\nect of Trade on Factor Prices\nRecall our factor price equations (and convert to real prices)\nw\nPC=MPL C andr",
+      "word_count": 31,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 2,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "heckscher-ohlin-students-1-0026",
+      "file_path": "Heckscher_Ohlin_Students (1).pdf",
+      "file_name": "Heckscher_Ohlin_Students (1).pdf",
+      "file_role": "unknown",
+      "section": "PC=MPK C",
+      "chunk_index": 26,
+      "text": "PC=MPK C\n)w\nPC=1\n4\u0012KC\nLC\u00133\n4\n)r\nPC=3\n4\u0012LC\nKC\u00131\n4\n)w\nPC=1\n4\n3\u0012PS\nPC\u00132!3\n4\n)r\nPC=3\n4\n1\n3\u0012PC\nPS\u00132!1\n4\n)w\nPC=33\n4\n4\n1\nPC\nPS!3\n2\n)r\nPC=33\n4\n4\u0012PC\nPS\u00131\n2\nHeckscher-Ohlin Model 30/34\n\nE\nect of Trade on Factor Prices\nw\nPC=33\n4\n4\n1\nPC\nPS!3\n2r\nPC=33\n4\n4\u0012PC\nPS\u00131\n2\nWhat happens if the home country { which is capital\nabundant { opens up to trade?\nIf the home country does trade, what do we know has to be\ntrue about the relative price of ComputersPC\nPS?\nPC\nPS\")w\nPC#andr\nPC\".\nThe Stolper-Samuelson Theorem: Free international trade\nbene\nts the abundant factor and harms the scarce factor.\nHeckscher-Ohlin Model 31/34",
+      "word_count": 149,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 9,
+        "heading": 1,
+        "question": 2
+      }
+    },
+    {
+      "id": "heckscher-ohlin-students-1-0027",
+      "file_path": "Heckscher_Ohlin_Students (1).pdf",
+      "file_name": "Heckscher_Ohlin_Students (1).pdf",
+      "file_role": "unknown",
+      "section": "Opinions Toward Free Trade",
+      "chunk_index": 27,
+      "text": "Opinions Toward Free Trade\nIn the short-run speci\nc-factors model, labor may gain or lose\nfrom free trade, but the speci\nc factor in the export sector\ngains, and the speci\nc factor in the import sector loses.\nIf labor also earns some part of the rental on the speci\nc\nfactor in their industry, the industry of employment of workers\nwill a\nect their attitudes toward free trade.\nIn the long-run Heckscher-Ohlin model, however, the industry\nof employment should not matter.\nAccording to the Stolper-Samuelson theorem, an increase in\nthe relative price of exports will bene\nt the factor of\nproduction used intensively in exports and harm the other,\nregardless of the industry in which these factors of production\nactually work.\nHeckscher-Ohlin Model 32/34",
+      "word_count": 126,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "heckscher-ohlin-students-1-0028",
+      "file_path": "Heckscher_Ohlin_Students (1).pdf",
+      "file_name": "Heckscher_Ohlin_Students (1).pdf",
+      "file_role": "unknown",
+      "section": "Opinions Toward Free Trade",
+      "chunk_index": 28,
+      "text": "Opinions Toward Free Trade\nIn the United States, export industries tend to use high-skilled\nlabor intensively for research and development and other\nscienti\nc work.\nTherefore, an increase in the relative price of exports will\nbene\nt skilled labor in the long run, regardless of whether\nthese workers are employed in export-oriented industries or\nimport-competing industries.\nIn the long run, then, the skill level of workers should\ndetermine their attitudes toward free trade.\nHeckscher-Ohlin Model 33/34\n\nConclusion\nWe have now seen 4 standard theoretical trade models",
+      "word_count": 87,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "heckscher-ohlin-students-1-0029",
+      "file_path": "Heckscher_Ohlin_Students (1).pdf",
+      "file_name": "Heckscher_Ohlin_Students (1).pdf",
+      "file_role": "unknown",
+      "section": "Adam Smith!Ricardian!Speci",
+      "chunk_index": 29,
+      "text": "Adam Smith!Ricardian!Speci\nc-Factors!\nHeckscher-Ohlin\nS.F. and H.O. models shed light on how some may lose from\nfreer trade despite the aggregate winning.\nNext up, we dive a bit deeper into who loses from trade.\nKeep in mind that though there are losers to freer trade, trade\nprotection is typically seen as an ine\u000ecient mechanism to help\nthose who lose; i.e.\n(1) Hufbauer and Lowry (2012)\nnds that in the case of tari\ns set\non tires by Obama in 2009, \\the cost per job manufacturing\nsaved (a maximum of 1,200 jobs by our calculations) was at\nleast $900,000 in that year.\"\n(2) Amiti et. al (2019)\nnds that the 2017-2018 trade war has\nresulted in (conservatively) $200,000 welfare lose per job saved.\nHeckscher-Ohlin Model 34/34",
+      "word_count": 135,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "heckscher-ohlin-students-0000",
+      "file_path": "Heckscher_Ohlin_Students.pdf",
+      "file_name": "Heckscher_Ohlin_Students.pdf",
+      "file_role": "unknown",
+      "section": "ECON 404: Cal Poly",
+      "chunk_index": 0,
+      "text": "ECON 404: Cal Poly\nHeckscher-Ohlin Model 1/34\n\nMotivation\nModel developed by Eli Heckscher and his student Bertil\nOhlin in the early 1900s.\nAt the time, there was massive amounts of trade { including\nmachinery.\nThis ability to transport machines meant harder to justify\ndi\nerences in technology was the driving force of trade (like\nRicardo)\nSo, they assume there are di\nerences in resources.",
+      "word_count": 64,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "heckscher-ohlin-students-0001",
+      "file_path": "Heckscher_Ohlin_Students.pdf",
+      "file_name": "Heckscher_Ohlin_Students.pdf",
+      "file_role": "unknown",
+      "section": "Even today",
+      "chunk_index": 1,
+      "text": "Even today:\nCanada { lots of land\nU.S, Western Europe, and Japan { lots of skilled labor\nChina and other Asian countries { lots of unskilled labor\nHeckscher-Ohlin Model 2/34",
+      "word_count": 29,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "heckscher-ohlin-students-0002",
+      "file_path": "Heckscher_Ohlin_Students.pdf",
+      "file_name": "Heckscher_Ohlin_Students.pdf",
+      "file_role": "unknown",
+      "section": "Model Setup",
+      "chunk_index": 2,
+      "text": "Model Setup\nConsider two sectors; Computers ( C) and Shoes ( S).\nCapital ( K) and Labor ( L) are used in both sectors with the\ntotal amount of Capital and Labor\nxed.",
+      "word_count": 29,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "heckscher-ohlin-students-0003",
+      "file_path": "Heckscher_Ohlin_Students.pdf",
+      "file_name": "Heckscher_Ohlin_Students.pdf",
+      "file_role": "unknown",
+      "section": "Foreign",
+      "chunk_index": 3,
+      "text": "Foreign:\n\u0016K\u0003=K\u0003\nC+K\u0003\nS\n\u0016L\u0003=L\u0003\nC+L\u0003\nS\nHeckscher-Ohlin Model 3/34\n\nAssumptions\n1Both factors can move freely between industries.\n2Shoe production is labor-intensive; that is, it requires more\nlabor per unit of capital to produce shoes than computers\nLS",
+      "word_count": 43,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 2,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "heckscher-ohlin-students-0004",
+      "file_path": "Heckscher_Ohlin_Students.pdf",
+      "file_name": "Heckscher_Ohlin_Students.pdf",
+      "file_role": "unknown",
+      "section": "KS>LC",
+      "chunk_index": 4,
+      "text": "KS>LC\nKC\n3Foreign is labor-abundant. Equivalently, Home is capital\nabundant\n\u0016L\u0003\n\u0016K\u0003>\u0016L\n\u0016Kor\u0016K\n\u0016L>\u0016K\u0003\n\u0016L\u0003\nHeckscher-Ohlin Model 4/34\n\nAssumptions\n4The\nnal outputs can be traded freely, but labor and capital\ndo not move between countries.\n5The technologies used to produce the two goods are identical\nacross the countries { i.e. everyone produces the same way.",
+      "word_count": 60,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "heckscher-ohlin-students-0005",
+      "file_path": "Heckscher_Ohlin_Students.pdf",
+      "file_name": "Heckscher_Ohlin_Students.pdf",
+      "file_role": "unknown",
+      "section": "QS=QS(KS;LS)",
+      "chunk_index": 5,
+      "text": "QS=QS(KS;LS)\n6Consumer tastes are the same across countries, and\npreferences for computers and shoes do not vary with the\ncounty's level of income.\nHeckscher-Ohlin Model 5/34",
+      "word_count": 30,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 1,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "heckscher-ohlin-students-0006",
+      "file_path": "Heckscher_Ohlin_Students.pdf",
+      "file_name": "Heckscher_Ohlin_Students.pdf",
+      "file_role": "unknown",
+      "section": "No Trade Equilibrium",
+      "chunk_index": 6,
+      "text": "No Trade Equilibrium\nHeckscher-Ohlin Model 8/34\n\nChoosing the Mix of Inputs { Home\nAgain, with perfect competition, we know that in equilibrium",
+      "word_count": 22,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "heckscher-ohlin-students-0007",
+      "file_path": "Heckscher_Ohlin_Students.pdf",
+      "file_name": "Heckscher_Ohlin_Students.pdf",
+      "file_role": "unknown",
+      "section": "Finding Input Intensity",
+      "chunk_index": 7,
+      "text": "Finding Input Intensity\nLabor (capital) intensive: A good is labor (capital) intensive\nrelative to another good if its production requires more (less)\nlabor per machine than the other good requires in its\nproduction.\nExample: Suppose production is Cobb-Douglas\nQS=L3\n4\nSK1\n4\nS(3)\nQC=L1\n4\nCK3\n4\nC(4)\nFind the marginal products and technical rate of substitution\n(TRS)",
+      "word_count": 62,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 1,
+        "assessment": 0,
+        "formula": 3,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "heckscher-ohlin-students-0008",
+      "file_path": "Heckscher_Ohlin_Students.pdf",
+      "file_name": "Heckscher_Ohlin_Students.pdf",
+      "file_role": "unknown",
+      "section": "Finding Input Intensity",
+      "chunk_index": 8,
+      "text": "Finding Input Intensity\nIn Equilibrium the TRS in each industry has to be equal.\nWhy?",
+      "word_count": 15,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 1
+      }
+    },
+    {
+      "id": "heckscher-ohlin-students-0009",
+      "file_path": "Heckscher_Ohlin_Students.pdf",
+      "file_name": "Heckscher_Ohlin_Students.pdf",
+      "file_role": "unknown",
+      "section": "KS= 9\u0012LC",
+      "chunk_index": 9,
+      "text": "KS= 9\u0012LC\nKC\u0013\nTherefore, the Shoe sector will require 9 times as much labor\npre capital as the Computer sector making Shoes labor\nintensive and Computers capital intensive .\nHeckscher-Ohlin Model 11/34\n\nChoosing the Mix of Inputs { Home\nNote that the country is constrained by the total amount of\nlabor and capital. In the previous section we\ngured out the\noptimal mix of labor and capital, but not the exact amount\nused.\nWe need our input constraints, but also Prices.\nUsing our optimality conditions\nPC",
+      "word_count": 86,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 1,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "heckscher-ohlin-students-0010",
+      "file_path": "Heckscher_Ohlin_Students.pdf",
+      "file_name": "Heckscher_Ohlin_Students.pdf",
+      "file_role": "unknown",
+      "section": "MPL C= 3\u0012KS",
+      "chunk_index": 10,
+      "text": "MPL C= 3\u0012KS\nLF\u00131\n4\u0012LC\nKC\u00133\n4\n= 3\u0012KC\n9LC\u00131\n4\u0012LC\nKC\u00133\n4\n=\u00123LC\nKC\u00131\n2\nHeckscher-Ohlin Model 12/34\n\nChoosing the Mix of Inputs { Home\nIn order to pin down each amount of inputs used in each\nsector, we have four equations and four unknowns.\nLS",
+      "word_count": 55,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 3,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "heckscher-ohlin-students-0011",
+      "file_path": "Heckscher_Ohlin_Students.pdf",
+      "file_name": "Heckscher_Ohlin_Students.pdf",
+      "file_role": "unknown",
+      "section": "Solving the above system of equations yields",
+      "chunk_index": 11,
+      "text": "Solving the above system of equations yields:\nKS=1\n80\nB@3\u0016L\u0010\nPC\nPS\u00112\u0000\u0016K1",
+      "word_count": 17,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 1,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "heckscher-ohlin-students-0012",
+      "file_path": "Heckscher_Ohlin_Students.pdf",
+      "file_name": "Heckscher_Ohlin_Students.pdf",
+      "file_role": "unknown",
+      "section": "CA KC=3",
+      "chunk_index": 12,
+      "text": "CA KC=3\n80\nB@3\u0016K\u0000\u0016L\u0010\nPC\nPS\u001121\nCA\nLS=9\n80\nB@\u0016L\u0000\u0016K\u0010\nPC\nPS\u00112\n31",
+      "word_count": 22,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 2,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "heckscher-ohlin-students-0013",
+      "file_path": "Heckscher_Ohlin_Students.pdf",
+      "file_name": "Heckscher_Ohlin_Students.pdf",
+      "file_role": "unknown",
+      "section": "CA LC=1",
+      "chunk_index": 13,
+      "text": "CA LC=1\n8\n3\u0016K\u0012PC\nPS\u00132\n\u0000\u0016L!\nWhat if the economy is endowed with more capital \u0016K? More\nlabor \u0016L?\nWhat if the relative price of ComputersPC\nPSincreases?\nDecreases?\nHeckscher-Ohlin Model 14/34",
+      "word_count": 36,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 1,
+        "heading": 1,
+        "question": 4
+      }
+    },
+    {
+      "id": "heckscher-ohlin-students-0014",
+      "file_path": "Heckscher_Ohlin_Students.pdf",
+      "file_name": "Heckscher_Ohlin_Students.pdf",
+      "file_role": "unknown",
+      "section": "Relative Supply",
+      "chunk_index": 14,
+      "text": "Relative Supply\nAs can be seen above, generally, an economy will tend to be\nrelatively e\nective at producing goods that are intensive in the\nfactors with which the country is relatively well endowed.\nThis can be seen explicitly by solving for the relative supply\nfunction\nQC\nQS=\u0012\n3\u0010\u0016K\n\u0016L\u0011\u0010\nPC\nPS\u00112\n\u00001\u0013\n33\n4\u0012\n3\u0000\u0010\u0016K\n\u0016L\u0011\u0010\nPC\nPS\u00112\u0013\u0010\nPC\nPS\u0011\nWhat if\u0016K\n\u0016L>\u0016K\u0003\n\u0016L\u0003?\nBut, perhaps more intuition can come from the PPFs\nHeckscher-Ohlin Model 15/34\n\nPPFs\nHeckscher-Ohlin Model 16/34",
+      "word_count": 89,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 2,
+        "heading": 1,
+        "question": 1
+      }
+    },
+    {
+      "id": "heckscher-ohlin-students-0015",
+      "file_path": "Heckscher_Ohlin_Students.pdf",
+      "file_name": "Heckscher_Ohlin_Students.pdf",
+      "file_role": "unknown",
+      "section": "Trade Equilibrium",
+      "chunk_index": 15,
+      "text": "Trade Equilibrium\nHeckscher-Ohlin Model 19/34\n\nTheorems\nThe H-O Theorem: A country will have comparative\nadvantage in, and therefore will export, that good whose\nproduction is relatively intensive in the factor with which that\ncountry is relatively well endowed.\nThe Rybczynski Theorem: At constant world prices, if a\ncountry experiences an increase in the supply of one factor, it\nwill produce more of the product whose production is\nintensive in that factor and less of the other.\nHeckscher-Ohlin Model 20/34\n\nTheorems",
+      "word_count": 82,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "heckscher-ohlin-students-0016",
+      "file_path": "Heckscher_Ohlin_Students.pdf",
+      "file_name": "Heckscher_Ohlin_Students.pdf",
+      "file_role": "unknown",
+      "section": "The Factor Price Equalization Theorem: Given all the",
+      "chunk_index": 16,
+      "text": "The Factor Price Equalization Theorem: Given all the\nassumptions of the H-O model, free international trade will\nlead to the international equalization of individual factor\nprices.\n!3 reasons why this might fail...\n1If countries have di\nerent technologies of production.\n2Needs complete convergence of the prices of goods. In the real\nworld, prices of goods are not fully equalized by international\ntrade { both natural barriers (such as transportation costs)\nand government (such as tari\ns, import quotas, and other\nrestrictions).\n3We also need the countries to produce the same set of goods.\nOne possible reason this isn't the case is countries have\nradically di\nerent ratios of capital to labor or of skilled to\nunskilled labor.\nHeckscher-Ohlin Model 21/34",
+      "word_count": 120,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "heckscher-ohlin-students-0017",
+      "file_path": "Heckscher_Ohlin_Students.pdf",
+      "file_name": "Heckscher_Ohlin_Students.pdf",
+      "file_role": "unknown",
+      "section": "Assumptions",
+      "chunk_index": 17,
+      "text": "Assumptions:\n1Labor and capital\now freely between the industries.\n2The production of shoes is labor-intensive as compared with\ncomputer production, which is capital-intensive.\n3The amounts of labor and capital found in the two countries\ndi\ner, with Foreign abundant in labor and Home abundant in\ncapital.\n4There is free international trade in goods.\n5The technologies for producing shoes and computers are the\nsame across countries.\n6Tastes are the same across countries.\nHeckscher-Ohlin Model 22/34",
+      "word_count": 75,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "heckscher-ohlin-students-0018",
+      "file_path": "Heckscher_Ohlin_Students.pdf",
+      "file_name": "Heckscher_Ohlin_Students.pdf",
+      "file_role": "unknown",
+      "section": "Testing the Heckscher-Ohlin Model",
+      "chunk_index": 18,
+      "text": "Testing the Heckscher-Ohlin Model\nThe\nrst test of the HeckscherOhlin theorem was performed by\neconomist Wassily Leontief in 1953.\nLeontief supposed correctly that in 1947 the United States\nwas abundant in capital relative to the rest of the world.\nLeontief assumed that U.S. and foreign technologies were the\nsame due to the limited data on foreign technology, which is\nconsistent with HO theorem.\nThus, from the HeckscherOhlin theorem, Leontief expected\nthat the United States would export capital-intensive goods\nand import labor-intensive goods.",
+      "word_count": 83,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 1,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "heckscher-ohlin-students-0019",
+      "file_path": "Heckscher_Ohlin_Students.pdf",
+      "file_name": "Heckscher_Ohlin_Students.pdf",
+      "file_role": "unknown",
+      "section": "What Leontief actually found, however, was just the opposite",
+      "chunk_index": 19,
+      "text": "What Leontief actually found, however, was just the opposite:\nthe capital-labor ratio for U.S. imports was higher than the\ncapitallabor ratio found for U.S. exports.\nThis\nnding contradicted the HeckscherOhlin theorem and\ncame to be called Leontief's paradox .\nHeckscher-Ohlin Model 23/34\n\nLeontief's (1953) Test",
+      "word_count": 47,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 1,
+        "formula": 2,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "heckscher-ohlin-students-0020",
+      "file_path": "Heckscher_Ohlin_Students.pdf",
+      "file_name": "Heckscher_Ohlin_Students.pdf",
+      "file_role": "unknown",
+      "section": "Exports Imports",
+      "chunk_index": 20,
+      "text": "Exports Imports\nCapital ($ million) $2.5 $3.1\nLabor (person-years) 182 170\nCapital/labor ($/person) $13,700 $18,200\nU.S. and foreign technologies are not the same.\nBy focusing only on labor and capital, Leontief ignored land.\nLabor should have been disaggregated by skill (since it would\nnot be surprising to\nnd that U.S. exports are intensive in\nskilled labor).\nThe data for 1947 may be unusual, since World War II had\njust ended.\nThe U.S. was not engaged in free trade, as the HO model\nassumes.\nHeckscher-Ohlin Model 24/34",
+      "word_count": 94,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "heckscher-ohlin-students-0021",
+      "file_path": "Heckscher_Ohlin_Students.pdf",
+      "file_name": "Heckscher_Ohlin_Students.pdf",
+      "file_role": "unknown",
+      "section": "Understanding Leontief's Paradox",
+      "chunk_index": 21,
+      "text": "Understanding Leontief's Paradox\nAs with any result that seems counterintuitive, you should\nalways ask yourself a couple questions.\nIs the methodology correct? In particular, if the methodology\nis appealing to a theoretical model, were the crimes\ncommitted in moving from theory to data signi\ncant?\nIf the methodology is correct, are there alternative\nexplanations outside the model which might explain the\nresult?\nIf exploring both questions leads you to accept the\nmethodology and the result, then you have a real puzzle\nAs you will notice, there is a common theme in economics\nthat \\puzzles\" are really just bad methodology or bad models\n(smell test usually su\u000ecient to identify a faux puzzle)\nHeckscher-Ohlin Model 25/34",
+      "word_count": 116,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 1,
+        "formula": 0,
+        "heading": 1,
+        "question": 3
+      }
+    },
+    {
+      "id": "heckscher-ohlin-students-0022",
+      "file_path": "Heckscher_Ohlin_Students.pdf",
+      "file_name": "Heckscher_Ohlin_Students.pdf",
+      "file_role": "unknown",
+      "section": "Testing the Heckscher-Ohlin Model",
+      "chunk_index": 22,
+      "text": "Testing the Heckscher-Ohlin Model\nAn important study by Donald Davis and David Weinstein\nshowed that if relax the assumption of common technologies,\nalong with assumptions underlying factor price equalization\n(countries produce the same goods and costless trade",
+      "word_count": 37,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 1,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "heckscher-ohlin-students-0023",
+      "file_path": "Heckscher_Ohlin_Students.pdf",
+      "file_name": "Heckscher_Ohlin_Students.pdf",
+      "file_role": "unknown",
+      "section": "equalizes prices of goods)",
+      "chunk_index": 23,
+      "text": "equalizes prices of goods):\nthen the predictions for the direction and volume of the factor\ncontent of trade line-up well with empirical evidence and\nultimately generate a good\nt.\nDi\u000eculty\nnding support for the predictions of the \\pure\"\nHeckscher-Ohlin model can be blamed on some of the\nassumptions made.\nHeckscher-Ohlin Model 26/34\n\nDavis and Weinstein (2001)\nHeckscher-Ohlin Model 27/34\n\nE\nect of Trade on Factor Prices\nLet's solve for equilibrium wages and rental rates and for\nsimplicity focus just on the Computer industry (note wages\nand rental rates have to be the same across industries)\nw=PCMPL C\nr=PCMPK C\nContinue to use our example from before\nQS=L3\n4\nSK1\n4\nS\nQC=L1\n4\nCK3\n4\nC\nHeckscher-Ohlin Model 28/34\n\nE\nect of Trade on Factor Prices\nRecall that in equilibrium, it must be the case that\nPC",
+      "word_count": 145,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 1,
+        "assessment": 0,
+        "formula": 5,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "heckscher-ohlin-students-0024",
+      "file_path": "Heckscher_Ohlin_Students.pdf",
+      "file_name": "Heckscher_Ohlin_Students.pdf",
+      "file_role": "unknown",
+      "section": "MPL C= 3\u0012KS",
+      "chunk_index": 24,
+      "text": "MPL C= 3\u0012KS\nLS\u00131\n4\u0012LC\nKC\u00133\n4\n= 3\u0012KC\n9LC\u00131\n4\u0012LC\nKC\u00133\n4\n=\u00123LC\nKC\u00131\n2\nWhich means that\nLC\nKC=1\n3\u0012PC\nPS\u00132\norKC",
+      "word_count": 35,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 4,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "heckscher-ohlin-students-0025",
+      "file_path": "Heckscher_Ohlin_Students.pdf",
+      "file_name": "Heckscher_Ohlin_Students.pdf",
+      "file_role": "unknown",
+      "section": "LC= 3\u0012PS",
+      "chunk_index": 25,
+      "text": "LC= 3\u0012PS\nPC\u00132\nHeckscher-Ohlin Model 29/34\n\nE\nect of Trade on Factor Prices\nRecall our factor price equations (and convert to real prices)\nw\nPC=MPL C andr",
+      "word_count": 31,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 2,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "heckscher-ohlin-students-0026",
+      "file_path": "Heckscher_Ohlin_Students.pdf",
+      "file_name": "Heckscher_Ohlin_Students.pdf",
+      "file_role": "unknown",
+      "section": "PC=MPK C",
+      "chunk_index": 26,
+      "text": "PC=MPK C\n)w\nPC=1\n4\u0012KC\nLC\u00133\n4\n)r\nPC=3\n4\u0012LC\nKC\u00131\n4\n)w\nPC=1\n4\n3\u0012PS\nPC\u00132!3\n4\n)r\nPC=3\n4\n1\n3\u0012PC\nPS\u00132!1\n4\n)w\nPC=33\n4\n4\n1\nPC\nPS!3\n2\n)r\nPC=33\n4\n4\u0012PC\nPS\u00131\n2\nHeckscher-Ohlin Model 30/34\n\nE\nect of Trade on Factor Prices\nw\nPC=33\n4\n4\n1\nPC\nPS!3\n2r\nPC=33\n4\n4\u0012PC\nPS\u00131\n2\nWhat happens if the home country { which is capital\nabundant { opens up to trade?\nIf the home country does trade, what do we know has to be\ntrue about the relative price of ComputersPC\nPS?\nPC\nPS\")w\nPC#andr\nPC\".\nThe Stolper-Samuelson Theorem: Free international trade\nbene\nts the abundant factor and harms the scarce factor.\nHeckscher-Ohlin Model 31/34",
+      "word_count": 149,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 9,
+        "heading": 1,
+        "question": 2
+      }
+    },
+    {
+      "id": "heckscher-ohlin-students-0027",
+      "file_path": "Heckscher_Ohlin_Students.pdf",
+      "file_name": "Heckscher_Ohlin_Students.pdf",
+      "file_role": "unknown",
+      "section": "Opinions Toward Free Trade",
+      "chunk_index": 27,
+      "text": "Opinions Toward Free Trade\nIn the short-run speci\nc-factors model, labor may gain or lose\nfrom free trade, but the speci\nc factor in the export sector\ngains, and the speci\nc factor in the import sector loses.\nIf labor also earns some part of the rental on the speci\nc\nfactor in their industry, the industry of employment of workers\nwill a\nect their attitudes toward free trade.\nIn the long-run Heckscher-Ohlin model, however, the industry\nof employment should not matter.\nAccording to the Stolper-Samuelson theorem, an increase in\nthe relative price of exports will bene\nt the factor of\nproduction used intensively in exports and harm the other,\nregardless of the industry in which these factors of production\nactually work.\nHeckscher-Ohlin Model 32/34",
+      "word_count": 126,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "heckscher-ohlin-students-0028",
+      "file_path": "Heckscher_Ohlin_Students.pdf",
+      "file_name": "Heckscher_Ohlin_Students.pdf",
+      "file_role": "unknown",
+      "section": "Opinions Toward Free Trade",
+      "chunk_index": 28,
+      "text": "Opinions Toward Free Trade\nIn the United States, export industries tend to use high-skilled\nlabor intensively for research and development and other\nscienti\nc work.\nTherefore, an increase in the relative price of exports will\nbene\nt skilled labor in the long run, regardless of whether\nthese workers are employed in export-oriented industries or\nimport-competing industries.\nIn the long run, then, the skill level of workers should\ndetermine their attitudes toward free trade.\nHeckscher-Ohlin Model 33/34\n\nConclusion\nWe have now seen 4 standard theoretical trade models",
+      "word_count": 87,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "heckscher-ohlin-students-0029",
+      "file_path": "Heckscher_Ohlin_Students.pdf",
+      "file_name": "Heckscher_Ohlin_Students.pdf",
+      "file_role": "unknown",
+      "section": "Adam Smith!Ricardian!Speci",
+      "chunk_index": 29,
+      "text": "Adam Smith!Ricardian!Speci\nc-Factors!\nHeckscher-Ohlin\nS.F. and H.O. models shed light on how some may lose from\nfreer trade despite the aggregate winning.\nNext up, we dive a bit deeper into who loses from trade.\nKeep in mind that though there are losers to freer trade, trade\nprotection is typically seen as an ine\u000ecient mechanism to help\nthose who lose; i.e.\n(1) Hufbauer and Lowry (2012)\nnds that in the case of tari\ns set\non tires by Obama in 2009, \\the cost per job manufacturing\nsaved (a maximum of 1,200 jobs by our calculations) was at\nleast $900,000 in that year.\"\n(2) Amiti et. al (2019)\nnds that the 2017-2018 trade war has\nresulted in (conservatively) $200,000 welfare lose per job saved.\nHeckscher-Ohlin Model 34/34",
+      "word_count": 135,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "literature-review-2-0000",
+      "file_path": "Literature Review (2).pdf",
+      "file_name": "Literature Review (2).pdf",
+      "file_role": "unknown",
+      "section": "Topic",
+      "chunk_index": 0,
+      "text": "Topic:\n\nDo\n\nfirms\n\nreduce\n\ncapital\n\nexpenditure\n\nand\n\nlong-run\n\ninvestment\n\nwhen\n\nexposed\n\nto\n\ntrade\n\npolicy\n\nuncertainty?\n\nI\n\nam\n\ninterested\n\nin\n\nexploring",
+      "word_count": 20,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 1
+      }
+    },
+    {
+      "id": "literature-review-2-0001",
+      "file_path": "Literature Review (2).pdf",
+      "file_name": "Literature Review (2).pdf",
+      "file_role": "unknown",
+      "section": "CAPEX",
+      "chunk_index": 1,
+      "text": "CAPEX\n\n/\n\ninvestment\n\nspending\n\nbecause\n\nit\n\nrelates\n\nto\n\nboth\n\nfinance\n\nand\n\neconomics.\n\nI\n\nwant\n\nto\n\nevaluate\n\na\n\ncouple\n\ndifferent\n\nthings,\n\nstarting\n\nwith\n\nhow\n\nthe\n\nbehavior\n\nof\n\nsmaller\n\n(market\n\ncap)\n\nfirms\n\ndiffer\n\nfrom\n\nlarge\n\nfirms\n\nwhen\n\ntrade\n\npolicy\n\nuncertainty\n\nincreases,\n\nsince\n\nsmaller\n\nfirms\n\ntypically\n\nhave\n\na\n\nsmaller\n\nsupply\n\nchain\n\nand\n\nnetwork.\n\nThen,\n\nevaluating\n\nif\n\nspecific\n\nsectors\n\nare\n\nmore\n\nprone\n\nto\n\nTPU\n\n(does\n\nTPU\n\naffect\n\ncapex\n\nmore\n\nin\n\nmanufacturing\n\nvs\n\nsoftware\n\nservices).\n\nI\n\nwould\n\nthen\n\nconclude\n\nwith\n\nthe\n\neffects\n\nof\n\ngeography;\n\nI\n\npresume\n\ncompanies\n\nin\n\nChina\n\nare\n\nless\n\naffected\n\nbecause\n\nof\n\ntheir\n\nproduction,\n\nbut\n\nit\n\nwould\n\nbe\n\nsomething\n\nworth\n\nexploring.\n\nArticles\n\n1.\n\nCaldara\n\net\n\nal.\n\n(2020)\n\n—\n\nThe\n\neconomic\n\neffects\n\nof\n\ntrade\n\npolicy\n\nuncertainty\n\na.\n\nPublished\n\nin\n\nJournal\n\nof\n\nMonetary\n\nEconomics\n\ni.\n\nPre\n\nappr oved\n\n2.\n\nHandley\n\n&\n\nLimão\n\n(2015)\n\n—\n\nTrade\n\nand\n\nInvestment\n\nunder\n\nPolicy",
+      "word_count": 130,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "literature-review-2-0002",
+      "file_path": "Literature Review (2).pdf",
+      "file_name": "Literature Review (2).pdf",
+      "file_role": "unknown",
+      "section": "Journal",
+      "chunk_index": 2,
+      "text": "Journal:\n\nEconomic\n\nPolicy\n\ni.\n\nPre\n\nAppr oved\n\n3.\n\nHandley\n\n&\n\nLimão\n\n(2017)\n\n—\n\nPolicy\n\nUncertainty ,\n\nTrade,\n\nand",
+      "word_count": 15,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "literature-review-2-0003",
+      "file_path": "Literature Review (2).pdf",
+      "file_name": "Literature Review (2).pdf",
+      "file_role": "unknown",
+      "section": "Welfare",
+      "chunk_index": 3,
+      "text": "Welfare:\n\nTheory\n\nand\n\nEvidence\n\nfor\n\nChina\n\nand\n\nthe\n\nUnited\n\nStates\n\na.\n\nPublished\n\nin\n\nAmerican\n\nEconomic\n\nReview\n\ni.\n\nPre\n\nApproved\n\n4.\n\nPierce\n\n&\n\nSchott\n\n(2016)\n\n—\n\nThe\n\nSurprisingly\n\nSwift\n\nDecline\n\nof\n\nUS\n\nManufacturing\n\nEmployment\n\na.\n\nPublished\n\nin\n\nAmerican\n\nEconomic\n\nReview\n\ni.\n\nPre\n\nAppr oved\n\n5.\n\nPierce\n\n&\n\nSchott\n\n(2018)\n\n–\n\nInvestment\n\nresponses\n\nto\n\ntrade",
+      "word_count": 49,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 2,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "literature-review-2-0004",
+      "file_path": "Literature Review (2).pdf",
+      "file_name": "Literature Review (2).pdf",
+      "file_role": "unknown",
+      "section": "liberalization",
+      "chunk_index": 4,
+      "text": ":\n\nJournal\n\nof\n\nInternational\n\nEconomics\n\ni.\n\nPre\n\nAppr oved\n\n6.\n\nGulen\n\n&\n\nIon\n\n(2016)\n\n—\n\nReview\n\nof\n\nFinancial\n\nStudies\n\na.\n\nNot\n\nPre\n\nAppr oved",
+      "word_count": 21,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 1,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "literature-review-0000",
+      "file_path": "Literature Review.pdf",
+      "file_name": "Literature Review.pdf",
+      "file_role": "unknown",
+      "section": "Topic",
+      "chunk_index": 0,
+      "text": "Topic:\n\nDo\n\nfirms\n\nreduce\n\ncapital\n\nexpenditure\n\nand\n\nlong-run\n\ninvestment\n\nwhen\n\nexposed\n\nto\n\ntrade\n\npolicy\n\nuncertainty?\n\nI\n\nam\n\ninterested\n\nin\n\nexploring",
+      "word_count": 20,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 1
+      }
+    },
+    {
+      "id": "literature-review-0001",
+      "file_path": "Literature Review.pdf",
+      "file_name": "Literature Review.pdf",
+      "file_role": "unknown",
+      "section": "CAPEX",
+      "chunk_index": 1,
+      "text": "CAPEX\n\n/\n\ninvestment\n\nspending\n\nbecause\n\nit\n\nrelates\n\nto\n\nboth\n\nfinance\n\nand\n\neconomics.\n\nI\n\nwant\n\nto\n\nevaluate\n\na\n\ncouple\n\ndifferent\n\nthings,\n\nstarting\n\nwith\n\nhow\n\nthe\n\nbehavior\n\nof\n\nsmaller\n\n(market\n\ncap)\n\nfirms\n\ndiffer\n\nfrom\n\nlarge\n\nfirms\n\nwhen\n\ntrade\n\npolicy\n\nuncertainty\n\nincreases,\n\nsince\n\nsmaller\n\nfirms\n\ntypically\n\nhave\n\na\n\nsmaller\n\nsupply\n\nchain\n\nand\n\nnetwork.\n\nThen,\n\nevaluating\n\nif\n\nspecific\n\nsectors\n\nare\n\nmore\n\nprone\n\nto\n\nTPU\n\n(does\n\nTPU\n\naffect\n\ncapex\n\nmore\n\nin\n\nmanufacturing\n\nvs\n\nsoftware\n\nservices).\n\nI\n\nwould\n\nthen\n\nconclude\n\nwith\n\nthe\n\neffects\n\nof\n\ngeography;\n\nI\n\npresume\n\ncompanies\n\nin\n\nChina\n\nare\n\nless\n\naffected\n\nbecause\n\nof\n\ntheir\n\nproduction,\n\nbut\n\nit\n\nwould\n\nbe\n\nsomething\n\nworth\n\nexploring.\n\nArticles\n\n1.\n\nCaldara\n\net\n\nal.\n\n(2020)\n\n—\n\nThe\n\neconomic\n\neffects\n\nof\n\ntrade\n\npolicy\n\nuncertainty\n\na.\n\nPublished\n\nin\n\nJournal\n\nof\n\nMonetary\n\nEconomics\n\ni.\n\nPre\n\nappr oved\n\n2.\n\nHandley\n\n&\n\nLimão\n\n(2015)\n\n—\n\nTrade\n\nand\n\nInvestment\n\nunder\n\nPolicy",
+      "word_count": 130,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "literature-review-0002",
+      "file_path": "Literature Review.pdf",
+      "file_name": "Literature Review.pdf",
+      "file_role": "unknown",
+      "section": "Journal",
+      "chunk_index": 2,
+      "text": "Journal:\n\nEconomic\n\nPolicy\n\ni.\n\nPre\n\nAppr oved\n\n3.\n\nHandley\n\n&\n\nLimão\n\n(2017)\n\n—\n\nPolicy\n\nUncertainty ,\n\nTrade,\n\nand",
+      "word_count": 15,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "literature-review-0003",
+      "file_path": "Literature Review.pdf",
+      "file_name": "Literature Review.pdf",
+      "file_role": "unknown",
+      "section": "Welfare",
+      "chunk_index": 3,
+      "text": "Welfare:\n\nTheory\n\nand\n\nEvidence\n\nfor\n\nChina\n\nand\n\nthe\n\nUnited\n\nStates\n\na.\n\nPublished\n\nin\n\nAmerican\n\nEconomic\n\nReview\n\ni.\n\nPre\n\nApproved\n\n4.\n\nPierce\n\n&\n\nSchott\n\n(2016)\n\n—\n\nThe\n\nSurprisingly\n\nSwift\n\nDecline\n\nof\n\nUS\n\nManufacturing\n\nEmployment\n\na.\n\nPublished\n\nin\n\nAmerican\n\nEconomic\n\nReview\n\ni.\n\nPre\n\nAppr oved\n\n5.\n\nPierce\n\n&\n\nSchott\n\n(2018)\n\n–\n\nInvestment\n\nresponses\n\nto\n\ntrade",
+      "word_count": 49,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 2,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "literature-review-0004",
+      "file_path": "Literature Review.pdf",
+      "file_name": "Literature Review.pdf",
+      "file_role": "unknown",
+      "section": "liberalization",
+      "chunk_index": 4,
+      "text": ":\n\nJournal\n\nof\n\nInternational\n\nEconomics\n\ni.\n\nPre\n\nAppr oved\n\n6.\n\nGulen\n\n&\n\nIon\n\n(2016)\n\n—\n\nReview\n\nof\n\nFinancial\n\nStudies\n\na.\n\nNot\n\nPre\n\nAppr oved",
+      "word_count": 21,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 1,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "new-new-trade-students-0000",
+      "file_path": "New_New_Trade_Students.pdf",
+      "file_name": "New_New_Trade_Students.pdf",
+      "file_role": "unknown",
+      "section": "ECON 404: Cal Poly",
+      "chunk_index": 0,
+      "text": "ECON 404: Cal Poly\nInternational Trade and Heterogeneous Firms 1/42\n\nIntroduction\nWhy do we need firm heterogeneity?\nKrugman model has gains from variety, but extensive margin\nwas agnostic.\nBetter understanding of this extensive margin leads to a\nbetter understanding of the world.\nIt’s cool.\nInternational Trade and Heterogeneous Firms 2/42",
+      "word_count": 53,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 1
+      }
+    },
+    {
+      "id": "new-new-trade-students-0001",
+      "file_path": "New_New_Trade_Students.pdf",
+      "file_name": "New_New_Trade_Students.pdf",
+      "file_role": "unknown",
+      "section": "Road Map",
+      "chunk_index": 1,
+      "text": "Road Map\n1Consumers demand varieties of a good.\n2Entrepreneur decides to pay a cost to take a draw from a\nproductivity distribution.\n3Entrepreneur observes productivity and decides to become a\nfirm.\n4Non-negative profit condition.\n5Free-entry to close the model.\n6Comparative Statics.\nInternational Trade and Heterogeneous Firms 3/42\n\nConsumers\nFirst define ε= 1/(1−α)>1 is the elasticity of substitution\nand Ω is the set of varieties available to the consumer.\nUtility\nU=µln (X) +Y\nX=\u0012Z\ni∈Ωx(i)αdi\u00131\nα\nDemand\nx(i) =\u0014p(i)−ε\nP1−ε\u0015\nµ\nwhere\nP1−ε=Z\ni∈Ωp(i)1−εdi\nInternational Trade and Heterogeneous Firms 4/42\n\nFirms\nBefore thinking about entrepreneurs, we need a brief\ndiscussion on labor.\nLabor is fixed, fully employed, and only input.\nSince labor is only input, total income = w∗L=E.\nNumeriare is freely traded, equalizes wages, and normalize\nwage = 1.\nInternational Trade and Heterogeneous Firms 5/42\n\nEntrepreneurs\nPay a fixed cost fE(measured in units of labor) in order to\nenter the industry.\nDraw a constant marginal cost afrom the distribution G(a).\nCan pay a fixed cost fDto set up shop and serve the domestic\nmarket.\nCan pay another fixed cost fX>fDto serve the foreign\nmarket through exports.\nIf I export, I pay a symmetric iceberg transport cost\nrepresented by τ >1.\nCan exit and do nothing.\nInternational Trade and Heterogeneous Firms 6/42\n\nFirms\nNote that with constant marginal costs the decisions to serve\nthe domestic and foreign market are independent.\nDo I pay fD?\nOnly if my variable profit is at least as big as fD.\nDomestic profits are\nπD(i) =\u0002\np(i)−ai\u0003\nQD(i)−fD\n=\u0014[p(i)−ai]µ\nP1−ε\u0015\np(i)−ε−fD.\nNote QD(i) =x(i) in equilibrium; i.e. supply = demand.\nInternational Trade and Heterogeneous Firms 7/42\n\nFirms\nA firm selling domestically will charge a price equal to a\nconstant markup over marginal cost,\np(i) =ai\nα.\nTherefore, the operating profit function for a purely domestic\nfirm is\nπD(i) =a1−ε\niB−fD\nwhere\nB=1\nεα1−ε\u0010µ\nP1−ε\u0011\n.\nInternational Trade and Heterogeneous Firms 8/42\n\nEquilibrium Condition 1\nDefine aDto be the least efficient firm that sells to the\ndomestic market.\nThis firm is given by\na1−ε\nDB=fD.\nThis means that every entrepreneur that drew an a<aDwill\nproduce and serve the domestic market.\nAny entrepreneur that drew an a>aDwill not produce.\nNote that there is the analogous condition for the foreign\ncountry: a∗\nD1−εB∗=fD\nInternational Trade and Heterogeneous Firms 9/42\n\nFirms\nDo I pay fX?\nOnly if my variable profit from exports is at least as big as fX.\nExport profits are\nπX= (τai)1−εB∗−fX,\nwhere\nB∗=1\nεα1−ε\u0012µ\nP∗1−ε\u0013\n.\nNote again that price is a constant markup of marginal cost\np∗(i) =τai\nαand export supply equal foreign demand.\nInternational Trade and Heterogeneous Firms 10/42\n\nEquilibrium Condition 2\nDefine aXto be the least efficient firm that sells to the foreign\nmarket.\nThis firm is given by\n(τaX)1−εB∗=fX.\nThis means that every entrepreneur that drew an a<aXwill\nproduce and serve the foreign and domestic market.\nAny entrepreneur that drew an aX<awill not export.\nNote that there is the analogous condition for the foreign\ncountry: τa∗\nX1−εB=fX\nInternational Trade and Heterogeneous Firms 11/42",
+      "word_count": 572,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 23,
+        "heading": 1,
+        "question": 2
+      }
+    },
+    {
+      "id": "new-new-trade-students-0002",
+      "file_path": "New_New_Trade_Students.pdf",
+      "file_name": "New_New_Trade_Students.pdf",
+      "file_role": "unknown",
+      "section": "Free Entry",
+      "chunk_index": 2,
+      "text": "Free Entry\nWe have characterized the cutoff firms, but we aren’t done.\nFirst notice that\nB=1\nεα1−ε\u0010µ\nP1−ε\u0011\nand\nP1−ε=Z\ni∈Ωp(i)1−εdi\n=NEZaD\n0\u0010a\nα\u00111−ε\ndG(a) +N∗\nEZa∗\nX\n0\u0010τa\nα\u00111−ε\ndG(a)\nSo, we need to figure out the number of people taking a draw\nin each country, NEandN∗\nE\nInternational Trade and Heterogeneous Firms 12/42",
+      "word_count": 75,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 3,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "new-new-trade-students-0003",
+      "file_path": "New_New_Trade_Students.pdf",
+      "file_name": "New_New_Trade_Students.pdf",
+      "file_role": "unknown",
+      "section": "Free Entry",
+      "chunk_index": 3,
+      "text": "Free Entry\nThe free entry condition implies that expected profits ¯ πmust\nbe zero.\nI.e. the probability I draw a productivity good enough to sell\ndomestically and the associated payoff plus the probability I\ndraw a productivity good enough to be an exported and the\nassociated payoff must equal the cost to take a draw.\n\u0002\nV(aD)B−G(aD)fD\u0003\n+\u0002\nV(aX)τ1−εB∗−G(aX)fX\u0003\n=fE\nwhere\nV(z) =Zz\n0a1−εdG(a).\nInternational Trade and Heterogeneous Firms 13/42",
+      "word_count": 83,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 4,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "new-new-trade-students-0004",
+      "file_path": "New_New_Trade_Students.pdf",
+      "file_name": "New_New_Trade_Students.pdf",
+      "file_role": "unknown",
+      "section": "Distribution Assumption",
+      "chunk_index": 4,
+      "text": "Distribution Assumption\nThough we don’t need to have a specific distribution to derive\nthe main results, it is nice to have closed form solutions.\nIt is common (and matches US data well) to assume G(a)",
+      "word_count": 37,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 1,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "new-new-trade-students-0005",
+      "file_path": "New_New_Trade_Students.pdf",
+      "file_name": "New_New_Trade_Students.pdf",
+      "file_role": "unknown",
+      "section": "follows the Pareto distribution",
+      "chunk_index": 5,
+      "text": "follows the Pareto distribution:\nG(a) =\u0012a\naU\u0013k\n,0<a<aU\nV(a) =k\nk+ 1−ε\u0012a\naU\u0013k\na1−ε,0<a<aU\nwhere k>(ε−1).\nSide Note: Some researchers are also using the Fr´ echet\ndistribution or truncated Pareto.\nInternational Trade and Heterogeneous Firms 14/42\n\nEquilibrium Condition 3\nUsing the Pareto distribution, our free entry condition\nbecomes\nfE=(ε−1)[ak\nDfD+ak\nXfX]\n[k+ 1−ε]ak\nU.\nSimilarly, for the foreign country\nfE=(ε−1)[a∗\nDkfD+a∗\nXkfX]\n[k+ 1−ε]ak\nU\nInternational Trade and Heterogeneous Firms 15/42\n\nRecap\nWe have a total of six equilibrium conditions – 3 conditions ×\n2 countries.\n1Nonnegative profit for domestic market.\n2Nonnegative profit for foreign market.\n3Free entry.\nGiven our assumptions, we will have a symmetric equilibrium\naD=a∗\nD, aX=a∗",
+      "word_count": 138,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 1,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 6,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "new-new-trade-students-0006",
+      "file_path": "New_New_Trade_Students.pdf",
+      "file_name": "New_New_Trade_Students.pdf",
+      "file_role": "unknown",
+      "section": "X, NE=N∗",
+      "chunk_index": 6,
+      "text": "X, NE=N∗\nE\nSo we really only have three equilibrium conditions now.\nInternational Trade and Heterogeneous Firms 16/42\n\nSolution\naA=\u0014ψfE\nfD\u00151\nk\naU,\naD=\"\nfψ\nXτk\nfψ\nXτk+fψ\nDψfE\nfD#1\nk\naU,\naX=\"\nfψ\nD\nfψ\nXτk+fψ\nDψfE\nfX#1\nk\naU,\nNE=αµ\nkfE\nwhere\nψ≡[k−(ε−1)]\n(ε−1)>0.\nInternational Trade and Heterogeneous Firms 17/42\n\n0\naaXTotal profit under trade\nProfit curve in autarkyπ(a)\naDaAInternational Trade and Heterogeneous Firms 18/42\n\nResults\nOpening up to trade causes the least efficient firms to exit\n−daD\ndτ=\n−fψ\nD\nfψ\nXτk+fψ\nD!\naD\nτ<0\nNote that this can easily be expressed as an elasticity\n−τ\naDdaD\ndτ=\n−fψ\nD\nfψ\nXτk+fψ\nD!\n≡ −ϵad\nInternational Trade and Heterogeneous Firms 19/42\n\nResults\nOpening up to trade increases the number (mass) of varieties\nimported/exported\n−daX\ndτ=\nfψ\nXτk\nfψ\nXτk+fψ\nD!\naX\nτ>0\nNote that this can easily be expressed as an elasticity\n−τ\naXdaX\ndτ=\nfψ\nXτk\nfψ\nXτk+fψ\nD!\n≡ −ϵaX\nInternational Trade and Heterogeneous Firms 20/42\n\nResults\nWhat about total variety gains ` a la Krugman?\nThe mass of varieties in each group are\nND=G(aD)NE=\u0012aD\naU\u0013k\nNE\nNX=G(aX)NE=\u0012aX\naU\u0013k\nNE.\nSo, the change in total available varieties to consume is\n−dNC\ndτ=−\"\nkak−1\nDNE\nak\nUdaD\ndτ+kak−1\nXNE\nak\nUdaX\ndτ#\n=ψαµ\nfXτfD\"\nfψ\nXτkfψ\nD[fD−fX]\n(fψ\nXτk+fψ\nD)2#\n<0\nInternational Trade and Heterogeneous Firms 21/42\n\nResults\nSo if there are no gains from variety, where do they come\nfrom?\n(Note that the variety result is not general to all distributions and\nmodels)\nEfficiency gains.\nThrough international competition, the least efficient firms\nexit and are no longer paying fixed costs.\nWhat about consumers?\nThough they lose some varieties, the varieties that are left are\nless expensive\nInternational Trade and Heterogeneous Firms 22/42\n\nWelfare\nTo see this more concretely, look at the welfare function.\nWelfare is the indirect utility.\nV=µln (X) + ( I−µ). (1)\nIncome/Expenditure is equal to labor income plus profits from",
+      "word_count": 361,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 17,
+        "heading": 1,
+        "question": 3
+      }
+    },
+    {
+      "id": "new-new-trade-students-0007",
+      "file_path": "New_New_Trade_Students.pdf",
+      "file_name": "New_New_Trade_Students.pdf",
+      "file_role": "unknown",
+      "section": "domestically owned firms",
+      "chunk_index": 7,
+      "text": "domestically owned firms:\nI=Lk+NE¯π.\nWhat are average aggregate profits?\nInternational Trade and Heterogeneous Firms 23/42\n\nWelfare\nDixit and Stiglitz (1977) show that\nX=Is(P)\nP\nwhere s(P) is the propensity to consume the heterogeneous\ngood. Quasilinear utility implies that Is(P) =µ. Thus\nµ=PX\n⇒0 =XdP\ndτ+PdX\ndτ\n⇒1\nXdX\ndτ=−1\nPdP\ndτ\nInternational Trade and Heterogeneous Firms 24/42\n\nWelfare\nDifferentiating the (negative) indirect utility (1), we get\n−dV\ndτ=−µ\nXdX\ndτ\n=µ\nPdP\ndτ\nSo the change in welfare depends on how the price index\nchanges.\nThe price index is a weighted average of prices and depends\non\n1Prices\n2Number of varieties\nInternational Trade and Heterogeneous Firms 25/42",
+      "word_count": 121,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 8,
+        "heading": 1,
+        "question": 1
+      }
+    },
+    {
+      "id": "new-new-trade-students-0008",
+      "file_path": "New_New_Trade_Students.pdf",
+      "file_name": "New_New_Trade_Students.pdf",
+      "file_role": "unknown",
+      "section": "Price Index",
+      "chunk_index": 8,
+      "text": "Price Index\nWe can write the price index in the following way\nP=\u0012\u0014k\nk+ 1−ε\u0015\u0014\nND\u0010aD\nα\u00111−ε\n+NX\u0010τaX\nα\u00111−ε\u0015\u0013 1\n1−ε\nImportant things to note\nFor welfare ↑, we need τ↓ ⇒ P ↓ , and\nε >1\nI.e.τ↓ ⇒ (stuff )↑\nP=1\nα \u0014kNE\nk+ 1−ε\u0015\"\nak+1−ε\nD+τ1−εak+1−ε\nX\nak\nU#! 1\n1−ε\nInternational Trade and Heterogeneous Firms 26/42",
+      "word_count": 75,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 1,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 2,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "new-new-trade-students-0009",
+      "file_path": "New_New_Trade_Students.pdf",
+      "file_name": "New_New_Trade_Students.pdf",
+      "file_role": "unknown",
+      "section": "Price Index",
+      "chunk_index": 9,
+      "text": "Price Index\nDifferentiating the price index yields the following elasticity\nτ\nPdP\ndτ=\u0014−ψ\nα\u0015\nak+1−ε\nDϵaD+τ1−εak+1−ε\nXϵaX−\u0010\n1\nψ\u0011\nτ1−εak+1−ε\nX\nak+1−ε\nD+τ1−εak+1−ε\nX\n\nNote thatτaX\naD=\u0010\nfD\nfX\u00111\nε−1\nτ\nPdP\ndτ=\u0014−ψ\nα\u0015\nfψ\nXτkϵaD+fψ\nDϵaX−\u0012\nfψ\nD\nψ\u0013\nfψ\nXτk+fψ\nD\n\nInternational Trade and Heterogeneous Firms 27/42\n\nWelfare\nUsing our elasticities, this collapses to\nτ\nPdP\ndτ=\u00141\nα\u0015\"\nfψ\nD\nfψ\nXτk+fψ\nD#\n=ϵaD\nα>0 (2)\nTherefore our welfare analysis concludes with\n−dV\ndτ=\u0010µ\nατ\u0011\nϵaD>0 (3)\nInternational Trade and Heterogeneous Firms 28/42\n\nSo who cares?",
+      "word_count": 116,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 6,
+        "heading": 1,
+        "question": 1
+      }
+    },
+    {
+      "id": "new-new-trade-students-0010",
+      "file_path": "New_New_Trade_Students.pdf",
+      "file_name": "New_New_Trade_Students.pdf",
+      "file_role": "unknown",
+      "section": "First, there are some important results from the Melitz model",
+      "chunk_index": 10,
+      "text": "First, there are some important results from the Melitz model:\nEven without gains from variety, countries can gain from trade\nthough better efficiency.\nThe most efficient (and biggest) are the firms who export\n(which has been the source of numerous empirical research)\nBut perhaps more importantly, this has given us a tractable\nmodel to allow for more realistic extensive margin...\nwhich can have important implications for models from the\npast (Krugman vs. Chaney), but also give us the tools to ask\nreally interesting questions.\nInternational Trade and Heterogeneous Firms 29/42\n\nSome applications of the “Meltiz” model\nInternational Trade and Heterogeneous Firms 30/42\n\nCole and Davies (2014 RDE)\nReally thinking about the variety effects on welfare; I.e. Does\ntrade lead to homogenization/Americanization?\nUtility\nU=µ1ln (X1) +µ2ln (X2) + Φ( aD,a∗\nD) +Y\nwhere\nX1=\u0012Z\ni∈Ω1xk(i)ρdi\u00131\nρ\n,\nX2=\u0014\nα1\nε\u0012Z\ni∈Ω2x(i)ρdi\u0013\n+β1\nε\u0012Z\ni∈Ω3x(i)ρdi\u0013\n+γ1\nε\u0012Z\ni∈Ω4x(i)ρdi\u0013\u0015 1\nρ\nand\nµ1>0, µ2≥0\nInternational Trade and Heterogeneous Firms 31/42",
+      "word_count": 181,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 2,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 4,
+        "heading": 1,
+        "question": 1
+      }
+    },
+    {
+      "id": "new-new-trade-students-0011",
+      "file_path": "New_New_Trade_Students.pdf",
+      "file_name": "New_New_Trade_Students.pdf",
+      "file_role": "unknown",
+      "section": "DaDindex of Home Firms",
+      "chunk_index": 11,
+      "text": "DaDindex of Home Firms\nindex of Foreign Firms∈Ω1\n/bracehtipdownleft /bracehtipupright/bracehtipupleft /bracehtipdownright\n/bracehtipupleft /bracehtipdownright/bracehtipdownleft /bracehtipupright/bracehtipupleft /bracehtipdownright/bracehtipdownleft /bracehtipupright/bracehtipupleft /bracehtipdownright/bracehtipdownleft /bracehtipupright0\n0\nInternational Trade and Heterogeneous Firms 32/42\n\nChanges in Cutoffs\n/bracehtipdownleft /bracehtipupright/bracehtipupleft /bracehtipdownright\n∈Ω2\n∈Ω1\n∈Ω3 ∈Ω4a∗\nXaX\na∗",
+      "word_count": 46,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "new-new-trade-students-0012",
+      "file_path": "New_New_Trade_Students.pdf",
+      "file_name": "New_New_Trade_Students.pdf",
+      "file_role": "unknown",
+      "section": "DaDindex of Home Firms",
+      "chunk_index": 12,
+      "text": "DaDindex of Home Firms\nindex of Foreign Firms∈Ω1\n/bracehtipdownleft /bracehtipupright/bracehtipupleft /bracehtipdownright\n/bracehtipupleft /bracehtipdownright/bracehtipdownleft /bracehtipupright/bracehtipupleft /bracehtipdownright/bracehtipdownleft /bracehtipupright/bracehtipupleft /bracehtipdownright/bracehtipdownleft /bracehtipuprighta/prime\nX a/prime\nD/bracehtipupleft /bracehtipdownright/bracehtipdownleft /bracehtipupright/bracehtipdownleft /bracehtipupright/bracehtipupleft /bracehtipdownright\na∗\nx/primea∗\nD/prime/bracehtipdownleft /bracehtipupright/bracehtipupleft /bracehtipdownright\n/bracehtipupleft /bracehtipdownright/bracehtipdownleft /bracehtipupright/bracehtipupleft /bracehtipdownright/bracehtipdownleft /bracehtipupright00\nInternational Trade and Heterogeneous Firms 33/42\n\nCole and Davies (2014 RDE) – Conclusion\nGoal was to take the critique of variety homogenization and\ngive it full force\nSmall, local, unusual varieties are especially prized\nPotential loss from globalization\nFind that a reduction in trade costs increases welfare from\ndirect consumption\nAn ambiguous effect on tourism benefit\nTotal effect still positive since choice of exporting is\nendogenous\nOnly the loss in the existence value can lead to a welfare loss\nInternational Trade and Heterogeneous Firms 34/42\n\nHelpman, Melitz, and Yeaple (2004 AER)\nIntroduced the option to become a multinational in addition\nto exporting.\nEverything very similar except firms could now pay a fixed\ncost fM>fX>fDto participate in FDI.\nThis results in the most productive firms being MNEs, the\n“medium” productive firms exporting, and the least\nproductive firms selling only to the domestic market.\nThis is confirmed in the data and they find that the\nproductivity advantage of MNEs over exporters is about 15%\nfor US firms.\nInternational Trade and Heterogeneous Firms 35/42\n\nCole and Davies (2011 EER)\nInvestigates how the presence or threat of FDI affects a\ncountry’s “optimal” tariff.\nEllingsen and W¨ arneryd (1997 IER) have homogeneous firms\nand show how the “optimal” tariff (one that maximizes\ndomestic firm profits) is one that is just low enough to\nprevent firms from tariff-jumping.\nFirm heterogeneity dulls this knife-edge result and allows for\nsome firms to be MNEs while others export.\nThey assume firms are heterogenous over fixed cost instead of\nmarginal cost and don’t allow for drawing productivity from a\ndistribution.\nThey find that the presence of FDI lowers the noncooperative\nNash tariff.\nInternational Trade and Heterogeneous Firms 36/42",
+      "word_count": 340,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "new-new-trade-students-0013",
+      "file_path": "New_New_Trade_Students.pdf",
+      "file_name": "New_New_Trade_Students.pdf",
+      "file_role": "unknown",
+      "section": "Exam",
+      "chunk_index": 13,
+      "text": "Exam:\nAbout 6-7 questions: multiple parts\nCan have a “clean” calculator, pencil, and a straight-edge\nAnswers in provided space – scratch paper (not turned in) will\nbe provided",
+      "word_count": 27,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 1,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "new-new-trade-students-0014",
+      "file_path": "New_New_Trade_Students.pdf",
+      "file_name": "New_New_Trade_Students.pdf",
+      "file_role": "unknown",
+      "section": "Ricardian Model",
+      "chunk_index": 14,
+      "text": "Ricardian Model\nLabor only input\nComparative advantage/oportunity cost\nEveryone gains\nIn general leads to full specialization\nExcept when countries are really different in size.\nInternational Trade and Heterogeneous Firms 37/42",
+      "word_count": 32,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "new-new-trade-students-0015",
+      "file_path": "New_New_Trade_Students.pdf",
+      "file_name": "New_New_Trade_Students.pdf",
+      "file_role": "unknown",
+      "section": "Midterm Review",
+      "chunk_index": 15,
+      "text": "Midterm Review\nSpecific Factors model\nLabor fully mobile, but other factors specific to an industry is\nimmobile\nPPF bowed out and slope is equal to −MPL F",
+      "word_count": 27,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 1,
+        "example_problem": 0,
+        "assessment": 1,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "new-new-trade-students-0016",
+      "file_path": "New_New_Trade_Students.pdf",
+      "file_name": "New_New_Trade_Students.pdf",
+      "file_role": "unknown",
+      "section": "In general",
+      "chunk_index": 16,
+      "text": "In general:\n1The factor specific to the sector whose relative price increases\nis definitely better off.\n2The factor specific to the sector whose relative price decreases\nis definitely worse off.\n3The change in welfare for the mobile factor is ambiguous.\nBegin to think about political economy of trade\nInternational Trade and Heterogeneous Firms 38/42",
+      "word_count": 55,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "new-new-trade-students-0017",
+      "file_path": "New_New_Trade_Students.pdf",
+      "file_name": "New_New_Trade_Students.pdf",
+      "file_role": "unknown",
+      "section": "Midterm Review",
+      "chunk_index": 17,
+      "text": "Midterm Review\nHechscher-Ohlin model\nStandard model assumes identical technologies, but different\nendowments of capital and labor.\nCapital and Labor substitutable – bowed out ppf with slope\nequal to −MPL F",
+      "word_count": 29,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 1,
+        "example_problem": 0,
+        "assessment": 1,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "new-new-trade-students-0018",
+      "file_path": "New_New_Trade_Students.pdf",
+      "file_name": "New_New_Trade_Students.pdf",
+      "file_role": "unknown",
+      "section": "MPK C",
+      "chunk_index": 18,
+      "text": "MPK C\nhow to find out Capital and Labor intensive industry\nThe H-O Theorem: A country will have comparative\nadvantage in, and therefore will export, that good whose\nproduction is relatively intensive in the factor with which that\ncountry is relatively well endowed.\nThe Rybczynski Theorem: At constant world prices, if a\ncountry experiences an increase in the supply of one factor, it\nwill produce more of the product whose production is intensive\nin that factor and less of the other.\nInternational Trade and Heterogeneous Firms 39/42",
+      "word_count": 88,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "new-new-trade-students-0019",
+      "file_path": "New_New_Trade_Students.pdf",
+      "file_name": "New_New_Trade_Students.pdf",
+      "file_role": "unknown",
+      "section": "The Factor Price Equalization Theorem: Given all the",
+      "chunk_index": 19,
+      "text": "The Factor Price Equalization Theorem: Given all the\nassumptions of the H-O model, free international trade will\nlead to the international equalization of individual factor prices.\nThe Stolper-Samuelson Theorem: Free international trade\nbenefits the abundant factor and harms the scarce factor.",
+      "word_count": 41,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "new-new-trade-students-0020",
+      "file_path": "New_New_Trade_Students.pdf",
+      "file_name": "New_New_Trade_Students.pdf",
+      "file_role": "unknown",
+      "section": "Distributional Effects of Trade",
+      "chunk_index": 20,
+      "text": "Distributional Effects of Trade\nAutor, Dorn and Hanson (2013 AER) – Effect of China shock\nPierce and Schott (2016 AER) – Effect of China entering the\nWTO\nMcLaren and Hakobyan (2016 REStat) – Effect of NAFTA\nMain takeway is non-college educated workers in particular in\nmanufacturing (but also in non-manufacturing sectors) made\nworse off in terms of employment and wages. College educated\nworkers saw little to no effect.\nInternational Trade and Heterogeneous Firms 41/42",
+      "word_count": 72,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "new-new-trade-students-0021",
+      "file_path": "New_New_Trade_Students.pdf",
+      "file_name": "New_New_Trade_Students.pdf",
+      "file_role": "unknown",
+      "section": "New Trade Theory",
+      "chunk_index": 21,
+      "text": "New Trade Theory\nIntra-industry trade\nCan have everything identical (but also have increasing returns\nto scale; e.g. add a fixed cost to production and constant\nmarginal cost) and gain from trade through gains in variety.",
+      "word_count": 36,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "new-new-trade-students-0022",
+      "file_path": "New_New_Trade_Students.pdf",
+      "file_name": "New_New_Trade_Students.pdf",
+      "file_role": "unknown",
+      "section": "New New Trade Theory",
+      "chunk_index": 22,
+      "text": "New New Trade Theory\nNew Trade Theory, but with firm heterogeneity.\nNow we don’t necessarily gain from trade through increased\nvariety, but we do gain from increased efficiency by “killing\noff” the least productive firms.\nInternational Trade and Heterogeneous Firms 42/42",
+      "word_count": 43,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "ricardian-students-0000",
+      "file_path": "Ricardian_Students.pdf",
+      "file_name": "Ricardian_Students.pdf",
+      "file_role": "unknown",
+      "section": "ECON 404: Cal Poly",
+      "chunk_index": 0,
+      "text": "ECON 404: Cal Poly\nClassical Model of Trade: Ricardian 1/42\n\nDe\nnitions\nMarginal Product of Labor: The extra output obtained by\nusing one more unit of labor.\nAbsolute advantage: The ability of a country to produce a\ngood using fewer productive inputs than is possible anywhere\nelse in the world; or producing the most output with the same\namount of inputs.\nComparative advantage: A country has comparative\nadvantage in good xif it gives up less of good yto produce\none unit of good x.\nClassical Model of Trade: Ricardian 2/42\n\nAssumptions\n1. Perfect Competition in all markets.\n2. Factors of production cannot move between countries.\n3. There are no barriers to trade in goods.\n4. Exports must pay for imports.\n5. Labor is the only relevant factor of production in terms of\nproductivity analysis or costs of production.\n6. Production exhibits constant returns to scale between labor\nand output.\n7. Constant MPL .\n8. Foreign variables will be denoted with a `\u0003'.\nClassical Model of Trade: Ricardian 3/42",
+      "word_count": 169,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "ricardian-students-0001",
+      "file_path": "Ricardian_Students.pdf",
+      "file_name": "Ricardian_Students.pdf",
+      "file_role": "unknown",
+      "section": "First Theory for Why Countries Trade and Gain from Trade",
+      "chunk_index": 1,
+      "text": "First Theory for Why Countries Trade and Gain from Trade\nAdam Smith, the \\\nrst\" economist provides an explanation in\nhis 1776 book, The Wealth of Nations . Countries can gain by\nspecializing in what they do well and then trading for other\ngoods that they do not produce as easily.\nIn fact, we all do this as individuals. I specialize in being a\nprofessor and then trade these services to get food, clothing,\nhousing, etc. In contrast, imagine a world where we all had to\nbe self-su\u000ecient.\nSmith laid out a simple narrative to show how this works. The\nfollowing is a simple numerical model that captures the main\nelements of his argument.\nSuppose that there are just two countries, England and\nPortugal, and two goods, Cloth and Wheat. And the following\nchart shows how much output 1 labor produces of each good\nin each country.\nClassical Model of Trade: Ricardian 4/42",
+      "word_count": 153,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "ricardian-students-0002",
+      "file_path": "Ricardian_Students.pdf",
+      "file_name": "Ricardian_Students.pdf",
+      "file_role": "unknown",
+      "section": "Cloth Wheat",
+      "chunk_index": 2,
+      "text": "Cloth Wheat\nEngland 1 yard 1/4 bushel\nPortugal 1/2 yard 1/3 bushel\nAutarky Scenario: Assume each country has 24 units of\nlabor (called their Endowment ). Suppose they put half their\ntime into each good.\nEngland: Cloth = 12 yards; Wheat = 3 bushels\nPortugal: Cloth = 6 yards; Wheat = 4 bushels\nWorld: Cloth = 18 yards; Wheat = 7 bushels\nClassical Model of Trade: Ricardian 5/42",
+      "word_count": 65,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 6,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "ricardian-students-0003",
+      "file_path": "Ricardian_Students.pdf",
+      "file_name": "Ricardian_Students.pdf",
+      "file_role": "unknown",
+      "section": "Cloth Wheat",
+      "chunk_index": 3,
+      "text": "Cloth Wheat\nEngland 1 yard 1/4 bushel\nPortugal 1/2 yard 1/3 bushel\nSpecialization and Trade Scenario: First, let each country\nspecialize in what they do well (i.e., their absolute advantage).",
+      "word_count": 34,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "ricardian-students-0004",
+      "file_path": "Ricardian_Students.pdf",
+      "file_name": "Ricardian_Students.pdf",
+      "file_role": "unknown",
+      "section": "Thus, production will be the following",
+      "chunk_index": 4,
+      "text": "Thus, production will be the following:\nEngland: Cloth = 24 yards; Wheat = 0 bushels\nPortugal: Cloth = 0 yards; Wheat = 8 bushels\nWorld: Cloth = 24 yards; Wheat = 8 bushels\nClassical Model of Trade: Ricardian 6/42",
+      "word_count": 34,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 6,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "ricardian-students-0005",
+      "file_path": "Ricardian_Students.pdf",
+      "file_name": "Ricardian_Students.pdf",
+      "file_role": "unknown",
+      "section": "Adam Smith",
+      "chunk_index": 5,
+      "text": "Adam Smith\nWhat has happened to world production?\nWorld: Cloth = 18 yards; Wheat = 7 bushels\nWorld: Cloth = 24 yards; Wheat = 8 bushels\nOne possible trading price here that works is 2C for 1W\nEngland: Could trade 6 cloth for 3 Wheat and have 18 yards of\ncloth and 3 bushels of Wheat.\nPortugal: Could trade 3 Wheat for 6 cloth and have 6 yards of\ncloth and 5 bushels of Wheat.\nTake away: If countries specialize in the good they have an\nabsolute advantage in and trade, they can consume more than if\nthey stay in autraky.\nClassical Model of Trade: Ricardian 7/42",
+      "word_count": 104,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 4,
+        "heading": 1,
+        "question": 1
+      }
+    },
+    {
+      "id": "ricardian-students-0006",
+      "file_path": "Ricardian_Students.pdf",
+      "file_name": "Ricardian_Students.pdf",
+      "file_role": "unknown",
+      "section": "David Ricardo and Theory of Comparative Advantage",
+      "chunk_index": 6,
+      "text": "David Ricardo and Theory of Comparative Advantage\nDavid Ricardo writes a follow-up piece to Adam smith in\n1791, titled Principles of Political Economy and Taxation .\nSmith's example only covers situations where each country\nhas a clear absolute advantage in a di\nerent good.\nRicardo shows that gains from specialization and trade can\noccur even when one country is more e\u000ecient at producing\nboth goods. The reason comes down to opportunity costs.\nTo see this we will work through a model in more detail.\nClassical Model of Trade: Ricardian 8/42",
+      "word_count": 91,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 1,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "ricardian-students-0007",
+      "file_path": "Ricardian_Students.pdf",
+      "file_name": "Ricardian_Students.pdf",
+      "file_role": "unknown",
+      "section": "Home Country: Supply Side",
+      "chunk_index": 7,
+      "text": "Home Country: Supply Side\nTwo goods: Cloth ( C) and Wheat ( W)\nMPL C= 2 and MPL W= 4\nLabor = 25 workers\nClassical Model of Trade: Ricardian 9/42",
+      "word_count": 28,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 3,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "ricardian-students-0008",
+      "file_path": "Ricardian_Students.pdf",
+      "file_name": "Ricardian_Students.pdf",
+      "file_role": "unknown",
+      "section": "Home Country: Supply Side",
+      "chunk_index": 8,
+      "text": "Home Country: Supply Side\nRecall that MPL is constant in each sector, so the slope of the\nPPF is constant\nSlope of PPF =\u0000MPL C\u0001L",
+      "word_count": 26,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 1,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "ricardian-students-0009",
+      "file_path": "Ricardian_Students.pdf",
+      "file_name": "Ricardian_Students.pdf",
+      "file_role": "unknown",
+      "section": "MPL W=\u00001",
+      "chunk_index": 9,
+      "text": "MPL W=\u00001\n2\nThis is the opportunity cost of Wheat (the good on the\nhorizontal axis)\nSuppose QW\"1, it takes one worker to produce 4 bushels of\nWheat, so 1 =4 of a worker's time must now be taken away\nfrom the cloth industry.\nSince one worker can produce 2 units of cloth, 1 =4 of a worker\ncan produce2\n4=1\n2units of cloth.\nClassical Model of Trade: Ricardian 10/42",
+      "word_count": 74,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 4,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "ricardian-students-0010",
+      "file_path": "Ricardian_Students.pdf",
+      "file_name": "Ricardian_Students.pdf",
+      "file_role": "unknown",
+      "section": "Home Country: Demand Side",
+      "chunk_index": 10,
+      "text": "Home Country: Demand Side\nWhat will actually be produced will depend on what\nconsumers actually want; i.e. their utility function.\nFor simplicity, think of a representative consumer.\nRepresent their utility with indi\nerence curves.\nWhat is the slope of an indi\nerence curve?\nSlope =\u0000MRS =\u0000MU W",
+      "word_count": 48,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 3,
+        "heading": 1,
+        "question": 1
+      }
+    },
+    {
+      "id": "ricardian-students-0011",
+      "file_path": "Ricardian_Students.pdf",
+      "file_name": "Ricardian_Students.pdf",
+      "file_role": "unknown",
+      "section": "First: Graphically/intuitively",
+      "chunk_index": 11,
+      "text": "First: Graphically/intuitively\nThe PPF is the country's \\budget constraint\" { try to get on\nthe highest indi\nerence curve given your budget constraint.\nClassical Model of Trade: Ricardian 12/42",
+      "word_count": 30,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "ricardian-students-0012",
+      "file_path": "Ricardian_Students.pdf",
+      "file_name": "Ricardian_Students.pdf",
+      "file_role": "unknown",
+      "section": "rms",
+      "chunk_index": 12,
+      "text": "rms:\nIf\nrms are pro\nt maximizing, what do we know has to be\ntrue for each\nrm in each sector?\nCloth\nmax\nLpCfC(LC)\u0000wCLC\n)pCdfC\ndL=wC\n)pCMPL C=wC\nSame for Wheat\npWMPL W=wW\nClassical Model of Trade: Ricardian 13/42",
+      "word_count": 45,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 3,
+        "heading": 1,
+        "question": 1
+      }
+    },
+    {
+      "id": "ricardian-students-0013",
+      "file_path": "Ricardian_Students.pdf",
+      "file_name": "Ricardian_Students.pdf",
+      "file_role": "unknown",
+      "section": "Home Country: Equilibrium",
+      "chunk_index": 13,
+      "text": "Home Country: Equilibrium\npCMPL C=wC\npWMPL W=wW\nWhat has to be true about wages in each sector? (recall every\nworker is identical)\npWMPL W=pCMPL C\n)pW\npC=MPL C",
+      "word_count": 32,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 4,
+        "heading": 1,
+        "question": 1
+      }
+    },
+    {
+      "id": "ricardian-students-0014",
+      "file_path": "Ricardian_Students.pdf",
+      "file_name": "Ricardian_Students.pdf",
+      "file_role": "unknown",
+      "section": "MPL W",
+      "chunk_index": 14,
+      "text": "MPL W\npW\npCis the relative price of Wheat in the home country.\nClassical Model of Trade: Ricardian 14/42",
+      "word_count": 20,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "ricardian-students-0015",
+      "file_path": "Ricardian_Students.pdf",
+      "file_name": "Ricardian_Students.pdf",
+      "file_role": "unknown",
+      "section": "MPL W",
+      "chunk_index": 15,
+      "text": "MPL W\nWhat has to be true about consumers maximizing their utility?\npW\npC=MU W",
+      "word_count": 16,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 1,
+        "heading": 1,
+        "question": 1
+      }
+    },
+    {
+      "id": "ricardian-students-0016",
+      "file_path": "Ricardian_Students.pdf",
+      "file_name": "Ricardian_Students.pdf",
+      "file_role": "unknown",
+      "section": "MU C",
+      "chunk_index": 16,
+      "text": "MU C\nGiven our technology the relative price of Wheat ispW\npC=1\n2.\nNote that technology is pinning down relative prices, while\nutility is determining how much of each is produced in\nequilibrium.\nClassical Model of Trade: Ricardian 15/42",
+      "word_count": 41,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 1,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "ricardian-students-0017",
+      "file_path": "Ricardian_Students.pdf",
+      "file_name": "Ricardian_Students.pdf",
+      "file_role": "unknown",
+      "section": "C= 1, MPL\u0003",
+      "chunk_index": 17,
+      "text": "C= 1, MPL\u0003\nW= 1, and L\u0003= 100\nFirst, who has the absolute advantage in each good?\nNow, who has the comparative advantage in Cloth?\nOpportunity cost of Cloth in Foreign = 1 bushel of Wheat.\nOpportunity cost of Cloth in Home = 2 bushels of Wheat.\nThus Foreign has lower opportunity cost and a comparative\nadvantage in Cloth.\nWho has the comparative advantage in Wheat?\nCan a country have the comparative advantage in both goods?\nClassical Model of Trade: Ricardian 16/42",
+      "word_count": 81,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 5,
+        "heading": 1,
+        "question": 4
+      }
+    },
+    {
+      "id": "ricardian-students-0018",
+      "file_path": "Ricardian_Students.pdf",
+      "file_name": "Ricardian_Students.pdf",
+      "file_role": "unknown",
+      "section": "Foreign Country: Supply Side",
+      "chunk_index": 18,
+      "text": "Foreign Country: Supply Side\nRecall that MPL\u0003is constant in each sector, so the slope of\nthe PPF is constant\nSlope of PPF =\u0000MPL\u0003\nC\u0001L\u0003\nMPL\u0003",
+      "word_count": 27,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 1,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "ricardian-students-0019",
+      "file_path": "Ricardian_Students.pdf",
+      "file_name": "Ricardian_Students.pdf",
+      "file_role": "unknown",
+      "section": "W\u0001L\u0003=\u0000MPL\u0003",
+      "chunk_index": 19,
+      "text": "W\u0001L\u0003=\u0000MPL\u0003\nC\nMPL\u0003\nW=\u00001\nThis is the opportunity cost of Wheat (the good on the\nhorizontal axis)",
+      "word_count": 20,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 2,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "ricardian-students-0020",
+      "file_path": "Ricardian_Students.pdf",
+      "file_name": "Ricardian_Students.pdf",
+      "file_role": "unknown",
+      "section": "Suppose Q\u0003",
+      "chunk_index": 20,
+      "text": "Suppose Q\u0003\nW\"1, it takes one worker to produce 1 bushel of\nWheat, so one worker must now be taken away from the cloth\nindustry.\nSince one worker can produce 1 units of cloth, one worker can\nproduce 1 units of cloth.\nClassical Model of Trade: Ricardian 17/42",
+      "word_count": 50,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "ricardian-students-0021",
+      "file_path": "Ricardian_Students.pdf",
+      "file_name": "Ricardian_Students.pdf",
+      "file_role": "unknown",
+      "section": "Foreign Country: Demand Side",
+      "chunk_index": 21,
+      "text": "Foreign Country: Demand Side\nWhat will actually be produced will depend on what\nconsumers actually want; i.e. their utility function.\nFor simplicity, think of a representative consumer.\nRepresent their utility with indi\nerence curves.\nWhat is the slope of an indi\nerence curve?\nSlope =\u0000MRS\u0003=\u0000MU\u0003\nW\nMU\u0003\nC\nClassical Model of Trade: Ricardian 19/42",
+      "word_count": 57,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 3,
+        "heading": 1,
+        "question": 1
+      }
+    },
+    {
+      "id": "ricardian-students-0022",
+      "file_path": "Ricardian_Students.pdf",
+      "file_name": "Ricardian_Students.pdf",
+      "file_role": "unknown",
+      "section": "First: Graphically/intuitively",
+      "chunk_index": 22,
+      "text": "First: Graphically/intuitively\nThe PPF is the country's \\budget constraint\" { try to get on\nthe highest indi\nerence curve given your budget constraint.\nClassical Model of Trade: Ricardian 20/42",
+      "word_count": 30,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "ricardian-students-0023",
+      "file_path": "Ricardian_Students.pdf",
+      "file_name": "Ricardian_Students.pdf",
+      "file_role": "unknown",
+      "section": "rms",
+      "chunk_index": 23,
+      "text": "rms:\nIf\nrms are pro\nt maximizing, what do we know has to be\ntrue for each\nrm in each sector?\nCloth\nmax\nL\u0003p\u0003\nCf\u0003\nC(LC)\u0000w\u0003\nCL\u0003\nC\n)p\u0003\nCdf\u0003\nC\ndL=w\u0003\nC\n)p\u0003",
+      "word_count": 38,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 1,
+        "heading": 1,
+        "question": 1
+      }
+    },
+    {
+      "id": "ricardian-students-0024",
+      "file_path": "Ricardian_Students.pdf",
+      "file_name": "Ricardian_Students.pdf",
+      "file_role": "unknown",
+      "section": "WMPL\u0003",
+      "chunk_index": 24,
+      "text": "WMPL\u0003\nW=w\u0003\nW\nWhat has to be true about wages in each sector? (recall every\nworker is identical)\np\u0003",
+      "word_count": 20,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 1,
+        "heading": 1,
+        "question": 1
+      }
+    },
+    {
+      "id": "ricardian-students-0025",
+      "file_path": "Ricardian_Students.pdf",
+      "file_name": "Ricardian_Students.pdf",
+      "file_role": "unknown",
+      "section": "C=MPL\u0003",
+      "chunk_index": 25,
+      "text": "C=MPL\u0003\nC\nMPL\u0003\nW\np\u0003\nW\np\u0003\nCis the relative price of Wheat in the foreign country.\nClassical Model of Trade: Ricardian 22/42",
+      "word_count": 25,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 1,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "ricardian-students-0026",
+      "file_path": "Ricardian_Students.pdf",
+      "file_name": "Ricardian_Students.pdf",
+      "file_role": "unknown",
+      "section": "C=MPL\u0003",
+      "chunk_index": 26,
+      "text": "C=MPL\u0003\nC\nMPL\u0003\nW\nWhat has to be true about consumers maximizing their utility?\np\u0003\nW\np\u0003\nC=MU\u0003\nW\nMU\u0003",
+      "word_count": 22,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 2,
+        "heading": 1,
+        "question": 1
+      }
+    },
+    {
+      "id": "ricardian-students-0027",
+      "file_path": "Ricardian_Students.pdf",
+      "file_name": "Ricardian_Students.pdf",
+      "file_role": "unknown",
+      "section": "Equilibrium prices is when supply equals demand",
+      "chunk_index": 27,
+      "text": "Equilibrium prices is when supply equals demand:\nMPL\u0003\nC\nMPL\u0003\nW=p\u0003\nW\np\u0003\nC=MU\u0003\nW\nMU\u0003\nC\nGiven our technology the relative price of Wheat isp\u0003\nW\np\u0003\nC= 1.\nNote that technology is pinning down relative prices, while\nutility is determining how much of each is produced in\nequilibrium.\nClassical Model of Trade: Ricardian 23/42",
+      "word_count": 59,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 3,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "ricardian-students-0028",
+      "file_path": "Ricardian_Students.pdf",
+      "file_name": "Ricardian_Students.pdf",
+      "file_role": "unknown",
+      "section": "International Trade Equilibrium",
+      "chunk_index": 28,
+      "text": "International Trade Equilibrium\nTo begin, suppose there was a world relative price\u0010\npW\npC\u0011w\nand\nfocus on Home where the autarky equilibrium relative price of\nWheatpW\npC=1\n2\nFor simplicity assume the nominal price pC=pw",
+      "word_count": 38,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 1,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 2,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "ricardian-students-0029",
+      "file_path": "Ricardian_Students.pdf",
+      "file_name": "Ricardian_Students.pdf",
+      "file_role": "unknown",
+      "section": "C. What",
+      "chunk_index": 29,
+      "text": "C. What\nwould happen if\u0010\npW\npC\u0011w\n>pW\npC=1\n2?\npW\nW>pWand from our pro\nt maximizing wage conditions\npCMPL C=wC and pw",
+      "word_count": 27,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 2,
+        "heading": 1,
+        "question": 1
+      }
+    },
+    {
+      "id": "ricardian-students-0030",
+      "file_path": "Ricardian_Students.pdf",
+      "file_name": "Ricardian_Students.pdf",
+      "file_role": "unknown",
+      "section": "WMPL W=wW",
+      "chunk_index": 30,
+      "text": "WMPL W=wW\n)wW>wC\nWheat producers get a higher price for Wheat and want to\nproduce more Wheat.\nAt the same time workers see a higher wage to work in the\nWheat industry and want to move out of the Cloth industry\ninto the Wheat industry.\nClassical Model of Trade: Ricardian 24/42",
+      "word_count": 54,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 1,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "ricardian-students-0031",
+      "file_path": "Ricardian_Students.pdf",
+      "file_name": "Ricardian_Students.pdf",
+      "file_role": "unknown",
+      "section": "International Trade Equilibrium",
+      "chunk_index": 31,
+      "text": "International Trade Equilibrium\nSince MPL s are constant wages never equalize and Home\nFULLY specializes in Wheat.\nWhat about consumers?\nNo home production of cloth, but can trade on the world\nmarket at\u0010\npW\npC\u0011w\n.\nWheat is more expensive, but cloth is relatively cheaper, so\nthey can exchange Wheat for more cloth than what they\ncould have produced { Trade Triangle\nClassical Model of Trade: Ricardian 25/42",
+      "word_count": 68,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 1
+      }
+    },
+    {
+      "id": "ricardian-students-0032",
+      "file_path": "Ricardian_Students.pdf",
+      "file_name": "Ricardian_Students.pdf",
+      "file_role": "unknown",
+      "section": "International Trade Equilibrium",
+      "chunk_index": 32,
+      "text": "International Trade Equilibrium\nDecompose the gains from trade and specialization.\nSimilar intuition for if\u0010\npW\npC\u0011w\n<pW\npC=1\n2!Home will fully\nspecialize in Cloth.\nNote the same thought experiment can be applied to Foreign.\nClassical Model of Trade: Ricardian 27/42",
+      "word_count": 44,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 1,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "ricardian-students-0033",
+      "file_path": "Ricardian_Students.pdf",
+      "file_name": "Ricardian_Students.pdf",
+      "file_role": "unknown",
+      "section": "International Trade Equilibrium",
+      "chunk_index": 33,
+      "text": "International Trade Equilibrium\nNow recall the autarky equilibrium relative prices of Wheat\npW\npC=1\n2for Home andp\u0003\nW\np\u0003\nC= 1 for Foreign.\nCan there be a trade equilibrium between the two countries\nwhere\u0010\npW\npC\u0011w\n>p\u0003\nW\np\u0003\nC= 1?\nNO. Both countries would only want to produce Wheat...\nwhich is\nne if consumers only want to be full and naked.\nCan there be a trade equilibrium between the two countries\nwhere\u0010\npW\npC\u0011w\n<pW\npC=1\n2?\nNO. Both countries would only want to produce cloth... which\nis\nne if consumers aren't hungry.\nSo the equilibrium Terms of Trade must be\n1\n2=pW\npC<\u0012pW\npC\u0013w\n<p\u0003\nW\np\u0003\nC= 1\nClassical Model of Trade: Ricardian 29/42",
+      "word_count": 125,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 6,
+        "heading": 1,
+        "question": 2
+      }
+    },
+    {
+      "id": "ricardian-students-0034",
+      "file_path": "Ricardian_Students.pdf",
+      "file_name": "Ricardian_Students.pdf",
+      "file_role": "unknown",
+      "section": "International Trade Equilibrium",
+      "chunk_index": 34,
+      "text": "International Trade Equilibrium\nSuppose\u0010\npW\npC\u0011w\n=2\n3.\nWe just saw how the country as a whole is better with trade\nwhen the TOT is strictly di\nerent from their autarky relative\nprice.\nHow are wages a\nected in each country?\nFirst let's think about the real wage. So we need to divide the\nwage by a price\nClassical Model of Trade: Ricardian 30/42",
+      "word_count": 66,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 1,
+        "heading": 1,
+        "question": 1
+      }
+    },
+    {
+      "id": "ricardian-students-0035",
+      "file_path": "Ricardian_Students.pdf",
+      "file_name": "Ricardian_Students.pdf",
+      "file_role": "unknown",
+      "section": "For Home",
+      "chunk_index": 35,
+      "text": "For Home\nAutarkyw\npW=MPL W= 4 bushels\nTradew\npw\nW=MPL W= 4 bushels",
+      "word_count": 15,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 4,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "ricardian-students-0036",
+      "file_path": "Ricardian_Students.pdf",
+      "file_name": "Ricardian_Students.pdf",
+      "file_role": "unknown",
+      "section": "For Foreign",
+      "chunk_index": 36,
+      "text": "For Foreign\nAutarkyw\u0003\np\u0003\nW=\u0012p\u0003\nC\np\u0003\nW\u0013\nMPL\u0003\nC= 1 bushel\nTradew\u0003\npw\nW=\u0012pC\npW\u0013w\nMPL\u0003\nC=\u00123\n2\u0013\n1 =3\n2>1 bushel\nClassical Model of Trade: Ricardian 32/42",
+      "word_count": 35,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 5,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "ricardian-students-0037",
+      "file_path": "Ricardian_Students.pdf",
+      "file_name": "Ricardian_Students.pdf",
+      "file_role": "unknown",
+      "section": "International Trade Equilibrium",
+      "chunk_index": 37,
+      "text": "International Trade Equilibrium\nThe real wage in terms of the good each country has a\ncomparative advantage in stays the same, but the real wage in\nterms of the other good goes up.\nIn real terms, both wages increase.\nHowever the real wage of Home is higher than that of Foreign.\nThis is driven by absolute advantage. In the end, wages are\ndriven by productivity and Home is more productive than\nForeign.\nClassical Model of Trade: Ricardian 33/42",
+      "word_count": 79,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "ricardian-students-0038",
+      "file_path": "Ricardian_Students.pdf",
+      "file_name": "Ricardian_Students.pdf",
+      "file_role": "unknown",
+      "section": "International Trade Equilibrium",
+      "chunk_index": 38,
+      "text": "International Trade Equilibrium\nBefore, we arbitrarily chose a world price (Terms of Trade).\nHow do we determine what this actually will be?\nNeed to incorporate demand.\nFirst, let's derive the Home's export supply of Wheat.\nFor a given relative price pW=pChome will be willing to\nsupply certain bundles of Wheat and Cloth.\nHowever, there will be only one speci\nc bundle demanded at\nthat price { recall the Trade Triangle.\nNow, try various di\nerent relative prices.\nClassical Model of Trade: Ricardian 34/42",
+      "word_count": 84,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 2,
+        "heading": 1,
+        "question": 1
+      }
+    },
+    {
+      "id": "ricardian-students-0039",
+      "file_path": "Ricardian_Students.pdf",
+      "file_name": "Ricardian_Students.pdf",
+      "file_role": "unknown",
+      "section": "International Trade Equilibrium",
+      "chunk_index": 39,
+      "text": "International Trade Equilibrium\nNow, do the same thought experiment with Foreign demand\nfor wheat.\nClassical Model of Trade: Ricardian 36/42",
+      "word_count": 21,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "ricardian-students-0040",
+      "file_path": "Ricardian_Students.pdf",
+      "file_name": "Ricardian_Students.pdf",
+      "file_role": "unknown",
+      "section": "Thought Experiment",
+      "chunk_index": 40,
+      "text": "Thought Experiment\nWhat if Home got really big?\nThen their export supply would shift out.\nIf it got so big the relative price of home would not change\nfrom autarky.\nImplication: Small countries gain the most from free trade,\nbut no country can be made worse o\n.\nClassical Model of Trade: Ricardian 39/42",
+      "word_count": 54,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 1
+      }
+    },
+    {
+      "id": "ricardian-students-0041",
+      "file_path": "Ricardian_Students.pdf",
+      "file_name": "Ricardian_Students.pdf",
+      "file_role": "unknown",
+      "section": "Size Does Matter",
+      "chunk_index": 41,
+      "text": "Size Does Matter\nImportance of being unimportant: When small countries\ntrade with big countries, the small are likely to enjoy most of\nthe mutual gains from trade.\nHowever , in reality, his isn't always the case, note McLaren\n(1997) and Cole, Haley, and Lowen (2008).\nClassical Model of Trade: Ricardian 40/42\n\nCriticisms of the Ricardian Model\nEveryone gains without any sort of redistribution.\nToo much specialization.\nLabor only input.\nExogenous technology. Why doesn't information about\nproduction techniques transfer across countries??\nNot a ton of empirical support.\nClassical Model of Trade: Ricardian 41/42\n\nNext up \\Gains and Losses from Trade in the Speci\nc-Factors\nModel\"\nClassical Model of Trade: Ricardian 42/42",
+      "word_count": 112,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 2
+      }
+    },
+    {
+      "id": "specific-factors-students-1-0000",
+      "file_path": "Specific_Factors_Students (1).pdf",
+      "file_name": "Specific_Factors_Students (1).pdf",
+      "file_role": "unknown",
+      "section": "ECON 404: Cal Poly",
+      "chunk_index": 0,
+      "text": "ECON 404: Cal Poly\nSpeci\nc-Factors Model 1/19\n\nMotivation\nRecall some of the problems we had with the Ricardian Model\nEveryone gains without any sort of redistribution.\nToo much specialization.\nLabor only input.\nExogenous technology. Why doesn't information about\nproduction techniques transfer across countries??",
+      "word_count": 45,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 2
+      }
+    },
+    {
+      "id": "specific-factors-students-1-0001",
+      "file_path": "Specific_Factors_Students (1).pdf",
+      "file_name": "Specific_Factors_Students (1).pdf",
+      "file_role": "unknown",
+      "section": "The Speci",
+      "chunk_index": 1,
+      "text": "The Speci\nc-Factors model addresses these critiques\nAllow for more inputs than labor\nAssume technology could be the same across countries\nSpeci\nc-Factors Model 2/19\n\nSetup of the model\nEconomy can produce two goods: Manufacturing and\nAgriculture\nEach country has three factors of production: Labor ( L),\ncapital ( K), and land ( Tfor terrain)\nManufacturing is produced using capital and labor but NOT\nland\nAgriculture is produced using land and labor but NOT capital\nLabor is mobile while land and capital are speci\nc factors\nWe assume diminishing marginal productivity of labor.\nThe lack of mobility of factors means this model can be\nthought of as a \\short-run\" model.\nSpeci\nc-Factors Model 3/19",
+      "word_count": 113,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "specific-factors-students-1-0002",
+      "file_path": "Specific_Factors_Students (1).pdf",
+      "file_name": "Specific_Factors_Students (1).pdf",
+      "file_role": "unknown",
+      "section": "QM=QM(K;LM) (1)",
+      "chunk_index": 2,
+      "text": "QM=QM(K;LM) (1)\nSpeci\nc-Factors Model 4/19\n\nProduction\nThe production function for Agriculture is (note Tis\nxed)",
+      "word_count": 20,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 2,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "specific-factors-students-1-0003",
+      "file_path": "Specific_Factors_Students (1).pdf",
+      "file_name": "Specific_Factors_Students (1).pdf",
+      "file_role": "unknown",
+      "section": "LM+LA=L (3)",
+      "chunk_index": 3,
+      "text": "LM+LA=L (3)\nThe production possibilities frontier is bowed out and the\nslope is equal to\u0000MPL A",
+      "word_count": 19,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 1,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "specific-factors-students-1-0004",
+      "file_path": "Specific_Factors_Students (1).pdf",
+      "file_name": "Specific_Factors_Students (1).pdf",
+      "file_role": "unknown",
+      "section": "Prices, Wages, and Labor Allocation",
+      "chunk_index": 4,
+      "text": "Prices, Wages, and Labor Allocation\nHow much labor will be employed in each sector?\nLooking at the supply-side of labor, labor will move to the\nindustry that pays the most. So, with perfect competition and\nfree labor mobility (think long run equilibrium), the wages in\neach sector must be equal and we need to have the revenue",
+      "word_count": 57,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 1
+      }
+    },
+    {
+      "id": "specific-factors-students-1-0005",
+      "file_path": "Specific_Factors_Students (1).pdf",
+      "file_name": "Specific_Factors_Students (1).pdf",
+      "file_role": "unknown",
+      "section": "marginal product in each sector equal the wage",
+      "chunk_index": 5,
+      "text": "marginal product in each sector equal the wage:\nw=MPL M\u0003PM (4)\nw=MPL A\u0003PA (5)\nRearranging these two equations, we can get",
+      "word_count": 25,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 2,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "specific-factors-students-1-0006",
+      "file_path": "Specific_Factors_Students (1).pdf",
+      "file_name": "Specific_Factors_Students (1).pdf",
+      "file_role": "unknown",
+      "section": "MPL M=\u0000PM",
+      "chunk_index": 6,
+      "text": "MPL M=\u0000PM\nPA(6)\nThe left side of the equation is the slope of the production\npossibility frontier at the actual production point. The right\nside is the relative price of cloth.\nSpeci\nc-Factors Model 7/19",
+      "word_count": 38,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 2,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "specific-factors-students-1-0007",
+      "file_path": "Specific_Factors_Students (1).pdf",
+      "file_name": "Specific_Factors_Students (1).pdf",
+      "file_role": "unknown",
+      "section": "Prices, Wages, and Labor Allocation",
+      "chunk_index": 7,
+      "text": "Prices, Wages, and Labor Allocation\nWhat determines the relative price in Autarky??\nUtility { again try to get on the highest indi\nerence curve\ngiven the PPF.\nSuppose there is an equal-proportional change in prices.\nIf there is no change in the relative price then there will be no\nchange in the labor allocation and output\nSpeci\nc-Factors Model 8/19\n\nSuppose there is a change in relative prices.\nWhat happens if the price of Manufacturing increases, but the\nprice of Agriculture remains the same?",
+      "word_count": 84,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 3
+      }
+    },
+    {
+      "id": "specific-factors-students-1-0008",
+      "file_path": "Specific_Factors_Students (1).pdf",
+      "file_name": "Specific_Factors_Students (1).pdf",
+      "file_role": "unknown",
+      "section": "Going back to our wage equations",
+      "chunk_index": 8,
+      "text": "Going back to our wage equations:\nw=MPL M\u0003PM\nw=MPL A\u0003PA\nAs the price of Manufacturing goes up, the wage rate in the\nManufacturing industry must also go up.\nLabor starts to move into the Manufacturing industry out of\nthe Agriculture industry.\nSpeci\nc-Factors Model 9/19\n\nSuppose there is a change in relative prices.\nHowever, recall that the MPL is not constant, so as labor\nmoves into the Manufacturing industry, the MPL Mbegins to\ndecrease putting downward pressure on the wage rate in the\nManufacturing industry.\nAt the same time, labor is moving out of the Agriculture\nindustry, increasing the MPL Aand thus the wage rate in the\nAgriculture industry.\nThis happens until we are settled back into our equilibrium\ncondition (6), however we are at a di\nerent level of\nproduction.\nSpeci\nc-Factors Model 10/19\n\nSuppose there is a change in relative prices\nSpeci\nc-Factors Model 11/19\n\nRelative Prices and the Distribution of Income\nFirst note when the pM\", because the MPL adjust as well,\nthe wage rate won't increase by the same amount.\nNow let's look at what this price change implies about the\nincomes of three groups: workers, owners of capital, and\nowners of land.\nWorkers nominal wage rate increase, however it's less than the\nprice of Manufacturing, sow\nPM#andw\nPA\". Ambiguous e\nect.\nOwners of capital are de\nnitely better o\n: The real wage rate\nin terms of Manufacturing has fallen, so the pro\nts of capital\nowners in terms of what they produce (Manufacturing) rises {\ni.e. the income of capital owners will rise more than\nproportionately with the rise in PM.\nOwners of land are de\nnitely worse o\n. (1) The real wage in\nterms of food (the good they produce) rises, squeezing their\nincome and (2) the rise in cloth price reduces the purchasing\npower of any given income.\nSpeci\nc-Factors Model 12/19",
+      "word_count": 318,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 8,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "specific-factors-students-1-0009",
+      "file_path": "Specific_Factors_Students (1).pdf",
+      "file_name": "Specific_Factors_Students (1).pdf",
+      "file_role": "unknown",
+      "section": "In General",
+      "chunk_index": 9,
+      "text": "In General\n1The factor speci\nc to the sector whose relative price increases\nis de\nnitely better o\n.\n2The factor speci\nc to the sector whose relative price decreases\nis de\nnitely worse o\n.\n3The change in welfare for the mobile factor is ambiguous.\nSpeci\nc-Factors Model 13/19\n\nInternational Trade in the Speci\nc Factors Model\nFor trade to take place, the country must face a world relative\nprice that di\ners from the autarky relative price.\nWhy might the relative supply curve for the world be di\nerent\nfrom the home?\nThe other countries could have di\nerent technologies (like the\nRicardian model)\nThe other countries could have the same technologies, but\ndi\nerent resources.\nGiven what we just discussed; if there is trade between two\ncountries, the trading relative price (TOT) must be di\nerent\nthan the countries' autarky relative price.\nThus, even though some win and some lose in each country,\nthe gains must outweigh the losses\nSpeci\nc-Factors Model 14/19\n\nGains from Trade\nSpeci\nc-Factors Model 15/19",
+      "word_count": 174,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 1
+      }
+    },
+    {
+      "id": "specific-factors-students-1-0010",
+      "file_path": "Specific_Factors_Students (1).pdf",
+      "file_name": "Specific_Factors_Students (1).pdf",
+      "file_role": "unknown",
+      "section": "The Political Economy of Trade: A Preliminary View",
+      "chunk_index": 10,
+      "text": "The Political Economy of Trade: A Preliminary View\nWe now have a model that highlights the fact that some win\nfrom trade liberalization (export sector) and some lose from it\n(import competing sector).\nThere has always been this tension in society. Since there are\nsome losers, does this mean we should not trade?? Here are\nthree reasons why economists tend not to stress the income\ndistribution e",
+      "word_count": 67,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 2
+      }
+    },
+    {
+      "id": "specific-factors-students-1-0011",
+      "file_path": "Specific_Factors_Students (1).pdf",
+      "file_name": "Specific_Factors_Students (1).pdf",
+      "file_role": "unknown",
+      "section": "ects of trade",
+      "chunk_index": 11,
+      "text": "ects of trade:\n1Income distribution e\nects are not speci\nc to international\ntrade.\n2It is always better to allow trade and compensate those who\nare hurt by it than to prohibit trade.\n3The losers are typically better organized than those who gain.\nA bit more on this later, but there is the Trade Adjustment\nAssistance Program. For a nice discussion on it's e",
+      "word_count": 64,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "specific-factors-students-1-0012",
+      "file_path": "Specific_Factors_Students (1).pdf",
+      "file_name": "Specific_Factors_Students (1).pdf",
+      "file_role": "unknown",
+      "section": "International Labor Mobility",
+      "chunk_index": 12,
+      "text": "International Labor Mobility\nJust like free labor mobility within a country will equalize real\nwages, free labor mobility across countries will equalize real\nwages.\nThis assumes\nThat labor is identical { though this isn't that big of an\nassumption because you could simply say that wages across\njob type will equate.\nThat labor doesn't care where it lives { think of the EU, there\nis theoretically free labor mobility, though people tend to stay\nin their own country.\nGenerally, this raises world output/welfare, but of course there\nwill be some losers if these gains aren't redistributed somehow.\nThe same is true for all factors of production { though this\ncan be di\u000ecult for other reasons.\nSpeci\nc-Factors Model 17/19\n\nRecap\nWe now have a model that\n1doesn't rely on exogenous di\nerences in technology to drive\ncomparative advantage and thus trade.\n2doesn't result in everyone being better o\nwithout\nredistribution (the country as a whole is still better o\nwith\ntrade).\n3doesn't result in full specialization if the TOT is di\nerent than\nautarky prices.\nThis opens the door for understanding the political economy\nof trade (winners vs. losers)\nSpeci\nc-Factors Model 18/19\n\nNext up the \\Heckscher-Ohlin Model\"\nSpeci\nc-Factors Model 19/19",
+      "word_count": 204,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 1,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "specific-factors-students-2-0000",
+      "file_path": "Specific_Factors_Students (2).pdf",
+      "file_name": "Specific_Factors_Students (2).pdf",
+      "file_role": "unknown",
+      "section": "ECON 404: Cal Poly",
+      "chunk_index": 0,
+      "text": "ECON 404: Cal Poly\nSpeci\nc-Factors Model 1/19\n\nMotivation\nRecall some of the problems we had with the Ricardian Model\nEveryone gains without any sort of redistribution.\nToo much specialization.\nLabor only input.\nExogenous technology. Why doesn't information about\nproduction techniques transfer across countries??",
+      "word_count": 45,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 2
+      }
+    },
+    {
+      "id": "specific-factors-students-2-0001",
+      "file_path": "Specific_Factors_Students (2).pdf",
+      "file_name": "Specific_Factors_Students (2).pdf",
+      "file_role": "unknown",
+      "section": "The Speci",
+      "chunk_index": 1,
+      "text": "The Speci\nc-Factors model addresses these critiques\nAllow for more inputs than labor\nAssume technology could be the same across countries\nSpeci\nc-Factors Model 2/19\n\nSetup of the model\nEconomy can produce two goods: Manufacturing and\nAgriculture\nEach country has three factors of production: Labor ( L),\ncapital ( K), and land ( Tfor terrain)\nManufacturing is produced using capital and labor but NOT\nland\nAgriculture is produced using land and labor but NOT capital\nLabor is mobile while land and capital are speci\nc factors\nWe assume diminishing marginal productivity of labor.\nThe lack of mobility of factors means this model can be\nthought of as a \\short-run\" model.\nSpeci\nc-Factors Model 3/19",
+      "word_count": 113,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "specific-factors-students-2-0002",
+      "file_path": "Specific_Factors_Students (2).pdf",
+      "file_name": "Specific_Factors_Students (2).pdf",
+      "file_role": "unknown",
+      "section": "QM=QM(K;LM) (1)",
+      "chunk_index": 2,
+      "text": "QM=QM(K;LM) (1)\nSpeci\nc-Factors Model 4/19\n\nProduction\nThe production function for Agriculture is (note Tis\nxed)",
+      "word_count": 20,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 2,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "specific-factors-students-2-0003",
+      "file_path": "Specific_Factors_Students (2).pdf",
+      "file_name": "Specific_Factors_Students (2).pdf",
+      "file_role": "unknown",
+      "section": "LM+LA=L (3)",
+      "chunk_index": 3,
+      "text": "LM+LA=L (3)\nThe production possibilities frontier is bowed out and the\nslope is equal to\u0000MPL A",
+      "word_count": 19,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 1,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "specific-factors-students-2-0004",
+      "file_path": "Specific_Factors_Students (2).pdf",
+      "file_name": "Specific_Factors_Students (2).pdf",
+      "file_role": "unknown",
+      "section": "Prices, Wages, and Labor Allocation",
+      "chunk_index": 4,
+      "text": "Prices, Wages, and Labor Allocation\nHow much labor will be employed in each sector?\nLooking at the supply-side of labor, labor will move to the\nindustry that pays the most. So, with perfect competition and\nfree labor mobility (think long run equilibrium), the wages in\neach sector must be equal and we need to have the revenue",
+      "word_count": 57,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 1
+      }
+    },
+    {
+      "id": "specific-factors-students-2-0005",
+      "file_path": "Specific_Factors_Students (2).pdf",
+      "file_name": "Specific_Factors_Students (2).pdf",
+      "file_role": "unknown",
+      "section": "marginal product in each sector equal the wage",
+      "chunk_index": 5,
+      "text": "marginal product in each sector equal the wage:\nw=MPL M\u0003PM (4)\nw=MPL A\u0003PA (5)\nRearranging these two equations, we can get",
+      "word_count": 25,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 2,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "specific-factors-students-2-0006",
+      "file_path": "Specific_Factors_Students (2).pdf",
+      "file_name": "Specific_Factors_Students (2).pdf",
+      "file_role": "unknown",
+      "section": "MPL M=\u0000PM",
+      "chunk_index": 6,
+      "text": "MPL M=\u0000PM\nPA(6)\nThe left side of the equation is the slope of the production\npossibility frontier at the actual production point. The right\nside is the relative price of cloth.\nSpeci\nc-Factors Model 7/19",
+      "word_count": 38,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 2,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "specific-factors-students-2-0007",
+      "file_path": "Specific_Factors_Students (2).pdf",
+      "file_name": "Specific_Factors_Students (2).pdf",
+      "file_role": "unknown",
+      "section": "Prices, Wages, and Labor Allocation",
+      "chunk_index": 7,
+      "text": "Prices, Wages, and Labor Allocation\nWhat determines the relative price in Autarky??\nUtility { again try to get on the highest indi\nerence curve\ngiven the PPF.\nSuppose there is an equal-proportional change in prices.\nIf there is no change in the relative price then there will be no\nchange in the labor allocation and output\nSpeci\nc-Factors Model 8/19\n\nSuppose there is a change in relative prices.\nWhat happens if the price of Manufacturing increases, but the\nprice of Agriculture remains the same?",
+      "word_count": 84,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 3
+      }
+    },
+    {
+      "id": "specific-factors-students-2-0008",
+      "file_path": "Specific_Factors_Students (2).pdf",
+      "file_name": "Specific_Factors_Students (2).pdf",
+      "file_role": "unknown",
+      "section": "Going back to our wage equations",
+      "chunk_index": 8,
+      "text": "Going back to our wage equations:\nw=MPL M\u0003PM\nw=MPL A\u0003PA\nAs the price of Manufacturing goes up, the wage rate in the\nManufacturing industry must also go up.\nLabor starts to move into the Manufacturing industry out of\nthe Agriculture industry.\nSpeci\nc-Factors Model 9/19\n\nSuppose there is a change in relative prices.\nHowever, recall that the MPL is not constant, so as labor\nmoves into the Manufacturing industry, the MPL Mbegins to\ndecrease putting downward pressure on the wage rate in the\nManufacturing industry.\nAt the same time, labor is moving out of the Agriculture\nindustry, increasing the MPL Aand thus the wage rate in the\nAgriculture industry.\nThis happens until we are settled back into our equilibrium\ncondition (6), however we are at a di\nerent level of\nproduction.\nSpeci\nc-Factors Model 10/19\n\nSuppose there is a change in relative prices\nSpeci\nc-Factors Model 11/19\n\nRelative Prices and the Distribution of Income\nFirst note when the pM\", because the MPL adjust as well,\nthe wage rate won't increase by the same amount.\nNow let's look at what this price change implies about the\nincomes of three groups: workers, owners of capital, and\nowners of land.\nWorkers nominal wage rate increase, however it's less than the\nprice of Manufacturing, sow\nPM#andw\nPA\". Ambiguous e\nect.\nOwners of capital are de\nnitely better o\n: The real wage rate\nin terms of Manufacturing has fallen, so the pro\nts of capital\nowners in terms of what they produce (Manufacturing) rises {\ni.e. the income of capital owners will rise more than\nproportionately with the rise in PM.\nOwners of land are de\nnitely worse o\n. (1) The real wage in\nterms of food (the good they produce) rises, squeezing their\nincome and (2) the rise in cloth price reduces the purchasing\npower of any given income.\nSpeci\nc-Factors Model 12/19",
+      "word_count": 318,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 8,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "specific-factors-students-2-0009",
+      "file_path": "Specific_Factors_Students (2).pdf",
+      "file_name": "Specific_Factors_Students (2).pdf",
+      "file_role": "unknown",
+      "section": "In General",
+      "chunk_index": 9,
+      "text": "In General\n1The factor speci\nc to the sector whose relative price increases\nis de\nnitely better o\n.\n2The factor speci\nc to the sector whose relative price decreases\nis de\nnitely worse o\n.\n3The change in welfare for the mobile factor is ambiguous.\nSpeci\nc-Factors Model 13/19\n\nInternational Trade in the Speci\nc Factors Model\nFor trade to take place, the country must face a world relative\nprice that di\ners from the autarky relative price.\nWhy might the relative supply curve for the world be di\nerent\nfrom the home?\nThe other countries could have di\nerent technologies (like the\nRicardian model)\nThe other countries could have the same technologies, but\ndi\nerent resources.\nGiven what we just discussed; if there is trade between two\ncountries, the trading relative price (TOT) must be di\nerent\nthan the countries' autarky relative price.\nThus, even though some win and some lose in each country,\nthe gains must outweigh the losses\nSpeci\nc-Factors Model 14/19\n\nGains from Trade\nSpeci\nc-Factors Model 15/19",
+      "word_count": 174,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 1
+      }
+    },
+    {
+      "id": "specific-factors-students-2-0010",
+      "file_path": "Specific_Factors_Students (2).pdf",
+      "file_name": "Specific_Factors_Students (2).pdf",
+      "file_role": "unknown",
+      "section": "The Political Economy of Trade: A Preliminary View",
+      "chunk_index": 10,
+      "text": "The Political Economy of Trade: A Preliminary View\nWe now have a model that highlights the fact that some win\nfrom trade liberalization (export sector) and some lose from it\n(import competing sector).\nThere has always been this tension in society. Since there are\nsome losers, does this mean we should not trade?? Here are\nthree reasons why economists tend not to stress the income\ndistribution e",
+      "word_count": 67,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 2
+      }
+    },
+    {
+      "id": "specific-factors-students-2-0011",
+      "file_path": "Specific_Factors_Students (2).pdf",
+      "file_name": "Specific_Factors_Students (2).pdf",
+      "file_role": "unknown",
+      "section": "ects of trade",
+      "chunk_index": 11,
+      "text": "ects of trade:\n1Income distribution e\nects are not speci\nc to international\ntrade.\n2It is always better to allow trade and compensate those who\nare hurt by it than to prohibit trade.\n3The losers are typically better organized than those who gain.\nA bit more on this later, but there is the Trade Adjustment\nAssistance Program. For a nice discussion on it's e",
+      "word_count": 64,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "specific-factors-students-2-0012",
+      "file_path": "Specific_Factors_Students (2).pdf",
+      "file_name": "Specific_Factors_Students (2).pdf",
+      "file_role": "unknown",
+      "section": "International Labor Mobility",
+      "chunk_index": 12,
+      "text": "International Labor Mobility\nJust like free labor mobility within a country will equalize real\nwages, free labor mobility across countries will equalize real\nwages.\nThis assumes\nThat labor is identical { though this isn't that big of an\nassumption because you could simply say that wages across\njob type will equate.\nThat labor doesn't care where it lives { think of the EU, there\nis theoretically free labor mobility, though people tend to stay\nin their own country.\nGenerally, this raises world output/welfare, but of course there\nwill be some losers if these gains aren't redistributed somehow.\nThe same is true for all factors of production { though this\ncan be di\u000ecult for other reasons.\nSpeci\nc-Factors Model 17/19\n\nRecap\nWe now have a model that\n1doesn't rely on exogenous di\nerences in technology to drive\ncomparative advantage and thus trade.\n2doesn't result in everyone being better o\nwithout\nredistribution (the country as a whole is still better o\nwith\ntrade).\n3doesn't result in full specialization if the TOT is di\nerent than\nautarky prices.\nThis opens the door for understanding the political economy\nof trade (winners vs. losers)\nSpeci\nc-Factors Model 18/19\n\nNext up the \\Heckscher-Ohlin Model\"\nSpeci\nc-Factors Model 19/19",
+      "word_count": 204,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 1,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "specific-factors-students-0000",
+      "file_path": "Specific_Factors_Students.pdf",
+      "file_name": "Specific_Factors_Students.pdf",
+      "file_role": "unknown",
+      "section": "ECON 404: Cal Poly",
+      "chunk_index": 0,
+      "text": "ECON 404: Cal Poly\nSpeci\nc-Factors Model 1/19\n\nMotivation\nRecall some of the problems we had with the Ricardian Model\nEveryone gains without any sort of redistribution.\nToo much specialization.\nLabor only input.\nExogenous technology. Why doesn't information about\nproduction techniques transfer across countries??",
+      "word_count": 45,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 2
+      }
+    },
+    {
+      "id": "specific-factors-students-0001",
+      "file_path": "Specific_Factors_Students.pdf",
+      "file_name": "Specific_Factors_Students.pdf",
+      "file_role": "unknown",
+      "section": "The Speci",
+      "chunk_index": 1,
+      "text": "The Speci\nc-Factors model addresses these critiques\nAllow for more inputs than labor\nAssume technology could be the same across countries\nSpeci\nc-Factors Model 2/19\n\nSetup of the model\nEconomy can produce two goods: Manufacturing and\nAgriculture\nEach country has three factors of production: Labor ( L),\ncapital ( K), and land ( Tfor terrain)\nManufacturing is produced using capital and labor but NOT\nland\nAgriculture is produced using land and labor but NOT capital\nLabor is mobile while land and capital are speci\nc factors\nWe assume diminishing marginal productivity of labor.\nThe lack of mobility of factors means this model can be\nthought of as a \\short-run\" model.\nSpeci\nc-Factors Model 3/19",
+      "word_count": 113,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "specific-factors-students-0002",
+      "file_path": "Specific_Factors_Students.pdf",
+      "file_name": "Specific_Factors_Students.pdf",
+      "file_role": "unknown",
+      "section": "QM=QM(K;LM) (1)",
+      "chunk_index": 2,
+      "text": "QM=QM(K;LM) (1)\nSpeci\nc-Factors Model 4/19\n\nProduction\nThe production function for Agriculture is (note Tis\nxed)",
+      "word_count": 20,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 2,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "specific-factors-students-0003",
+      "file_path": "Specific_Factors_Students.pdf",
+      "file_name": "Specific_Factors_Students.pdf",
+      "file_role": "unknown",
+      "section": "LM+LA=L (3)",
+      "chunk_index": 3,
+      "text": "LM+LA=L (3)\nThe production possibilities frontier is bowed out and the\nslope is equal to\u0000MPL A",
+      "word_count": 19,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 1,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "specific-factors-students-0004",
+      "file_path": "Specific_Factors_Students.pdf",
+      "file_name": "Specific_Factors_Students.pdf",
+      "file_role": "unknown",
+      "section": "Prices, Wages, and Labor Allocation",
+      "chunk_index": 4,
+      "text": "Prices, Wages, and Labor Allocation\nHow much labor will be employed in each sector?\nLooking at the supply-side of labor, labor will move to the\nindustry that pays the most. So, with perfect competition and\nfree labor mobility (think long run equilibrium), the wages in\neach sector must be equal and we need to have the revenue",
+      "word_count": 57,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 1
+      }
+    },
+    {
+      "id": "specific-factors-students-0005",
+      "file_path": "Specific_Factors_Students.pdf",
+      "file_name": "Specific_Factors_Students.pdf",
+      "file_role": "unknown",
+      "section": "marginal product in each sector equal the wage",
+      "chunk_index": 5,
+      "text": "marginal product in each sector equal the wage:\nw=MPL M\u0003PM (4)\nw=MPL A\u0003PA (5)\nRearranging these two equations, we can get",
+      "word_count": 25,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 2,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "specific-factors-students-0006",
+      "file_path": "Specific_Factors_Students.pdf",
+      "file_name": "Specific_Factors_Students.pdf",
+      "file_role": "unknown",
+      "section": "MPL M=\u0000PM",
+      "chunk_index": 6,
+      "text": "MPL M=\u0000PM\nPA(6)\nThe left side of the equation is the slope of the production\npossibility frontier at the actual production point. The right\nside is the relative price of cloth.\nSpeci\nc-Factors Model 7/19",
+      "word_count": 38,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 2,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "specific-factors-students-0007",
+      "file_path": "Specific_Factors_Students.pdf",
+      "file_name": "Specific_Factors_Students.pdf",
+      "file_role": "unknown",
+      "section": "Prices, Wages, and Labor Allocation",
+      "chunk_index": 7,
+      "text": "Prices, Wages, and Labor Allocation\nWhat determines the relative price in Autarky??\nUtility { again try to get on the highest indi\nerence curve\ngiven the PPF.\nSuppose there is an equal-proportional change in prices.\nIf there is no change in the relative price then there will be no\nchange in the labor allocation and output\nSpeci\nc-Factors Model 8/19\n\nSuppose there is a change in relative prices.\nWhat happens if the price of Manufacturing increases, but the\nprice of Agriculture remains the same?",
+      "word_count": 84,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 3
+      }
+    },
+    {
+      "id": "specific-factors-students-0008",
+      "file_path": "Specific_Factors_Students.pdf",
+      "file_name": "Specific_Factors_Students.pdf",
+      "file_role": "unknown",
+      "section": "Going back to our wage equations",
+      "chunk_index": 8,
+      "text": "Going back to our wage equations:\nw=MPL M\u0003PM\nw=MPL A\u0003PA\nAs the price of Manufacturing goes up, the wage rate in the\nManufacturing industry must also go up.\nLabor starts to move into the Manufacturing industry out of\nthe Agriculture industry.\nSpeci\nc-Factors Model 9/19\n\nSuppose there is a change in relative prices.\nHowever, recall that the MPL is not constant, so as labor\nmoves into the Manufacturing industry, the MPL Mbegins to\ndecrease putting downward pressure on the wage rate in the\nManufacturing industry.\nAt the same time, labor is moving out of the Agriculture\nindustry, increasing the MPL Aand thus the wage rate in the\nAgriculture industry.\nThis happens until we are settled back into our equilibrium\ncondition (6), however we are at a di\nerent level of\nproduction.\nSpeci\nc-Factors Model 10/19\n\nSuppose there is a change in relative prices\nSpeci\nc-Factors Model 11/19\n\nRelative Prices and the Distribution of Income\nFirst note when the pM\", because the MPL adjust as well,\nthe wage rate won't increase by the same amount.\nNow let's look at what this price change implies about the\nincomes of three groups: workers, owners of capital, and\nowners of land.\nWorkers nominal wage rate increase, however it's less than the\nprice of Manufacturing, sow\nPM#andw\nPA\". Ambiguous e\nect.\nOwners of capital are de\nnitely better o\n: The real wage rate\nin terms of Manufacturing has fallen, so the pro\nts of capital\nowners in terms of what they produce (Manufacturing) rises {\ni.e. the income of capital owners will rise more than\nproportionately with the rise in PM.\nOwners of land are de\nnitely worse o\n. (1) The real wage in\nterms of food (the good they produce) rises, squeezing their\nincome and (2) the rise in cloth price reduces the purchasing\npower of any given income.\nSpeci\nc-Factors Model 12/19",
+      "word_count": 318,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 8,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "specific-factors-students-0009",
+      "file_path": "Specific_Factors_Students.pdf",
+      "file_name": "Specific_Factors_Students.pdf",
+      "file_role": "unknown",
+      "section": "In General",
+      "chunk_index": 9,
+      "text": "In General\n1The factor speci\nc to the sector whose relative price increases\nis de\nnitely better o\n.\n2The factor speci\nc to the sector whose relative price decreases\nis de\nnitely worse o\n.\n3The change in welfare for the mobile factor is ambiguous.\nSpeci\nc-Factors Model 13/19\n\nInternational Trade in the Speci\nc Factors Model\nFor trade to take place, the country must face a world relative\nprice that di\ners from the autarky relative price.\nWhy might the relative supply curve for the world be di\nerent\nfrom the home?\nThe other countries could have di\nerent technologies (like the\nRicardian model)\nThe other countries could have the same technologies, but\ndi\nerent resources.\nGiven what we just discussed; if there is trade between two\ncountries, the trading relative price (TOT) must be di\nerent\nthan the countries' autarky relative price.\nThus, even though some win and some lose in each country,\nthe gains must outweigh the losses\nSpeci\nc-Factors Model 14/19\n\nGains from Trade\nSpeci\nc-Factors Model 15/19",
+      "word_count": 174,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 1
+      }
+    },
+    {
+      "id": "specific-factors-students-0010",
+      "file_path": "Specific_Factors_Students.pdf",
+      "file_name": "Specific_Factors_Students.pdf",
+      "file_role": "unknown",
+      "section": "The Political Economy of Trade: A Preliminary View",
+      "chunk_index": 10,
+      "text": "The Political Economy of Trade: A Preliminary View\nWe now have a model that highlights the fact that some win\nfrom trade liberalization (export sector) and some lose from it\n(import competing sector).\nThere has always been this tension in society. Since there are\nsome losers, does this mean we should not trade?? Here are\nthree reasons why economists tend not to stress the income\ndistribution e",
+      "word_count": 67,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 2
+      }
+    },
+    {
+      "id": "specific-factors-students-0011",
+      "file_path": "Specific_Factors_Students.pdf",
+      "file_name": "Specific_Factors_Students.pdf",
+      "file_role": "unknown",
+      "section": "ects of trade",
+      "chunk_index": 11,
+      "text": "ects of trade:\n1Income distribution e\nects are not speci\nc to international\ntrade.\n2It is always better to allow trade and compensate those who\nare hurt by it than to prohibit trade.\n3The losers are typically better organized than those who gain.\nA bit more on this later, but there is the Trade Adjustment\nAssistance Program. For a nice discussion on it's e",
+      "word_count": 64,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 0,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    },
+    {
+      "id": "specific-factors-students-0012",
+      "file_path": "Specific_Factors_Students.pdf",
+      "file_name": "Specific_Factors_Students.pdf",
+      "file_role": "unknown",
+      "section": "International Labor Mobility",
+      "chunk_index": 12,
+      "text": "International Labor Mobility\nJust like free labor mobility within a country will equalize real\nwages, free labor mobility across countries will equalize real\nwages.\nThis assumes\nThat labor is identical { though this isn't that big of an\nassumption because you could simply say that wages across\njob type will equate.\nThat labor doesn't care where it lives { think of the EU, there\nis theoretically free labor mobility, though people tend to stay\nin their own country.\nGenerally, this raises world output/welfare, but of course there\nwill be some losers if these gains aren't redistributed somehow.\nThe same is true for all factors of production { though this\ncan be di\u000ecult for other reasons.\nSpeci\nc-Factors Model 17/19\n\nRecap\nWe now have a model that\n1doesn't rely on exogenous di\nerences in technology to drive\ncomparative advantage and thus trade.\n2doesn't result in everyone being better o\nwithout\nredistribution (the country as a whole is still better o\nwith\ntrade).\n3doesn't result in full specialization if the TOT is di\nerent than\nautarky prices.\nThis opens the door for understanding the political economy\nof trade (winners vs. losers)\nSpeci\nc-Factors Model 18/19\n\nNext up the \\Heckscher-Ohlin Model\"\nSpeci\nc-Factors Model 19/19",
+      "word_count": 204,
+      "signals": {
+        "learning_objective": 0,
+        "emphasis": 0,
+        "summary": 1,
+        "example_problem": 0,
+        "assessment": 0,
+        "formula": 0,
+        "heading": 1,
+        "question": 0
+      }
+    }
+  ],
+  "warnings": [],
+  "syllabus_analysis": {
+    "status": "not_found",
+    "course_code": null,
+    "course_name": null,
+    "instructor": null,
+    "grading_breakdown": [],
+    "exam_weighting": [],
+    "important_topics": [],
+    "learning_objectives": [],
+    "exam_guidance": [],
+    "sources": [],
+    "created_at": "2026-04-28T21:29:17+00:00"
+  }
+}

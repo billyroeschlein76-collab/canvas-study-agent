@@ -1,0 +1,848 @@
+{
+  "created_at": "2026-04-28T21:29:04+00:00",
+  "source": "polyratings.dev",
+  "api_base": "https://api-prod.polyratings.org",
+  "course_code": "ECON 201",
+  "course_name": "Principles of Microeconomics",
+  "instructor": "Parisa Mahjoor",
+  "status": "found",
+  "professor_match": {
+    "id": "0038ea39-3910-4f80-9353-41dce33c754d",
+    "name": "Parisa Mahjoor",
+    "department": "CHEM",
+    "num_evals": 17,
+    "overall_rating": 0.64,
+    "material_clear": 0.82,
+    "student_difficulties": 0.46
+  },
+  "top_matches": [
+    {
+      "score": 1.7,
+      "id": "0038ea39-3910-4f80-9353-41dce33c754d",
+      "name": "Parisa Mahjoor",
+      "department": "CHEM",
+      "courses": [
+        "CHEM 110",
+        "CHEM 127",
+        "CHEM 316"
+      ],
+      "num_evals": 17,
+      "overall_rating": 0.64
+    },
+    {
+      "score": 0.712,
+      "id": "b8940792-86b5-4911-ac2e-53bc975a6c44",
+      "name": "Aric Shafran",
+      "department": "ECON",
+      "courses": [
+        "ECON 201",
+        "ECON 221",
+        "ECON 434",
+        "ECON 435",
+        "ECON 222",
+        "ECON 510",
+        "ECON 524"
+      ],
+      "num_evals": 70,
+      "overall_rating": 2.23
+    },
+    {
+      "score": 0.65,
+      "id": "31fa4ff6-d393-412f-8663-2c1f138a099a",
+      "name": "Mike Marlow",
+      "department": "ECON",
+      "courses": [
+        "ECON 201",
+        "ECON 221",
+        "ECON 222",
+        "ECON 311",
+        "ECON 410",
+        "ECON 424",
+        "ECON 464",
+        "GSB 500",
+        "GSB 523",
+        "GSB 533"
+      ],
+      "num_evals": 124,
+      "overall_rating": 2.73
+    },
+    {
+      "score": 0.65,
+      "id": "38e5cde8-9d3e-41d2-884f-f4d9315aadc9",
+      "name": "Eric Fisher",
+      "department": "ECON",
+      "courses": [
+        "ECON 101",
+        "ECON 201",
+        "ECON 202",
+        "ECON 222",
+        "ECON 330",
+        "ECON 333",
+        "ECON 337",
+        "ECON 339",
+        "ECON 401",
+        "ECON 404",
+        "ECON 405",
+        "ECON 460",
+        "ECON 512"
+      ],
+      "num_evals": 108,
+      "overall_rating": 2.45
+    },
+    {
+      "score": 0.64,
+      "id": "d5123a85-c0e9-49dd-9e9b-f4d42db24106",
+      "name": "Laura Moore",
+      "department": "ARCH",
+      "courses": [
+        "ARCH 131",
+        "ARCH 132"
+      ],
+      "num_evals": 8,
+      "overall_rating": 3.34
+    }
+  ],
+  "course_review_count": 0,
+  "total_review_count": 17,
+  "course_specific_used": false,
+  "review_url": "https://polyratings.dev/professor/0038ea39-3910-4f80-9353-41dce33c754d",
+  "categories": {
+    "study_strategies": [
+      {
+        "insight": "Students report that lectures, notes, or slides are important for exams.",
+        "support_count": 10,
+        "review_count": 17,
+        "reliability": "recurring student-reported pattern",
+        "source": "student-reported",
+        "examples": [
+          {
+            "course": "CHEM 110",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "She can be hard to understand at times because of her accent and her lectures can be very dry but overall an easy class."
+          },
+          {
+            "course": "CHEM 110",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "Lectures can be a bit confusing at times because it is pretty fast paced."
+          },
+          {
+            "course": "CHEM 127",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "Where to start, how about with the fact that she thinks this is your only class, and you should be spending all your time focused on her class, or \"sleeping less\" like she told us in one of her recent lectures to the class about how we \"aren't studying enough.\" She is very smart but just having your doctorate does not mean you know anything about teaching."
+          }
+        ]
+      },
+      {
+        "insight": "Students report that homework, assignments, or problem sets are important preparation.",
+        "support_count": 7,
+        "review_count": 17,
+        "reliability": "recurring student-reported pattern",
+        "source": "student-reported",
+        "examples": [
+          {
+            "course": "CHEM 110",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "There's no homework and the final is basically a shorter version of the 500 question study guide."
+          },
+          {
+            "course": "CHEM 127",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "The poor LA's in our class do all the grading and do all they can to help us with the labs and homework and such."
+          },
+          {
+            "course": "CHEM 127",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "Do not take anything she says at face value because you will realize that the labs, the homework, the quizzes, and the midterms are extremely rigorous and challenging."
+          }
+        ]
+      },
+      {
+        "insight": "Students mention quizzes as a meaningful signal for what to study.",
+        "support_count": 9,
+        "review_count": 17,
+        "reliability": "recurring student-reported pattern",
+        "source": "student-reported",
+        "examples": [
+          {
+            "course": "CHEM 110",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "There's a quiz every week but she drops your two lowest grades."
+          },
+          {
+            "course": "CHEM 110",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "Basically in CHEM 110, work hard to study for the quizzes each week and thoroughly complete the labs and you'll get a good grade."
+          },
+          {
+            "course": "CHEM 127",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "It is impossible to keep up with all of the work, between lecture, 1-2 labs per week, homeworks every week, quizzes every week, the 50 suggested problems she posts a few times per week, and reading the textbook."
+          }
+        ]
+      },
+      {
+        "insight": "Students report that review sheets, study guides, or practice exams are useful.",
+        "support_count": 3,
+        "review_count": 17,
+        "reliability": "recurring student-reported pattern",
+        "source": "student-reported",
+        "examples": [
+          {
+            "course": "CHEM 110",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "There's no homework and the final is basically a shorter version of the 500 question study guide."
+          },
+          {
+            "course": "CHEM 110",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "The final was a compilation of the huge Finals study guide she sends out."
+          },
+          {
+            "course": "CHEM 127",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "As if we aren't already sleeping less because of our other classes.The practice exam for her midterms did not help in the least, I walked out of that midterm terrified."
+          }
+        ]
+      },
+      {
+        "insight": "Students report that readings or the textbook matter.",
+        "support_count": 5,
+        "review_count": 17,
+        "reliability": "recurring student-reported pattern",
+        "source": "student-reported",
+        "examples": [
+          {
+            "course": "CHEM 127",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "It is impossible to keep up with all of the work, between lecture, 1-2 labs per week, homeworks every week, quizzes every week, the 50 suggested problems she posts a few times per week, and reading the textbook."
+          },
+          {
+            "course": "CHEM 127",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "The book can be quite confusing at times and even when I show her what particularly in the book has me confused she still shames me for asking."
+          },
+          {
+            "course": "CHEM 127",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "Anything includes lectures, homework, labs, textbook material, and previous information mentioned in class."
+          }
+        ]
+      },
+      {
+        "insight": "Students recommend office hours or asking questions.",
+        "support_count": 5,
+        "review_count": 17,
+        "reliability": "recurring student-reported pattern",
+        "source": "student-reported",
+        "examples": [
+          {
+            "course": "CHEM 110",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "I greatly enjoyed this class and Parisa is very helpful."
+          },
+          {
+            "course": "CHEM 127",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "Oh, and going into office hours is really awkward because her and Dr."
+          },
+          {
+            "course": "CHEM 127",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "Since I had a basic understanding of chemistry from my sophomore year of high school, it was definitely difficult to follow along- especially because she gives off a bad vibe to students who ask questions."
+          }
+        ]
+      }
+    ],
+    "exam_patterns": [
+      {
+        "insight": "Students report that lectures, notes, or slides are important for exams.",
+        "support_count": 10,
+        "review_count": 17,
+        "reliability": "recurring student-reported pattern",
+        "source": "student-reported",
+        "examples": [
+          {
+            "course": "CHEM 110",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "She can be hard to understand at times because of her accent and her lectures can be very dry but overall an easy class."
+          },
+          {
+            "course": "CHEM 110",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "Lectures can be a bit confusing at times because it is pretty fast paced."
+          },
+          {
+            "course": "CHEM 127",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "Where to start, how about with the fact that she thinks this is your only class, and you should be spending all your time focused on her class, or \"sleeping less\" like she told us in one of her recent lectures to the class about how we \"aren't studying enough.\" She is very smart but just having your doctorate does not mean you know anything about teaching."
+          }
+        ]
+      },
+      {
+        "insight": "Students report that homework, assignments, or problem sets are important preparation.",
+        "support_count": 7,
+        "review_count": 17,
+        "reliability": "recurring student-reported pattern",
+        "source": "student-reported",
+        "examples": [
+          {
+            "course": "CHEM 110",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "There's no homework and the final is basically a shorter version of the 500 question study guide."
+          },
+          {
+            "course": "CHEM 127",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "The poor LA's in our class do all the grading and do all they can to help us with the labs and homework and such."
+          },
+          {
+            "course": "CHEM 127",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "Do not take anything she says at face value because you will realize that the labs, the homework, the quizzes, and the midterms are extremely rigorous and challenging."
+          }
+        ]
+      },
+      {
+        "insight": "Students mention quizzes as a meaningful signal for what to study.",
+        "support_count": 9,
+        "review_count": 17,
+        "reliability": "recurring student-reported pattern",
+        "source": "student-reported",
+        "examples": [
+          {
+            "course": "CHEM 110",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "There's a quiz every week but she drops your two lowest grades."
+          },
+          {
+            "course": "CHEM 110",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "Basically in CHEM 110, work hard to study for the quizzes each week and thoroughly complete the labs and you'll get a good grade."
+          },
+          {
+            "course": "CHEM 127",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "It is impossible to keep up with all of the work, between lecture, 1-2 labs per week, homeworks every week, quizzes every week, the 50 suggested problems she posts a few times per week, and reading the textbook."
+          }
+        ]
+      },
+      {
+        "insight": "Students report that review sheets, study guides, or practice exams are useful.",
+        "support_count": 3,
+        "review_count": 17,
+        "reliability": "recurring student-reported pattern",
+        "source": "student-reported",
+        "examples": [
+          {
+            "course": "CHEM 110",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "There's no homework and the final is basically a shorter version of the 500 question study guide."
+          },
+          {
+            "course": "CHEM 110",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "The final was a compilation of the huge Finals study guide she sends out."
+          },
+          {
+            "course": "CHEM 127",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "As if we aren't already sleeping less because of our other classes.The practice exam for her midterms did not help in the least, I walked out of that midterm terrified."
+          }
+        ]
+      },
+      {
+        "insight": "Students report that readings or the textbook matter.",
+        "support_count": 5,
+        "review_count": 17,
+        "reliability": "recurring student-reported pattern",
+        "source": "student-reported",
+        "examples": [
+          {
+            "course": "CHEM 127",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "It is impossible to keep up with all of the work, between lecture, 1-2 labs per week, homeworks every week, quizzes every week, the 50 suggested problems she posts a few times per week, and reading the textbook."
+          },
+          {
+            "course": "CHEM 127",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "The book can be quite confusing at times and even when I show her what particularly in the book has me confused she still shames me for asking."
+          },
+          {
+            "course": "CHEM 127",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "Anything includes lectures, homework, labs, textbook material, and previous information mentioned in class."
+          }
+        ]
+      },
+      {
+        "insight": "Students mention cumulative exams or finals.",
+        "support_count": 4,
+        "review_count": 17,
+        "reliability": "recurring student-reported pattern",
+        "source": "student-reported",
+        "examples": [
+          {
+            "course": "CHEM 127",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "I aced the first midterm but it has gone downhill since then."
+          },
+          {
+            "course": "CHEM 127",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "As if we aren't already sleeping less because of our other classes.The practice exam for her midterms did not help in the least, I walked out of that midterm terrified."
+          },
+          {
+            "course": "CHEM 127",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "Don't take her if you can, she has a heavy workload, something is due at the beginning of every class, her practice midterm had nothing to do with her second midterm."
+          }
+        ]
+      }
+    ],
+    "difficult_topics": [
+      {
+        "insight": "Review text repeatedly names these possible difficult-topic cues: hard, extremely, difficult, times, lectures, labs",
+        "support_count": 24,
+        "review_count": 17,
+        "reliability": "student-reported keyword pattern",
+        "source": "student-reported",
+        "examples": []
+      },
+      {
+        "insight": "Students describe the class or material as difficult or confusing.",
+        "support_count": 10,
+        "review_count": 17,
+        "reliability": "recurring student-reported pattern",
+        "source": "student-reported",
+        "examples": [
+          {
+            "course": "CHEM 110",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "She can be hard to understand at times because of her accent and her lectures can be very dry but overall an easy class."
+          },
+          {
+            "course": "CHEM 110",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "Basically in CHEM 110, work hard to study for the quizzes each week and thoroughly complete the labs and you'll get a good grade."
+          },
+          {
+            "course": "CHEM 127",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "The book can be quite confusing at times and even when I show her what particularly in the book has me confused she still shames me for asking."
+          }
+        ]
+      }
+    ],
+    "time_management": [
+      {
+        "insight": "Students mention cumulative exams or finals.",
+        "support_count": 4,
+        "review_count": 17,
+        "reliability": "recurring student-reported pattern",
+        "source": "student-reported",
+        "examples": [
+          {
+            "course": "CHEM 127",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "I aced the first midterm but it has gone downhill since then."
+          },
+          {
+            "course": "CHEM 127",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "As if we aren't already sleeping less because of our other classes.The practice exam for her midterms did not help in the least, I walked out of that midterm terrified."
+          },
+          {
+            "course": "CHEM 127",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "Don't take her if you can, she has a heavy workload, something is due at the beginning of every class, her practice midterm had nothing to do with her second midterm."
+          }
+        ]
+      },
+      {
+        "insight": "Students mention time load, pacing, or starting early.",
+        "support_count": 3,
+        "review_count": 17,
+        "reliability": "recurring student-reported pattern",
+        "source": "student-reported",
+        "examples": [
+          {
+            "course": "CHEM 127",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "She skips over soo much material that it makes it impossible to keep up with her in lecture."
+          },
+          {
+            "course": "CHEM 127",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "Don't take her if you can, she has a heavy workload, something is due at the beginning of every class, her practice midterm had nothing to do with her second midterm."
+          },
+          {
+            "course": "CHEM 127",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "In this course I put in a lot of time and made a conscious effort to always go to office hours however my grade never reflected the amount of time I put in."
+          }
+        ]
+      },
+      {
+        "insight": "Students mention strict grading, rubrics, or point deductions.",
+        "support_count": 4,
+        "review_count": 17,
+        "reliability": "recurring student-reported pattern",
+        "source": "student-reported",
+        "examples": [
+          {
+            "course": "CHEM 127",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "The poor LA's in our class do all the grading and do all they can to help us with the labs and homework and such."
+          },
+          {
+            "course": "CHEM 127",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "Her LA's did the grading and her practice problems and lecture slides had clearly been taken from somewhere else, so she put in minimal effort for this class."
+          },
+          {
+            "course": "CHEM 127",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "She cannot lecture to save her life, she expects far too much from the students, she cannot admit to herself that she is the problem not the students, every assignment or quiz is graded ridiculously hard(don't count on any partial credit), in class she is rude to students, she is extremely unhelpful in answering questions(don't even try asking questions, she will just say you didn't do the reading or don't pay attention and say its your fault for not knowing something), and so on....."
+          }
+        ]
+      }
+    ],
+    "pitfalls": [
+      {
+        "insight": "Students mention time load, pacing, or starting early.",
+        "support_count": 3,
+        "review_count": 17,
+        "reliability": "recurring student-reported pattern",
+        "source": "student-reported",
+        "examples": [
+          {
+            "course": "CHEM 127",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "She skips over soo much material that it makes it impossible to keep up with her in lecture."
+          },
+          {
+            "course": "CHEM 127",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "Don't take her if you can, she has a heavy workload, something is due at the beginning of every class, her practice midterm had nothing to do with her second midterm."
+          },
+          {
+            "course": "CHEM 127",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "In this course I put in a lot of time and made a conscious effort to always go to office hours however my grade never reflected the amount of time I put in."
+          }
+        ]
+      },
+      {
+        "insight": "Students mention strict grading, rubrics, or point deductions.",
+        "support_count": 4,
+        "review_count": 17,
+        "reliability": "recurring student-reported pattern",
+        "source": "student-reported",
+        "examples": [
+          {
+            "course": "CHEM 127",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "The poor LA's in our class do all the grading and do all they can to help us with the labs and homework and such."
+          },
+          {
+            "course": "CHEM 127",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "Her LA's did the grading and her practice problems and lecture slides had clearly been taken from somewhere else, so she put in minimal effort for this class."
+          },
+          {
+            "course": "CHEM 127",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "She cannot lecture to save her life, she expects far too much from the students, she cannot admit to herself that she is the problem not the students, every assignment or quiz is graded ridiculously hard(don't count on any partial credit), in class she is rude to students, she is extremely unhelpful in answering questions(don't even try asking questions, she will just say you didn't do the reading or don't pay attention and say its your fault for not knowing something), and so on....."
+          }
+        ]
+      },
+      {
+        "insight": "Students describe the class or material as difficult or confusing.",
+        "support_count": 10,
+        "review_count": 17,
+        "reliability": "recurring student-reported pattern",
+        "source": "student-reported",
+        "examples": [
+          {
+            "course": "CHEM 110",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "She can be hard to understand at times because of her accent and her lectures can be very dry but overall an easy class."
+          },
+          {
+            "course": "CHEM 110",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "Basically in CHEM 110, work hard to study for the quizzes each week and thoroughly complete the labs and you'll get a good grade."
+          },
+          {
+            "course": "CHEM 127",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "The book can be quite confusing at times and even when I show her what particularly in the book has me confused she still shames me for asking."
+          }
+        ]
+      }
+    ],
+    "recurring_themes": [
+      {
+        "insight": "Students report that lectures, notes, or slides are important for exams.",
+        "support_count": 10,
+        "review_count": 17,
+        "reliability": "recurring student-reported pattern",
+        "source": "student-reported",
+        "examples": [
+          {
+            "course": "CHEM 110",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "She can be hard to understand at times because of her accent and her lectures can be very dry but overall an easy class."
+          },
+          {
+            "course": "CHEM 110",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "Lectures can be a bit confusing at times because it is pretty fast paced."
+          },
+          {
+            "course": "CHEM 127",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "Where to start, how about with the fact that she thinks this is your only class, and you should be spending all your time focused on her class, or \"sleeping less\" like she told us in one of her recent lectures to the class about how we \"aren't studying enough.\" She is very smart but just having your doctorate does not mean you know anything about teaching."
+          }
+        ]
+      },
+      {
+        "insight": "Students report that homework, assignments, or problem sets are important preparation.",
+        "support_count": 7,
+        "review_count": 17,
+        "reliability": "recurring student-reported pattern",
+        "source": "student-reported",
+        "examples": [
+          {
+            "course": "CHEM 110",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "There's no homework and the final is basically a shorter version of the 500 question study guide."
+          },
+          {
+            "course": "CHEM 127",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "The poor LA's in our class do all the grading and do all they can to help us with the labs and homework and such."
+          },
+          {
+            "course": "CHEM 127",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "Do not take anything she says at face value because you will realize that the labs, the homework, the quizzes, and the midterms are extremely rigorous and challenging."
+          }
+        ]
+      },
+      {
+        "insight": "Students mention quizzes as a meaningful signal for what to study.",
+        "support_count": 9,
+        "review_count": 17,
+        "reliability": "recurring student-reported pattern",
+        "source": "student-reported",
+        "examples": [
+          {
+            "course": "CHEM 110",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "There's a quiz every week but she drops your two lowest grades."
+          },
+          {
+            "course": "CHEM 110",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "Basically in CHEM 110, work hard to study for the quizzes each week and thoroughly complete the labs and you'll get a good grade."
+          },
+          {
+            "course": "CHEM 127",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "It is impossible to keep up with all of the work, between lecture, 1-2 labs per week, homeworks every week, quizzes every week, the 50 suggested problems she posts a few times per week, and reading the textbook."
+          }
+        ]
+      },
+      {
+        "insight": "Students report that review sheets, study guides, or practice exams are useful.",
+        "support_count": 3,
+        "review_count": 17,
+        "reliability": "recurring student-reported pattern",
+        "source": "student-reported",
+        "examples": [
+          {
+            "course": "CHEM 110",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "There's no homework and the final is basically a shorter version of the 500 question study guide."
+          },
+          {
+            "course": "CHEM 110",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "The final was a compilation of the huge Finals study guide she sends out."
+          },
+          {
+            "course": "CHEM 127",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "As if we aren't already sleeping less because of our other classes.The practice exam for her midterms did not help in the least, I walked out of that midterm terrified."
+          }
+        ]
+      },
+      {
+        "insight": "Students report that readings or the textbook matter.",
+        "support_count": 5,
+        "review_count": 17,
+        "reliability": "recurring student-reported pattern",
+        "source": "student-reported",
+        "examples": [
+          {
+            "course": "CHEM 127",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "It is impossible to keep up with all of the work, between lecture, 1-2 labs per week, homeworks every week, quizzes every week, the 50 suggested problems she posts a few times per week, and reading the textbook."
+          },
+          {
+            "course": "CHEM 127",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "The book can be quite confusing at times and even when I show her what particularly in the book has me confused she still shames me for asking."
+          },
+          {
+            "course": "CHEM 127",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "Anything includes lectures, homework, labs, textbook material, and previous information mentioned in class."
+          }
+        ]
+      },
+      {
+        "insight": "Students mention cumulative exams or finals.",
+        "support_count": 4,
+        "review_count": 17,
+        "reliability": "recurring student-reported pattern",
+        "source": "student-reported",
+        "examples": [
+          {
+            "course": "CHEM 127",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "I aced the first midterm but it has gone downhill since then."
+          },
+          {
+            "course": "CHEM 127",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "As if we aren't already sleeping less because of our other classes.The practice exam for her midterms did not help in the least, I walked out of that midterm terrified."
+          },
+          {
+            "course": "CHEM 127",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "Don't take her if you can, she has a heavy workload, something is due at the beginning of every class, her practice midterm had nothing to do with her second midterm."
+          }
+        ]
+      },
+      {
+        "insight": "Students mention time load, pacing, or starting early.",
+        "support_count": 3,
+        "review_count": 17,
+        "reliability": "recurring student-reported pattern",
+        "source": "student-reported",
+        "examples": [
+          {
+            "course": "CHEM 127",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "She skips over soo much material that it makes it impossible to keep up with her in lecture."
+          },
+          {
+            "course": "CHEM 127",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "Don't take her if you can, she has a heavy workload, something is due at the beginning of every class, her practice midterm had nothing to do with her second midterm."
+          },
+          {
+            "course": "CHEM 127",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "In this course I put in a lot of time and made a conscious effort to always go to office hours however my grade never reflected the amount of time I put in."
+          }
+        ]
+      },
+      {
+        "insight": "Students recommend office hours or asking questions.",
+        "support_count": 5,
+        "review_count": 17,
+        "reliability": "recurring student-reported pattern",
+        "source": "student-reported",
+        "examples": [
+          {
+            "course": "CHEM 110",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "I greatly enjoyed this class and Parisa is very helpful."
+          },
+          {
+            "course": "CHEM 127",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "Oh, and going into office hours is really awkward because her and Dr."
+          },
+          {
+            "course": "CHEM 127",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "Since I had a basic understanding of chemistry from my sophomore year of high school, it was definitely difficult to follow along- especially because she gives off a bad vibe to students who ask questions."
+          }
+        ]
+      },
+      {
+        "insight": "Students mention strict grading, rubrics, or point deductions.",
+        "support_count": 4,
+        "review_count": 17,
+        "reliability": "recurring student-reported pattern",
+        "source": "student-reported",
+        "examples": [
+          {
+            "course": "CHEM 127",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "The poor LA's in our class do all the grading and do all they can to help us with the labs and homework and such."
+          },
+          {
+            "course": "CHEM 127",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "Her LA's did the grading and her practice problems and lecture slides had clearly been taken from somewhere else, so she put in minimal effort for this class."
+          },
+          {
+            "course": "CHEM 127",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "She cannot lecture to save her life, she expects far too much from the students, she cannot admit to herself that she is the problem not the students, every assignment or quiz is graded ridiculously hard(don't count on any partial credit), in class she is rude to students, she is extremely unhelpful in answering questions(don't even try asking questions, she will just say you didn't do the reading or don't pay attention and say its your fault for not knowing something), and so on....."
+          }
+        ]
+      },
+      {
+        "insight": "Students describe the class or material as difficult or confusing.",
+        "support_count": 10,
+        "review_count": 17,
+        "reliability": "recurring student-reported pattern",
+        "source": "student-reported",
+        "examples": [
+          {
+            "course": "CHEM 110",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "She can be hard to understand at times because of her accent and her lectures can be very dry but overall an easy class."
+          },
+          {
+            "course": "CHEM 110",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "Basically in CHEM 110, work hard to study for the quizzes each week and thoroughly complete the labs and you'll get a good grade."
+          },
+          {
+            "course": "CHEM 127",
+            "post_date": "2014-03-01T08:00:00.000Z",
+            "example": "The book can be quite confusing at times and even when I show her what particularly in the book has me confused she still shames me for asking."
+          }
+        ]
+      }
+    ]
+  },
+  "strategy_modifiers": {
+    "role_boosts": {
+      "lecture_slides": 1.06,
+      "lecture_notes": 1.06,
+      "assignment": 1.06,
+      "quiz": 1.06,
+      "practice_exam": 1.12,
+      "exam_review": 1.12,
+      "study_guide": 1.12,
+      "reading": 1.06
+    },
+    "teaching_style": [
+      "anchor lessons in lecture notes and slide evidence",
+      "slow down on weak concepts and use more examples",
+      "quiz frequently with short active-recall checks",
+      "use more worked examples and problem practice",
+      "connect definitions to reading themes and examples"
+    ],
+    "review_scope": "professor-wide reviews"
+  },
+  "review_scope": "professor-wide reviews"
+}
