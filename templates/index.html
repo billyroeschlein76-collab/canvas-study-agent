@@ -127,15 +127,17 @@
     </div>
   </div>
 
-  <!-- Polyratings (shows after course selected) -->
+  <!-- Polyratings status (shows after course selected) -->
   <div id="sidebar-reviews" class="hidden px-3 pb-3">
-    <button id="sidebar-reviews-btn" onclick="fetchReviews()"
-      class="w-full text-left px-3 py-2 rounded-md text-xs font-semibold text-amber-400 hover:bg-slate-800 transition flex items-center gap-2">
-      <span>★</span>
-      <span id="sidebar-reviews-label">Fetch Polyratings</span>
-      <span id="sidebar-reviews-spinner" class="hidden ml-auto"><span class="spinner" style="width:10px;height:10px;border-width:2px;border-top-color:#fbbf24"></span></span>
-    </button>
-    <div id="sidebar-reviews-status" class="hidden px-3 pt-1 text-[10px] leading-tight"></div>
+    <div class="flex items-center gap-1 px-3 py-1.5">
+      <span class="text-amber-400 text-[11px]">★</span>
+      <span id="sidebar-reviews-label" class="text-[10px] text-slate-400 flex-1 leading-tight">Polyratings</span>
+      <button id="sidebar-reviews-refresh" onclick="fetchReviews({force:true})"
+        title="Refresh Polyratings"
+        class="text-[10px] text-slate-500 hover:text-amber-400 transition ml-auto px-1">↻</button>
+      <span id="sidebar-reviews-spinner" class="hidden"><span class="spinner" style="width:9px;height:9px;border-width:2px;border-top-color:#fbbf24"></span></span>
+    </div>
+    <div id="sidebar-reviews-status" class="hidden px-3 pb-1 text-[10px] leading-tight text-slate-400"></div>
   </div>
 
   <!-- Nav -->
@@ -219,11 +221,14 @@
             </div>
           </div>
           <div class="flex items-center gap-2">
-            <button id="reviews-btn" onclick="fetchReviews()"
-              class="bg-white border border-slate-300 hover:bg-slate-50 text-slate-700 text-sm font-semibold px-4 py-2 rounded-lg transition flex items-center gap-2">
-              <span id="reviews-btn-text">Fetch Polyratings</span>
-              <span id="reviews-spinner" class="hidden"><span class="spinner" style="width:12px;height:12px;border-width:2px"></span></span>
-            </button>
+            <!-- Polyratings status pill (replaces fetch button) -->
+            <div id="polyratings-pill" class="hidden items-center gap-1.5 text-[11px] px-2.5 py-1.5 rounded-lg border font-medium">
+              <span id="polyratings-pill-icon">○</span>
+              <span id="polyratings-pill-text"></span>
+              <button onclick="fetchReviews({force:true})" title="Refresh Polyratings"
+                class="text-[10px] opacity-60 hover:opacity-100 transition ml-0.5">↻</button>
+              <span id="reviews-spinner" class="hidden"><span class="spinner" style="width:10px;height:10px;border-width:2px;border-top-color:currentColor"></span></span>
+            </div>
             <button onclick="generateExam()"
               class="bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold px-4 py-2 rounded-lg transition flex items-center gap-2">
               <span>Generate Practice Exam</span>
@@ -233,6 +238,11 @@
         </div>
         <!-- Reviews status bar -->
         <div id="reviews-status" class="hidden mx-7 mb-3 px-4 py-2.5 rounded-lg text-xs font-medium flex items-center gap-2"></div>
+        <!-- Professor & Course Strategy card (shown after Polyratings fetch) -->
+        <div id="reviews-strategy-card" class="hidden mx-7 mb-4 bg-amber-50 border border-amber-200 rounded-xl p-5">
+          <div class="text-[10px] font-bold uppercase tracking-widest text-amber-600 mb-3">Professor &amp; Course Strategy</div>
+          <div id="reviews-strategy-body" class="space-y-3 text-sm"></div>
+        </div>
 
         <!-- Legend -->
         <div class="px-7 pb-3 flex items-center gap-4 text-xs text-slate-500 shrink-0">
@@ -259,15 +269,24 @@
         </button>
       </div>
 
-      <!-- Saved sets list -->
-      <div id="practice-sets-list" class="mb-6"></div>
-
       <!-- Active exam viewer -->
       <div id="practice-viewer" class="hidden"></div>
     </div>
 
     <!-- ── Teach ── -->
     <div id="view-teach" class="hidden fade-in p-7 max-w-2xl">
+      <!-- Practice action bar -->
+      <div class="flex items-center gap-2 mb-5 p-3 bg-indigo-50 border border-indigo-100 rounded-xl">
+        <span class="text-xs text-indigo-600 font-medium flex-1">Ready to test yourself?</span>
+        <button onclick="generateExam()"
+          class="bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold px-3 py-1.5 rounded-md transition flex items-center gap-1.5">
+          ✎ Generate Practice Exam
+        </button>
+        <button id="teach-gen-topic-btn" onclick="generateTopicSet(document.getElementById('teach-search').value.trim()||'')"
+          class="bg-white border border-indigo-300 hover:bg-indigo-50 text-indigo-700 text-xs font-semibold px-3 py-1.5 rounded-md transition">
+          Generate Problem Set
+        </button>
+      </div>
       <!-- Search bar -->
       <div class="flex gap-2.5 mb-6">
         <input id="teach-search" type="text" placeholder="Topic name, or leave blank for the #1 topic…"
@@ -416,6 +435,7 @@ function selectCourse(key) {
   activeCourse = courses.find(c => c.key === key);
   if (!activeCourse) return;
   topicsCache = null;
+  tutor = null;
   renderCourseList();
   document.getElementById('header-course').textContent = activeCourse.name;
 
@@ -437,6 +457,8 @@ function selectCourse(key) {
   } else {
     showView('topics');
     loadTopics();
+    // v4: auto-fetch Polyratings silently on course open
+    fetchReviews({ silent: true });
   }
 }
 
@@ -501,7 +523,8 @@ function showView(name) {
   if (name==='quiz' && !quizState.questions.length) loadQuiz();
   if (name==='plan') loadPlan();
   if (name==='review') loadReview();
-  if (name==='practice') loadPracticeSets();
+  // saved sets removed
+  if (name==='teach' && !tutor) startTutor();
 }
 
 function setHeader(label) { document.getElementById('header-view').textContent = label; }
@@ -515,7 +538,7 @@ async function loadTopics() {
   if (!activeCourse) return;
   const listEl = document.getElementById('topics-list');
   listEl.innerHTML = '<div class="p-5 text-slate-400 text-sm">Loading topics…</div>';
-  const data = await api(`/api/topics?state=${enc(activeCourse.state_dir)}&limit=50`);
+  const data = await api(`/api/topics?state=${enc(activeCourse.state_dir)}&limit=20`);
   if (data.error) { listEl.innerHTML = `<div class="p-5 text-red-500 text-sm">${esc(data.error)}</div>`; return; }
   topicsCache = data;
   document.getElementById('topics-meta').textContent =
@@ -683,63 +706,170 @@ function closeDrawer() {
 }
 
 // ============================================================
-//  Polyratings Reviews
+//  Polyratings Reviews — v4 auto-fetch with 5-state status pill
 // ============================================================
-async function fetchReviews() {
+
+/**
+ * Render the Polyratings status pill and sidebar label into one of 5 states.
+ * State is driven by `status` and `injectionSummary`.
+ */
+function renderPolyratingsStatus(status, injectionSummary, skipReason) {
+  const pill    = document.getElementById('polyratings-pill');
+  const pillIcon = document.getElementById('polyratings-pill-icon');
+  const pillText = document.getElementById('polyratings-pill-text');
+  const sbLbl   = document.getElementById('sidebar-reviews-label');
+  const sbSt    = document.getElementById('sidebar-reviews-status');
+  if (!pill) return;
+
+  pill.classList.remove('hidden');
+  pill.classList.add('flex');
+
+  let icon, text, pillCls, sbText;
+
+  if (status === 'found') {
+    icon    = '📊';
+    text    = injectionSummary || 'Polyratings loaded';
+    pillCls = 'bg-emerald-50 border-emerald-200 text-emerald-800';
+    sbText  = injectionSummary || 'Reviews loaded';
+    if (sbLbl) sbLbl.textContent = '★ Polyratings';
+  } else if (status === 'cached') {
+    icon    = '📊';
+    text    = 'Using cached · ' + (injectionSummary || 'Polyratings');
+    pillCls = 'bg-slate-100 border-slate-200 text-slate-600';
+    sbText  = injectionSummary || 'Cached';
+    if (sbLbl) sbLbl.textContent = '★ Polyratings';
+  } else if (status === 'skipped') {
+    icon    = '○';
+    text    = 'No professor data — generation using defaults';
+    pillCls = 'bg-slate-50 border-slate-200 text-slate-400';
+    sbText  = 'No professor data';
+    if (sbLbl) sbLbl.textContent = 'Polyratings';
+  } else if (status === 'no_professor_match' || status === 'not_found') {
+    icon    = '○';
+    text    = 'No Polyratings match found';
+    pillCls = 'bg-slate-50 border-slate-200 text-slate-400';
+    sbText  = 'No match';
+    if (sbLbl) sbLbl.textContent = 'Polyratings';
+  } else {
+    // error / fetch_failed / unknown
+    icon    = '○';
+    text    = 'Polyratings unavailable';
+    pillCls = 'bg-slate-50 border-slate-200 text-slate-400';
+    sbText  = 'Unavailable';
+    if (sbLbl) sbLbl.textContent = 'Polyratings';
+  }
+
+  pill.className = `flex items-center gap-1.5 text-[11px] px-2.5 py-1.5 rounded-lg border font-medium ${pillCls}`;
+  if (pillIcon) pillIcon.textContent = icon;
+  if (pillText) pillText.textContent = text;
+  if (sbSt) { sbSt.textContent = sbText; sbSt.classList.remove('hidden'); }
+}
+
+async function fetchReviews(opts) {
+  opts = opts || {};
+  const silent = !!opts.silent;  // true = no spinners/alerts for non-found states
+  const force  = !!opts.force;   // true = bypass cache, trigger real fetch
+
   if (!activeCourse) return;
-  const btn  = document.getElementById('reviews-btn');
-  const txt  = document.getElementById('reviews-btn-text');
-  const sp   = document.getElementById('reviews-spinner');
-  const bar  = document.getElementById('reviews-status');
-  btn.disabled = true;
-  txt.textContent = 'Fetching…';
-  sp.classList.remove('hidden');
-  bar.classList.add('hidden');
 
-  const res = await api('/api/reviews', { method: 'POST',
-    body: JSON.stringify({ state_dir: activeCourse.state_dir }) });
-
-  btn.disabled = false;
-  txt.textContent = 'Fetch Polyratings';
-  sp.classList.add('hidden');
-  // Also re-enable sidebar button
-  const sbBtn = document.getElementById('sidebar-reviews-btn');
+  const sp    = document.getElementById('reviews-spinner');
   const sbSp  = document.getElementById('sidebar-reviews-spinner');
-  const sbLbl = document.getElementById('sidebar-reviews-label');
-  const sbSt  = document.getElementById('sidebar-reviews-status');
-  if (sbBtn) sbBtn.disabled = false;
-  if (sbSp)  sbSp.classList.add('hidden');
 
-  bar.classList.remove('hidden');
+  if (!silent) {
+    if (sp)   sp.classList.remove('hidden');
+    if (sbSp) sbSp.classList.remove('hidden');
+  }
+
+  const res = await api('/api/reviews', {
+    method: 'POST',
+    body: JSON.stringify({ state_dir: activeCourse.state_dir, force }),
+  });
+
+  if (sp)   sp.classList.add('hidden');
+  if (sbSp) sbSp.classList.add('hidden');
+
   if (!res.ok) {
-    bar.className = 'mx-7 mb-3 px-4 py-2.5 rounded-lg text-xs font-medium flex items-center gap-2 bg-red-50 border border-red-200 text-red-700';
-    bar.innerHTML = `<span>✕</span><span>${esc(res.error || 'Request failed')}</span>`;
-    if (sbSt) { sbSt.className = 'px-3 pt-1 text-[10px] leading-tight text-red-400'; sbSt.textContent = 'Failed'; sbSt.classList.remove('hidden'); }
+    if (!silent) {
+      renderPolyratingsStatus('error', null, null);
+    }
     return;
   }
+
+  // Render the status pill
+  renderPolyratingsStatus(res.status, res.injection_summary, res.skip_reason);
+
+  // Build strategy card if reviews found
+  const stratCard = document.getElementById('reviews-strategy-card');
+  const stratBody = document.getElementById('reviews-strategy-body');
 
   if (res.status === 'found') {
     const dept = (res.department || '').toUpperCase();
     const courseName = (activeCourse.name || '').toUpperCase();
     const deptMismatch = dept && !courseName.includes(dept.slice(0,3)) &&
       !['ECON','BUS','FIN','ACCT','MGMT'].some(d => dept.includes(d));
-    if (deptMismatch) {
-      bar.className = 'mx-7 mb-3 px-4 py-2.5 rounded-lg text-xs font-medium flex items-center gap-2 bg-amber-50 border border-amber-200 text-amber-800';
-      bar.innerHTML = `<span>⚠</span><span>${esc(res.message)} — department mismatch, verify this is the right professor before relying on review data.</span>`;
-      if (sbLbl) sbLbl.textContent = '★ Reviews (verify dept)';
-      if (sbSt)  { sbSt.className = 'px-3 pt-1 text-[10px] leading-tight text-amber-400'; sbSt.textContent = 'Dept mismatch — verify'; sbSt.classList.remove('hidden'); }
-    } else {
-      bar.className = 'mx-7 mb-3 px-4 py-2.5 rounded-lg text-xs font-medium flex items-center gap-2 bg-emerald-50 border border-emerald-200 text-emerald-800';
-      bar.innerHTML = `<span>✓</span><span>${esc(res.message)}</span>`;
-      if (sbLbl) sbLbl.textContent = '★ Reviews loaded';
-      if (sbSt)  { sbSt.className = 'px-3 pt-1 text-[10px] leading-tight text-emerald-400'; sbSt.textContent = `${res.review_count||''} reviews · ${res.instructor||''}`; sbSt.classList.remove('hidden'); }
+
+    // Show a bar notification only on manual fetch (not silent)
+    const bar = document.getElementById('reviews-status');
+    if (!silent && bar) {
+      bar.classList.remove('hidden');
+      if (deptMismatch) {
+        bar.className = 'mx-7 mb-3 px-4 py-2.5 rounded-lg text-xs font-medium flex items-center gap-2 bg-amber-50 border border-amber-200 text-amber-800';
+        bar.innerHTML = `<span>⚠</span><span>${esc(res.message)} — verify this is the right professor.</span>`;
+      } else {
+        bar.className = 'mx-7 mb-3 px-4 py-2.5 rounded-lg text-xs font-medium flex items-center gap-2 bg-emerald-50 border border-emerald-200 text-emerald-800';
+        bar.innerHTML = `<span>✓</span><span>${esc(res.message)}</span>`;
+      }
     }
-  } else {
-    bar.className = 'mx-7 mb-3 px-4 py-2.5 rounded-lg text-xs font-medium flex items-center gap-2 bg-slate-100 border border-slate-200 text-slate-600';
-    bar.innerHTML = `<span>ℹ</span><span>${esc(res.message)}</span>`;
-    if (sbLbl) sbLbl.textContent = 'Fetch Polyratings';
-    if (sbSt)  { sbSt.className = 'px-3 pt-1 text-[10px] leading-tight text-slate-400'; sbSt.textContent = 'No match found'; sbSt.classList.remove('hidden'); }
+
+    // Strategy card
+    const sections = [];
+    if (res.exam_patterns && res.exam_patterns.length) {
+      sections.push(`
+        <div>
+          <div class="text-[10px] font-bold uppercase tracking-widest text-amber-700 mb-1.5">Exam Style — What Students Report</div>
+          <ul class="space-y-1">${res.exam_patterns.map(p=>`<li class="flex gap-2 text-slate-700"><span class="text-amber-500 shrink-0">▸</span><span>${esc(p)}</span></li>`).join('')}</ul>
+        </div>`);
+    }
+    if (res.study_strategies && res.study_strategies.length) {
+      sections.push(`
+        <div>
+          <div class="text-[10px] font-bold uppercase tracking-widest text-amber-700 mb-1.5">How to Study for This Course</div>
+          <ul class="space-y-1">${res.study_strategies.map(s=>`<li class="flex gap-2 text-slate-700"><span class="text-amber-500 shrink-0">▸</span><span>${esc(s)}</span></li>`).join('')}</ul>
+        </div>`);
+    }
+    if (res.difficult_topics && res.difficult_topics.length) {
+      sections.push(`
+        <div>
+          <div class="text-[10px] font-bold uppercase tracking-widest text-red-500 mb-1.5">Topics Students Find Hard</div>
+          <ul class="space-y-1">${res.difficult_topics.map(t=>`<li class="flex gap-2 text-slate-700"><span class="text-red-400 shrink-0">▲</span><span>${esc(t)}</span></li>`).join('')}</ul>
+        </div>`);
+    }
+    if (res.strategy_tips && res.strategy_tips.length) {
+      sections.push(`
+        <div>
+          <div class="text-[10px] font-bold uppercase tracking-widest text-amber-700 mb-1.5">Tutor Recommendations</div>
+          <ul class="space-y-1">${res.strategy_tips.map(t=>`<li class="flex gap-2 text-slate-700"><span class="text-amber-500 shrink-0">→</span><span>${esc(t)}</span></li>`).join('')}</ul>
+        </div>`);
+    }
+    if (stratCard && stratBody) {
+      if (sections.length) {
+        stratBody.innerHTML = sections.join('<hr class="border-amber-100">');
+        stratCard.classList.remove('hidden');
+      } else {
+        stratCard.classList.add('hidden');
+      }
+    }
+  } else if (stratCard) {
+    stratCard.classList.add('hidden');
+    // For non-found, hide bar unless manual refresh
+    const bar = document.getElementById('reviews-status');
+    if (!silent && bar) {
+      bar.classList.add('hidden');
+    }
   }
+
+  // Re-rank topics if reviews updated the exam map
+  if (res.topics_updated) loadTopics();
 }
 
 // ============================================================
@@ -756,7 +886,6 @@ async function generateExam() {
   [sp1,sp2].forEach(s=>s&&s.classList.add('hidden'));
   if (ps.error) { alert('Error: ' + ps.error); return; }
   showRawView('practice');
-  loadPracticeSets();
   activePracticeSet = ps;
   showAnswerKey = false;
   renderPracticeViewer(ps);
@@ -772,7 +901,6 @@ async function generateTopicSet(topicName) {
   })});
   if (ps.error) { alert('Error: ' + ps.error); return; }
   showRawView('practice');
-  loadPracticeSets();
   activePracticeSet = ps;
   showAnswerKey = false;
   renderPracticeViewer(ps);
@@ -781,12 +909,8 @@ async function generateTopicSet(topicName) {
 }
 
 async function generateVariation(setId) {
-  if (!activeCourse) return;
-  // Load existing set to get kind and topic_query
-  const sets = await api(`/api/practice/list?state=${enc(activeCourse.state_dir)}`);
-  const existing = sets.find(s=>s.id===setId);
-  if (!existing) return;
-  const isExam = existing.kind === 'practice exam';
+  if (!activeCourse || !activePracticeSet) return;
+  const isExam = activePracticeSet.kind === 'practice exam';
   const ps = await api('/api/practice/generate', { method:'POST', body: JSON.stringify({
     state_dir: activeCourse.state_dir,
     kind: isExam ? 'exam' : 'topic',
@@ -796,56 +920,31 @@ async function generateVariation(setId) {
   if (ps.error) { alert('Error: ' + ps.error); return; }
   activePracticeSet = ps;
   showAnswerKey = false;
-  loadPracticeSets();
   renderPracticeViewer(ps);
   document.getElementById('practice-viewer').classList.remove('hidden');
 }
 
 // ============================================================
-//  Practice — List
+//  Practice — List (stubbed — saved sets UI removed)
 // ============================================================
-async function loadPracticeSets() {
-  if (!activeCourse) return;
-  const sets = await api(`/api/practice/list?state=${enc(activeCourse.state_dir)}`);
-  const el = document.getElementById('practice-sets-list');
-  if (!sets.length) {
-    el.innerHTML = `<div class="text-sm text-slate-400">No practice sets yet. Click <strong>Generate Practice Exam</strong> to create one.</div>`;
-    return;
-  }
-  el.innerHTML = `
-    <div class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-2">Saved Sets</div>
-    <div class="bg-white border border-slate-200 rounded-xl divide-y divide-slate-100 overflow-hidden">
-      ${sets.map(s=>`
-        <div class="pset-row px-5 py-3.5 flex items-center gap-4" onclick="openSavedSet('${escQ(s.id)}')">
-          <div class="flex-1 min-w-0">
-            <div class="font-semibold text-sm text-slate-800">${esc(s.title)}</div>
-            <div class="text-xs text-slate-400 mt-0.5">${s.problem_count} problems · ${s.course_type} · ${s.created_at?s.created_at.slice(0,10):''}</div>
-          </div>
-          <span class="text-xs font-medium text-slate-500 shrink-0 bg-slate-100 px-2 py-0.5 rounded">${s.kind==='practice exam'?'Full Exam':'Problem Set'}</span>
-          <span class="text-slate-300 text-sm shrink-0">›</span>
-        </div>`).join('')}
-    </div>`;
-}
-
-async function openSavedSet(setId) {
-  if (!activeCourse) return;
-  // Re-fetch from list metadata, then load full JSON via generate-variation trick:
-  // Actually just load via export HTML approach — but we need the full JSON.
-  // We'll load via a lightweight endpoint — for now, re-generate not needed,
-  // instead load from the generate endpoint response by fetching the metadata:
-  const r = await fetch(`/api/practice/export/html?state=${enc(activeCourse.state_dir)}&id=${encodeURIComponent(setId)}&kind=worksheet`);
-  if (!r.ok) return;
-  // We can't get the JSON back from html endpoint; let's store active set differently.
-  // Instead, open as printable page:
-  window.open(`/api/practice/export/html?state=${enc(activeCourse.state_dir)}&id=${encodeURIComponent(setId)}&kind=worksheet`, '_blank');
-}
+async function loadPracticeSets() { /* saved sets UI removed */ }
+async function openSavedSet(setId) { /* saved sets UI removed */ }
 
 // ============================================================
 //  Practice — Viewer
 // ============================================================
+
+// Maps archetype number → short task-type label shown on answer key only
+const ARCHETYPE_LABEL = {
+  0: 'concept', 1: 'calculation', 2: 'critique',
+  3: 'calculation', 4: 'interpretation', 5: 'comparison',
+  6: 'what-if', 7: 'synthesis',
+};
+// Archetypes that use numbered steps (calculation-style)
+const COMPUTATIONAL_ARCHETYPES = new Set([1, 3]);
+
 function renderPracticeViewer(ps) {
   const el = document.getElementById('practice-viewer');
-  const grouped = groupByTopic(ps.problems);
   const keyMode = showAnswerKey;
   const setId = ps.id || '';
 
@@ -882,7 +981,6 @@ function renderPracticeViewer(ps) {
     </div>
 
     <div class="exam-paper">
-      <!-- Exam header -->
       <div class="exam-header">
         <div style="font-size:22px;font-weight:700;color:#0f172a;margin-bottom:6px">${esc(ps.title)}${keyMode?' — Answer Key':''}</div>
         <div style="font-size:12px;color:#64748b;display:flex;gap:20px;flex-wrap:wrap">
@@ -897,27 +995,30 @@ function renderPracticeViewer(ps) {
         </div>` : ''}
       </div>
 
-      <!-- Sections -->
-      ${Object.entries(grouped).map(([topic, probs], sIdx) => {
-        const first = probs[0];
-        const pClass = first.source_priority==='very likely exam material'?'badge-high':first.source_priority==='possibly testable material'?'badge-mid':'badge-low';
-        const pLabel = first.source_priority==='very likely exam material'?'Very Likely':first.source_priority==='possibly testable material'?'Possible':'Low';
-        return `
-          <div class="exam-section-head">
-            <span>Section ${sIdx+1}: ${esc(topic)}</span>
-            <span class="text-[11px] font-semibold px-2 py-0.5 rounded-full ${pClass}">${pLabel}</span>
-            <span class="text-xs text-slate-400 ml-auto">${first.source_score}/100 · ${first.source_confidence} confidence</span>
-          </div>
-          ${probs.map(p => keyMode ? renderAnswerProblem(p) : renderWorksheetProblem(p)).join('')}`;
-      }).join('')}
+      <!-- Problems in global order — no topic-name section headers -->
+      ${ps.problems.map(p => keyMode ? renderAnswerProblem(p) : renderWorksheetProblem(p)).join('')}
     </div>`;
 }
 
+function taskLabel(p, forAnswerKey = false) {
+  if (!forAnswerKey) return ''; // worksheet: no label — cleaner continuous flow
+  const lbl = ARCHETYPE_LABEL[p.archetype] || '';
+  if (!lbl) return '';
+  return `<span style="font-size:10px;color:#cbd5e1;margin-right:6px">${lbl}</span>`;
+}
+
+function problemText(p) {
+  // Backend may return "question" (v4 realizer path) or "prompt" (legacy path).
+  // Always try question first, fall back to prompt.
+  return p.question || p.prompt || '';
+}
+
 function renderWorksheetProblem(p) {
+  const text = problemText(p);
   return `
     <div class="exam-problem">
-      ${p.low_confidence ? `<div class="low-conf-banner">⚠ Low confidence — generated from general patterns</div>` : ''}
-      <div style="font-weight:600;font-size:14px;color:#1e293b;margin-bottom:8px">${p.number}. ${esc(p.prompt)}</div>
+      ${p.low_confidence ? `<div class="low-conf-banner">Low confidence — generated from general patterns</div>` : ''}
+      <div style="font-weight:600;font-size:14px;color:#1e293b;margin-bottom:8px;white-space:pre-wrap">${p.number}. ${esc(text)}</div>
       <div class="answer-lines">
         <div class="answer-line"></div>
         <div class="answer-line"></div>
@@ -928,18 +1029,19 @@ function renderWorksheetProblem(p) {
 }
 
 function renderAnswerProblem(p) {
-  const steps = (p.steps||[]).map((s,i)=>`
-    <div class="answer-step">
-      <span class="answer-step-num">Step ${i+1}.</span>
-      <span>${esc(s)}</span>
-    </div>`).join('');
+  const text = problemText(p);
+  const isCalc = COMPUTATIONAL_ARCHETYPES.has(p.archetype);
+  // For calculation problems: numbered steps. For conceptual: inline hints as prose.
+  const stepsHtml = (p.steps||[]).map((s,i) => isCalc
+    ? `<div class="answer-step"><span class="answer-step-num">Step ${i+1}.</span><span>${esc(s)}</span></div>`
+    : `<div class="answer-step"><span style="color:#94a3b8;margin-right:6px">—</span><span style="color:#475569">${esc(s)}</span></div>`
+  ).join('');
   return `
     <div class="exam-problem">
-      ${p.low_confidence ? `<div class="low-conf-banner">⚠ Low confidence — generated from general patterns</div>` : ''}
-      <div style="font-size:12px;color:#64748b;margin-bottom:6px">${p.number}. ${esc(p.prompt)}</div>
-      <div class="answer-final">Final Answer: ${esc(p.answer||'')}</div>
-      ${steps}
-      ${p.concept ? `<div><span class="concept-tag">Concept: ${esc(p.concept)}</span></div>` : ''}
+      ${p.low_confidence ? `<div class="low-conf-banner">Low confidence — generated from general patterns</div>` : ''}
+      <div style="font-size:12px;color:#64748b;margin-bottom:6px;white-space:pre-wrap">${taskLabel(p, true)}${p.number}. ${esc(text)}</div>
+      <div class="answer-final">${esc(p.answer||'')}</div>
+      ${stepsHtml}
     </div>`;
 }
 
@@ -949,14 +1051,7 @@ function setKeyMode(isKey) {
   renderPracticeViewer(activePracticeSet);
 }
 
-function groupByTopic(problems) {
-  const map = {};
-  for (const p of problems) {
-    if (!map[p.topic]) map[p.topic] = [];
-    map[p.topic].push(p);
-  }
-  return map;
-}
+// groupByTopic removed — exam renders in global Q1–N order
 
 // ============================================================
 //  Teach — Interactive Tutor

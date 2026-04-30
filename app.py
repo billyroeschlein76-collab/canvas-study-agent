@@ -178,13 +178,30 @@ def api_topics():
     state_dir = Path(request.args["state"])
     limit = int(request.args.get("limit", 25))
     exam_map = sa.load_exam_map(state_dir)
-    topics = exam_map.get("topics", [])[:limit]
+    raw_topics = exam_map.get("topics", [])
+
+    # v4: Apply topic normalization — filter out OCR junk, remap canonical names.
+    # Pass more candidates than needed so we have a full kept list after filtering.
+    kept, demoted, rejected, _ = sa.filter_practice_topics(raw_topics[:max(limit * 2, 50)])
+
+    # Build the display list: kept topics (canonicalized names), then demoted if needed
+    display_topics: list[dict] = []
+    seen_keys: set[str] = set()
+    for t in kept + demoted:
+        tk = t.get("topic_key", "")
+        if tk not in seen_keys:
+            seen_keys.add(tk)
+            display_topics.append(t)
+        if len(display_topics) >= limit:
+            break
+
     progress = sa.load_progress(state_dir)
     covered = set(progress.get("covered_topics", {}).keys())
-    for t in topics:
+    for t in display_topics:
         t["covered"] = t["topic_key"] in covered
+
     return jsonify({
-        "topics": topics,
+        "topics": display_topics,
         "course_type": exam_map.get("course_type", "mixed"),
         "course_name": exam_map.get("course_name") or "",
         "generated_at": exam_map.get("generated_at") or "",
@@ -344,15 +361,91 @@ def api_tutor_answer():
     return jsonify({"pct": pct, "level": level, "message": msg})
 
 
+def _rebuild_topic_scores_in_state(state_dir: Path) -> None:
+    """Load exam_map + review_insights, re-score, overwrite exam_map.json."""
+    exam_map = sa.load_exam_map(state_dir)
+    review_insights = sa.load_review_insights(state_dir)
+    updated = sa.rebuild_topic_scores(exam_map, review_insights)
+    sa.write_json(state_dir / "exam_map.json", updated)
+
+
+def _load_syllabus_meta(state_dir: Path) -> dict:
+    """Load syllabus_analysis, returning {} on failure."""
+    try:
+        idx = sa.load_index(state_dir)
+        return sa.load_syllabus_analysis(state_dir, idx)
+    except Exception:
+        return {}
+
+
+@app.route("/api/reviews/status")
+def api_reviews_status():
+    """Return cached polyratings_signals for a course without triggering a fetch."""
+    state_dir = Path(request.args["state"])
+    data = sa.read_json(state_dir / "polyratings_signals.json", {})
+    if not data:
+        return jsonify({"status": "no_cache"})
+    return jsonify({
+        "status": data.get("status", "unknown"),
+        "skip_reason": data.get("skip_reason"),
+        "injection_summary": data.get("injection_summary"),
+        "used_polyratings_signals": bool(
+            data.get("confidence", {}).get("sufficient") and data.get("status") == "found"
+        ),
+        "polyratings_confidence": {"overall": (data.get("confidence") or {}).get("overall")},
+    })
+
+
 @app.route("/api/reviews", methods=["POST"])
 def api_reviews():
     body = request.json or {}
     state_dir = Path(body["state_dir"])
+    force = bool(body.get("force", False))
     try:
-        syllabus = sa.load_syllabus_analysis(state_dir, sa.load_index(state_dir))
-        insights = sa.fetch_polyratings_insights(syllabus, state_dir)
-        status   = insights.get("status", "unknown")
-        match    = insights.get("professor_match")
+        # Load syllabus metadata for the gate check
+        syllabus = _load_syllabus_meta(state_dir)
+        professor  = syllabus.get("instructor") or body.get("professor")
+        course_code = syllabus.get("course_code") or body.get("course_code")
+        course_name = syllabus.get("course_name") or body.get("course_name")
+
+        # If force=True (manual ↻), always do a full Polyratings fetch first
+        if force:
+            try:
+                insights = sa.fetch_polyratings_insights(syllabus, state_dir)
+            except Exception as exc:
+                insights = {"status": "error", "error": str(exc)}
+        else:
+            insights = sa.load_review_insights(state_dir)
+
+        status = insights.get("status", "unknown")
+
+        # Rebuild topic scores if reviews found
+        topics_updated = False
+        if status == "found":
+            try:
+                _rebuild_topic_scores_in_state(state_dir)
+                topics_updated = True
+            except Exception:
+                pass
+
+        # Derive/refresh the structured signals cache
+        signals_data = sa.ensure_reviews_cached(
+            state_dir,
+            professor=professor,
+            course_code=course_code,
+            course_name=course_name,
+            force=force,
+        )
+
+        match = insights.get("professor_match")
+        categories = insights.get("categories", {})
+        strategy_tips = insights.get("strategy_modifiers", {}).get("teaching_style", [])
+        difficult_topics = [item["insight"] for item in categories.get("difficult_topics", [])[:1]]
+        exam_patterns = [item["insight"] for item in categories.get("exam_patterns", [])[:3]]
+        study_strategies = [item["insight"] for item in categories.get("study_strategies", [])[:3]]
+
+        confidence = signals_data.get("confidence") or {}
+
         return jsonify({
             "ok": True,
             "status": status,
@@ -361,6 +454,17 @@ def api_reviews():
             "department": match.get("department") if match else None,
             "review_count": insights.get("total_review_count", 0),
             "message": _reviews_message(status, insights),
+            "strategy_tips": strategy_tips[:4],
+            "exam_patterns": exam_patterns,
+            "study_strategies": study_strategies,
+            "difficult_topics": difficult_topics,
+            "topics_updated": topics_updated,
+            # v4 additions
+            "injection_summary": signals_data.get("injection_summary"),
+            "used_polyratings_signals": bool(confidence.get("sufficient") and status == "found"),
+            "polyratings_confidence": {"overall": confidence.get("overall")},
+            "signals_status": signals_data.get("status"),
+            "skip_reason": signals_data.get("skip_reason"),
         })
     except Exception as exc:
         return jsonify({"ok": False, "error": str(exc)}), 500
@@ -409,9 +513,25 @@ def api_practice_generate():
     topic_query = body.get("topic_query") or None
     problems_per_topic = int(body.get("problems_per_topic", 2))
     variation = int(body.get("variation", 0))  # seed offset for "generate more"
+    debug_mode = bool(body.get("debug", False))
 
     exam_map = sa.load_exam_map(state_dir)
     course_name = exam_map.get("course_name") or state_dir.name.upper().replace("-", " ")
+    course_type = exam_map.get("course_type", "mixed")
+
+    # ── v4: Ensure Polyratings signals are cached (no-op if stale or skipped) ──
+    syllabus = _load_syllabus_meta(state_dir)
+    signals_data = sa.ensure_reviews_cached(
+        state_dir,
+        professor=syllabus.get("instructor"),
+        course_code=syllabus.get("course_code"),
+        course_name=syllabus.get("course_name") or course_name,
+    )
+    archetype_weights  = signals_data.get("archetype_weights") or {str(i): 1.0 for i in range(10)}
+    signals_confidence = signals_data.get("confidence") or {}
+    signals_content    = signals_data.get("signals") or {}
+    poly_status        = signals_data.get("status", "no_cache")
+    used_signals       = bool(signals_confidence.get("sufficient") and poly_status == "found")
 
     if kind == "exam":
         title = f"{course_name} — Practice Exam"
@@ -423,20 +543,106 @@ def api_practice_generate():
         ps_kind = "topic-specific problem set"
         max_topics = 1
 
-    # Build practice set; vary seed so "generate again" gives different problems
+    # topic selection — filter_practice_topics is applied inside choose_practice_topics
     topics = sa.choose_practice_topics(exam_map, topic_query, top=8, max_topics=max_topics)
+
+    # Collect filter debug info from a second pass (non-destructive — topics already chosen)
+    _, _, _, filter_debug = sa.filter_practice_topics(
+        exam_map.get("topics", [])[:max(8, max_topics)]
+    )
+
+    # Archetype sequences — ordered easy → hard to produce a difficulty curve.
+    EXAM_ARCHETYPES  = [0, 3, 1, 5, 2, 4, 6, 1, 7, 2]  # multi-topic exam
+    TOPIC_ARCHETYPES = [0, 3, 2, 6, 1, 5, 7, 4]         # single-topic deep dive
+
+    archetype_seq = EXAM_ARCHETYPES if kind == "exam" else TOPIC_ARCHETYPES
+    archetype_seq = (
+        archetype_seq[variation % len(archetype_seq):]
+        + archetype_seq[: variation % len(archetype_seq)]
+    )
+
+    # ── v4: Apply Polyratings weights + diversity floor to archetype schedule ──
+    n_questions = len(topics) * problems_per_topic
+    # Infer course family for recall_min calculation
+    course_family, _ = sa.infer_course_family(
+        syllabus.get("course_name") or course_name,
+        syllabus.get("course_code") or "",
+    )
+    recall_min = sa.compute_recall_minimum(
+        n_questions,
+        family=course_family,
+        signals=signals_content,
+        confidence=signals_confidence,
+    )
+    archetype_seq = sa.apply_archetype_weights_with_floor(
+        archetype_seq,
+        archetype_weights,
+        n_questions,
+        recall_min=recall_min,
+    )
+
+    peer_names = [t["topic"] for t in topics]
+
+    # Archetype name map for debug output
+    _arch_names = {
+        0: "Define-in-Context",    1: "Compute-and-Interpret", 2: "Diagnose-Flaw",
+        3: "Apply-Procedure",      4: "Interpret-Output",      5: "Compare-Contrast",
+        6: "What-If",              7: "Synthesize",            8: "Design-or-Evaluate",
+        9: "Choose-Tool",
+    }
+
     problems: list[dict[str, Any]] = []
+    debug_questions: list[dict[str, Any]] = []
+    seen_sigs: dict[str, int] = {}
     serial = 1
+
     for t_idx, topic in enumerate(topics, start=1):
         for local_idx in range(problems_per_topic):
-            seed = (t_idx * 10 + local_idx + variation * 37) % 97
-            p = sa.make_practice_problem(topic, exam_map.get("course_type", "mixed"), seed)
+            base_seed = (t_idx * 10 + local_idx + variation * 37) % 97
+            problem_idx = serial - 1
+            assigned_archetype = archetype_seq[problem_idx % len(archetype_seq)]
+
+            # Structural deduplication: try up to 4 archetype rotations
+            dedup_warning: str = ""
+            p: dict[str, Any] = {}
+            for retry in range(4):
+                candidate_arch = archetype_seq[
+                    (problem_idx + retry) % len(archetype_seq)
+                ]
+                candidate_seed = (base_seed + retry) % 97
+                p = sa.make_practice_problem(
+                    topic, course_type, candidate_seed,
+                    archetype=candidate_arch, peers=peer_names,
+                    course_name=course_name,
+                )
+                sig = p.get("structure_signature", "unknown")
+                max_rep = sa.MAX_SIGNATURE_REPEATS.get(
+                    sig, sa.MAX_SIGNATURE_REPEATS["default"]
+                )
+                if seen_sigs.get(sig, 0) < max_rep:
+                    if retry > 0:
+                        dedup_warning = (
+                            f"rotated archetype {assigned_archetype}→{candidate_arch} "
+                            f"(sig '{sig}' already at limit)"
+                        )
+                    break
+            else:
+                # All retries exhausted — use last candidate anyway
+                dedup_warning = f"dedup limit reached, used '{sig}' anyway"
+
+            sig = p.get("structure_signature", "unknown")
+            seen_sigs[sig] = seen_sigs.get(sig, 0) + 1
+
             p["number"] = serial
             p["source_priority"] = topic["priority"]
             p["source_score"] = topic["score"]
             p["source_confidence"] = topic["confidence"]
             p["sources"] = topic.get("sources", [])[:3]
-            # Flag low-confidence problems
+            # Tag each problem with its reasoning family
+            arch = p.get("archetype", assigned_archetype)
+            p["reasoning_family"] = sa.ARCHETYPE_TO_REASONING_FAMILY.get(arch, "RF-D")
+            if dedup_warning:
+                p["dedup_warning"] = dedup_warning
             low_conf = (
                 topic["confidence"] in {"low", "very low"}
                 or not topic.get("sources")
@@ -444,18 +650,63 @@ def api_practice_generate():
             )
             p["low_confidence"] = low_conf
             problems.append(p)
+
+            if debug_mode:
+                debug_questions.append({
+                    "number": serial,
+                    "topic": topic["topic"],
+                    "archetype": arch,
+                    "archetype_name": _arch_names.get(arch, "specialized"),
+                    "reasoning_family": p["reasoning_family"],
+                    "generator": p.get("generator", "unknown"),
+                    "structure_signature": sig,
+                    "dedup_warning": dedup_warning or None,
+                })
+
             serial += 1
+
+    # ── v4: Reasoning-family diversity audit ──────────────────────────────────
+    problems, audit_info = sa.run_reasoning_family_audit(problems, n_questions)
+
+    # ── v4: Transparency fields ───────────────────────────────────────────────
+    poly_confidence_out = {"overall": signals_confidence.get("overall")}
 
     practice_set: dict[str, Any] = {
         "title": title,
         "kind": ps_kind,
-        "course_type": exam_map.get("course_type", "mixed"),
+        "course_type": course_type,
         "course_name": course_name,
         "topics": topics,
         "problems": problems,
         "created_at": sa.now_iso(),
         "variation": variation,
+        # v4 transparency (always present)
+        "polyratings_status": poly_status,
+        "used_polyratings_signals": used_signals,
+        "polyratings_confidence": poly_confidence_out,
     }
+    if debug_mode:
+        debug_arch_weights: dict[str, Any] = {}
+        if used_signals:
+            debug_arch_weights = archetype_weights
+        practice_set["debug"] = {
+            "normalized_topics": filter_debug,
+            "questions": debug_questions,
+            "duplication_warnings": [
+                q for q in debug_questions if q.get("dedup_warning")
+            ],
+            # v4 debug additions
+            "polyratings_confidence": {
+                "overall": signals_confidence.get("overall"),
+                "review_count_score": signals_confidence.get("review_count_score"),
+                "match_quality": signals_confidence.get("match_quality"),
+                "review_recency": signals_confidence.get("review_recency"),
+                "signal_consistency": signals_confidence.get("signal_consistency"),
+                "sufficient": signals_confidence.get("sufficient"),
+            },
+            "archetype_weights_applied": debug_arch_weights,
+            "reasoning_family_audit": audit_info,
+        }
 
     # Persist
     set_id = sa.slugify(title) + "--" + sa.now_iso()[:10] + (f"-v{variation}" if variation else "")

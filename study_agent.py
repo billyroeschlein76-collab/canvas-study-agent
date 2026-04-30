@@ -291,7 +291,194 @@ GENERIC_TERMS = {
     "students",
     "understand",
     "using",
+    # institution names
+    "california",
+    "polytechnic",
+    "university",
+    "department",
+    "college",
+    "institute",
+    "faculty",
+    "professor",
+    "copyright",
+    "textbook",
+    "publisher",
+    "edition",
+    "figure",
+    "table",
+    "appendix",
+    "reference",
+    "bibliography",
 }
+
+# ---------------------------------------------------------------------------
+# Exam-generation filtering constants
+# ---------------------------------------------------------------------------
+
+# Single words that appear at sentence starts in slide PDFs and get extracted
+# as spurious "topics". Rejected outright unless in EXAM_TOPIC_WHITELIST.
+EXAM_TOPIC_ARTIFACT_WORDS: frozenset[str] = frozenset({
+    "remember", "individual", "equation", "note", "recall",
+    "define", "given", "consider", "let", "assume", "suppose",
+    "derive", "find", "compare", "describe", "show", "illustrate",
+    "apply", "applying", "use", "using", "obtain", "observe",
+    "write", "state", "list", "identify",
+})
+
+# Single-word topics that ARE meaningful despite being short.
+EXAM_TOPIC_WHITELIST: frozenset[str] = frozenset({
+    "regression", "covariates", "endogeneity", "heteroskedasticity",
+    "multicollinearity", "randomization", "causality", "elasticity",
+    "surplus", "depreciation", "amortization", "omission", "bias",
+    "variance", "covariance", "probability", "estimation", "inference",
+    "identification", "unconfoundedness", "collinearity", "simultaneity",
+    "autocorrelation", "homoskedasticity", "consistency", "efficiency",
+})
+
+# Maps mangled / OCR-collapsed topic_key strings to canonical display names.
+CANONICAL_TOPIC_MAP: dict[str, str] = {
+    # OCR ligature collapse turns "effect" → "eﬀect", so topic_key ends up mangled
+    "estimate estimate ate":            "Average Treatment Effect (ATE)",
+    "estimate ate":                     "Average Treatment Effect (ATE)",
+    "estimate treatment effect":        "Average Treatment Effect (ATE)",
+    "ate":                              "Average Treatment Effect (ATE)",
+    "att":                              "Average Treatment Effect on the Treated (ATT)",
+    "atu":                              "Average Treatment Effect on the Untreated (ATU)",
+    "average treatment":                "Average Treatment Effect (ATE)",
+    "average treatment effect":         "Average Treatment Effect (ATE)",
+    "potential outcome":                "Potential Outcome Framework",
+    "assignment mechanism":             "Assignment Mechanism",
+    "ordinary least square":            "OLS Regression",
+    "ordinary least squares":           "OLS Regression",
+    "instrumental variable":            "Instrumental Variables",
+    "instrumental variables":           "Instrumental Variables",
+    "difference in difference":         "Difference-in-Differences",
+    "difference in differences":        "Difference-in-Differences",
+    "regression discontinuity":         "Regression Discontinuity Design",
+    "omitted variable":                 "Omitted Variable Bias",
+    "omitted variable bias":            "Omitted Variable Bias",
+    "law large number":                 "Law of Large Numbers",
+    "law of large numbers":             "Law of Large Numbers",
+    "central limit theorem":            "Central Limit Theorem",
+    "selection bias":                   "Selection Bias",
+    # OCR redundancy collapse
+    "statistically significant significance": "Statistical Significance",
+    "significant significance level":   "Significance Level",
+    "identi cation":                    "Identification Strategy",
+    "reject null hypothesis":           "Hypothesis Testing",
+    "randomly assigned":                "Random Assignment",
+}
+
+# Archetypes whose question structure is compatible with numeric/specialized generators.
+COMPUTATIONAL_ARCHETYPES: frozenset[int] = frozenset({1, 3})
+
+# Which archetypes each specialized generator can genuinely satisfy.
+# If the assigned archetype is not in the set for a given generator,
+# the generator is bypassed and make_conceptual_problem is used instead.
+SPECIALIZED_ARCHETYPE_SUPPORT: dict[str, frozenset[int]] = {
+    "elasticity":        frozenset({1, 3}),
+    "revenue":           frozenset({1, 3}),
+    "consumer_surplus":  frozenset({1, 3}),
+    "producer_surplus":  frozenset({1, 3}),
+    "deadweight":        frozenset({1, 3}),
+    "treatment_effect":  frozenset({1, 3}),
+    "accounting":        frozenset({1, 3}),
+}
+
+# Deduplication: maximum times a given structure_signature may appear in one exam.
+MAX_SIGNATURE_REPEATS: dict[str, int] = {
+    "specialized:treatment_effect_basic": 1,
+    "specialized:elasticity_compute":     1,
+    "specialized:revenue_compute":        1,
+    "specialized:consumer_surplus_compute": 1,
+    "specialized:producer_surplus_compute": 1,
+    "specialized:deadweight_compute":     1,
+    "specialized:accounting_compute":     1,
+    "default":                            2,
+}
+
+# ---------------------------------------------------------------------------
+# v4 architecture constants
+# ---------------------------------------------------------------------------
+
+# Reasoning-family taxonomy — coarser than archetypes, used for diversity audit.
+ARCHETYPE_TO_REASONING_FAMILY: dict[int, str] = {
+    0: "RF-A",  # Recall/Reproduce
+    1: "RF-B",  # Execute/Calculate
+    2: "RF-C",  # Diagnose/Critique
+    3: "RF-B",  # Execute/Calculate
+    4: "RF-D",  # Interpret/Explain
+    5: "RF-D",  # Interpret/Explain
+    6: "RF-E",  # Extrapolate/Design
+    7: "RF-D",  # Interpret/Explain
+    8: "RF-C",  # Diagnose/Critique
+    9: "RF-E",  # Extrapolate/Design
+}
+
+# No reasoning family may represent more than this fraction of exam questions.
+REASONING_FAMILY_CAP_RATIO: float = 0.45
+
+# Course-family keywords for inference (ordered; multi-word phrases score higher).
+COURSE_FAMILY_KEYWORDS: dict[str, list[str]] = {
+    "ECON_CAUSAL": [
+        "econometrics", "causal inference", "causal", "regression discontinuity",
+        "difference-in-differences", "instrumental variable", "treatment effect",
+        "regression", "endogeneity", "ordinary least squares", "OLS",
+        "identification",
+    ],
+    "ECON_PRICE": [
+        "microeconomics", "consumer surplus", "price theory", "market equilibrium",
+        "deadweight loss", "industrial organization", "oligopoly", "monopoly",
+        "supply", "demand", "elasticity", "price",
+    ],
+    "MATH": [
+        "real analysis", "abstract algebra", "linear algebra", "differential equations",
+        "discrete mathematics", "number theory", "calculus", "topology",
+        "statistics", "probability", "mathematics", "math",
+    ],
+    "CS": [
+        "machine learning", "artificial intelligence", "data structure",
+        "operating system", "software engineering", "deep learning",
+        "algorithm", "networks", "database", "programming", "computer science", "systems",
+    ],
+    "ACCOUNTING": [
+        "financial statements", "income statement", "balance sheet",
+        "managerial accounting", "GAAP", "depreciation", "journal entry",
+        "accounting", "audit",
+    ],
+    "BIOLOGY": [
+        "molecular biology", "cell biology", "genetics", "ecology", "physiology",
+        "biochemistry", "microbiology", "anatomy", "evolution",
+        "biology", "organism",
+    ],
+    "CHEMISTRY": [
+        "organic chemistry", "thermodynamics", "stoichiometry", "periodic table",
+        "kinetics", "reaction", "equilibrium", "bonds", "chemistry", "molecular",
+    ],
+    "HUMANITIES": [
+        "political science", "art history", "literary analysis", "rhetoric",
+        "philosophy", "anthropology", "sociology", "ethics", "literature",
+        "history", "writing", "culture",
+    ],
+}
+
+# Patterns that flag a phrase as OCR garbage or a sentence fragment, not a topic.
+_GARBAGE_RE = re.compile(
+    r"(?:"
+    r"[^a-z\s]{3,}"             # 3+ consecutive non-alpha chars (OCR junk)
+    r"|^\d[\d\s]*$"              # pure number string
+    r"|\b(http|www|\.com|\.org|\.edu)\b"  # URLs
+    r"|\b(slo|cal poly|calpoly|san luis obispo|obispo)\b"  # institution short-forms
+    r")",
+    re.I,
+)
+
+# Leading verb forms that mark sentence fragments disguised as topics.
+_FRAGMENT_START_RE = re.compile(
+    r"^(using|applying|understand|understanding|define|defining|given|consider|"
+    r"note|recall|see|refer|compare|show|illustrate|assume|assuming|let|suppose)\b",
+    re.I,
+)
 
 
 QUANT_TERMS = {
@@ -1024,6 +1211,15 @@ def useful_phrase(phrase: str) -> bool:
         return False
     if re.fullmatch(r"\d+(\s+\d+)*", phrase):
         return False
+    # Reject OCR garbage and institution names
+    if _GARBAGE_RE.search(phrase):
+        return False
+    # Reject sentence fragments that start with action verbs
+    if _FRAGMENT_START_RE.match(phrase):
+        return False
+    # Reject very short single-word phrases that aren't meaningful (< 5 chars)
+    if len(words) == 1 and len(words[0]) < 5:
+        return False
     return True
 
 
@@ -1611,6 +1807,633 @@ def fetch_polyratings_insights(
         return base
 
 
+# ---------------------------------------------------------------------------
+# v4: Polyratings metadata gate helpers
+# ---------------------------------------------------------------------------
+
+def _is_valid_professor(name: str | None) -> bool:
+    """Return True if professor name is usable for a Polyratings lookup."""
+    if not name or not name.strip():
+        return False
+    n = name.strip()
+    if re.match(r"^(staff|tba|tbd|unknown|n/a|instructor|professor|faculty)$", n, re.I):
+        return False
+    # Must have at least one space OR at least 4 non-space characters
+    if " " not in n and len(n.replace(" ", "")) < 4:
+        return False
+    return True
+
+
+def _is_usable_course_identifier(code: str | None, name: str | None) -> bool:
+    """Return True if either course_code or course_name is specific enough."""
+    # Option A: course_code has both a letter and a digit
+    if code and code.strip():
+        c = code.strip()
+        if not re.match(r"^(n/a|none|tbd)$", c, re.I):
+            if re.search(r"[a-zA-Z]", c) and re.search(r"\d", c):
+                return True
+    # Option B: course_name is specific enough (>= 8 chars, >= 2 words, one word >= 5 chars)
+    if name and name.strip():
+        n = name.strip()
+        if re.match(r"^(course|class|section|lecture|seminar)\s*\d*$", n, re.I):
+            return False
+        words = n.split()
+        if len(n) >= 8 and len(words) >= 2 and any(len(w) >= 5 for w in words):
+            return True
+    return False
+
+
+# ---------------------------------------------------------------------------
+# v4: Polyratings structured signal extraction
+# ---------------------------------------------------------------------------
+
+def _compute_archetype_weights_from_signals(
+    exam_style: dict[str, Any],
+    difficulty_signals: dict[str, Any],
+) -> dict[str, float]:
+    """Derive archetype weight multipliers from exam style signals. Clamped to [0.6, 1.6]."""
+    weights: dict[str, float] = {str(i): 1.0 for i in range(10)}
+
+    if exam_style.get("heavy_computation"):
+        for a in ("1", "3"):
+            weights[a] = min(1.6, weights[a] * 1.4)
+        for a in ("0", "4"):
+            weights[a] = max(0.6, weights[a] * 0.7)
+
+    if exam_style.get("heavy_conceptual"):
+        for a in ("0", "2", "4", "5", "7"):
+            weights[a] = min(1.6, weights[a] * 1.3)
+        for a in ("1", "3"):
+            weights[a] = max(0.6, weights[a] * 0.8)
+
+    if exam_style.get("heavy_memorization"):
+        weights["0"] = min(1.6, weights["0"] * 1.5)
+        for a in ("6", "7"):
+            weights[a] = max(0.6, weights[a] * 0.8)
+
+    if difficulty_signals.get("tricky_wording"):
+        weights["2"] = min(1.6, weights["2"] * 1.3)
+
+    if difficulty_signals.get("time_pressure"):
+        weights["6"] = max(0.6, weights["6"] * 0.8)
+
+    return {k: round(max(0.6, min(1.6, v)), 3) for k, v in weights.items()}
+
+
+def extract_polyratings_signals(review_insights: dict[str, Any]) -> dict[str, Any]:
+    """Extract structured generation signals from existing review_insights data."""
+    categories = review_insights.get("categories", {})
+    professor_match = review_insights.get("professor_match") or {}
+
+    # Collect active theme keys across all categories
+    theme_keys: set[str] = set()
+    for cat_items in categories.values():
+        for item in cat_items:
+            theme_keys.add(item.get("key", ""))
+
+    heavy_computation = "homework_focus" in theme_keys
+    heavy_conceptual = "lecture_focus" in theme_keys and "tricky_questions" in theme_keys
+    heavy_memorization = False
+    heavy_application = "review_guide_focus" in theme_keys
+    tricky_wording = "tricky_questions" in theme_keys
+    time_pressure = "time_load" in theme_keys
+    curve_mentioned = False
+
+    for item in categories.get("pitfalls", []):
+        insight_text = item.get("insight", "").lower()
+        if any(w in insight_text for w in ("memorize", "memorization", "remember", "recall", "definition")):
+            heavy_memorization = True
+        if any(w in insight_text for w in ("curve", "curved", "curving")):
+            curve_mentioned = True
+
+    # Difficulty from professor student_difficulties rating (0–4 scale)
+    difficulty_rating = professor_match.get("student_difficulties")
+    if difficulty_rating is not None:
+        try:
+            d = float(difficulty_rating)
+            perceived_difficulty = "high" if d >= 3.0 else "medium" if d >= 2.0 else "low"
+        except (TypeError, ValueError):
+            perceived_difficulty = "unknown"
+    else:
+        perceived_difficulty = "unknown"
+
+    exam_style: dict[str, Any] = {
+        "heavy_computation": heavy_computation,
+        "heavy_conceptual": heavy_conceptual,
+        "heavy_application": heavy_application,
+        "heavy_memorization": heavy_memorization,
+        "mixed": not any([heavy_computation, heavy_conceptual, heavy_application, heavy_memorization]),
+    }
+    difficulty_sigs: dict[str, Any] = {
+        "perceived_difficulty": perceived_difficulty,
+        "curve_mentioned": curve_mentioned,
+        "tricky_wording": tricky_wording,
+        "time_pressure": time_pressure,
+    }
+
+    professor_emphasis = [item["insight"] for item in categories.get("exam_patterns", [])[:8]]
+    study_strategies   = [item["insight"] for item in categories.get("study_strategies", [])[:6]]
+    common_pitfalls    = [item["insight"] for item in categories.get("pitfalls", [])[:6]]
+    grade_hint = "harsh" if "strict_grading" in theme_keys else "unknown"
+
+    weights = _compute_archetype_weights_from_signals(exam_style, difficulty_sigs)
+
+    return {
+        "signals": {
+            "exam_style": exam_style,
+            "difficulty_signals": difficulty_sigs,
+            "professor_emphasis": professor_emphasis,
+            "study_strategies": study_strategies,
+            "common_pitfalls": common_pitfalls,
+            "grade_distribution_hint": grade_hint,
+        },
+        "archetype_weights": weights,
+    }
+
+
+def compute_signal_confidence(review_insights: dict[str, Any]) -> dict[str, Any]:
+    """Compute confidence scores for Polyratings signals (0.0–1.0 each)."""
+    review_count = review_insights.get("total_review_count", 0)
+    professor_match = review_insights.get("professor_match") or {}
+
+    # review_count_score: 0 → 0, 10 → 0.5, 30+ → 1.0
+    if review_count < 5:
+        rc_score = 0.0
+    elif review_count < 10:
+        rc_score = review_count / 10 * 0.5
+    elif review_count < 30:
+        rc_score = 0.5 + (review_count - 10) / 20 * 0.5
+    else:
+        rc_score = 1.0
+
+    # match_quality: 0.8 if API found a professor match, else 0.0
+    match_quality = 0.8 if professor_match else 0.0
+
+    # review_recency: assume 0.7 if we have a match (we don't have date data from current API)
+    review_recency = 0.7 if professor_match else 0.0
+
+    # signal_consistency: how many distinct theme insights we have
+    categories = review_insights.get("categories", {})
+    total_insights = sum(len(v) for v in categories.values())
+    signal_consistency = min(1.0, total_insights / 10)
+
+    overall = (
+        0.35 * rc_score
+        + 0.35 * match_quality
+        + 0.15 * review_recency
+        + 0.15 * signal_consistency
+    )
+    overall = round(min(1.0, overall), 3)
+
+    return {
+        "overall": overall,
+        "review_count_score": round(rc_score, 3),
+        "match_quality": round(match_quality, 3),
+        "review_recency": round(review_recency, 3),
+        "signal_consistency": round(signal_consistency, 3),
+        "sufficient": overall >= 0.5,
+    }
+
+
+# ---------------------------------------------------------------------------
+# v4: Polyratings signals cache layer
+# ---------------------------------------------------------------------------
+
+def load_polyratings_signals(state_dir: Path) -> dict[str, Any] | None:
+    """Load polyratings_signals.json if it exists and is fresh (< 24 hours old)."""
+    from datetime import timedelta
+    path = state_dir / "polyratings_signals.json"
+    data = read_json(path, None)
+    if not data:
+        return None
+    fetched_at = data.get("fetched_at")
+    if fetched_at:
+        try:
+            age = datetime.now(timezone.utc) - datetime.fromisoformat(fetched_at)
+            if age > timedelta(hours=24):
+                return None
+        except Exception:
+            pass
+    return data
+
+
+def _write_signals_stub(state_dir: Path, status: str, skip_reason: str) -> dict[str, Any]:
+    stub: dict[str, Any] = {
+        "fetched_at": now_iso(),
+        "status": status,
+        "skip_reason": skip_reason,
+        "confidence": {"overall": None, "sufficient": False},
+        "signals": {},
+        "archetype_weights": {str(i): 1.0 for i in range(10)},
+        "injection_summary": None,
+    }
+    write_json(state_dir / "polyratings_signals.json", stub)
+    return stub
+
+
+def _build_and_write_signals(state_dir: Path, review_insights: dict[str, Any]) -> dict[str, Any]:
+    """Build polyratings_signals.json from populated review_insights data."""
+    ri_status = review_insights.get("status", "error")
+    base: dict[str, Any] = {
+        "fetched_at": now_iso(),
+        "status": ri_status,
+        "skip_reason": None,
+        "professor": review_insights.get("instructor"),
+        "course_code": review_insights.get("course_code"),
+        "review_count": review_insights.get("total_review_count", 0),
+    }
+
+    if ri_status != "found":
+        base["confidence"] = {"overall": 0.0, "review_count_score": 0.0, "match_quality": 0.0,
+                              "review_recency": 0.0, "signal_consistency": 0.0, "sufficient": False}
+        base["signals"] = {}
+        base["archetype_weights"] = {str(i): 1.0 for i in range(10)}
+        base["injection_summary"] = None
+        write_json(state_dir / "polyratings_signals.json", base)
+        return base
+
+    extracted = extract_polyratings_signals(review_insights)
+    confidence = compute_signal_confidence(review_insights)
+
+    weights = extracted["archetype_weights"]
+    if not confidence["sufficient"]:
+        weights = {str(i): 1.0 for i in range(10)}
+    elif confidence["overall"] < 0.7:
+        # Half-weight: scale deltas toward 1.0 by 50 %
+        weights = {k: round(1.0 + (v - 1.0) * 0.5, 3) for k, v in weights.items()}
+
+    # Build a human-readable injection summary
+    signals = extracted["signals"]
+    exam_style = signals.get("exam_style", {})
+    styles = [k.replace("heavy_", "").replace("_", "-") for k, v in exam_style.items()
+              if v and k != "mixed"]
+    diff = signals.get("difficulty_signals", {}).get("perceived_difficulty", "unknown")
+    parts: list[str] = []
+    if styles:
+        parts.append("Exam style: " + "/".join(styles))
+    if diff != "unknown":
+        parts.append(f"Difficulty: {diff}")
+    injection_summary = " · ".join(parts) if parts else None
+
+    base["confidence"] = confidence
+    base["signals"] = signals
+    base["archetype_weights"] = weights
+    base["injection_summary"] = injection_summary
+
+    write_json(state_dir / "polyratings_signals.json", base)
+    return base
+
+
+def ensure_reviews_cached(
+    state_dir: Path,
+    professor: str | None = None,
+    course_code: str | None = None,
+    course_name: str | None = None,
+    force: bool = False,
+) -> dict[str, Any]:
+    """Ensure polyratings_signals.json is populated and fresh.
+
+    1. If a fresh cache exists (< 24h) and force=False → return it.
+    2. Validate metadata gate; write stub if insufficient.
+    3. Load existing review_insights.json; if not yet run, fetch now.
+    4. Extract structured signals → write polyratings_signals.json.
+    """
+    if not force:
+        cached = load_polyratings_signals(state_dir)
+        if cached is not None:
+            return cached
+        # Also short-circuit if stub says metadata is insufficient (avoid retry loops)
+        existing = read_json(state_dir / "polyratings_signals.json", {})
+        if existing.get("skip_reason") in (
+            "insufficient_professor_metadata", "unusable_course_identifier"
+        ):
+            return existing
+
+    if not _is_valid_professor(professor):
+        return _write_signals_stub(state_dir, "skipped", "insufficient_professor_metadata")
+    if not _is_usable_course_identifier(course_code, course_name):
+        return _write_signals_stub(state_dir, "skipped", "unusable_course_identifier")
+
+    # Load or fetch review_insights
+    review_insights = load_review_insights(state_dir)
+    if review_insights.get("status") in ("not_run", "no_instructor_from_syllabus"):
+        syllabus_stub = {
+            "instructor": professor,
+            "course_code": course_code,
+            "course_name": course_name,
+        }
+        try:
+            review_insights = fetch_polyratings_insights(syllabus_stub, state_dir)
+        except Exception as exc:
+            review_insights = {"status": "error", "error": str(exc)}
+
+    return _build_and_write_signals(state_dir, review_insights)
+
+
+# ---------------------------------------------------------------------------
+# v4: Archetype weighting with diversity floor
+# ---------------------------------------------------------------------------
+
+def compute_recall_minimum(
+    n: int,
+    family: str = "GENERIC",
+    signals: dict[str, Any] | None = None,
+    confidence: dict[str, Any] | None = None,
+) -> int:
+    """Compute the minimum number of recall (archetype 0) questions for an N-question exam."""
+    if n < 4:
+        return 0
+    signals = signals or {}
+    confidence = confidence or {}
+    heavy_memorization = (
+        signals.get("exam_style", {}).get("heavy_memorization", False)
+        and confidence.get("sufficient", False)
+    )
+    high_recall_families = {"HUMANITIES", "ACCOUNTING"}
+    if heavy_memorization or family in high_recall_families:
+        return min(2, max(1, math.ceil(n * 0.15)))
+    return 1  # Default: 1 recall question for any N >= 4
+
+
+def apply_archetype_weights_with_floor(
+    base_schedule: list[int],
+    archetype_weights: dict[str, float],
+    n: int,
+    recall_min: int = 1,
+) -> list[int]:
+    """Apply Polyratings archetype weights to the base schedule, then enforce diversity floor.
+
+    Returns a schedule list of length n that satisfies:
+    - Per-archetype-ID cap: ceil(n / 3)
+    - Computational family {1, 3}: at most floor(n * 0.5)
+    - Conceptual family {2, 4, 5, 6, 7, 8, 9}: at least ceil(n * 0.3)
+    - Recall family {0}: at least recall_min, at most ceil(n * 0.2)
+    """
+    if n == 0:
+        return []
+
+    COMPUTATIONAL = frozenset({1, 3})
+    CONCEPTUAL    = frozenset({2, 4, 5, 6, 7, 8, 9})
+    RECALL        = frozenset({0})
+
+    # Build schedule of length n by cycling base_schedule
+    schedule = [base_schedule[i % len(base_schedule)] for i in range(n)]
+
+    # Apply weight biasing: replace low-weight archetype slots with higher-weight alternatives
+    # Use a deterministic swap: for each position, if current archetype weight < 1.0 and
+    # a higher-weight archetype in the same family exists, prefer it.
+    def _family_of(a: int) -> frozenset:
+        if a in RECALL:        return RECALL
+        if a in COMPUTATIONAL: return COMPUTATIONAL
+        return CONCEPTUAL
+
+    for i in range(n):
+        cur = schedule[i]
+        cur_w = archetype_weights.get(str(cur), 1.0)
+        fam = _family_of(cur)
+        # Find highest-weight member of same family
+        best = max(fam, key=lambda a: archetype_weights.get(str(a), 1.0))
+        best_w = archetype_weights.get(str(best), 1.0)
+        if best_w > cur_w + 0.15:  # meaningful difference threshold
+            schedule[i] = best
+
+    # ── Enforce diversity floor ────────────────────────────────────────────
+
+    comp_cap       = math.floor(n * 0.5)
+    conceptual_flo = math.ceil(n * 0.3)
+    recall_cap     = math.ceil(n * 0.2)
+    per_id_cap     = math.ceil(n / 3)
+
+    def _counts() -> tuple[int, int, int]:
+        comp  = sum(1 for x in schedule if x in COMPUTATIONAL)
+        conc  = sum(1 for x in schedule if x in CONCEPTUAL)
+        rec   = sum(1 for x in schedule if x in RECALL)
+        return comp, conc, rec
+
+    # Helper: replace last occurrence of old_arch with new_arch
+    def _swap_last(old_arch: int, new_arch: int) -> None:
+        for i in range(n - 1, -1, -1):
+            if schedule[i] == old_arch:
+                schedule[i] = new_arch
+                return
+
+    # Enforce recall minimum (ensure at least recall_min recall questions)
+    comp, conc, rec = _counts()
+    while rec < recall_min and comp > 0:
+        # Replace a computational with recall
+        _swap_last(max(COMPUTATIONAL, key=lambda a: schedule.count(a)), 0)
+        comp, conc, rec = _counts()
+
+    # Enforce computational cap
+    comp, conc, rec = _counts()
+    while comp > comp_cap:
+        least_conc = min(CONCEPTUAL, key=lambda a: schedule.count(a))
+        most_comp  = max(COMPUTATIONAL, key=lambda a: schedule.count(a))
+        _swap_last(most_comp, least_conc)
+        comp, conc, rec = _counts()
+
+    # Enforce conceptual floor
+    comp, conc, rec = _counts()
+    while conc < conceptual_flo:
+        if comp == 0:
+            break
+        most_comp  = max(COMPUTATIONAL, key=lambda a: schedule.count(a))
+        least_conc = min(CONCEPTUAL, key=lambda a: schedule.count(a))
+        _swap_last(most_comp, least_conc)
+        comp, conc, rec = _counts()
+
+    # Enforce recall cap
+    comp, conc, rec = _counts()
+    while rec > recall_cap:
+        least_conc = min(CONCEPTUAL, key=lambda a: schedule.count(a))
+        _swap_last(0, least_conc)
+        comp, conc, rec = _counts()
+
+    # Enforce per-archetype-ID cap
+    from collections import Counter as _Counter
+    id_counts = _Counter(schedule)
+    for arch_id in list(id_counts.keys()):
+        while id_counts[arch_id] > per_id_cap:
+            fam = _family_of(arch_id)
+            candidates = [a for a in fam if a != arch_id and id_counts.get(a, 0) < per_id_cap]
+            if not candidates:
+                candidates = [a for a in range(10) if a != arch_id and id_counts.get(a, 0) < per_id_cap]
+            if not candidates:
+                break
+            replacement = min(candidates, key=lambda a: id_counts.get(a, 0))
+            _swap_last(arch_id, replacement)
+            id_counts[arch_id] -= 1
+            id_counts[replacement] = id_counts.get(replacement, 0) + 1
+
+    return schedule
+
+
+# ---------------------------------------------------------------------------
+# v4: Reasoning-family diversity audit
+# ---------------------------------------------------------------------------
+
+def run_reasoning_family_audit(
+    problems: list[dict[str, Any]],
+    n: int,
+) -> tuple[list[dict[str, Any]], dict[str, Any]]:
+    """Post-generation audit: prevent any reasoning family from exceeding cap.
+
+    Note: this adjusts the archetype label on the problem dict but does NOT
+    re-generate the question text. Swaps are flagged with 'reasoning_family_swapped'.
+    Returns (modified_problems, audit_info).
+    """
+    if not problems:
+        return problems, {}
+
+    cap = max(1, math.floor(n * REASONING_FAMILY_CAP_RATIO))
+
+    RF_TO_ARCHETYPES: dict[str, list[int]] = {
+        "RF-A": [0],
+        "RF-B": [1, 3],
+        "RF-C": [2, 8],
+        "RF-D": [4, 5, 7],
+        "RF-E": [6, 9],
+    }
+    ALL_RFS = list(RF_TO_ARCHETYPES.keys())
+
+    def _rf(p: dict) -> str:
+        arch = p.get("archetype", p.get("archetype_id", 0))
+        return ARCHETYPE_TO_REASONING_FAMILY.get(arch, "RF-D")
+
+    def _dist(lst: list[dict]) -> dict[str, int]:
+        d: dict[str, int] = {}
+        for p in lst:
+            rf = _rf(p)
+            d[rf] = d.get(rf, 0) + 1
+        return d
+
+    pre_dist = _dist(problems)
+    result = [dict(p) for p in problems]
+    swap_details: list[dict[str, Any]] = []
+    swaps_made = 0
+    max_total_swaps = max(2, 2 * n)
+
+    for rf, count in list(pre_dist.items()):
+        if count <= cap:
+            continue
+        excess = count - cap
+        for i in range(len(result) - 1, -1, -1):
+            if excess <= 0 or swaps_made >= max_total_swaps:
+                break
+            if _rf(result[i]) != rf:
+                continue
+            # Pick least-represented other family
+            cur_dist = _dist(result)
+            least_rf = min((r for r in ALL_RFS if r != rf), key=lambda r: cur_dist.get(r, 0))
+            candidates = RF_TO_ARCHETYPES.get(least_rf, [4])
+            old_arch = result[i].get("archetype", result[i].get("archetype_id", 0))
+            new_arch = candidates[swaps_made % len(candidates)]
+            swap_details.append({
+                "question_index": i,
+                "from_archetype": old_arch,
+                "to_archetype": new_arch,
+                "reason": f"{rf} exceeded cap ({count} > {cap})",
+            })
+            result[i]["archetype"] = new_arch
+            result[i]["reasoning_family_swapped"] = True
+            swaps_made += 1
+            excess -= 1
+
+    post_dist = _dist(result)
+    audit_info: dict[str, Any] = {
+        "pre_audit_distribution": pre_dist,
+        "post_audit_distribution": post_dist,
+        "swaps_made": swaps_made,
+        "swap_details": swap_details,
+    }
+    return result, audit_info
+
+
+# ---------------------------------------------------------------------------
+# v4: Course-family inference
+# ---------------------------------------------------------------------------
+
+def infer_course_family(course_name: str, course_code: str = "") -> tuple[str, float]:
+    """Infer course domain family from course name and code.
+
+    Returns (family_name, confidence) where confidence is 0.0–1.0.
+    Falls back to GENERIC when confidence < 0.6 or top two families are within 0.1.
+
+    Two-stage matching:
+    1. Keyword matching against COURSE_FAMILY_KEYWORDS (content-based)
+    2. Department-code prefix matching (structural, lower confidence)
+    """
+    text = (course_name + " " + course_code).lower()
+
+    scores: dict[str, float] = {}
+    for family, keywords in COURSE_FAMILY_KEYWORDS.items():
+        matched = 0.0
+        for kw in keywords:
+            if kw.lower() in text:
+                # Multi-word phrases score 1.5x
+                matched += 1.5 if " " in kw else 1.0
+        scores[family] = matched / max(len(keywords), 1)
+
+    # Stage 1: keyword match
+    if scores and max(scores.values()) >= 0.05:
+        sorted_fam = sorted(scores.items(), key=lambda x: x[1], reverse=True)
+        top_family, top_score = sorted_fam[0]
+        second_score = sorted_fam[1][1] if len(sorted_fam) > 1 else 0.0
+
+        # Fall back if top two families are too close (ambiguous)
+        if not (len(sorted_fam) > 1 and (top_score - second_score) < 0.02):
+            confidence = min(1.0, top_score * 10.0)
+            return (top_family, round(confidence, 3))
+
+    # Stage 2: department-code prefix fallback (lower confidence 0.5)
+    # Covers cases like "ECON 440" where the course name alone lacks topic keywords.
+    DEPT_FAMILY_MAP: dict[str, str] = {
+        "econ": "ECON_CAUSAL",   # default ECON → ECON_CAUSAL; refined by topics at generation
+        "ec":   "ECON_CAUSAL",
+        "cs":   "CS",
+        "csc":  "CS",
+        "cpe":  "CS",
+        "csc":  "CS",
+        "math": "MATH",
+        "mat":  "MATH",
+        "stat": "MATH",
+        "sta":  "MATH",
+        "bio":  "BIOLOGY",
+        "biol": "BIOLOGY",
+        "chem": "CHEMISTRY",
+        "chm":  "CHEMISTRY",
+        "hist": "HUMANITIES",
+        "pols": "HUMANITIES",
+        "phil": "HUMANITIES",
+        "engl": "HUMANITIES",
+        "soc":  "HUMANITIES",
+        "psy":  "HUMANITIES",
+        "acct": "ACCOUNTING",
+        "acc":  "ACCOUNTING",
+        "bus":  "ACCOUNTING",    # Business courses often accounting-adjacent
+    }
+    # Extract leading alphabetic token from course code or course name
+    leading = re.match(r"^([a-z]+)", text.strip())
+    if leading:
+        prefix = leading.group(1).lower()
+        # Try longest prefix match first
+        for length in range(min(4, len(prefix)), 1, -1):
+            dept = prefix[:length]
+            if dept in DEPT_FAMILY_MAP:
+                return (DEPT_FAMILY_MAP[dept], 0.5)
+
+    return ("GENERIC", 0.0)
+
+
+def get_domain_realizer(family: str) -> Any:
+    """Factory: return appropriate DomainRealizer for the given family, or None."""
+    try:
+        import study_agent_realizers as _sar  # type: ignore
+        return _sar.get_realizer(family)
+    except ImportError:
+        return None  # Realizers module not yet installed — caller handles fallback
+
+
 def make_index(course_dir: Path, state_dir: Path) -> dict[str, Any]:
     course_dir = course_dir.resolve()
     state_dir.mkdir(parents=True, exist_ok=True)
@@ -1794,6 +2617,9 @@ def build_exam_map(index: dict[str, Any], state_dir: Path) -> dict[str, Any]:
 
     stats = merge_same_concept_topics(stats)
     stats = prune_redundant_topics(stats)
+    # Snapshot pre-adjustment scores so rebuild_topic_scores can re-apply later
+    for item in stats.values():
+        item["pre_adjustment_score"] = item["score"]
     review_insights = load_review_insights(state_dir)
     apply_review_adjustments(stats, review_insights)
     top_score = max(item["score"] for item in stats.values())
@@ -1827,6 +2653,7 @@ def build_exam_map(index: dict[str, Any], state_dir: Path) -> dict[str, Any]:
                 "topic": title_topic(item["topic"]),
                 "topic_key": item["topic"],
                 "score": normalized_score,
+                "base_score": item.get("pre_adjustment_score", item["score"]),
                 "priority": priority,
                 "confidence": confidence,
                 "rationale": rationale,
@@ -1851,6 +2678,67 @@ def build_exam_map(index: dict[str, Any], state_dir: Path) -> dict[str, Any]:
     }
     write_json(state_dir / "exam_map.json", exam_map)
     return exam_map
+
+
+def rebuild_topic_scores(exam_map: dict[str, Any], review_insights: dict[str, Any]) -> dict[str, Any]:
+    """Re-apply review adjustments to an existing exam_map without re-parsing files.
+
+    Uses the ``base_score`` stored on each topic (captured before the previous
+    adjustment run) so repeated calls are idempotent.
+    """
+    topics = list(exam_map.get("topics", []))
+    if not topics:
+        return exam_map
+
+    status = review_insights.get("status", "")
+    role_boosts = review_insights.get("strategy_modifiers", {}).get("role_boosts", {})
+    review_terms = review_topic_keywords(review_insights) if status == "found" else set()
+
+    for topic in topics:
+        base = topic.get("base_score") or topic["score"]
+        factor = 1.0
+        adjustments: list[str] = []
+
+        if status == "found":
+            for role in topic.get("roles", []):
+                boost = float(role_boosts.get(role, 1.0))
+                if boost > 1.0:
+                    factor *= boost
+                    adjustments.append(
+                        f"boosted because student reviews emphasize {role.replace('_', ' ')}"
+                    )
+            topic_words = significant_word_set(topic.get("topic_key", topic["topic"].lower()))
+            if topic_words and review_terms and topic_words.intersection(review_terms):
+                factor *= 1.08
+                adjustments.append(
+                    "boosted because related terms appear in student-reported review themes"
+                )
+
+        topic["_adj"] = base * min(factor, 1.30)
+        topic["review_adjustments"] = adjustments[:3]
+
+    top = max((t["_adj"] for t in topics), default=1.0) or 1.0
+    for topic in topics:
+        ns = round((topic.pop("_adj") / top) * 100, 1)
+        topic["score"] = ns
+        file_count = topic.get("file_count", 1)
+        roles = topic.get("roles", [])
+        if ns >= 65 and (
+            file_count >= 2
+            or any(r in roles for r in ["practice_exam", "exam_review", "study_guide", "quiz"])
+        ):
+            topic["priority"] = "very likely exam material"
+        elif ns >= 30:
+            topic["priority"] = "possibly testable material"
+        else:
+            topic["priority"] = "low-priority material"
+
+    topics.sort(key=lambda x: x["score"], reverse=True)
+    updated = dict(exam_map)
+    updated["topics"] = topics
+    updated["topic_count"] = len(topics)
+    updated["review_insights"] = review_insights
+    return updated
 
 
 def merge_same_concept_topics(stats: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]]:
@@ -2476,14 +3364,165 @@ def score_answer(answer: str, expected: list[str]) -> float:
     return hits / max(3, min(len(expected), 6))
 
 
+def filter_practice_topics(
+    topics: list[dict[str, Any]],
+) -> tuple[list[dict[str, Any]], list[dict[str, Any]], list[dict[str, Any]], list[dict[str, Any]]]:
+    """Normalize and triage a candidate topic list before exam generation.
+
+    Returns ``(kept, demoted, rejected, debug_log)``.
+
+    * **kept** – clean topics ready for use (remapped or confirmed valid).
+    * **demoted** – potentially useful but lower-quality; used as fallback.
+    * **rejected** – artifacts / garbage; discarded entirely.
+    * **debug_log** – list of ``{original, canonical, action, reason}`` dicts.
+    """
+    kept: list[dict[str, Any]] = []
+    demoted: list[dict[str, Any]] = []
+    rejected: list[dict[str, Any]] = []
+    debug_log: list[dict[str, Any]] = []
+    seen_canonical: dict[str, int] = {}  # canonical_key → index in kept
+
+    for topic in topics:
+        original_name = topic["topic"]
+        key = topic.get("topic_key", original_name.lower()).strip()
+        words = key.split()
+        action = "kept"
+        reason = ""
+        canonical_name = original_name
+        canonical_key = key
+
+        # ── Step 1: canonical map lookup ──────────────────────────────────
+        if key in CANONICAL_TOPIC_MAP:
+            canonical_name = CANONICAL_TOPIC_MAP[key]
+            canonical_key = canonical_name.lower()
+            action = "remapped"
+            reason = f"'{key}' → '{canonical_name}'"
+
+        # ── Step 2: repeated-word collapse (OCR artifact detector) ────────
+        if action == "kept" and words:
+            word_counts = Counter(words)
+            if max(word_counts.values()) >= 2:
+                # Repeated word: try canonical map first; otherwise reject
+                action = "rejected"
+                reason = f"repeated word in topic key (OCR artifact): '{key}'"
+
+        # ── Step 2.5: Multi-word artifact patterns ───────────────────────
+        # a) Starts with an imperative/modal verb — slide instructions, not topics
+        _IMPERATIVE_VERBS: frozenset[str] = frozenset({
+            "play", "discuss", "keep", "move", "read", "find", "see", "note",
+            "show", "illustrate", "describe", "apply", "consider", "assume",
+            "suppose", "derive", "define", "compare", "use", "write", "state",
+            "list", "identify", "complement", "set", "sets", "check",
+            "review", "solve", "calculate", "compute", "evaluate", "recall",
+            "explain", "summarize", "answer", "interpret", "prove",
+            "need", "book", "work", "get", "ask", "put", "take", "make",
+            "build", "run", "go", "come", "bring", "give", "turn", "help",
+            "mention", "mentioned", "report", "require", "required",
+            "include", "convert", "scan", "upload", "download", "submit",
+        })
+        # b) Contains logistics / file-system / publisher artifact tokens
+        _LOGISTICS_TOKENS: frozenset[str] = frozenset({
+            "pdf", "slide", "slides", "page", "pages",
+            "assignment", "assignments", "assign",
+            "office", "email", "e-mail", "lab", "labs",
+            "tutorial", "tutorials", "computer", "computers",
+            "press", "publisher", "publishers", "edition", "isbn",
+            "edu", "along", "away", "through", "somewhere",
+        })
+        # c) Last word is a bare past-participle verb (passive fragment)
+        _PASSIVE_ENDS: frozenset[str] = frozenset({
+            "used", "given", "found", "taken", "done",
+            "made", "based", "managed", "changed", "determined",
+        })
+        if action == "kept" and words:
+            # a) Imperative/modal verb-phrase fragment (2-6 words, starts with verb)
+            if 2 <= len(words) <= 6 and words[0] in _IMPERATIVE_VERBS:
+                action = "rejected"
+                reason = f"imperative verb-phrase fragment: '{key}'"
+            # b) Logistics/file/publisher artifact word present
+            elif any(w in _LOGISTICS_TOKENS for w in words):
+                action = "rejected"
+                reason = f"logistics/artifact token in: '{key}'"
+            # c) Passive fragment: short phrase ending with a bare past-participle
+            elif len(words) <= 3 and words[-1] in _PASSIVE_ENDS:
+                action = "rejected"
+                reason = f"passive-verb fragment ending with '{words[-1]}': '{key}'"
+            # d) Single-character token — variable name or 'e.g.' abbreviation
+            elif any(len(w) == 1 for w in words):
+                action = "rejected"
+                reason = f"single-character token (variable/abbrev artifact): '{key}'"
+
+        # ── Step 3: single-word quality gate ──────────────────────────────
+        if action == "kept":
+            cwords = canonical_key.split()
+            if len(cwords) == 1:
+                w = cwords[0]
+                if w in EXAM_TOPIC_ARTIFACT_WORDS:
+                    action = "rejected"
+                    reason = f"single-word artifact: '{w}'"
+                elif w not in EXAM_TOPIC_WHITELIST:
+                    action = "demoted"
+                    reason = f"single-word topic not in whitelist: '{w}'"
+
+        # ── Step 4: near-duplicate deduplication (after canonical mapping) ─
+        if action in ("kept", "remapped", "demoted"):
+            if canonical_key in seen_canonical:
+                action = "rejected"
+                reason = f"duplicate of already-kept topic '{canonical_name}'"
+            else:
+                seen_canonical[canonical_key] = len(kept)
+
+        # Build updated topic dict
+        updated = dict(topic)
+        if canonical_name != original_name:
+            updated["topic"] = canonical_name
+            updated["topic_key"] = canonical_key
+
+        debug_log.append({
+            "original": original_name,
+            "canonical": canonical_name if canonical_name != original_name else original_name,
+            "action": action,
+            "reason": reason,
+        })
+
+        if action in ("kept", "remapped"):
+            kept.append(updated)
+        elif action == "demoted":
+            demoted.append(updated)
+        else:
+            rejected.append(updated)
+
+    return kept, demoted, rejected, debug_log
+
+
 def choose_practice_topics(exam_map: dict[str, Any], topic_query: str | None, top: int, max_topics: int) -> list[dict[str, Any]]:
     if topic_query:
         return [find_topic(exam_map, topic_query)]
-    topics = exam_map.get("topics", [])
-    selected = [topic for topic in topics[: max(top, max_topics)] if topic["priority"] != "low-priority material"]
-    if not selected:
-        selected = topics[:max_topics]
-    return selected[:max_topics]
+
+    all_topics = exam_map.get("topics", [])
+    fetch = max(top, max_topics)
+
+    # First pass: high-quality candidates
+    candidates = [t for t in all_topics[:fetch] if t["priority"] != "low-priority material"]
+    if not candidates:
+        candidates = all_topics[:fetch]
+
+    kept, demoted, _, _ = filter_practice_topics(candidates)
+    result = kept[:max_topics]
+
+    # Fill with demoted if needed
+    if len(result) < max_topics:
+        result += demoted[: max_topics - len(result)]
+
+    # Still short? Pull more from the full list
+    if len(result) < max_topics:
+        extra = [t for t in all_topics[fetch:] if t not in candidates]
+        extra_kept, extra_dem, _, _ = filter_practice_topics(extra[: max_topics * 2])
+        result += extra_kept[: max_topics - len(result)]
+        if len(result) < max_topics:
+            result += extra_dem[: max_topics - len(result)]
+
+    return result[:max_topics]
 
 
 def number_value(seed: int, base: int, step: int, mod: int) -> int:
@@ -2523,6 +3562,8 @@ def make_elasticity_problem(topic: dict[str, Any], seed: int) -> dict[str, Any]:
             f"Total revenue before = {p1} x {q1} = ${tr1}; after = {p2} x {q2} = ${tr2}.",
         ],
         "concept": "Midpoint elasticity, classification by absolute value, and revenue interpretation.",
+        "generator": "specialized",
+        "structure_signature": "specialized:elasticity_compute",
     }
 
 
@@ -2548,6 +3589,8 @@ def make_total_revenue_problem(topic: dict[str, Any], seed: int) -> dict[str, An
             f"Change = ${rev_b} - ${rev_a} = ${change}.",
         ],
         "concept": "Total revenue equals price times quantity. Interpret the direction and size of the change.",
+        "generator": "specialized",
+        "structure_signature": "specialized:revenue_compute",
     }
 
 
@@ -2582,7 +3625,9 @@ def make_surplus_problem(topic: dict[str, Any], seed: int, producer: bool = Fals
             f"Consumer surplus = 1/2 x {quantity} x {max_wtp - market_price} = ${surplus:.2f}.",
         ]
         concept = "Consumer surplus is the area below demand and above price."
-    return {"topic": topic["topic"], "prompt": prompt, "answer": answer, "steps": steps, "concept": concept}
+    sig = "specialized:producer_surplus_compute" if producer else "specialized:consumer_surplus_compute"
+    return {"topic": topic["topic"], "prompt": prompt, "answer": answer, "steps": steps, "concept": concept,
+            "generator": "specialized", "structure_signature": sig}
 
 
 def make_deadweight_loss_problem(topic: dict[str, Any], seed: int) -> dict[str, Any]:
@@ -2602,6 +3647,8 @@ def make_deadweight_loss_problem(topic: dict[str, Any], seed: int) -> dict[str, 
             f"Deadweight loss = 1/2 x {tax} x {reduction} = ${dwl:.2f}.",
         ],
         "concept": "Deadweight loss is the lost total surplus from trades that no longer occur.",
+        "generator": "specialized",
+        "structure_signature": "specialized:deadweight_compute",
     }
 
 
@@ -2622,6 +3669,8 @@ def make_treatment_effect_problem(topic: dict[str, Any], seed: int) -> dict[str,
             "Interpret the sign and size in the units of the outcome.",
         ],
         "concept": "Randomized experiments estimate causal effects with a difference in average outcomes.",
+        "generator": "specialized",
+        "structure_signature": "specialized:treatment_effect_basic",
     }
 
 
@@ -2644,55 +3693,381 @@ def make_accounting_problem(topic: dict[str, Any], seed: int) -> dict[str, Any]:
             "Both are income statement measures; gross profit is before operating expenses and net income is after expenses.",
         ],
         "concept": "Intermediate accounting problems often test classification, recognition, and statement effects.",
+        "generator": "specialized",
+        "structure_signature": "specialized:accounting_compute",
     }
 
 
-def make_conceptual_problem(topic: dict[str, Any], course_type: str, seed: int) -> dict[str, Any]:
-    templates = [
-        (
-            f"Define {topic['topic']} in two precise sentences, then give one course-specific example.",
-            f"A strong answer defines {topic['topic']}, names the relevant course context, and gives a concrete example rather than a vague description.",
-            ["State the definition.", "Add the course-specific context from the cited materials.", "Give one example or application."],
-            "Definition plus application.",
-        ),
-        (
-            f"Compare {topic['topic']} with a related concept from the same unit. What is the key difference an exam question might test?",
-            "A strong answer identifies both concepts, states one similarity, and explains the key difference that changes the answer.",
-            ["Name the related concept.", "State the similarity.", "State the tested difference and why it matters."],
-            "Comparison and contrast.",
-        ),
-        (
-            f"Write a short-answer response explaining why {topic['topic']} is important for the course's exam themes.",
-            "A strong answer connects the topic to the unit's main learning objective and explains what the instructor could ask you to do with it.",
-            ["Identify the exam theme.", "Explain how the topic fits the theme.", "End with an application or likely question style."],
-            "Short-answer explanation.",
-        ),
+def make_conceptual_problem(
+    topic: dict[str, Any],
+    course_type: str,
+    seed: int,
+    archetype: int | None = None,
+    peers: list[str] | None = None,
+) -> dict[str, Any]:
+    """Generate one exam-quality question using one of 8 distinct archetypes.
+
+    Archetypes (ordered easy → hard):
+      0  Multi-step applied problem
+      1  Parameter change / counterfactual
+      2  Assumption violation / bias detection
+      3  Data interpretation
+      4  Cross-topic synthesis
+      5  Debug a flawed argument
+      6  Reverse reasoning (infer assumptions from results)
+      7  Method comparison in context
+    """
+    name = topic["topic"]
+    snippets = [
+        s["snippet"] for s in topic.get("sources", [])[:4]
+        if s.get("snippet") and len(s["snippet"].split()) >= 8
     ]
-    prompt, answer, steps, concept = templates[seed % len(templates)]
+    ctx = snippets[seed % len(snippets)].strip()[:220] if snippets else ""
+
+    # --- archetype selection -------------------------------------------------
+    a = archetype if archetype is not None else seed % 8
+
+    # peer topic for cross-topic synthesis (archetype 4)
+    peer_list = [p for p in (peers or []) if p.lower() != name.lower()]
+    peer = peer_list[seed % len(peer_list)] if peer_list else "a related concept covered in this course"
+
+    # numbers for computational archetypes (1 and 3)
+    treated = number_value(seed,     72, 5, 7)   # treatment mean, range 72–102
+    control = number_value(seed + 1, 38, 3, 8)   # control mean,   range 38–59
+    se      = number_value(seed + 2,  4, 1, 5)   # SE,             range 4–8
+    diff    = treated - control
+    t_stat  = round(diff / max(se, 1), 2)
+    ci_lo   = round(diff - 1.96 * se, 1)
+    ci_hi   = round(diff + 1.96 * se, 1)
+    sig_str = "is" if abs(t_stat) > 1.96 else "is not"
+
+    # -------------------------------------------------------------------------
+    if a == 0:
+        # Archetype 0: Multi-step applied problem
+        if ctx:
+            prompt = (
+                f"Consider the following situation drawn from course material:\n\n"
+                f"“{ctx}”\n\n"
+                f"Using your understanding of {name}, work through the following:\n"
+                f"(a) Identify what {name} implies or predicts about this situation.\n"
+                f"(b) State the key assumptions required for that implication to hold.\n"
+                f"(c) Describe one piece of evidence that would strengthen the conclusion "
+                f"and one that would undermine it."
+            )
+        else:
+            prompt = (
+                f"An analyst wants to apply {name} to evaluate a program.\n\n"
+                f"(a) What steps must be completed before drawing a conclusion, and why does each matter?\n"
+                f"(b) What data or conditions are required for the approach to be valid?\n"
+                f"(c) What does a valid conclusion look like, and what would invalidate it?"
+            )
+        answer = (
+            f"(a) should correctly identify what {name} claims in context — not a definition restatement. "
+            f"(b) must list conditions with explanations, not just restate the definition. "
+            f"(c) should produce a falsifiable criterion, not a vague hedge."
+        )
+        steps = [
+            f"Identify the specific implication {name} makes in this situation.",
+            "List the conditions that must hold — with brief justification for each.",
+            "State one confirmatory and one disconfirmatory piece of evidence.",
+        ]
+        concept = "Multi-step applied reasoning."
+
+    elif a == 1:
+        # Archetype 1: Parameter change / counterfactual
+        prompt = (
+            f"A study using {name} reports: treatment group mean = {treated}, "
+            f"control group mean = {control}, SE of difference = {se}.\n\n"
+            f"(a) Compute the estimated effect and determine whether it is statistically "
+            f"significant at the 5% level.\n"
+            f"(b) Suppose the sample size were cut in half. Without recalculating, explain "
+            f"qualitatively how the SE, confidence interval width, and probability of a "
+            f"Type II error would each change.\n"
+            f"(c) Would your substantive conclusion about the program change? Justify your answer."
+        )
+        answer = (
+            f"(a) Effect = {treated} − {control} = {diff}; t = {t_stat}; result {sig_str} "
+            f"significant (|t| {'>' if abs(t_stat) > 1.96 else '≤'} 1.96). "
+            f"95% CI: [{ci_lo}, {ci_hi}]. "
+            f"(b) SE ∝ 1/√n, so halving N multiplies SE by √2 ≈ 1.41; "
+            f"CI widens proportionally; power falls. "
+            f"(c) Conclusion depends on whether the widened CI still excludes zero — "
+            f"students must reason from numbers, not just recite rules about power."
+        )
+        steps = [
+            f"Effect = {treated} − {control} = {diff}; t-stat = effect / SE.",
+            "SE ∝ 1/√n — halving N multiplies SE by √2 ≈ 1.41.",
+            "Check whether the widened CI still excludes zero to assess the conclusion.",
+        ]
+        concept = "Parameter change / counterfactual with significance testing."
+
+    elif a == 2:
+        # Archetype 2: Assumption violation / bias detection
+        if ctx:
+            prompt = (
+                f"The following claim rests on {name}:\n\n"
+                f"“{ctx[:200].rstrip()}”\n\n"
+                f"(a) Identify the most critical assumption underlying this claim.\n"
+                f"(b) Describe a specific, realistic scenario in which that assumption fails.\n"
+                f"(c) In which direction — upward or downward — would the resulting "
+                f"bias push the estimate? Explain your reasoning."
+            )
+        else:
+            prompt = (
+                f"A researcher uses {name} to support a causal claim.\n\n"
+                f"(a) Identify the most critical assumption {name} requires.\n"
+                f"(b) Describe a plausible, concrete violation of that assumption in a "
+                f"realistic research context.\n"
+                f"(c) In which direction would the resulting bias push the estimated effect? "
+                f"Explain using economic or statistical reasoning."
+            )
+        answer = (
+            f"(a) Must name the correct assumption — not a generic 'no bias' statement. "
+            f"(b) Needs a specific scenario, not a vague possibility. "
+            f"(c) Must commit to a direction with reasoning — "
+            f"'it could go either way' is not an acceptable answer."
+        )
+        steps = [
+            f"Name the specific assumption {name} requires (be precise, not generic).",
+            "Construct a concrete, realistic scenario where this assumption fails.",
+            "Sign the bias: does the violation cause over- or underestimation? Why?",
+        ]
+        concept = "Assumption violation and bias direction."
+
+    elif a == 3:
+        # Archetype 3: Data interpretation
+        prompt = (
+            f"A study produces the following output:\n\n"
+            f"  Treatment mean: {treated}  |  Control mean: {control}  |  SE of difference: {se}\n\n"
+            f"(a) Compute the estimated treatment effect and construct a 95% confidence interval.\n"
+            f"(b) State whether the result is statistically significant at the 5% level and "
+            f"interpret what this means — do not simply report the p-value threshold.\n"
+            f"(c) A critic argues the effect is ‘too small to be policy-relevant.’ "
+            f"Using your understanding of {name}, explain what additional information would "
+            f"be needed to evaluate this criticism."
+        )
+        answer = (
+            f"(a) Effect = {diff}; 95% CI: [{ci_lo}, {ci_hi}]. "
+            f"(b) t = {t_stat}; result {sig_str} significant. Interpretation: "
+            f"{'if repeated, 95% of such CIs would contain the true effect — this one excludes zero.' if sig_str == 'is' else 'the CI contains zero, so we cannot rule out no effect at this sample size.'} "
+            f"(c) Practical significance requires: cost of the intervention, counterfactual baseline, "
+            f"units of measurement, and comparison to prior literature — "
+            f"none of which are supplied by the t-test."
+        )
+        steps = [
+            f"Effect = {treated} − {control} = {diff}; CI = {diff} ± 1.96 × {se}.",
+            "Interpret significance: 'can rule out zero' is not the same as 'large effect.'",
+            f"List what is needed to judge practical relevance in the context of {name}.",
+        ]
+        concept = "Data interpretation and significance vs. practical importance."
+
+    elif a == 4:
+        # Archetype 4: Cross-topic synthesis
+        prompt = (
+            f"Both {name} and {peer} are concepts or methods used to address questions "
+            f"in this course.\n\n"
+            f"(a) Briefly describe the core purpose of each.\n"
+            f"(b) Describe a research scenario where {name} is the more appropriate approach "
+            f"and explain precisely why {peer} would fall short.\n"
+            f"(c) Describe a scenario where the reverse is true — "
+            f"where {peer} is the better choice and {name} is insufficient."
+        )
+        answer = (
+            f"A strong answer demonstrates understanding of when each applies, not just what each means. "
+            f"Common failure: correctly defining both but not constructing scenarios that genuinely "
+            f"favor one over the other. The scenarios must hinge on a real difference between the two approaches."
+        )
+        steps = [
+            f"State what {name} is designed to accomplish.",
+            f"State what {peer} is designed to accomplish.",
+            "Construct a scenario that genuinely favors each, with explanation of why the other fails.",
+        ]
+        concept = "Cross-topic synthesis."
+
+    elif a == 5:
+        # Archetype 5: Debug a flawed argument
+        if ctx:
+            flaw_setup = (
+                f"A student reads the following:\n\n"
+                f"“{ctx[:200].rstrip()}”\n\n"
+                f"The student concludes: ‘This confirms that {name} applies because "
+                f"the groups look similar at baseline.’"
+            )
+        else:
+            flaw_setup = (
+                f"A student argues: ‘Since the treatment and control groups have similar "
+                f"observed characteristics, we can conclude that {name} holds here and the "
+                f"estimated effect is causal.’"
+            )
+        prompt = (
+            flaw_setup + "\n\n"
+            f"Identify at least two distinct errors or unsupported leaps in this argument. "
+            f"For each error, explain what the student should have done or said instead."
+        )
+        answer = (
+            "Errors to identify: (1) baseline balance on observables does not establish "
+            "randomization or unconfoundedness — unobservables may still differ; "
+            "(2) correlation is not causation — the student has not ruled out confounders; "
+            "(3) 'look similar' is too vague — requires formal balance tests with appropriate statistics. "
+            "A strong answer names each error precisely and provides a corrected version."
+        )
+        steps = [
+            "Identify Error 1: what logical step is missing or invalid?",
+            "Identify Error 2: what different type of mistake is being made (scope, inference, or assumption)?",
+            "For each error, state what evidence or reasoning would actually support the conclusion.",
+        ]
+        concept = "Debugging a flawed empirical argument."
+
+    elif a == 6:
+        # Archetype 6: Reverse reasoning
+        prompt = (
+            f"A researcher reports: ‘Using {name}, we estimate an effect of {diff} units "
+            f"(SE = {se}) and conclude this reflects a causal relationship.’\n\n"
+            f"(a) List every assumption that must hold for ‘causal relationship’ to be "
+            f"a valid interpretation.\n"
+            f"(b) For each assumption, propose a specific empirical test or piece of evidence "
+            f"that would help verify it.\n"
+            f"(c) If the most critical assumption fails, describe a concrete methodological "
+            f"adjustment — not just a general caution."
+        )
+        answer = (
+            f"(a) Must list specific identification conditions for {name} — "
+            f"not just 'no bias.' "
+            f"(b) Must propose concrete tests (e.g., falsification tests, placebo regressions, "
+            f"covariate balance checks) — not vague statements like 'collect more data.' "
+            f"(c) Must name a specific alternative method or specification, "
+            f"not just 'be more careful about confounders.'"
+        )
+        steps = [
+            f"List the identification assumptions for {name} — be specific, not generic.",
+            "For each assumption, propose a testable implication or robustness check.",
+            "Name a concrete fallback method or specification if the key assumption fails.",
+        ]
+        concept = "Reverse reasoning — inferring required assumptions from a conclusion."
+
+    else:
+        # Archetype 7: Method comparison in context
+        prompt = (
+            f"A researcher is estimating a causal effect and is choosing between a strategy "
+            f"that relies on {name} and a more observational approach using extensive controls.\n\n"
+            f"(a) Under what conditions does {name} produce a credible causal estimate?\n"
+            f"(b) Identify two practical limitations of {name} that arise even when "
+            f"identification is technically valid.\n"
+            f"(c) Under what conditions would you prefer the observational approach despite "
+            f"its weaker identification strategy? Defend that choice explicitly."
+        )
+        answer = (
+            f"(a) State the identification conditions precisely, not just the intuition. "
+            f"(b) Practical limitations include cost, feasibility constraints, noncompliance, "
+            f"attrition, SUTVA violations, or external validity concerns. "
+            f"(c) The observational approach may be preferred when randomization is infeasible, "
+            f"unethical, or when the target population is only accessible through observational data "
+            f"— the student must justify the tradeoff explicitly, not simply list pros and cons."
+        )
+        steps = [
+            f"State the conditions under which {name} achieves valid causal identification.",
+            "List two practical limitations that hold even when identification conditions are met.",
+            "Construct a scenario where the observational alternative is the more defensible choice.",
+        ]
+        concept = "Method comparison in applied research context."
+
     if course_type == "quantitative":
-        steps = steps + ["If numbers are provided on the exam, write the formula or rule before substituting values."]
-    return {"topic": topic["topic"], "prompt": prompt, "answer": answer, "steps": steps, "concept": concept}
+        steps = steps + [
+            "If the question supplies numbers, state the relevant formula or rule before substituting."
+        ]
+
+    return {
+        "topic": topic["topic"],
+        "prompt": prompt,
+        "answer": answer,
+        "steps": steps,
+        "concept": concept,
+        "archetype": a,
+        "generator": "conceptual",
+        "structure_signature": f"conceptual:{a}",
+    }
 
 
-def make_practice_problem(topic: dict[str, Any], course_type: str, seed: int) -> dict[str, Any]:
+def make_practice_problem(
+    topic: dict[str, Any],
+    course_type: str,
+    seed: int,
+    archetype: int | None = None,
+    peers: list[str] | None = None,
+    course_name: str | None = None,
+) -> dict[str, Any]:
+    """v4 thin dispatcher: infer course family → get realizer → frame_problem.
+
+    Falls back to the legacy make_conceptual_problem path if realizers are
+    unavailable or produce an error, preserving backward compatibility.
+
+    Args:
+        course_name: The full course name (e.g. "ECON 480 Econometrics") used
+                     for domain family inference. Falls back to course_type if absent.
+    """
+    a = archetype if archetype is not None else seed % 8
+
+    # Try the v4 realizer path
+    try:
+        # Use course_name for family inference (more specific than course_type)
+        infer_from = course_name or course_type or ""
+        family, _conf = infer_course_family(infer_from, "")
+        realizer = get_domain_realizer(family)
+        if realizer is not None:
+            result = realizer.frame_problem(
+                topic=topic.get("topic", ""),
+                archetype_id=a,
+                seed=seed,
+                peers=peers,
+            )
+            # Ensure all required legacy fields are present
+            result.setdefault("topic", topic.get("topic", ""))
+            result.setdefault("archetype", a)
+            result.setdefault("archetype_id", a)
+            result.setdefault("concept", f"Archetype {a}")
+            result.setdefault("steps", [])
+            # Map "prompt" → "question" if needed (legacy consumers use "question")
+            if "question" not in result and "prompt" in result:
+                result["question"] = result.pop("prompt")
+            return result
+    except Exception:
+        pass  # Realizer failed — fall through to legacy path
+
+    # Legacy fallback: original routing logic preserved exactly
+    if archetype is not None and archetype not in COMPUTATIONAL_ARCHETYPES:
+        return make_conceptual_problem(topic, course_type, seed, archetype=archetype, peers=peers)
+
     key = topic["topic_key"].lower()
-    if "elasticity" in key:
+
+    def _can_use(gen_name: str) -> bool:
+        if archetype is None:
+            return True
+        return archetype in SPECIALIZED_ARCHETYPE_SUPPORT.get(gen_name, frozenset())
+
+    if "elasticity" in key and _can_use("elasticity"):
         return make_elasticity_problem(topic, seed)
-    if "total revenue" in key or key == "revenue":
+    if ("total revenue" in key or key == "revenue") and _can_use("revenue"):
         return make_total_revenue_problem(topic, seed)
-    if "consumer surplus" in key:
+    if "consumer surplus" in key and _can_use("consumer_surplus"):
         return make_surplus_problem(topic, seed)
-    if "producer surplus" in key:
+    if "producer surplus" in key and _can_use("producer_surplus"):
         return make_surplus_problem(topic, seed, producer=True)
-    if "deadweight" in key or "tax" in key:
+    if ("deadweight" in key or "tax" in key) and _can_use("deadweight"):
         return make_deadweight_loss_problem(topic, seed)
-    if any(term in key for term in ["treatment", "experimental", "experiment", "potential outcome", "unconfounded", "identification"]):
+    if any(term in key for term in [
+        "treatment", "experimental", "experiment", "potential outcome",
+        "unconfounded", "identification", "average treatment",
+    ]) and _can_use("treatment_effect"):
         return make_treatment_effect_problem(topic, seed)
-    if any(term in key for term in ["accounting", "revenue recognition", "inventory", "income statement", "balance sheet"]):
+    if any(term in key for term in [
+        "accounting", "revenue recognition", "inventory",
+        "income statement", "balance sheet",
+    ]) and _can_use("accounting"):
         return make_accounting_problem(topic, seed)
-    if course_type == "quantitative" and seed % 3 == 0:
+    if course_type == "quantitative" and seed % 3 == 0 and archetype is None:
         return make_treatment_effect_problem(topic, seed)
-    return make_conceptual_problem(topic, course_type, seed)
+
+    return make_conceptual_problem(topic, course_type, seed, archetype=archetype, peers=peers)
 
 
 def build_practice_set(
