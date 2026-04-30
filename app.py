@@ -132,21 +132,26 @@ def index():
 def api_courses():
     canvas_root = BASE_DIR / "canvas_files"
     courses = []
-    if canvas_root.exists():
-        for d in sorted(canvas_root.iterdir()):
-            if d.is_dir() and not d.name.startswith("."):
-                key = d.name.lower().replace(" ", "-")
-                state_dir = _state_dir(key)
-                indexed = (state_dir / "exam_map.json").exists()
-                file_count = sum(1 for f in d.rglob("*") if f.is_file() and not f.name.startswith("."))
-                courses.append({
-                    "name": d.name,
-                    "key": key,
-                    "course_dir": str(d),
-                    "state_dir": str(state_dir),
-                    "indexed": indexed,
-                    "file_count": file_count,
-                })
+    try:
+        dirs = [d for d in canvas_root.iterdir() if d.is_dir() and not d.name.startswith(".")]
+    except Exception:
+        dirs = []
+    for d in sorted(dirs):
+        key = d.name.lower().replace(" ", "-")
+        state_dir = _state_dir(key)
+        indexed = (state_dir / "exam_map.json").exists()
+        try:
+            file_count = sum(1 for f in d.rglob("*") if f.is_file() and not f.name.startswith("."))
+        except Exception:
+            file_count = 0
+        courses.append({
+            "name": d.name,
+            "key": key,
+            "course_dir": str(d),
+            "state_dir": str(state_dir),
+            "indexed": indexed,
+            "file_count": file_count,
+        })
     return jsonify(courses)
 
 
